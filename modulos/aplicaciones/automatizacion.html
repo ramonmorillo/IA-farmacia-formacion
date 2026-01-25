@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4.2 - Automatización de Tareas - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>M4.2 - Automatización de Tareas</h1>
+            <p class="subtitle">Optimizar trabajo administrativo sin comprometer calidad</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="informacion.html">Aplicaciones Prácticas</a>
+                <span>›</span>
+                <span>Automatización</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos</h2>
+            <ul>
+                <li>Identificar tareas farmacéuticas automatizables con IA</li>
+                <li>Distinguir automatización segura vs. peligrosa</li>
+                <li>Aplicar flujos de trabajo eficientes con supervisión</li>
+                <li>Mantener control profesional en procesos automatizados</li>
+            </ul>
+            <p><span class="badge badge-caution">Nivel: Intermedio</span> <span class="badge badge-info">Tiempo: 25 min</span></p>
+        </section>
+
+        <div class="alert alert-danger">
+            <span class="alert-icon">⚠️</span>
+            <div class="alert-content">
+                <p><strong>REGLA DE ORO DE LA AUTOMATIZACIÓN:</strong></p>
+                <p style="font-size: 1.1rem; margin: 0;"><strong>"Automatiza el proceso, NO la decisión clínica. Siempre revisa antes de usar."</strong></p>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <h2>✅ Tareas automatizables (con supervisión)</h2>
+            
+            <h3>🟢 Automatización SEGURA (riesgo bajo)</h3>
+            <div style="background: var(--green-safe-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <ul>
+                    <li><strong>Redacción de emails rutinarios:</strong> Respuestas a consultas administrativas comunes</li>
+                    <li><strong>Organización de datos:</strong> Formato de tablas, listas, reorganización de información</li>
+                    <li><strong>Generación de plantillas:</strong> Estructura de documentos, formularios</li>
+                    <li><strong>Traducción de textos:</strong> Información no crítica (con revisión)</li>
+                    <li><strong>Resumen de reuniones:</strong> Actas, puntos clave (de notas que TÚ tomaste)</li>
+                    <li><strong>Creación de material educativo básico:</strong> Borradores de folletos (a verificar)</li>
+                </ul>
+                <p><strong>Característica común:</strong> No afectan directamente decisiones clínicas, son reversibles, permiten revisión fácil</p>
+            </div>
+
+            <h3>🟡 Automatización CON PRECAUCIÓN (requiere verificación exhaustiva)</h3>
+            <div style="background: var(--yellow-caution-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <ul>
+                    <li><strong>Análisis de datos agregados:</strong> Tendencias de consumo, patrones (sin datos pacientes)</li>
+                    <li><strong>Generación de alertas:</strong> Posibles interacciones, duplicidades (requiere revisión farmacéutica)</li>
+                    <li><strong>Síntesis de literatura:</strong> Resúmenes de múltiples estudios (cada estudio debe verificarse)</li>
+                    <li><strong>Informes de gestión:</strong> Métricas, KPIs (revisar cálculos)</li>
+                </ul>
+                <p><strong>Característica común:</strong> Pueden influir en decisiones, requieren validación de resultados</p>
+            </div>
+
+            <h3>🔴 NUNCA automatizar (decisión clínica humana obligatoria)</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                <ul>
+                    <li><strong>Decisiones de dispensación</strong></li>
+                    <li><strong>Ajustes de dosis individualizados</strong></li>
+                    <li><strong>Interpretación de resultados de laboratorio</strong></li>
+                    <li><strong>Valoración de urgencias/derivaciones</strong></li>
+                    <li><strong>Respuestas automáticas a consultas clínicas de pacientes</strong></li>
+                    <li><strong>Cualquier proceso que afecte directamente salud del paciente</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>📧 Caso 1: Automatización de emails rutinarios</h2>
+            
+            <h3>Escenario</h3>
+            <p>Recibes 10-15 emails diarios con consultas administrativas similares: horarios, servicios, cómo pedir cita, etc.</p>
+
+            <h3>Flujo de automatización seguro:</h3>
+            
+            <div class="alert alert-info">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 1: Identifica patrones</h4>
+                    <p>Agrupa consultas en categorías:</p>
+                    <ul>
+                        <li>Horario de la farmacia</li>
+                        <li>Cómo pedir cita para seguimiento farmacoterapéutico</li>
+                        <li>Servicios disponibles (SPD, vacunación, etc.)</li>
+                        <li>Información sobre recetas electrónicas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 2: Crea plantillas con IA</h4>
+                    <div class="code-example">
+                        <pre>Prompt: "Redacta email cordial respondiendo a paciente que pregunta horario de farmacia.
+
+Información:
+- Horario: L-V 9:00-21:00, Sábados 10:00-14:00
+- Julio-Agosto: L-V 9:00-20:00
+- Cerrado domingos y festivos
+- Farmacia de guardia: consultar www.cofXX.es
+
+Tono: Profesional pero cálido, breve (máximo 4 líneas)."</pre>
+                    </div>
+                    <p><strong>IA genera:</strong> Borrador de email</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 3: Revisas y personalizas</h4>
+                    <ul>
+                        <li>Verificas que información es correcta</li>
+                        <li>Añades nombre del paciente si lo conoces</li>
+                        <li>Ajustas tono si es necesario</li>
+                        <li><strong>ENVÍAS TÚ</strong> (no automáticamente)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Tiempo ahorrado</h3>
+            <p><strong>Sin IA:</strong> 2-3 min por email × 15 emails = 30-45 min/día</p>
+            <p><strong>Con IA:</strong> 30 seg por email × 15 emails = 7-8 min/día</p>
+            <p><strong>Ahorro:</strong> ~35 min/día = 3 horas/semana</p>
+        </section>
+
+        <section class="content-card">
+            <h2>📊 Caso 2: Análisis de datos de gestión</h2>
+            
+            <h3>Escenario</h3>
+            <p>Necesitas informe mensual de consumo de antibióticos en tu hospital para presentar en comisión de farmacia.</p>
+
+            <h3>Proceso híbrido (automatización + validación):</h3>
+            
+            <div class="alert alert-info">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Datos de partida (exportados de tu sistema)</h4>
+                    <p>Tienes Excel con datos AGREGADOS (sin pacientes):</p>
+                    <ul>
+                        <li>Servicio</li>
+                        <li>Antibiótico</li>
+                        <li>DDD consumidas</li>
+                        <li>Coste</li>
+                    </ul>
+                    <p><strong>Verificas:</strong> No hay datos de pacientes individuales</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Prompt a IA (con datos)</h4>
+                    <div class="code-example">
+                        <pre>Prompt: "Analiza estos datos de consumo de antibióticos del mes de octubre:
+
+[Pegas tabla con datos agregados]
+
+Dame:
+1. Top 5 antibióticos más consumidos (por DDD)
+2. Top 3 servicios con mayor consumo
+3. Comparación con septiembre (si tengo datos)
+4. Antibióticos con aumento >20% vs. mes anterior
+5. Antibióticos de reserva (carbapenems, colistina) - consumo y tendencia
+
+Formato: Tabla + bullet points con insights clave."</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Validación OBLIGATORIA</h4>
+                    <p><strong>TÚ verificas:</strong></p>
+                    <ul>
+                        <li>¿Los números coinciden con tu Excel? (recalcula top 5 manualmente)</li>
+                        <li>¿Las comparaciones tienen sentido? (septiembre vs octubre)</li>
+                        <li>¿Los aumentos >20% son correctos? (verifica al menos 2-3)</li>
+                        <li>¿Los antibióticos de reserva están bien categorizados?</li>
+                    </ul>
+                    <p><strong>Si algo no cuadra:</strong> Revisa cálculo de IA o rehaz manualmente esa parte</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">4</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Interpretación TUYA</h4>
+                    <p>La IA dio números. TÚ interpretas:</p>
+                    <ul>
+                        <li>¿Por qué aumentó consumo de carbapenems? (Brote? Cirugía compleja?)</li>
+                        <li>¿El aumento en UCI es esperable? (¿Hubo más ingresos?)</li>
+                        <li>¿Qué acciones recomendar? (Formación, revisión protocolos, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Resultado</h3>
+            <p><strong>Ahorro de tiempo:</strong> 30-45 min en organizar datos y calcular</p>
+            <p><strong>Riesgo mitigado:</strong> Validaste cálculos, interpretación es tuya</p>
+            <p><strong>Valor añadido:</strong> Más tiempo para analizar causas y proponer soluciones</p>
+        </section>
+
+        <section class="content-card">
+            <h2>📝 Caso 3: Generación de actas de reuniones</h2>
+            
+            <h3>Escenario</h3>
+            <p>Reunión de comité de farmacia de 90 minutos. Tomaste notas en papel/ordenador.</p>
+
+            <h3>Automatización del formato (no del contenido):</h3>
+            
+            <div class="alert alert-info">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Durante reunión: TÚ tomas notas</h4>
+                    <ul>
+                        <li>Asistentes</li>
+                        <li>Puntos tratados (en tus palabras, como siempre)</li>
+                        <li>Decisiones tomadas</li>
+                        <li>Acciones asignadas</li>
+                    </ul>
+                    <p><strong>No cambies tu proceso:</strong> Sigue tomando notas como siempre</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Después: IA organiza formato</h4>
+                    <div class="code-example">
+                        <pre>Prompt: "Convierte estas notas de reunión en acta formal:
+
+[Pegas tus notas textuales]
+
+Formato deseado:
+1. Encabezado (fecha, asistentes, hora)
+2. Orden del día
+3. Desarrollo (punto por punto)
+4. Acuerdos alcanzados (numerados)
+5. Acciones pendientes (tabla: Qué | Quién | Cuándo)
+
+Mantén TODO el contenido de mis notas, solo organiza formato."</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Revisión crítica</h4>
+                    <p><strong>Verificas que:</strong></p>
+                    <ul>
+                        <li>No se perdió ningún punto de tus notas</li>
+                        <li>No se añadió nada que no estaba en tus notas</li>
+                        <li>Decisiones están correctamente reflejadas</li>
+                        <li>Acciones asignadas a personas correctas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Tiempo ahorrado</h3>
+            <p><strong>Sin IA:</strong> 30-40 min pasando notas a formato formal</p>
+            <p><strong>Con IA:</strong> 10 min (prompt + revisión)</p>
+            <p><strong>Ahorro:</strong> ~25 min por reunión</p>
+        </section>
+
+        <section class="content-card">
+            <h2>⚠️ Caso NEGATIVO: Automatización peligrosa</h2>
+            
+            <h3>❌ NUNCA hagas esto</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-lg); border-radius: 8px; border: 3px solid var(--red-danger);">
+                <h4>Escenario (MALO):</h4>
+                <p>"Voy a automatizar alertas de interacciones. La IA revisa prescripciones y envía email automático al médico si detecta interacción."</p>
+                
+                <h4 style="color: var(--red-danger);">¿Por qué es PELIGROSO?</h4>
+                <ul>
+                    <li><strong>Sin contexto clínico:</strong> IA no conoce historia del paciente</li>
+                    <li><strong>Falsos positivos:</strong> Puede alertar de interacciones irrelevantes</li>
+                    <li><strong>Falsos negativos:</strong> Puede NO detectar interacciones graves</li>
+                    <li><strong>Pérdida de responsabilidad:</strong> ¿Quién responde si hay error?</li>
+                    <li><strong>Spam:</strong> Médicos ignoran alertas si muchas son irrelevantes</li>
+                </ul>
+
+                <h4 style="color: var(--green-safe);">Alternativa CORRECTA:</h4>
+                <p><strong>IA como ayuda, TÚ decides:</strong></p>
+                <ol>
+                    <li>IA te SUGIERE posibles interacciones para revisar</li>
+                    <li><strong>TÚ revisas cada caso:</strong> historia, contexto, gravedad</li>
+                    <li><strong>TÚ decides:</strong> ¿Contacto al médico? ¿Es relevante?</li>
+                    <li><strong>TÚ comunicas:</strong> Si procede, email personalizado explicando por qué es relevante</li>
+                </ol>
+                <p><strong>Resultado:</strong> IA acelera screening, pero decisión es profesional y contextualizada</p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>🔧 Herramientas para automatización segura</h2>
+            
+            <h3>Nivel 1: Asistentes de IA conversacionales</h3>
+            <ul>
+                <li><strong>Para:</strong> Redacción, organización, borradores</li>
+                <li><strong>Ejemplos:</strong> ChatGPT, Claude, Gemini</li>
+                <li><strong>Ventaja:</strong> Flexibles, fáciles de usar</li>
+                <li><strong>Limitación:</strong> Requieren copiar/pegar, no integrados en tu sistema</li>
+            </ul>
+
+            <h3>Nivel 2: Herramientas de productividad con IA</h3>
+            <ul>
+                <li><strong>Email:</strong> Sugerencias de respuestas (Gmail, Outlook)</li>
+                <li><strong>Documentos:</strong> Ayuda redacción (Google Docs, Word con Copilot)</li>
+                <li><strong>Hojas cálculo:</strong> Fórmulas automáticas (Excel con IA)</li>
+                <li><strong>Ventaja:</strong> Integradas en herramientas que ya usas</li>
+                <li><strong>Cuidado:</strong> Verifica siempre las sugerencias</li>
+            </ul>
+
+            <h3>Nivel 3: Automatización avanzada (con IT)</h3>
+            <ul>
+                <li><strong>APIs de IA:</strong> Integración con sistemas hospitalarios</li>
+                <li><strong>Requiere:</strong> Departamento IT, validación, supervisión</li>
+                <li><strong>Ejemplos:</strong> Alertas inteligentes, análisis predictivo</li>
+                <li><strong>CRÍTICO:</strong> Debe tener aprobación de dirección médica y IT</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>📋 Checklist antes de automatizar</h2>
+            <div class="checklist">
+                <h3>Pregúntate SIEMPRE:</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="auto1">
+                        <label for="auto1">¿Esta tarea NO afecta directamente decisiones clínicas?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="auto2">
+                        <label for="auto2">¿Puedo revisar el resultado ANTES de usarlo?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="auto3">
+                        <label for="auto3">¿El error sería fácilmente detectable?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="auto4">
+                        <label for="auto4">¿Tengo tiempo suficiente para verificar?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="auto5">
+                        <label for="auto5">¿Mantengo control profesional del proceso?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="auto6">
+                        <label for="auto6">¿Hay política/protocolo de mi institución que lo permita?</label>
+                    </li>
+                </ul>
+                <p style="margin-top: var(--spacing-md);"><strong>Si alguna respuesta es NO → No automatices o consulta con supervisión</strong></p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>💡 Principios de automatización responsable</h2>
+            
+            <h3>1. Humano en el centro (Human-in-the-loop)</h3>
+            <p>La IA asiste, el humano decide. Siempre.</p>
+
+            <h3>2. Transparencia</h3>
+            <p>Documenta qué automatizaste, cómo funciona, qué verificas</p>
+
+            <h3>3. Reversibilidad</h3>
+            <p>Debe poder deshacerse fácilmente si hay error</p>
+
+            <h3>4. Proporcionalidad</h3>
+            <p>Más crítica la tarea → Menos automatización</p>
+
+            <h3>5. Mejora continua</h3>
+            <p>Revisa periódicamente: ¿la automatización sigue siendo útil y segura?</p>
+        </section>
+
+        <div class="page-navigation">
+            <a href="informacion.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Anterior</div>
+                    <div class="nav-link-title">← M4.1 - Búsqueda Info</div>
+                </div>
+            </a>
+            <a href="formacion.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Siguiente</div>
+                    <div class="nav-link-title">M4.3 - Formación →</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>Automatiza el proceso, NO la decisión clínica.</strong> Siempre supervisa y verifica.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+</body>
+</html>

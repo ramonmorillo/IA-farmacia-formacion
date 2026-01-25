@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1.1 - ¿Qué es la IA? - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1>M1.1 - ¿Qué es la IA?</h1>
+            <p class="subtitle">Conceptos básicos sin tecnicismos</p>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="que-es-ia.html">Fundamentos</a>
+                <span>›</span>
+                <span>¿Qué es la IA?</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Objetivos -->
+        <section class="content-card">
+            <h2>🎯 Objetivos de aprendizaje</h2>
+            <ul>
+                <li>Entender qué es realmente la IA (sin magia ni mitos)</li>
+                <li>Comprender cómo funciona a nivel conceptual</li>
+                <li>Identificar limitaciones inherentes de la tecnología</li>
+                <li>Relacionar el funcionamiento de la IA con su uso en farmacia</li>
+            </ul>
+            <p><span class="badge badge-info">Tiempo estimado: 15 minutos</span></p>
+        </section>
+
+        <!-- Contenido principal -->
+        <section class="content-card">
+            <h2>¿Qué es la Inteligencia Artificial?</h2>
+            
+            <h3>Definición simple (sin tecnicismos)</h3>
+            <p>La IA que usamos en herramientas como asistentes de texto es, esencialmente, un <strong>sistema estadístico muy sofisticado</strong> que predice cuál es la siguiente palabra más probable en una conversación.</p>
+            
+            <div class="alert alert-info">
+                <span class="alert-icon">💡</span>
+                <div class="alert-content">
+                    <p><strong>Analogía útil:</strong></p>
+                    <p>Imagina a alguien que ha leído millones de libros, artículos y conversaciones, pero que <strong>no entiende realmente lo que lee</strong>. Cuando le preguntas algo, esa persona busca patrones en todo lo que ha leído y te responde con lo que estadísticamente "suena coherente" basándose en esos patrones.</p>
+                    <p>Eso es básicamente lo que hace la IA: <strong>predice texto coherente basándose en patrones, no en comprensión real</strong>.</p>
+                </div>
+            </div>
+
+            <h3>¿Cómo "aprende" la IA?</h3>
+            <p>Los modelos de IA (LLM - Large Language Models) se entrenan con grandes cantidades de texto de internet, libros, artículos científicos, etc. Durante este entrenamiento:</p>
+            <ul>
+                <li>El sistema identifica <strong>patrones estadísticos</strong> en cómo se usan las palabras</li>
+                <li>Aprende qué palabras suelen aparecer juntas y en qué contextos</li>
+                <li>No "memoriza" el texto exacto, sino que <strong>construye un modelo probabilístico</strong></li>
+                <li>Cuando le haces una pregunta, genera respuestas basadas en esos patrones</li>
+            </ul>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <p><strong>Importante:</strong></p>
+                    <p>La IA no "sabe" farmacología como tú la sabrás después de estudiar. Ha visto muchos textos sobre farmacología y puede reproducir patrones, pero <strong>no tiene criterio farmacéutico ni responsabilidad profesional</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Limitaciones -->
+        <section class="content-card">
+            <h2>⚠️ Limitaciones inherentes de la IA</h2>
+            <p>Es fundamental que entiendas estas limitaciones <strong>antes</strong> de usar IA en tu trabajo:</p>
+
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md); margin-top: var(--spacing-md);">
+                <div class="alert alert-danger">
+                    <span class="alert-icon">1</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Alucinaciones (inventar información)</h4>
+                        <p>La IA puede generar respuestas que <strong>suenan correctas pero son completamente falsas</strong>. Esto incluye:</p>
+                        <ul>
+                            <li>Inventar nombres de medicamentos que no existen</li>
+                            <li>Citar estudios científicos ficticios</li>
+                            <li>Dar dosis o protocolos incorrectos con total confianza</li>
+                        </ul>
+                        <p><strong>¿Por qué ocurre?</strong> Porque la IA predice qué "suena bien", no qué "es verdad".</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">2</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Corte temporal (información desactualizada)</h4>
+                        <p>Los modelos se entrenan con datos hasta una fecha determinada. Esto significa que:</p>
+                        <ul>
+                            <li>No conocen medicamentos aprobados después de esa fecha</li>
+                            <li>No tienen actualizaciones de guías clínicas recientes</li>
+                            <li>Pueden dar información obsoleta o retirada</li>
+                        </ul>
+                        <p><strong>Implicación:</strong> NUNCA confíes en la IA para información que deba estar actualizada sin verificar con fuentes oficiales.</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">3</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Sesgos incorporados</h4>
+                        <p>Como la IA se entrena con texto de internet y otras fuentes, <strong>reproduce los sesgos</strong> presentes en esos datos:</p>
+                        <ul>
+                            <li>Puede dar más peso a prácticas de ciertos países</li>
+                            <li>Puede reflejar sesgos de género, raza o socioeconómicos</li>
+                            <li>Puede favorecer información más común sobre la más correcta</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">4</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Sin comprensión real del contexto</h4>
+                        <p>La IA no entiende:</p>
+                        <ul>
+                            <li>La gravedad de una decisión farmacoterapéutica</li>
+                            <li>Las implicaciones legales o éticas de sus respuestas</li>
+                            <li>El contexto específico de un paciente real</li>
+                            <li>Cuándo una pregunta requiere derivación a un profesional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Entonces, ¿para qué sirve? -->
+        <section class="content-card">
+            <h2>Entonces, ¿para qué SÍ sirve la IA en farmacia?</h2>
+            <p>A pesar de sus limitaciones, la IA es útil cuando se usa correctamente:</p>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Como punto de partida para búsqueda de información</h4>
+                    <p>Puede ayudarte a <strong>identificar conceptos o direcciones de búsqueda</strong>, pero siempre debes verificar con fuentes oficiales (fichas técnicas, guías clínicas, PubMed).</p>
+                    <p><strong>Ejemplo:</strong> "Explícame el mecanismo de acción de los IECA" → Luego verificas con un libro de farmacología.</p>
+                </div>
+            </div>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Para tareas administrativas sin riesgo</h4>
+                    <p>Redactar correos, organizar información, crear plantillas, etc. <strong>Siempre que no involucren datos de pacientes.</strong></p>
+                    <p><strong>Ejemplo:</strong> "Ayúdame a redactar un correo pidiendo información sobre un nuevo protocolo de farmacia".</p>
+                </div>
+            </div>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Para generar material educativo (verificado)</h4>
+                    <p>Crear borradores de folletos informativos, preguntas de repaso, etc. <strong>Siempre verificando la exactitud médica.</strong></p>
+                    <p><strong>Ejemplo:</strong> "Crea 10 preguntas tipo test sobre farmacocinética" → Verificas que las respuestas sean correctas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regla de oro -->
+        <section class="content-card">
+            <h2>💡 Regla de oro al usar IA</h2>
+            <div style="background: var(--yellow-caution-light); padding: var(--spacing-lg); border-radius: 8px; border-left: 4px solid var(--yellow-caution);">
+                <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: var(--spacing-md);">
+                    "Que ejecute no significa que esté bien"
+                </p>
+                <p style="color: var(--text-medium); margin: 0;">
+                    La IA puede generar texto coherente y convincente que sea <strong>completamente incorrecto</strong>. 
+                    Como farmacéutico, <strong>TÚ eres responsable de verificar</strong> cualquier información antes de usarla 
+                    o compartirla. La IA es una herramienta, no una autoridad.
+                </p>
+            </div>
+        </section>
+
+        <!-- Ejercicio de reflexión -->
+        <section class="content-card">
+            <h2>🤔 Ejercicio de reflexión</h2>
+            <p>Antes de continuar al siguiente módulo, reflexiona sobre estas preguntas:</p>
+            
+            <div class="checklist">
+                <h3>Autoevaluación</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="q1">
+                        <label for="q1">¿Entiendo que la IA predice patrones, no "comprende" farmacología?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="q2">
+                        <label for="q2">¿Puedo explicar qué son las "alucinaciones" y por qué ocurren?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="q3">
+                        <label for="q3">¿Entiendo que la IA puede tener información desactualizada?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="q4">
+                        <label for="q4">¿Soy consciente de que YO soy responsable de verificar cualquier información de IA?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="q5">
+                        <label for="q5">¿Puedo distinguir usos apropiados (búsqueda inicial) de inapropiados (decisión clínica)?</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="alert alert-info" style="margin-top: var(--spacing-md);">
+                <span class="alert-icon">💡</span>
+                <div class="alert-content">
+                    <p>Si has marcado todas las casillas, estás listo para continuar al siguiente módulo sobre capacidades y límites específicos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+            <a href="../../index.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Anterior</div>
+                    <div class="nav-link-title">← Inicio</div>
+                </div>
+            </a>
+            <a href="capacidades-limites.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Siguiente</div>
+                    <div class="nav-link-title">M1.2 - Capacidades y Límites →</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>Esta herramienta es exclusivamente formativa.</strong> No sustituye formación reglada ni orientación profesional. Prohibido el uso con datos reales de pacientes.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3.2 - Verificación Crítica - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>M3.2 - Verificación Crítica</h1>
+            <p class="subtitle">Cómo verificar información de IA sistemáticamente</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="prompting-farmaceutico.html">Prácticas Seguras</a>
+                <span>›</span>
+                <span>Verificación</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos</h2>
+            <ul>
+                <li>Desarrollar método sistemático de verificación</li>
+                <li>Identificar "señales de alarma" en respuestas de IA</li>
+                <li>Conocer fuentes fiables para contrastar información</li>
+                <li>Aplicar checklists según tipo de información</li>
+            </ul>
+            <p><span class="badge badge-danger">Módulo crítico</span> <span class="badge badge-info">Tiempo: 20 min</span></p>
+        </section>
+
+        <div class="alert alert-danger">
+            <span class="alert-icon">🚨</span>
+            <div class="alert-content">
+                <p><strong>Principio fundamental:</strong></p>
+                <p style="font-size: 1.1rem; margin: 0;">"Que suene bien NO significa que esté bien. La IA puede generar texto convincente y completamente falso con total confianza."</p>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <h2>🚩 Señales de alarma: Cuándo desconfiar inmediatamente</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                <div class="alert alert-danger">
+                    <span class="alert-icon">1</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Referencias bibliográficas muy específicas</h4>
+                        <p><strong>Ejemplo sospechoso:</strong> "Según Smith et al. (2023) en NEJM vol 388, p.1234..."</p>
+                        <p><strong>Riesgo:</strong> La IA tiende a inventar referencias con formato convincente</p>
+                        <p><strong>Acción:</strong> Buscar SIEMPRE en PubMed. Si no existe → Descartar completamente</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">2</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Información contradictoria dentro de la misma respuesta</h4>
+                        <p><strong>Ejemplo:</strong> "El fármaco tiene vida media de 4 horas... se administra una vez al día"</p>
+                        <p><strong>Riesgo:</strong> La IA mezcla información de fuentes distintas sin coherencia</p>
+                        <p><strong>Acción:</strong> Verificar CADA dato con ficha técnica</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">3</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Lenguaje vago o evasivo</h4>
+                        <p><strong>Ejemplos:</strong> "Algunos estudios sugieren...", "Se cree que...", "Podría ser..."</p>
+                        <p><strong>Riesgo:</strong> La IA usa vaguedad cuando no tiene información sólida</p>
+                        <p><strong>Acción:</strong> Pedir referencias específicas o buscar en fuentes oficiales</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">4</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Nombres de medicamentos/estudios que no conoces</h4>
+                        <p><strong>Ejemplo:</strong> "El estudio PARADIGM-XR demostró..." (no existe)</p>
+                        <p><strong>Riesgo:</strong> Alucinación de nombres inventados pero creíbles</p>
+                        <p><strong>Acción:</strong> Verificar en ClinicalTrials.gov, PubMed, o CIMA/AEMPS</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">5</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Números muy específicos sin fuente</h4>
+                        <p><strong>Ejemplo:</strong> "La incidencia es del 8.7% según datos recientes"</p>
+                        <p><strong>Riesgo:</strong> Cifras inventadas que parecen precisas</p>
+                        <p><strong>Acción:</strong> Pedir fuente exacta y verificar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>✅ Checklist de verificación por tipo de información</h2>
+            
+            <h3>📊 Información farmacológica general</h3>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="farm1">
+                        <label for="farm1">¿El mecanismo de acción coincide con ficha técnica?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="farm2">
+                        <label for="farm2">¿Las indicaciones mencionadas están aprobadas oficialmente?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="farm3">
+                        <label for="farm3">¿Los efectos adversos principales están en ficha técnica/UpToDate?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="farm4">
+                        <label for="farm4">¿La información de farmacocinética es coherente? (Ej: t1/2 vs frecuencia dosificación)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="farm5">
+                        <label for="farm5">¿He contrastado con AL MENOS 2 fuentes fiables?</label>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>🔬 Referencias bibliográficas</h3>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="ref1">
+                        <label for="ref1">¿He buscado cada referencia en PubMed?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="ref2">
+                        <label for="ref2">¿El título del estudio coincide con lo que la IA dijo?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="ref3">
+                        <label for="ref3">¿Los autores, año y revista existen realmente?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="ref4">
+                        <label for="ref4">¿He leído al menos el abstract del estudio yo mismo?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="ref5">
+                        <label for="ref5">¿Los resultados que cita la IA están realmente en el estudio?</label>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>⚠️ Interacciones farmacológicas</h3>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="int1">
+                        <label for="int1">¿He verificado la interacción en Micromedex/UpToDate?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="int2">
+                        <label for="int2">¿La gravedad coincide con bases de datos oficiales?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="int3">
+                        <label for="int3">¿El mecanismo de la interacción tiene sentido farmacológico?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="int4">
+                        <label for="int4">¿He revisado fichas técnicas de ambos fármacos?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="int5">
+                        <label for="int5">¿La IA NO mencionó interacciones que SÍ están en bases oficiales? (omisiones)</label>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>💊 Dosis y posología</h3>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="dos1">
+                        <label for="dos1">¿He verificado con ficha técnica oficial?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="dos2">
+                        <label for="dos2">¿Las unidades son correctas? (mg vs mcg, UI, etc)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="dos3">
+                        <label for="dos3">¿La frecuencia de administración es coherente con farmacocinética?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="dos4">
+                        <label for="dos4">¿He calculado manualmente si son cálculos complejos?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="dos5">
+                        <label for="dos5">¿He consultado con colega si es dosis crítica (pediátrica, quimioterapia)?</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>📚 Fuentes fiables para verificación (por orden de prioridad)</h2>
+            
+            <h3>🥇 Nivel 1: Fuentes primarias oficiales (SIEMPRE primero)</h3>
+            <div style="background: var(--green-safe-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <ul>
+                    <li><strong>Fichas técnicas:</strong> CIMA (AEMPS), EMA, FDA</li>
+                    <li><strong>Guías clínicas oficiales:</strong> NICE, ADA, ESC, SEMICYUC, SEPAR, etc</li>
+                    <li><strong>PubMed/Cochrane:</strong> Para estudios científicos</li>
+                    <li><strong>Protocolos de tu hospital:</strong> Si existen</li>
+                </ul>
+            </div>
+
+            <h3>🥈 Nivel 2: Bases de datos validadas (muy fiables)</h3>
+            <div style="background: var(--bg-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <ul>
+                    <li><strong>Micromedex:</strong> Interacciones, dosificación</li>
+                    <li><strong>UpToDate:</strong> Información clínica actualizada</li>
+                    <li><strong>Lexicomp:</strong> Información de medicamentos</li>
+                    <li><strong>Bot PLUS:</strong> (España) Medicamentos comercializados</li>
+                </ul>
+            </div>
+
+            <h3>🥉 Nivel 3: Fuentes complementarias (usar con criterio)</h3>
+            <div style="background: var(--yellow-caution-light); padding: var(--spacing-md); border-radius: 8px;">
+                <ul>
+                    <li><strong>Libros de farmacología:</strong> Goodman & Gilman, Katzung (ediciones actualizadas)</li>
+                    <li><strong>Revisiones sistemáticas:</strong> Cochrane Library</li>
+                    <li><strong>Sociedades científicas:</strong> Documentos de posicionamiento</li>
+                </ul>
+            </div>
+
+            <h3>🚫 NO usar como fuente única de verificación:</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                <ul>
+                    <li>❌ Wikipedia (puede tener errores, no es fuente médica oficial)</li>
+                    <li>❌ Blogs o webs no oficiales</li>
+                    <li>❌ Foros de pacientes</li>
+                    <li>❌ Otra IA diferente (pueden alucinar igual)</li>
+                    <li>❌ La propia IA cuando le preguntas "¿estás seguro?"</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>⏱️ Tiempos de verificación según criticidad</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de información</th>
+                            <th>Nivel crítico</th>
+                            <th>Tiempo verificación</th>
+                            <th>Fuentes mínimas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dosis pediátrica/quimioterapia</td>
+                            <td><span class="badge badge-danger">Crítico</span></td>
+                            <td>15-30 min</td>
+                            <td>Ficha técnica + protocolo + colega</td>
+                        </tr>
+                        <tr>
+                            <td>Interacción grave</td>
+                            <td><span class="badge badge-danger">Crítico</span></td>
+                            <td>10-15 min</td>
+                            <td>Micromedex + fichas técnicas</td>
+                        </tr>
+                        <tr>
+                            <td>Información para decisión clínica</td>
+                            <td><span class="badge badge-caution">Alto</span></td>
+                            <td>10-15 min</td>
+                            <td>2-3 fuentes oficiales</td>
+                        </tr>
+                        <tr>
+                            <td>Material educativo para pacientes</td>
+                            <td><span class="badge badge-caution">Medio</span></td>
+                            <td>5-10 min</td>
+                            <td>Ficha técnica + guía oficial</td>
+                        </tr>
+                        <tr>
+                            <td>Información farmacológica general</td>
+                            <td><span class="badge badge-safe">Bajo</span></td>
+                            <td>5 min</td>
+                            <td>1-2 fuentes</td>
+                        </tr>
+                        <tr>
+                            <td>Redacción administrativa</td>
+                            <td><span class="badge badge-safe">Muy bajo</span></td>
+                            <td>2 min</td>
+                            <td>Revisión personal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>🔍 Método de verificación paso a paso</h2>
+            
+            <div style="background: var(--bg-light); padding: var(--spacing-lg); border-radius: 8px;">
+                <h3 style="color: var(--primary-blue-dark);">Protocolo estándar de verificación:</h3>
+                
+                <div style="margin: var(--spacing-md) 0; padding: var(--spacing-md); background: white; border-radius: 6px;">
+                    <p><strong>PASO 1: Primera lectura crítica (30 segundos)</strong></p>
+                    <ul>
+                        <li>¿Suena demasiado perfecto/completo?</li>
+                        <li>¿Hay contradicciones internas?</li>
+                        <li>¿El lenguaje es vago o específico?</li>
+                    </ul>
+                </div>
+
+                <div style="margin: var(--spacing-md) 0; padding: var(--spacing-md); background: white; border-radius: 6px;">
+                    <p><strong>PASO 2: Identificar afirmaciones clave (1 min)</strong></p>
+                    <ul>
+                        <li>Subrayar/anotar las 3-5 afirmaciones principales</li>
+                        <li>Priorizar las más críticas para seguridad</li>
+                    </ul>
+                </div>
+
+                <div style="margin: var(--spacing-md) 0; padding: var(--spacing-md); background: white; border-radius: 6px;">
+                    <p><strong>PASO 3: Verificar afirmaciones (5-15 min según criticidad)</strong></p>
+                    <ul>
+                        <li>Buscar CADA afirmación clave en fuente oficial</li>
+                        <li>Anotar fuente consultada y resultado</li>
+                        <li>Si algo NO se puede verificar → DESCARTARLO</li>
+                    </ul>
+                </div>
+
+                <div style="margin: var(--spacing-md) 0; padding: var(--spacing-md); background: white; border-radius: 6px;">
+                    <p><strong>PASO 4: Verificar referencias si las hay (2-5 min)</strong></p>
+                    <ul>
+                        <li>Buscar en PubMed cada referencia mencionada</li>
+                        <li>Si no existe → ALERTA: posible alucinación masiva</li>
+                    </ul>
+                </div>
+
+                <div style="margin: var(--spacing-md) 0; padding: var(--spacing-md); background: white; border-radius: 6px;">
+                    <p><strong>PASO 5: Documentar (1-2 min)</strong></p>
+                    <ul>
+                        <li>Anotar fuentes consultadas</li>
+                        <li>Registrar fecha de verificación</li>
+                        <li>Decisión: ¿Usar/Modificar/Descartar?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>⚠️ Casos especiales de verificación</h2>
+            
+            <h3>Si la IA cita estudios que NO encuentras en PubMed</h3>
+            <div class="alert alert-danger">
+                <span class="alert-icon">🚨</span>
+                <div class="alert-content">
+                    <p><strong>Acción inmediata:</strong></p>
+                    <ol>
+                        <li>Descartar COMPLETAMENTE esa referencia</li>
+                        <li>Desconfiar del resto de información de esa respuesta</li>
+                        <li>Buscar información desde cero en fuentes oficiales</li>
+                        <li><strong>NO</strong> preguntar a la IA "¿estás seguro de esta referencia?" (dirá que sí)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>Si encuentras información contradictoria entre IA y ficha técnica</h3>
+            <div class="alert alert-caution">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <p><strong>Regla de oro:</strong> La ficha técnica SIEMPRE prevalece sobre IA</p>
+                    <p><strong>Excepción:</strong> Si ficha técnica es muy antigua y hay guías clínicas más recientes, priorizar guía + ficha técnica en combinación</p>
+                </div>
+            </div>
+
+            <h3>Si no tienes tiempo de verificar ahora</h3>
+            <div class="alert alert-danger">
+                <span class="alert-icon">⏰</span>
+                <div class="alert-content">
+                    <p><strong>Si no puedes verificar adecuadamente:</strong></p>
+                    <ul>
+                        <li><strong>NO uses la información de IA</strong></li>
+                        <li>Consulta directamente fuentes oficiales</li>
+                        <li>O reconoce honestamente: "Necesito verificar esto, dame X minutos"</li>
+                    </ul>
+                    <p style="margin-bottom: 0;"><strong>Nunca:</strong> "Voy a confiar en la IA porque tengo prisa" → Esto es negligencia profesional</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>✅ Autoevaluación final</h2>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="final1">
+                        <label for="final1">Conozco las 5 señales de alarma principales</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="final2">
+                        <label for="final2">Sé qué fuentes usar para verificar cada tipo de información</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="final3">
+                        <label for="final3">Puedo aplicar el protocolo de verificación en 5 pasos</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="final4">
+                        <label for="final4">Entiendo que si no tengo tiempo de verificar, NO debo usar IA</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="final5">
+                        <label for="final5">Sé que la ficha técnica SIEMPRE prevalece sobre IA</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="page-navigation">
+            <a href="prompting-farmaceutico.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Anterior</div>
+                    <div class="nav-link-title">← M3.1 - Prompting</div>
+                </div>
+            </a>
+            <a href="documentacion.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Siguiente</div>
+                    <div class="nav-link-title">M3.3 - Documentación →</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>La verificación NO es opcional. Es tu responsabilidad profesional.</strong></p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+</body>
+</html>

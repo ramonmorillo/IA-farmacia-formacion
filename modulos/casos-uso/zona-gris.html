@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2.3 - Zona Gris - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>M2.3 - Zona Gris</h1>
+            <p class="subtitle">Casos ambiguos que requieren criterio profesional</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="permitidos.html">Casos de Uso</a>
+                <span>›</span>
+                <span>Zona Gris</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos</h2>
+            <ul>
+                <li>Identificar situaciones ambiguas donde no hay respuesta simple</li>
+                <li>Aplicar un árbol de decisión para evaluar cada caso</li>
+                <li>Desarrollar criterio profesional para navegar la complejidad</li>
+                <li>Conocer el nivel de verificación requerido en cada escenario</li>
+            </ul>
+            <p><span class="badge badge-caution">Nivel: Intermedio</span> <span class="badge badge-info">Tiempo: 25 min</span></p>
+        </section>
+
+        <div class="alert alert-caution">
+            <span class="alert-icon">⚠️</span>
+            <div class="alert-content">
+                <p><strong>¿Qué es la "zona gris"?</strong></p>
+                <p>Son situaciones donde la IA <strong>podría</strong> ser útil, pero requieren <strong>máxima precaución y verificación</strong>. 
+                No son claramente "permitidas" ni "prohibidas" - dependen del contexto, el riesgo y tu capacidad de verificar.</p>
+                <p><strong>Principio rector:</strong> En la duda, más verificación. Si no puedes verificar adecuadamente, no uses IA.</p>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <h2>🌳 Árbol de decisión para zona gris</h2>
+            <div style="background: var(--bg-light); padding: var(--spacing-xl); border-radius: 8px; border: 2px solid var(--yellow-caution);">
+                <h3 style="color: var(--primary-blue-dark);">Pregúntate en este orden:</h3>
+                
+                <div style="margin: var(--spacing-md) 0; padding-left: var(--spacing-lg); border-left: 4px solid var(--primary-blue);">
+                    <p><strong>1. ¿Hay datos de pacientes reales involucrados?</strong></p>
+                    <p style="margin-left: var(--spacing-md);">
+                        → SI SÍ: <span style="color: var(--red-danger); font-weight: bold;">NO USAR (prohibido)</span><br>
+                        → SI NO: Continúa a pregunta 2
+                    </p>
+                </div>
+
+                <div style="margin: var(--spacing-md) 0; padding-left: var(--spacing-lg); border-left: 4px solid var(--primary-blue);">
+                    <p><strong>2. ¿La decisión afecta directamente a un paciente AHORA?</strong></p>
+                    <p style="margin-left: var(--spacing-md);">
+                        → SI SÍ: Continúa a pregunta 3 (alto riesgo)<br>
+                        → SI NO: Continúa a pregunta 4 (riesgo moderado)
+                    </p>
+                </div>
+
+                <div style="margin: var(--spacing-md) 0; padding-left: var(--spacing-lg); border-left: 4px solid var(--yellow-caution);">
+                    <p><strong>3. ¿Tienes TIEMPO y CAPACIDAD de verificar AHORA con fuentes oficiales?</strong></p>
+                    <p style="margin-left: var(--spacing-md);">
+                        → SI NO: <span style="color: var(--red-danger); font-weight: bold;">NO USAR (usa fuentes oficiales directamente)</span><br>
+                        → SI SÍ: <span style="color: var(--yellow-caution); font-weight: bold;">USAR con MÁXIMA verificación</span> (zona gris alta)
+                    </p>
+                </div>
+
+                <div style="margin: var(--spacing-md) 0; padding-left: var(--spacing-lg); border-left: 4px solid var(--green-safe);">
+                    <p><strong>4. ¿Puedes documentar fuentes y razonamiento?</strong></p>
+                    <p style="margin-left: var(--spacing-md);">
+                        → SI NO: <span style="color: var(--red-danger); font-weight: bold;">NO USAR (falta trazabilidad)</span><br>
+                        → SI SÍ: <span style="color: var(--green-safe); font-weight: bold;">USAR con verificación estándar</span> (zona gris baja)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>⚠️ Caso Zona Gris 1: Revisión de interacciones farmacológicas</h2>
+            
+            <h3>Escenario</h3>
+            <p>Un médico te consulta sobre posibles interacciones entre 5 medicamentos que está considerando prescribir a un paciente con comorbilidades múltiples.</p>
+
+            <h3>¿Por qué es zona gris?</h3>
+            <ul>
+                <li>✓ <strong>No introduces datos del paciente:</strong> Solo nombres de fármacos genéricos</li>
+                <li>⚠️ <strong>Afecta decisión clínica:</strong> Pero no es inmediata, tienes tiempo de verificar</li>
+                <li>✓ <strong>Puedes verificar exhaustivamente:</strong> Bases de datos oficiales disponibles</li>
+            </ul>
+
+            <h3>Protocolo de uso seguro:</h3>
+            <div class="alert alert-caution">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 1: Consulta a IA (orientación inicial)</h4>
+                    <div class="code-example">
+                        <pre>"¿Qué interacciones farmacológicas conocidas existen entre: enalapril, atorvastatina, metformina, omeprazol y ácido acetilsalicílico? Dame solo las interacciones significativas."</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 2: Verificación OBLIGATORIA</h4>
+                    <p>Comprueba CADA interacción mencionada en:</p>
+                    <ul>
+                        <li>Micromedex</li>
+                        <li>UpToDate Lexicomp</li>
+                        <li>Bot PLUS</li>
+                        <li>Fichas técnicas oficiales</li>
+                    </ul>
+                    <p><strong>Descarta cualquier interacción que NO aparezca en bases oficiales</strong> (puede ser inventada)</p>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 3: Valoración clínica TUYA</h4>
+                    <ul>
+                        <li>Evalúa relevancia clínica con contexto del paciente</li>
+                        <li>Considera alternativas terapéuticas si hay interacciones graves</li>
+                        <li>Documenta fuentes consultadas y tu razonamiento</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">4</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 4: Comunicación al médico</h4>
+                    <p><strong>Di:</strong> "He revisado interacciones en [fuentes oficiales]. Identifico [X interacción] que requiere [monitorización/ajuste]"</p>
+                    <p><strong>NO digas:</strong> "La IA dice que hay interacción"</p>
+                </div>
+            </div>
+
+            <h3>Tiempo requerido: 15-20 minutos</h3>
+            <p>Si no tienes este tiempo → Usa directamente bases de datos oficiales sin IA</p>
+        </section>
+
+        <section class="content-card">
+            <h2>⚠️ Caso Zona Gris 2: Análisis de literatura científica</h2>
+            
+            <h3>Escenario</h3>
+            <p>Estás preparando un protocolo hospitalario sobre anticoagulación perioperatoria y necesitas revisar literatura reciente.</p>
+
+            <h3>¿Por qué es zona gris?</h3>
+            <ul>
+                <li>✓ <strong>No hay paciente inmediato:</strong> Es trabajo de investigación/protocolo</li>
+                <li>✓ <strong>Tienes tiempo de verificar:</strong> No es urgente</li>
+                <li>⚠️ <strong>Afectará decisiones futuras:</strong> El protocolo se usará con pacientes reales</li>
+                <li>⚠️ <strong>IA puede inventar referencias:</strong> Alto riesgo de alucinaciones en bibliografía</li>
+            </ul>
+
+            <h3>Protocolo de uso seguro:</h3>
+            
+            <div class="alert alert-caution">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 1: Usar IA para identificar TÉRMINOS, no referencias</h4>
+                    <div class="code-example">
+                        <pre>"¿Qué términos MeSH debería usar para buscar en PubMed sobre anticoagulación perioperatoria en cirugía cardíaca? Dame solo términos de búsqueda."</pre>
+                    </div>
+                    <p><strong>NO pidas:</strong> "Dame 10 estudios sobre este tema" (riesgo alto de inventar referencias)</p>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 2: Búsqueda en PubMed TÚ MISMO</h4>
+                    <p>Usa los términos identificados para buscar en PubMed/Cochrane</p>
+                    <p>Lee abstracts y artículos completos personalmente</p>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 3: Si IA sugiere estudios específicos → VERIFICAR en PubMed</h4>
+                    <p>Si la IA menciona "Smith et al. 2023 en NEJM sobre X":</p>
+                    <ol>
+                        <li>Buscar en PubMed ese autor, año, revista</li>
+                        <li>Si NO existe → <strong>Descartar (es inventado)</strong></li>
+                        <li>Si existe → Leer el estudio completo, no confiar en resumen de IA</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">4</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Paso 4: Declarar uso de IA si publicas</h4>
+                    <p>En metodología del protocolo: "Búsqueda bibliográfica asistida por IA para identificación de términos. Revisión y análisis crítico realizado por autores"</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>⚠️ Caso Zona Gris 3: Análisis de datos agregados (sin pacientes identificables)</h2>
+            
+            <h3>Escenario</h3>
+            <p>Tienes datos agregados de consumo de antibióticos del último trimestre en tu hospital y quieres identificar patrones para optimizar stock.</p>
+
+            <h3>¿Por qué es zona gris?</h3>
+            <ul>
+                <li>✓ <strong>Sin datos individuales:</strong> Solo totales por servicio/mes</li>
+                <li>✓ <strong>No afecta decisión clínica inmediata:</strong> Es gestión de stock</li>
+                <li>⚠️ <strong>Dependes de análisis correcto de IA:</strong> Si se equivoca, puede haber desabastecimiento</li>
+            </ul>
+
+            <h3>Protocolo de uso seguro:</h3>
+            
+            <div class="alert alert-caution">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">PERMITIDO si cumples:</h4>
+                    <ul>
+                        <li><strong>Anonimización verificada:</strong> Ningún dato permite identificar pacientes</li>
+                        <li><strong>Verificación estadística:</strong> Comprobar coherencia de resultados</li>
+                        <li><strong>Consulta con experto:</strong> Si análisis es complejo, validar con estadístico</li>
+                        <li><strong>No automatizar decisiones:</strong> Usar análisis como orientación, decidir tú</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Ejemplo de datos SEGUROS para IA:</h3>
+            <div class="code-example">
+                <pre>Consumo Q4 2024:
+- Amoxicilina/clavulánico: 15000 DDD (Oct), 16500 (Nov), 14800 (Dic)
+- Ceftriaxona: 8000 DDD (Oct), 9200 (Nov), 8500 (Dic)
+- Ciprofloxacino: 5000 DDD (Oct), 4800 (Nov), 5200 (Dic)
+
+Analiza tendencias y sugiere puntos de reorden.</pre>
+            </div>
+
+            <h3>Ejemplo de datos INSEGUROS (NO usar):</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                <p style="color: var(--red-danger);"><strong>❌ NUNCA hagas esto:</strong></p>
+                <pre>Lista de pacientes con antibiótico en UCI:
+- Paciente A (70a, varón): Meropenem día 5
+- Paciente B (65a, mujer): Vancomicina día 3...</pre>
+                <p style="color: var(--red-danger);">Esto contiene datos individuales → Prohibido</p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>⚠️ Caso Zona Gris 4: Cálculos auxiliares como doble verificación</h2>
+            
+            <h3>Escenario</h3>
+            <p>Has calculado manualmente una dosis de quimioterapia según protocolo y quieres una segunda verificación.</p>
+
+            <h3>¿Por qué es zona gris?</h3>
+            <ul>
+                <li>⚠️ <strong>Alto riesgo:</strong> Errores en quimioterapia pueden ser fatales</li>
+                <li>✓ <strong>Ya hiciste cálculo primario:</strong> IA es verificación adicional, no principal</li>
+                <li>⚠️ <strong>IA puede equivocarse en fórmulas:</strong> No es calculadora médica validada</li>
+            </ul>
+
+            <h3>Protocolo ESTRICTO:</h3>
+            
+            <div class="alert alert-danger">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Tu cálculo es el PRIMARIO</h4>
+                    <p>Calcula manualmente siguiendo protocolo hospitalario oficial</p>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">IA como verificación ADICIONAL (opcional)</h4>
+                    <p>Pide a IA que haga el cálculo (sin datos del paciente):</p>
+                    <div class="code-example">
+                        <pre>"Calcula dosis de cisplatino para SC 1.8 m², según AUC 6. Muestra paso a paso la fórmula usada."</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-danger">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Verificación con COLEGA (OBLIGATORIO)</h4>
+                    <p>Regla hospitalaria estándar: Doble verificación por dos farmacéuticos</p>
+                    <p><strong>IA NO sustituye al segundo farmacéutico</strong></p>
+                </div>
+            </div>
+
+            <div class="alert alert-danger">
+                <span class="alert-icon">4</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Si hay discrepancia</h4>
+                    <p><strong>NUNCA confíes automáticamente en IA</strong></p>
+                    <p>Si tu cálculo ≠ cálculo IA:</p>
+                    <ol>
+                        <li>Revisar TU cálculo primero</li>
+                        <li>Verificar con calculadora médica validada</li>
+                        <li>Consultar con colega</li>
+                        <li>Revisar protocolo oficial</li>
+                        <li>Si persiste duda → Consultar con oncólogo</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>📋 Niveles de verificación según riesgo</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nivel de riesgo</th>
+                            <th>Tipo de tarea</th>
+                            <th>Verificación requerida</th>
+                            <th>Tiempo mínimo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-danger">MUY ALTO</span></td>
+                            <td>Cálculo quimioterapia, dosis pediátricas críticas</td>
+                            <td>Manual + colega + calculadora validada</td>
+                            <td>15-30 min</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-danger">ALTO</span></td>
+                            <td>Interacciones críticas, decisión dispensación</td>
+                            <td>2-3 fuentes oficiales + documentar</td>
+                            <td>10-15 min</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-caution">MEDIO</span></td>
+                            <td>Información farmacológica, protocolos</td>
+                            <td>1-2 fuentes oficiales</td>
+                            <td>5-10 min</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-safe">BAJO</span></td>
+                            <td>Redacción administrativa, organización</td>
+                            <td>Revisión personal</td>
+                            <td>2-5 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>💡 Regla de oro para zona gris</h2>
+            <div style="background: var(--yellow-caution); padding: var(--spacing-xl); border-radius: 8px;">
+                <h3 style="margin-top: 0; color: var(--text-dark);">Si tienes duda, aplica el principio de precaución:</h3>
+                <p style="font-size: 1.1rem; color: var(--text-dark); margin: 0;">
+                    <strong>"¿Puedo explicar y defender mi decisión si algo sale mal, documentando que verifiqué exhaustivamente?"</strong>
+                </p>
+                <p style="margin-top: var(--spacing-md); color: var(--text-dark);">
+                    → SI SÍ: Puedes usar IA con máxima verificación<br>
+                    → SI NO: No uses IA, usa directamente fuentes oficiales
+                </p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>✅ Autoevaluación</h2>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="z1">
+                        <label for="z1">Puedo aplicar el árbol de decisión para evaluar casos ambiguos</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="z2">
+                        <label for="z2">Entiendo que zona gris = máxima verificación, no "vale todo"</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="z3">
+                        <label for="z3">Sé ajustar nivel de verificación según riesgo de la tarea</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="z4">
+                        <label for="z4">Reconozco cuándo NO tengo tiempo/capacidad de verificar adecuadamente</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="z5">
+                        <label for="z5">Puedo documentar mi proceso de verificación y razonamiento</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="page-navigation">
+            <a href="prohibidos.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Anterior</div>
+                    <div class="nav-link-title">← M2.2 - Casos Prohibidos</div>
+                </div>
+            </a>
+            <a href="../practicas/prompting-farmaceutico.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Siguiente módulo</div>
+                    <div class="nav-link-title">M3.1 - Prompting →</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>Esta herramienta es exclusivamente formativa.</strong> No sustituye formación reglada ni orientación profesional. Prohibido el uso con datos reales de pacientes.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+</body>
+</html>

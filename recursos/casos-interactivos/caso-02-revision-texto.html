@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso 02 - Revisión de Texto - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <style>
+        .scenario {
+            background: var(--bg-light);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .text-box {
+            background: white;
+            border: 2px solid var(--border-color);
+            padding: var(--spacing-md);
+            border-radius: 6px;
+            margin: var(--spacing-md) 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        
+        .error-highlight {
+            background-color: #ffebee;
+            border-left: 3px solid var(--red-danger);
+            padding: var(--spacing-sm);
+            margin: var(--spacing-sm) 0;
+        }
+        
+        .choice {
+            background: white;
+            border: 2px solid var(--border-color);
+            padding: var(--spacing-md);
+            margin: var(--spacing-sm) 0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .choice:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .choice.correct {
+            border-color: var(--green-safe);
+            background: var(--green-safe-light);
+        }
+        
+        .choice.incorrect {
+            border-color: var(--red-danger);
+            background: var(--red-danger-light);
+        }
+        
+        .feedback {
+            display: none;
+            padding: var(--spacing-md);
+            margin-top: var(--spacing-sm);
+            border-radius: 6px;
+        }
+        
+        .feedback.show {
+            display: block;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Caso Interactivo 02</h1>
+            <p class="subtitle">Revisión de Texto: Detectar errores de IA</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="../fundamentos/que-es-ia.html">Casos Interactivos</a>
+                <span>›</span>
+                <span>Caso 02</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos del caso</h2>
+            <ul>
+                <li>Desarrollar ojo crítico para detectar errores de IA</li>
+                <li>Identificar información inventada o imprecisa</li>
+                <li>Saber qué verificar y cómo</li>
+                <li>Practicar revisión sistemática de texto generado por IA</li>
+            </ul>
+            <p><span class="badge badge-caution">Dificultad: Media</span> <span class="badge badge-info">Tiempo: 15 min</span></p>
+        </section>
+
+        <div class="scenario">
+            <h3>📋 El escenario</h3>
+            <p>Has pedido a la IA que redacte un borrador de informe sobre "Interacciones del omeprazol" para incluir en un protocolo hospitalario.</p>
+            <p><strong>La IA ha generado este texto:</strong></p>
+        </div>
+
+        <div class="text-box" id="ai-text">
+El omeprazol es un inhibidor de la bomba de protones (IBP) ampliamente utilizado para el tratamiento de la enfermedad por reflujo gastroesofágico y úlceras pépticas. Es importante conocer sus interacciones farmacológicas principales:
+
+**Interacciones con anticoagulantes:**
+El omeprazol reduce significativamente la eficacia del clopidogrel al inhibir el CYP2C19, enzima necesaria para activar este antiagregante plaquetario. Según el estudio PARADIGM publicado en NEJM en 2022, pacientes que toman ambos fármacos tienen un 40% más riesgo de eventos cardiovasculares. Se recomienda usar pantoprazol como alternativa más segura.
+
+**Interacciones con antifúngicos:**
+El omeprazol disminuye la absorción del ketoconazol y el itraconazol debido a la elevación del pH gástrico. La administración conjunta puede reducir hasta un 70% los niveles plasmáticos de estos antifúngicos.
+
+**Interacciones con antivirales:**
+Según las guías de la FDA de 2023, el omeprazol está contraindicado con atazanavir y nelfinavir, ya que reduce su biodisponibilidad en un 80-90%.
+
+**Metabolismo:**
+El omeprazol se metaboliza principalmente por CYP3A4 y CYP2C19, por lo que puede interactuar con inductores e inhibidores potentes de estas enzimas.
+        </div>
+
+        <div class="content-card">
+            <h2>🔍 Tu tarea: Identificar errores</h2>
+            <p>Lee el texto y después responde las preguntas para identificar qué está mal.</p>
+        </div>
+
+        <!-- PREGUNTA 1 -->
+        <div id="question1" class="content-card">
+            <h3>Pregunta 1: El estudio "PARADIGM" en NEJM 2022</h3>
+            <p><strong>¿Qué deberías hacer primero con esta referencia?</strong></p>
+            
+            <div class="choice" onclick="selectChoice(this, 'q1', false)">
+                <strong>A)</strong> Confiar en la referencia, parece específica y creíble
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto</strong></p>
+                    <p>Las referencias muy específicas (autor, año, revista, datos) son precisamente las que más debes verificar - la IA tiende a inventarlas con formato convincente.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q1', true)">
+                <strong>B)</strong> Buscarla en PubMed inmediatamente
+                <div class="feedback">
+                    <p><strong>✓ Correcto</strong></p>
+                    <p><strong>Resultado:</strong> No existe ningún estudio "PARADIGM" en NEJM 2022 sobre omeprazol-clopidogrel.</p>
+                    <p><strong>Lo que SÍ existe:</strong> Estudios sobre esta interacción, pero no con ese nombre ni en esa revista/año.</p>
+                    <p><strong>Lección:</strong> La IA puede inventar referencias que suenan muy creíbles. SIEMPRE verifica en PubMed.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q1', false)">
+                <strong>C)</strong> Preguntarle a la IA si está segura de la referencia
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto</strong></p>
+                    <p>Preguntar a la IA si está segura NO es verificación. La IA dirá que sí con total confianza, incluso si la referencia es inventada.</p>
+                    <p><strong>La IA no "sabe" que está inventando.</strong> Predice texto probable, no verifica verdad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREGUNTA 2 -->
+        <div id="question2" class="content-card hidden">
+            <h3>Pregunta 2: "Guías FDA 2023"</h3>
+            <p><strong>¿Qué problema tiene esta afirmación?</strong></p>
+            
+            <div class="choice" onclick="selectChoice(this, 'q2', false)">
+                <strong>A)</strong> Ninguno, la FDA publica guías regularmente
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto</strong></p>
+                    <p>Aunque la FDA publica guías, la IA tiene fecha de corte de conocimiento. No puede saber qué publicó la FDA en 2023 si fue entrenada antes de esa fecha.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q2', true)">
+                <strong>B)</strong> La IA no puede conocer guías de 2023 (fecha posterior a su entrenamiento)
+                <div class="feedback">
+                    <p><strong>✓ Correcto</strong></p>
+                    <p><strong>Problema:</strong> Si la IA fue entrenada hasta principios de 2024, puede "alucinar" documentos de 2023.</p>
+                    <p><strong>Qué hacer:</strong></p>
+                    <ul>
+                        <li>Buscar en web oficial de FDA si existe ese documento</li>
+                        <li>Verificar fecha de actualización</li>
+                        <li>Si existe, leer el documento original (no confiar en resumen de IA)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q2', false)">
+                <strong>C)</strong> Las guías FDA no son fiables
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto</strong></p>
+                    <p>Las guías FDA SON fiables. El problema es que la IA puede estar inventando que existe una guía de 2023, no que las guías de FDA sean malas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREGUNTA 3 -->
+        <div id="question3" class="content-card hidden">
+            <h3>Pregunta 3: "40% más riesgo de eventos cardiovasculares"</h3>
+            <p><strong>¿Qué deberías hacer con este dato específico?</strong></p>
+            
+            <div class="choice" onclick="selectChoice(this, 'q3', false)">
+                <strong>A)</strong> Usarlo tal cual, es un dato numérico concreto
+                <div class="feedback">
+                    <p><strong>❌ Muy peligroso</strong></p>
+                    <p>Datos numéricos específicos (porcentajes, estadísticas) son especialmente peligrosos porque:</p>
+                    <ul>
+                        <li>Suenan muy precisos y creíbles</li>
+                        <li>La IA puede inventarlos</li>
+                        <li>Si los citas y son falsos, pierdes toda credibilidad</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q3', true)">
+                <strong>B)</strong> Verificarlo en estudios reales y usar dato de esos estudios, no del texto de IA
+                <div class="feedback">
+                    <p><strong>✓ Correcto</strong></p>
+                    <p><strong>Proceso correcto:</strong></p>
+                    <ol>
+                        <li>Buscar estudios reales sobre omeprazol-clopidogrel en PubMed</li>
+                        <li>Leer los estudios (especialmente meta-análisis)</li>
+                        <li>Extraer TÚ MISMO el dato del estudio</li>
+                        <li>Citar el estudio real, no mencionar que la IA te orientó</li>
+                    </ol>
+                    <p><strong>Ejemplo real:</strong> Hay estudios que muestran aumento de riesgo, pero los porcentajes varían (20-30% en algunos, más en otros). Debes usar datos de estudios específicos que cites.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q3', false)">
+                <strong>C)</strong> Redondear a "aumenta el riesgo" sin especificar porcentaje
+                <div class="feedback">
+                    <p><strong>⚠️ Mejor que A, pero no ideal</strong></p>
+                    <p>Generalizar es más seguro que inventar datos, pero en un protocolo hospitalario necesitas precisión.</p>
+                    <p><strong>Mejor:</strong> Buscar estudios reales y citar dato verificado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREGUNTA 4 -->
+        <div id="question4" class="content-card hidden">
+            <h3>Pregunta 4: "Reducción 70% niveles de ketoconazol/itraconazol"</h3>
+            <p><strong>¿Cómo verificarías este dato?</strong></p>
+            
+            <div class="choice" onclick="selectChoice(this, 'q4', true)">
+                <strong>A)</strong> Consultar fichas técnicas de omeprazol, ketoconazol e itraconazol
+                <div class="feedback">
+                    <p><strong>✓ Correcto</strong></p>
+                    <p><strong>Dónde buscar:</strong></p>
+                    <ul>
+                        <li>Ficha técnica omeprazol: Sección "Interacciones"</li>
+                        <li>Ficha técnica ketoconazol: Sección "Interacciones" + "Precauciones"</li>
+                        <li>Micromedex o UpToDate</li>
+                    </ul>
+                    <p><strong>Importante:</strong> El porcentaje exacto (70%) debe venir de estudios farmacocinéticos específicos. Las fichas técnicas pueden decir "reduce significativamente" sin dar porcentaje exacto.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q4', false)">
+                <strong>B)</strong> Aceptarlo porque el mecanismo (pH gástrico) tiene sentido
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto</strong></p>
+                    <p>Que el MECANISMO sea correcto (pH gástrico afecta absorción) NO significa que el PORCENTAJE sea correcto.</p>
+                    <p>La IA puede combinar:</p>
+                    <ul>
+                        <li>Mecanismo real (correcto)</li>
+                        <li>Porcentaje inventado (incorrecto)</li>
+                    </ul>
+                    <p>Resultado: Texto que suena creíble pero tiene datos falsos.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q4', false)">
+                <strong>C)</strong> Buscar "omeprazol ketoconazol 70%" en Google
+                <div class="feedback">
+                    <p><strong>⚠️ Riesgo moderado</strong></p>
+                    <p>Google puede encontrar:</p>
+                    <ul>
+                        <li>Estudios reales (bien)</li>
+                        <li>Otros textos generados por IA con el mismo error (mal)</li>
+                        <li>Páginas no oficiales (dudosas)</li>
+                    </ul>
+                    <p><strong>Mejor:</strong> Ir directo a fuentes oficiales (fichas técnicas, PubMed)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PREGUNTA 5 -->
+        <div id="question5" class="content-card hidden">
+            <h3>Pregunta 5: Metabolismo "principalmente CYP3A4 y CYP2C19"</h3>
+            <p><strong>¿Este dato es correcto?</strong></p>
+            
+            <div class="choice" onclick="selectChoice(this, 'q5', false)">
+                <strong>A)</strong> Sí, la IA sabe farmacocinética
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto - y peligroso</strong></p>
+                    <p>La IA NO "sabe" farmacocinética en el sentido humano. Predice texto probable basándose en patrones.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q5', true)">
+                <strong>B)</strong> Necesito verificarlo en ficha técnica, puede estar al revés
+                <div class="feedback">
+                    <p><strong>✓ Correcto</strong></p>
+                    <p><strong>Dato REAL (de ficha técnica):</strong></p>
+                    <p>Omeprazol se metaboliza <strong>principalmente por CYP2C19</strong> y secundariamente por CYP3A4.</p>
+                    <p><strong>La IA lo puso al REVÉS.</strong></p>
+                    <p><strong>¿Por qué ocurre?</strong> La IA "vio" muchos textos mencionando ambas enzimas juntas, pero mezcló el orden de importancia.</p>
+                    <p><strong>Lección CRÍTICA:</strong> Datos que "suenan bien" pueden estar sutilmente incorrectos. SIEMPRE verifica con ficha técnica.</p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 'q5', false)">
+                <strong>C)</strong> Es correcto si varios IBPs comparten metabolismo
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto</strong></p>
+                    <p>Cada IBP tiene perfil farmacocinético específico:</p>
+                    <ul>
+                        <li>Omeprazol: Principalmente CYP2C19</li>
+                        <li>Pantoprazol: Menos dependiente de CYP2C19</li>
+                        <li>Lansoprazol: Similar a omeprazol</li>
+                    </ul>
+                    <p>NO asumas que "IBPs" comparten todo - verifica cada fármaco individualmente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTADOS FINALES -->
+        <div id="results" class="content-card hidden">
+            <h2>📊 Resultados</h2>
+            <p id="score"></p>
+            
+            <h3>Resumen de errores detectados en el texto de IA:</h3>
+            <div class="error-highlight">
+                <p><strong>❌ Error 1:</strong> Estudio "PARADIGM" en NEJM 2022 - NO EXISTE (referencia inventada)</p>
+            </div>
+            <div class="error-highlight">
+                <p><strong>❌ Error 2:</strong> "Guías FDA 2023" - Fecha posterior a conocimiento de IA (posible alucinación)</p>
+            </div>
+            <div class="error-highlight">
+                <p><strong>❌ Error 3:</strong> "40% más riesgo" - Dato numérico sin fuente verificable</p>
+            </div>
+            <div class="error-highlight">
+                <p><strong>❌ Error 4:</strong> "70% reducción" - Porcentaje específico no verificado</p>
+            </div>
+            <div class="error-highlight">
+                <p><strong>❌ Error 5:</strong> Metabolismo "principalmente CYP3A4" - AL REVÉS (es CYP2C19 principalmente)</p>
+            </div>
+
+            <h3>Lecciones clave:</h3>
+            <ul>
+                <li><strong>Referencias específicas:</strong> Las más probables de ser inventadas → Verificar SIEMPRE en PubMed</li>
+                <li><strong>Datos numéricos:</strong> Porcentajes, estadísticas → Buscar en estudios originales</li>
+                <li><strong>Fechas recientes:</strong> Posteriores a conocimiento de IA → Alta probabilidad de alucinación</li>
+                <li><strong>Datos sutiles:</strong> Orden de enzimas, matices → Verificar con ficha técnica</li>
+                <li><strong>Mecanismos correctos ≠ Datos correctos:</strong> La IA puede mezclar verdades con invenciones</li>
+            </ul>
+
+            <h3>✅ Protocolo de revisión de textos de IA:</h3>
+            <ol>
+                <li><strong>Referencias:</strong> Buscar CADA una en PubMed</li>
+                <li><strong>Datos numéricos:</strong> Verificar en estudios originales</li>
+                <li><strong>Información farmacológica:</strong> Contrastar con ficha técnica</li>
+                <li><strong>Guías/normativas:</strong> Verificar en web oficial del organismo</li>
+                <li><strong>Si hay duda:</strong> Descarta y busca información tú mismo</li>
+            </ol>
+
+            <div class="alert alert-danger">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <p><strong>Recuerda:</strong></p>
+                    <p>Un texto de IA puede tener 80% correcto y 20% inventado. Ese 20% puede ser crítico. 
+                    Por eso NUNCA uses texto de IA sin verificar completamente, especialmente en protocolos clínicos.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>Desarrolla ojo crítico.</strong> La IA puede mezclar verdad con invención de forma convincente.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta">Caso formativo para practicar revisión crítica de contenido generado por IA.</p>
+        </div>
+    </footer>
+
+    <script>
+        let score = 0;
+        let currentQuestion = 1;
+
+        function selectChoice(element, questionId, isCorrect) {
+            // Marcar opción seleccionada
+            const choices = element.parentElement.querySelectorAll('.choice');
+            choices.forEach(c => {
+                c.classList.remove('correct', 'incorrect');
+                const feedback = c.querySelector('.feedback');
+                if (feedback) feedback.classList.remove('show');
+            });
+
+            element.classList.add(isCorrect ? 'correct' : 'incorrect');
+            const feedback = element.querySelector('.feedback');
+            if (feedback) feedback.classList.add('show');
+
+            if (isCorrect) score++;
+
+            // Mostrar siguiente pregunta después de 2 segundos
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion <= 5) {
+                    document.getElementById('question' + currentQuestion).classList.remove('hidden');
+                } else {
+                    showResults();
+                }
+            }, 2000);
+        }
+
+        function showResults() {
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('score').innerHTML = `<strong>Tu puntuación: ${score}/5</strong><br>` +
+                (score === 5 ? '🏆 ¡Perfecto! Tienes muy buen ojo crítico.' : 
+                 score >= 3 ? '👍 Bien. Sigue practicando la verificación sistemática.' :
+                 '⚠️ Necesitas ser más crítico con contenido de IA. Repasa las lecciones.');
+            
+            window.scrollTo({ top: document.getElementById('results').offsetTop - 100, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

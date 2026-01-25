@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso 03 - Análisis de Datos - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <style>
+        .scenario {
+            background: var(--bg-light);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            border-left: 4px solid var(--primary-blue);
+        }
+        
+        .data-table {
+            overflow-x: auto;
+            margin: var(--spacing-md) 0;
+        }
+        
+        .choice {
+            background: white;
+            border: 2px solid var(--border-color);
+            padding: var(--spacing-md);
+            margin: var(--spacing-sm) 0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .choice:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .choice.correct {
+            border-color: var(--green-safe);
+            background: var(--green-safe-light);
+        }
+        
+        .choice.incorrect {
+            border-color: var(--red-danger);
+            background: var(--red-danger-light);
+        }
+        
+        .feedback {
+            display: none;
+            padding: var(--spacing-md);
+            margin-top: var(--spacing-sm);
+            border-radius: 6px;
+        }
+        
+        .feedback.show {
+            display: block;
+        }
+        
+        .hidden {
+            display: none;
+        }
+
+        .step {
+            background: white;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Caso Interactivo 03</h1>
+            <p class="subtitle">Análisis de Datos: Usar IA de forma segura con datos agregados</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="../fundamentos/que-es-ia.html">Casos Interactivos</a>
+                <span>›</span>
+                <span>Caso 03</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos del caso</h2>
+            <ul>
+                <li>Distinguir datos individuales vs. agregados</li>
+                <li>Usar IA de forma segura para analizar tendencias</li>
+                <li>Verificar cálculos y conclusiones de IA</li>
+                <li>Mantener cumplimiento RGPD en análisis</li>
+            </ul>
+            <p><span class="badge badge-caution">Dificultad: Media</span> <span class="badge badge-info">Tiempo: 20 min</span></p>
+        </section>
+
+        <div class="scenario">
+            <h3>📋 El escenario</h3>
+            <p>Eres farmacéutico hospitalario. Tu jefe te pide preparar informe mensual sobre consumo de antibióticos en el hospital para presentar en comisión de farmacia.</p>
+            
+            <p><strong>Tienes:</strong></p>
+            <ul>
+                <li>Archivo Excel exportado del sistema del hospital</li>
+                <li>Datos AGREGADOS por servicio (sin pacientes individuales)</li>
+                <li>Necesitas identificar tendencias y alertas</li>
+                <li>La presentación es en 2 días</li>
+            </ul>
+        </div>
+
+        <!-- DECISIÓN INICIAL -->
+        <div id="step1" class="step">
+            <h2>📊 Paso 1: Preparación de datos</h2>
+            
+            <p><strong>Tus datos (muestra):</strong></p>
+            <div class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Antibiótico</th>
+                            <th>DDD Oct-24</th>
+                            <th>DDD Sep-24</th>
+                            <th>Coste €</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>UCI</td><td>Meropenem</td><td>450</td><td>380</td><td>4.200€</td></tr>
+                        <tr><td>UCI</td><td>Colistina</td><td>85</td><td>55</td><td>890€</td></tr>
+                        <tr><td>Cirugía</td><td>Cefazolina</td><td>1200</td><td>1150</td><td>340€</td></tr>
+                        <tr><td>Medicina Interna</td><td>Levofloxacino</td><td>680</td><td>720</td><td>520€</td></tr>
+                        <tr><td>Pediatría</td><td>Amoxicilina-clav</td><td>340</td><td>310</td><td>180€</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Primera decisión crítica:</h3>
+            <p><strong>¿Puedes usar IA con estos datos?</strong></p>
+            
+            <div class="choice" onclick="selectChoice(this, 1, false)">
+                <strong>A)</strong> No, porque son datos del hospital (confidenciales)
+                <div class="feedback">
+                    <p><strong>❌ Incorrecto</strong></p>
+                    <p>Los datos SÍ son del hospital, pero están <strong>AGREGADOS</strong> (sin identificación de pacientes).</p>
+                    <p><strong>Diferencia clave:</strong></p>
+                    <ul>
+                        <li>❌ "Paciente 12345, 65 años, UCI, recibió meropenem" → Dato individual, NO usar en IA</li>
+                        <li>✓ "UCI consumió 450 DDD de meropenem" → Dato agregado, SÍ permitido</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 1, true)">
+                <strong>B)</strong> Sí, porque son datos AGREGADOS (no hay pacientes individuales)
+                <div class="feedback">
+                    <p><strong>✓ Correcto</strong></p>
+                    <p><strong>Por qué es seguro:</strong></p>
+                    <ul>
+                        <li>No hay nombres de pacientes</li>
+                        <li>No hay historias clínicas</li>
+                        <li>Son totales por servicio (imposible identificar individuos)</li>
+                        <li>Cumple RGPD Art. 9 (no son "datos de salud" de personas identificables)</li>
+                    </ul>
+                    <p><strong>Precaución igualmente:</strong> Verifica política de tu hospital sobre compartir datos externos, aunque sean agregados.</p>
+                    <button onclick="showStep(2)">Continuar →</button>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 1, false)">
+                <strong>C)</strong> Sí, pero solo después de anonimizar más (eliminar nombres de servicios)
+                <div class="feedback">
+                    <p><strong>⚠️ Innecesario (pero no incorrecto)</strong></p>
+                    <p>Los nombres de servicios (UCI, Cirugía) NO son datos personales. Ya están suficientemente agregados.</p>
+                    <p><strong>Anonimizar más</strong> ("Servicio A", "Servicio B") añade complejidad sin beneficio real de privacidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PASO 2: ANÁLISIS CON IA -->
+        <div id="step2" class="step hidden">
+            <h2>🤖 Paso 2: Análisis con IA</h2>
+            
+            <p>Decides usar IA para acelerar análisis. Le pasas los datos y pides:</p>
+            
+            <div style="background: var(--bg-light); padding: var(--spacing-md); border-radius: 6px; margin: var(--spacing-md) 0;">
+                <p><strong>Tu prompt:</strong></p>
+                <p style="font-family: monospace;">"Analiza estos datos de consumo de antibióticos. Dame: 1) Top 5 más consumidos, 2) Aumentos >20% vs mes anterior, 3) Antibióticos de reserva con tendencia al alza"</p>
+            </div>
+
+            <p><strong>La IA responde:</strong></p>
+            <div style="background: white; border: 2px solid var(--border-color); padding: var(--spacing-md); border-radius: 6px; margin: var(--spacing-md) 0;">
+                <p><strong>Top 5 antibióticos más consumidos (DDD):</strong></p>
+                <ol>
+                    <li>Cefazolina - 1200 DDD</li>
+                    <li>Levofloxacino - 680 DDD</li>
+                    <li>Meropenem - 450 DDD</li>
+                    <li>Amoxicilina-clavulánico - 340 DDD</li>
+                    <li>Colistina - 85 DDD</li>
+                </ol>
+                
+                <p><strong>Aumentos >20% vs. mes anterior:</strong></p>
+                <ul>
+                    <li>Meropenem: +18.4% (de 380 a 450 DDD)</li>
+                    <li>Colistina: +54.5% (de 55 a 85 DDD) ⚠️</li>
+                </ul>
+                
+                <p><strong>Antibióticos de reserva (carbapenems, colistina):</strong></p>
+                <ul>
+                    <li>Meropenem: Tendencia al alza (+18.4%)</li>
+                    <li>Colistina: Aumento significativo (+54.5%) - ALERTA</li>
+                </ul>
+            </div>
+
+            <h3>¿Qué debes hacer ANTES de usar esto en tu informe?</h3>
+            
+            <div class="choice" onclick="selectChoice(this, 2, false)">
+                <strong>A)</strong> Usarlo directamente, los cálculos parecen correctos
+                <div class="feedback">
+                    <p><strong>❌ Peligroso</strong></p>
+                    <p>Aunque los cálculos PAREZCAN correctos, debes verificarlos. La IA puede:</p>
+                    <ul>
+                        <li>Redondear mal</li>
+                        <li>Confundir orden (mayor a menor)</li>
+                        <li>Calcular porcentajes incorrectamente</li>
+                        <li>Clasificar mal (¿colistina es top 5 si solo hay 5 antibióticos en la muestra?)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 2, true)">
+                <strong>B)</strong> Verificar los cálculos manualmente o con Excel
+                <div class="feedback">
+                    <p><strong>✓ Correcto</strong></p>
+                    <p><strong>Verificaciones obligatorias:</strong></p>
+                    <ol>
+                        <li><strong>Top 5:</strong> ¿Están ordenados correctamente? (Sí)</li>
+                        <li><strong>Porcentaje meropenem:</strong> (450-380)/380 = 18.4% ✓</li>
+                        <li><strong>Porcentaje colistina:</strong> (85-55)/55 = 54.5% ✓</li>
+                        <li><strong>Clasificación reserva:</strong> ¿Meropenem y colistina son realmente de reserva? (Sí, verificar con protocolo hospital)</li>
+                    </ol>
+                    <p><strong>Tiempo:</strong> 5 minutos verificando vs. potencial error grave en presentación</p>
+                    <button onclick="showStep(3)">Continuar →</button>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 2, false)">
+                <strong>C)</strong> Pedirle a la IA que verifique sus propios cálculos
+                <div class="feedback">
+                    <p><strong>❌ Inútil</strong></p>
+                    <p>La IA no "verifica" en el sentido humano. Si hizo un error, probablemente lo repetirá.</p>
+                    <p><strong>Analogía:</strong> Es como pedirle a alguien que se corrija a sí mismo sin mostrarle dónde falló.</p>
+                    <p><strong>Solución:</strong> TÚ verificas con herramienta independiente (Excel, calculadora).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PASO 3: INTERPRETACIÓN -->
+        <div id="step3" class="step hidden">
+            <h2>💡 Paso 3: Interpretación de resultados</h2>
+            
+            <p>Has verificado que los cálculos de IA son correctos. Ahora necesitas interpretar:</p>
+            
+            <div style="background: var(--yellow-caution-light); padding: var(--spacing-md); border-radius: 6px; border-left: 4px solid var(--yellow-caution);">
+                <p><strong>Hallazgo preocupante:</strong></p>
+                <p>Colistina aumentó 54.5% en un mes (de 55 a 85 DDD en UCI)</p>
+            </div>
+
+            <h3>¿Cómo interpretas este dato?</h3>
+            
+            <div class="choice" onclick="selectChoice(this, 3, false)">
+                <strong>A)</strong> Pregunto a la IA qué significa este aumento
+                <div class="feedback">
+                    <p><strong>❌ Mal enfoque</strong></p>
+                    <p>La IA puede darte explicaciones genéricas ("podría indicar resistencias..."), pero:</p>
+                    <ul>
+                        <li>NO conoce la situación de TU hospital</li>
+                        <li>NO sabe si hubo brote, cambio protocolo, más ingresos UCI</li>
+                        <li>NO puede contextualizar el dato</li>
+                    </ul>
+                    <p><strong>La interpretación clínica es EXCLUSIVAMENTE humana.</strong></p>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 3, true)">
+                <strong>B)</strong> Contacto con UCI para entender el contexto antes de sacar conclusiones
+                <div class="feedback">
+                    <p><strong>✓ Correcto - Enfoque profesional</strong></p>
+                    <p><strong>Preguntas clave a UCI:</strong></p>
+                    <ul>
+                        <li>¿Hubo más ingresos en octubre?</li>
+                        <li>¿Algún brote de multirresistentes?</li>
+                        <li>¿Cambio en protocolo empírico?</li>
+                        <li>¿Casos complejos específicos?</li>
+                    </ul>
+                    <p><strong>Posibles hallazgos:</strong></p>
+                    <ul>
+                        <li>Caso: "Tuvimos 2 pacientes con Acinetobacter MDR → Justifica aumento"</li>
+                        <li>Caso: "No hubo nada especial → Alerta real, revisar uso"</li>
+                    </ul>
+                    <p><strong>La IA dio el DATO, TÚ das el SIGNIFICADO.</strong></p>
+                    <button onclick="showStep(4)">Continuar →</button>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 3, false)">
+                <strong>C)</strong> Lo marco como alerta automáticamente en el informe
+                <div class="feedback">
+                    <p><strong>⚠️ Prematuro</strong></p>
+                    <p>Un aumento del 54% PARECE alarmante, pero podría ser:</p>
+                    <ul>
+                        <li>Números absolutos pequeños (30 DDD de diferencia en todo el mes para todo el servicio)</li>
+                        <li>Casos justificados (2 pacientes graves)</li>
+                        <li>Variabilidad normal (UCI tiene casos muy variables)</li>
+                    </ul>
+                    <p><strong>Mejor:</strong> Investiga contexto antes de etiquetar como "alerta".</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PASO 4: PRESENTACIÓN -->
+        <div id="step4" class="step hidden">
+            <h2>📊 Paso 4: Preparar presentación</h2>
+            
+            <p>Tras contactar con UCI, descubres que hubo 2 pacientes con Acinetobacter MDR que requirieron colistina. El aumento está justificado.</p>
+
+            <h3>¿Cómo presentas esto en comisión?</h3>
+            
+            <div class="choice" onclick="selectChoice(this, 4, false)">
+                <strong>A)</strong> "La IA detectó aumento del 54% en colistina"
+                <div class="feedback">
+                    <p><strong>❌ Mal - Atribuyes protagonismo a IA</strong></p>
+                    <p><strong>Problemas:</strong></p>
+                    <ul>
+                        <li>La IA solo hizo cálculo aritmético</li>
+                        <li>TÚ verificaste, investigaste, interpretaste</li>
+                        <li>Mencionar IA en comisión es innecesario y confuso</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 4, true)">
+                <strong>B)</strong> "Colistina aumentó 54% (85 vs 55 DDD). Causa: 2 casos Acinetobacter MDR en UCI confirmados por Dr. X. Uso apropiado."
+                <div class="feedback">
+                    <p><strong>✓ Perfecto - Presentación profesional</strong></p>
+                    <p><strong>Por qué es correcto:</strong></p>
+                    <ul>
+                        <li>✓ Datos verificados (cálculo correcto)</li>
+                        <li>✓ Contexto investigado (contactaste UCI)</li>
+                        <li>✓ Fuente validada (Dr. X confirmó)</li>
+                        <li>✓ Conclusión profesional (uso apropiado)</li>
+                        <li>✓ Sin mencionar IA (innecesario, la herramienta no es relevante)</li>
+                    </ul>
+                    <p><strong>La comisión ve:</strong> Análisis farmacéutico riguroso, no "lo hizo la IA".</p>
+                    <button onclick="showResults()">Ver resumen →</button>
+                </div>
+            </div>
+            
+            <div class="choice" onclick="selectChoice(this, 4, false)">
+                <strong>C)</strong> "Detectamos aumento, pero está justificado por casos MDR"
+                <div class="feedback">
+                    <p><strong>⚠️ Incompleto</strong></p>
+                    <p>Falta información cuantitativa:</p>
+                    <ul>
+                        <li>¿Cuánto aumentó? (54% es impactante)</li>
+                        <li>¿Cuántos casos? (2 pacientes)</li>
+                        <li>¿Quién confirmó? (Dr. X de UCI)</li>
+                    </ul>
+                    <p><strong>La comisión espera datos concretos, no generalidades.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div id="results" class="content-card hidden">
+            <h2>📊 Resumen del caso</h2>
+            
+            <h3>✅ Lo que hiciste bien (flujo correcto):</h3>
+            <ol>
+                <li><strong>Verificaste legalidad:</strong> Datos agregados → OK para IA</li>
+                <li><strong>Usaste IA apropiadamente:</strong> Cálculos aritméticos, tendencias</li>
+                <li><strong>Verificaste resultados:</strong> Recalculaste porcentajes manualmente</li>
+                <li><strong>Investigaste contexto:</strong> Contactaste UCI para entender el "por qué"</li>
+                <li><strong>Presentaste profesionalmente:</strong> Datos + contexto + conclusión, sin mencionar IA</li>
+            </ol>
+
+            <h3>🎯 Lecciones clave:</h3>
+            
+            <div style="background: var(--green-safe-light); padding: var(--spacing-md); border-radius: 8px; margin: var(--spacing-md) 0;">
+                <h4>✓ Datos agregados son seguros para IA</h4>
+                <ul>
+                    <li>Sin nombres de pacientes → OK</li>
+                    <li>Totales por servicio/mes → OK</li>
+                    <li>Imposible identificar individuos → OK</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--primary-blue-light); padding: var(--spacing-md); border-radius: 8px; margin: var(--spacing-md) 0;">
+                <h4>🔍 Siempre verifica cálculos de IA</h4>
+                <ul>
+                    <li>Porcentajes: Recalcula con calculadora</li>
+                    <li>Ordenamientos: Verifica que el top 5 es correcto</li>
+                    <li>Clasificaciones: Confirma categorías (¿es realmente "reserva"?)</li>
+                </ul>
+                <p><strong>Tiempo:</strong> 5 minutos → Evita error en presentación oficial</p>
+            </div>
+
+            <div style="background: var(--yellow-caution-light); padding: var(--spacing-md); border-radius: 8px; margin: var(--spacing-md) 0;">
+                <h4>💡 Interpretación = HUMANA</h4>
+                <ul>
+                    <li>IA da datos/tendencias</li>
+                    <li>TÚ investigas contexto</li>
+                    <li>TÚ sacas conclusiones</li>
+                    <li>TÚ decides acciones</li>
+                </ul>
+                <p><strong>IA = Calculadora avanzada, NO analista clínico</strong></p>
+            </div>
+
+            <div style="background: var(--bg-light); padding: var(--spacing-md); border-radius: 8px; margin: var(--spacing-md) 0;">
+                <h4>📝 Presentación profesional</h4>
+                <ul>
+                    <li>Menciona datos verificados</li>
+                    <li>Explica contexto investigado</li>
+                    <li>Da conclusión fundamentada</li>
+                    <li>NO menciones IA (herramienta interna, no relevante para audiencia)</li>
+                </ul>
+            </div>
+
+            <h3>⚠️ Errores a evitar:</h3>
+            <ul>
+                <li>❌ Usar datos INDIVIDUALES de pacientes en IA</li>
+                <li>❌ Confiar en cálculos sin verificar</li>
+                <li>❌ Dejar que IA "interprete" resultados clínicos</li>
+                <li>❌ Atribuir análisis a IA ("la IA detectó...")</li>
+                <li>❌ Sacar conclusiones sin investigar contexto</li>
+            </ul>
+
+            <h3>✅ Checklist para análisis de datos con IA:</h3>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="check1" checked>
+                        <label for="check1">Los datos están AGREGADOS (sin pacientes individuales)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="check2" checked>
+                        <label for="check2">He verificado cálculos de IA manualmente</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="check3" checked>
+                        <label for="check3">He investigado contexto de hallazgos importantes</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="check4" checked>
+                        <label for="check4">La interpretación y conclusiones son MÍAS, no de IA</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="check5" checked>
+                        <label for="check5">Puedo defender cada conclusión con datos + contexto</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>IA calcula, TÚ interpretas.</strong> Los datos agregados son seguros, pero la conclusión es profesional.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta">Caso formativo sobre uso seguro de IA en análisis de datos farmacéuticos.</p>
+        </div>
+    </footer>
+
+    <script>
+        function selectChoice(element, step, isCorrect) {
+            const choices = element.parentElement.querySelectorAll('.choice');
+            choices.forEach(c => {
+                c.classList.remove('correct', 'incorrect');
+                const feedback = c.querySelector('.feedback');
+                if (feedback) feedback.classList.remove('show');
+            });
+
+            element.classList.add(isCorrect ? 'correct' : 'incorrect');
+            const feedback = element.querySelector('.feedback');
+            if (feedback) feedback.classList.add('show');
+        }
+
+        function showStep(stepNumber) {
+            document.getElementById('step' + stepNumber).classList.remove('hidden');
+            window.scrollTo({ 
+                top: document.getElementById('step' + stepNumber).offsetTop - 100, 
+                behavior: 'smooth' 
+            });
+        }
+
+        function showResults() {
+            document.getElementById('results').classList.remove('hidden');
+            window.scrollTo({ 
+                top: document.getElementById('results').offsetTop - 100, 
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+</body>
+</html>

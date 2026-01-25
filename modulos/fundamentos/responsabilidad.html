@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1.3 - Responsabilidad Profesional - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>M1.3 - Responsabilidad Profesional</h1>
+            <p class="subtitle">Marco ético y legal del uso de IA en farmacia</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="que-es-ia.html">Fundamentos</a>
+                <span>›</span>
+                <span>Responsabilidad Profesional</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos de aprendizaje</h2>
+            <ul>
+                <li>Entender que la responsabilidad profesional NO se delega a la IA</li>
+                <li>Conocer el marco deontológico farmacéutico aplicado al uso de IA</li>
+                <li>Identificar implicaciones legales (RGPD, responsabilidad civil)</li>
+                <li>Aplicar principios éticos en decisiones con apoyo de IA</li>
+            </ul>
+            <p><span class="badge badge-danger">Módulo crítico</span> <span class="badge badge-info">Tiempo: 15 min</span></p>
+        </section>
+
+        <section class="content-card">
+            <h2>⚖️ Principio fundamental</h2>
+            <div style="background: linear-gradient(to right, var(--red-danger-light), var(--yellow-caution-light)); padding: var(--spacing-xl); border-radius: 8px; border-left: 6px solid var(--red-danger);">
+                <h3 style="color: var(--red-danger); margin-top: 0; font-size: 1.5rem;">La IA NO es responsable de nada. TÚ SÍ.</h3>
+                <p style="font-size: 1.1rem; color: var(--text-dark); margin-bottom: 0;">
+                    Independientemente de qué herramienta uses, <strong>tú eres legalmente responsable</strong> de cualquier decisión, 
+                    recomendación o acción que afecte a un paciente. La IA es una herramienta; la responsabilidad es siempre del profesional.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>📜 Marco deontológico farmacéutico</h2>
+            <p>El Código Deontológico de los Farmacéuticos Españoles establece principios que aplican al uso de IA:</p>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Principio de beneficencia</h4>
+                    <p><strong>Artículo 8:</strong> "El farmacéutico tiene el deber de actuar en beneficio del paciente"</p>
+                    <p><strong>Aplicación a IA:</strong></p>
+                    <ul>
+                        <li>Usar IA solo si beneficia al paciente (ahorro de tiempo, reducción de errores administrativos)</li>
+                        <li>No usar IA si introduce riesgo adicional (falta de verificación, información no contrastada)</li>
+                        <li>El beneficio para el farmacéutico (comodidad) NO justifica riesgo para el paciente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Principio de no maleficencia</h4>
+                    <p><strong>"Primum non nocere" - Ante todo, no hacer daño</strong></p>
+                    <p><strong>Aplicación a IA:</strong></p>
+                    <ul>
+                        <li>Si no puedes verificar la información de IA → NO LA USES</li>
+                        <li>Si tienes duda sobre la exactitud → Consulta fuentes oficiales primero</li>
+                        <li>Nunca tomes una decisión clínica basada solo en IA sin verificar</li>
+                        <li>En caso de duda, actúa según tu criterio profesional sin IA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Principio de autonomía del paciente</h4>
+                    <p><strong>Artículo 12:</strong> "Respetar la autonomía del paciente y su derecho a la información"</p>
+                    <p><strong>Aplicación a IA:</strong></p>
+                    <ul>
+                        <li>Si usas IA para preparar información al paciente, VERIFICA la exactitud</li>
+                        <li>El paciente tiene derecho a saber si usas IA en su atención (transparencia)</li>
+                        <li>La decisión final sobre su tratamiento es del paciente con información correcta</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">4</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Principio de confidencialidad</h4>
+                    <p><strong>Artículo 35:</strong> "Secreto profesional y protección de datos"</p>
+                    <p><strong>Aplicación a IA:</strong></p>
+                    <ul>
+                        <li><strong>NUNCA</strong> introducir datos de pacientes en IA pública</li>
+                        <li>Incluso datos "anonimizados" pueden ser reidentificables</li>
+                        <li>Violación de secreto profesional → Responsabilidad penal</li>
+                        <li>Cumplimiento estricto del RGPD (ver siguiente sección)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>🔒 RGPD y datos de salud (Art. 9)</h2>
+            
+            <div class="alert alert-danger">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Los datos de salud son categoría especial</h4>
+                    <p><strong>Artículo 9 RGPD:</strong> "Quedan prohibidos el tratamiento de datos personales que revelen [...] datos relativos a la salud"</p>
+                    <p><strong>Lo que significa para ti:</strong></p>
+                    <ul>
+                        <li>Datos de salud tienen <strong>protección reforzada</strong></li>
+                        <li>Requieren <strong>base legal específica</strong> para procesarlos</li>
+                        <li>Introducir datos de pacientes en IA pública = <strong>transferencia internacional no autorizada</strong></li>
+                        <li>Posibles sanciones: Hasta 20 millones € o 4% facturación anual (Art. 83 RGPD)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">ℹ️</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">¿Qué son "datos de salud"?</h4>
+                    <p>Según el RGPD, datos de salud incluyen:</p>
+                    <ul>
+                        <li>Información sobre el estado de salud físico o mental de una persona</li>
+                        <li>Medicamentos prescritos o dispensados</li>
+                        <li>Resultados de analíticas o pruebas diagnósticas</li>
+                        <li>Historial médico o farmacoterapéutico</li>
+                        <li><strong>Cualquier dato que pueda identificar a una persona + información sanitaria</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Casos prácticos RGPD:</h3>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md); margin-top: var(--spacing-md);">
+                <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                    <p><strong>❌ VIOLACIÓN RGPD:</strong></p>
+                    <p>"Copiar receta de un paciente con nombre, DNI y medicación en IA para comprobar interacciones"</p>
+                    <p><strong>Consecuencia:</strong> Infracción muy grave + responsabilidad disciplinaria + posible sanción económica</p>
+                </div>
+
+                <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                    <p><strong>❌ VIOLACIÓN RGPD:</strong></p>
+                    <p>"Subir lista de pacientes con diabetes del centro de salud para análisis de adherencia"</p>
+                    <p><strong>Consecuencia:</strong> Transferencia internacional no autorizada de categoría especial</p>
+                </div>
+
+                <div style="background: var(--green-safe-light); padding: var(--spacing-md); border-radius: 8px;">
+                    <p><strong>✓ CORRECTO:</strong></p>
+                    <p>"Usar datos agregados (sin identificación): 'Tengo 50 pacientes diabéticos, ¿qué indicadores debería monitorizar?'"</p>
+                    <p><strong>Justificación:</strong> Sin datos personales, solo estadísticas generales</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>⚖️ Responsabilidad civil y penal</h2>
+
+            <h3>Responsabilidad civil</h3>
+            <div class="alert alert-caution">
+                <span class="alert-icon">⚖️</span>
+                <div class="alert-content">
+                    <p><strong>Escenario:</strong> Un farmacéutico usa IA para calcular una dosis de medicamento pediátrico. La IA comete un error. El farmacéutico no verifica. El niño sufre una reacción adversa grave.</p>
+                    <p><strong>¿Quién es responsable?</strong></p>
+                    <p style="color: var(--red-danger); font-weight: bold;">El FARMACÉUTICO. No la IA, no el fabricante del software.</p>
+                    <p><strong>¿Por qué?</strong></p>
+                    <ul>
+                        <li>El farmacéutico tiene el <strong>deber profesional de verificar</strong></li>
+                        <li>La IA es una herramienta; el profesional es responsable de su uso correcto</li>
+                        <li>Negligencia profesional: no verificar cálculo de dosis crítica</li>
+                    </ul>
+                    <p><strong>Consecuencia:</strong> Responsabilidad civil (indemnización) + responsabilidad disciplinaria (Colegio)</p>
+                </div>
+            </div>
+
+            <h3>Responsabilidad penal</h3>
+            <div class="alert alert-danger">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <p><strong>Delitos relacionados con mal uso de IA:</strong></p>
+                    <ul>
+                        <li><strong>Delito contra la intimidad (Art. 197 CP):</strong> Revelar secretos de pacientes introduciendo datos en IA</li>
+                        <li><strong>Delito de intrusismo (Art. 403 CP):</strong> Si la IA realiza actos propios de la profesión sin supervisión adecuada</li>
+                        <li><strong>Imprudencia profesional (Art. 142/152 CP):</strong> Lesiones o muerte por no verificar información de IA</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>📋 Trazabilidad y documentación</h2>
+            <p>En entornos regulados (hospitales, centros de salud), el uso de IA debe estar documentado:</p>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">📝</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Qué documentar cuando uses IA:</h4>
+                    <ul>
+                        <li><strong>Tarea realizada:</strong> "Búsqueda de información sobre nuevo anticoagulante"</li>
+                        <li><strong>Herramienta usada:</strong> "Asistente de IA (sin especificar datos confidenciales)"</li>
+                        <li><strong>Verificación:</strong> "Contrastado con ficha técnica AEMPS y guía ESC 2024"</li>
+                        <li><strong>Decisión final:</strong> "Recomendación basada en fuentes verificadas, no en salida directa de IA"</li>
+                        <li><strong>Fecha y responsable:</strong> Tu nombre y fecha</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p><strong>¿Por qué documentar?</strong></p>
+            <ul>
+                <li>Auditorías internas o externas</li>
+                <li>Defensa en caso de reclamación</li>
+                <li>Transparencia metodológica (investigación)</li>
+                <li>Mejora de procesos (identificar qué funciona y qué no)</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>💡 Reglas de oro de responsabilidad</h2>
+            <div style="background: var(--primary-blue); color: white; padding: var(--spacing-lg); border-radius: 8px;">
+                <h3 style="color: white; margin-top: 0;">Las 5 reglas inquebrantables:</h3>
+                <ol style="line-height: 2; font-size: 1.1rem;">
+                    <li><strong>Tú eres siempre responsable</strong> de lo que haces con la información de IA</li>
+                    <li><strong>Verifica ANTES de actuar</strong> si la decisión afecta a un paciente</li>
+                    <li><strong>NUNCA introduzcas datos de pacientes</strong> en IA pública</li>
+                    <li><strong>Documenta tu uso</strong> de IA en entornos profesionales</li>
+                    <li><strong>En caso de duda, no uses IA</strong> - tu criterio profesional es suficiente</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>✅ Autoevaluación final Módulo 1</h2>
+            <p>Antes de pasar a casos de uso, asegúrate de que puedes afirmar:</p>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="r1">
+                        <label for="r1">Entiendo que SOY RESPONSABLE de cualquier decisión, aunque use IA</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="r2">
+                        <label for="r2">Conozco los principios deontológicos (beneficencia, no maleficencia, autonomía, confidencialidad)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="r3">
+                        <label for="r3">Sé que los datos de salud son categoría especial en RGPD</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="r4">
+                        <label for="r4">Puedo identificar cuándo introduciría datos de pacientes (y NO hacerlo)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="r5">
+                        <label for="r5">Entiendo la importancia de documentar el uso de IA en mi trabajo</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="r6">
+                        <label for="r6">Sé que puedo tener responsabilidad civil o penal si uso IA negligentemente</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="alert alert-info" style="margin-top: var(--spacing-md);">
+                <span class="alert-icon">🎓</span>
+                <div class="alert-content">
+                    <p><strong>Si has marcado todas las casillas:</strong> Estás listo para el Módulo 2 (Casos de uso). 
+                    Ahora veremos aplicaciones concretas de estos principios en situaciones reales.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-navigation">
+            <a href="capacidades-limites.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Anterior</div>
+                    <div class="nav-link-title">← M1.2 - Capacidades y Límites</div>
+                </div>
+            </a>
+            <a href="../casos-uso/permitidos.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Siguiente módulo</div>
+                    <div class="nav-link-title">M2.1 - Casos Permitidos →</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>Esta herramienta es exclusivamente formativa.</strong> No sustituye formación reglada ni orientación profesional. Prohibido el uso con datos reales de pacientes.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+</body>
+</html>

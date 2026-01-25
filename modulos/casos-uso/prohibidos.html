@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2.2 - Casos Prohibidos - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>M2.2 - Casos de Uso Prohibidos</h1>
+            <p class="subtitle">Qué NUNCA debes hacer con IA en farmacia</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="permitidos.html">Casos de Uso</a>
+                <span>›</span>
+                <span>Casos Prohibidos</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos</h2>
+            <ul>
+                <li>Identificar usos peligrosos que NUNCA deben realizarse</li>
+                <li>Entender las consecuencias de cada mal uso</li>
+                <li>Reconocer estos casos en situaciones reales</li>
+                <li>Aprender de errores comunes para prevenirlos</li>
+            </ul>
+            <p><span class="badge badge-danger">Módulo crítico</span> <span class="badge badge-info">Tiempo: 20 min</span></p>
+        </section>
+
+        <div class="alert alert-danger">
+            <span class="alert-icon">🚫</span>
+            <div class="alert-content">
+                <p><strong>Advertencia importante:</strong></p>
+                <p>Este módulo muestra casos de USO INCORRECTO para que aprendas a reconocerlos. 
+                <strong>NUNCA repliques estos ejemplos en la práctica real.</strong> Las consecuencias pueden ser graves: 
+                daño al paciente, responsabilidad legal, sanciones disciplinarias.</p>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <h2>❌ Caso Prohibido 1: Interpretación de síntomas</h2>
+            
+            <h3>Ejemplo de mal uso</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>Escenario:</strong> Un paciente llega a la farmacia con dolor de pecho y dificultad para respirar.</p>
+                <p><strong>❌ Acción INCORRECTA:</strong></p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>Prompt que NUNCA debes hacer:</strong></p>
+                    <pre>"Un paciente de 65 años tiene dolor torácico opresivo, sudoración, dificultad para respirar. ¿Qué puede ser? ¿Le doy algo para el dolor?"</pre>
+                </div>
+            </div>
+
+            <h3>¿Por qué es peligroso?</h3>
+            <ul>
+                <li><strong>Riesgo vital inmediato:</strong> Estos son síntomas de posible infarto. El paciente necesita asistencia médica URGENTE</li>
+                <li><strong>La IA no tiene contexto completo:</strong> No ve al paciente, no conoce su historial, no puede valorar gravedad</li>
+                <li><strong>Pérdida de tiempo crítico:</strong> Cada minuto cuenta en urgencias cardiovasculares</li>
+                <li><strong>Responsabilidad profesional:</strong> TÚ sabes que estos síntomas requieren derivación. No necesitas IA para esto</li>
+            </ul>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Acción CORRECTA en este escenario:</h4>
+                    <ol>
+                        <li><strong>Valoración inmediata:</strong> Síntomas de alarma cardiovascular</li>
+                        <li><strong>Derivación urgente:</strong> "Llame al 112 ahora" o acompañar a urgencias si el centro está cerca</li>
+                        <li><strong>NO dar medicación:</strong> Ni analgésicos ni nada hasta que sea valorado</li>
+                        <li><strong>NO usar IA:</strong> Tu criterio profesional es suficiente y más rápido</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>Consecuencias del mal uso:</h3>
+            <ul>
+                <li>Daño grave o muerte del paciente por retraso en atención</li>
+                <li>Responsabilidad civil (demanda por negligencia)</li>
+                <li>Responsabilidad penal (imprudencia profesional grave)</li>
+                <li>Inhabilitación profesional por el Colegio</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>❌ Caso Prohibido 2: Introducir datos de pacientes reales</h2>
+            
+            <h3>Ejemplos de mal uso</h3>
+            
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>❌ Ejemplo 1: Receta con datos identificativos</strong></p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>NUNCA hagas esto:</strong></p>
+                    <pre>"Revisa esta receta:
+Paciente: María García López, DNI 12345678A
+Medicación:
+- Enalapril 10mg
+- Atorvastatina 20mg
+- Metformina 850mg
+¿Hay interacciones?"</pre>
+                </div>
+            </div>
+
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>❌ Ejemplo 2: Historial farmacoterapéutico</strong></p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>NUNCA hagas esto:</strong></p>
+                    <pre>"Este paciente (Juan Pérez, 70 años, diabético, hipertenso, IRC grado 3) toma [lista de 12 medicamentos]. ¿Puedo optimizar su tratamiento?"</pre>
+                </div>
+            </div>
+
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>❌ Ejemplo 3: Resultados de analíticas</strong></p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>NUNCA hagas esto:</strong></p>
+                    <pre>"Paciente con estos resultados:
+Glucosa: 180 mg/dL
+HbA1c: 8.5%
+Creatinina: 1.8 mg/dL
+¿Ajusto dosis de metformina?"</pre>
+                </div>
+            </div>
+
+            <h3>¿Por qué es prohibido?</h3>
+            <ul>
+                <li><strong>Violación RGPD Art. 9:</strong> Datos de salud son categoría especial. Procesarlos en IA pública = transferencia internacional no autorizada</li>
+                <li><strong>Quebrantamiento del secreto profesional:</strong> Delito tipificado en Código Penal (Art. 197)</li>
+                <li><strong>Pérdida de control de datos:</strong> No sabes dónde quedan almacenados ni quién puede acceder</li>
+                <li><strong>Daño reputacional:</strong> Si se descubre, pérdida de confianza de pacientes</li>
+            </ul>
+
+            <h3>Sanciones posibles:</h3>
+            <ul>
+                <li><strong>RGPD:</strong> Hasta 20 millones € o 4% facturación anual (Art. 83)</li>
+                <li><strong>Penal:</strong> Pena de prisión por revelación de secretos</li>
+                <li><strong>Colegial:</strong> Suspensión o inhabilitación profesional</li>
+                <li><strong>Civil:</strong> Indemnización al paciente por daños</li>
+            </ul>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Alternativa CORRECTA:</h4>
+                    <p>Si necesitas consultar interacciones:</p>
+                    <ol>
+                        <li>Usa bases de datos oficiales (Micromedex, UpToDate, Bot PLUS)</li>
+                        <li>Consulta directamente sin usar IA</li>
+                        <li>Si quieres usar IA para CONCEPTO GENERAL (sin paciente real): "¿Qué interacciones tiene enalapril con estatinas?" (pregunta genérica, sin datos de paciente)</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>❌ Caso Prohibido 3: Decisiones de dispensación</h2>
+            
+            <h3>Ejemplo de mal uso</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>❌ Escenario:</strong></p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>NUNCA hagas esto:</strong></p>
+                    <pre>"Una paciente embarazada trae receta de [medicamento X]. ¿Puedo dispensarlo? ¿Es seguro en embarazo?"</pre>
+                </div>
+            </div>
+
+            <h3>¿Por qué es peligroso?</h3>
+            <ul>
+                <li><strong>Responsabilidad legal exclusiva tuya:</strong> La decisión de dispensar o no es acto profesional farmacéutico</li>
+                <li><strong>La IA no conoce el caso concreto:</strong> Semana de embarazo, indicación, riesgo/beneficio específico</li>
+                <li><strong>Información potencialmente desactualizada:</strong> Clasificaciones de riesgo en embarazo cambian</li>
+                <li><strong>Puede omitir contraindicaciones:</strong> O dar información errónea sobre seguridad</li>
+            </ul>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Acción CORRECTA:</h4>
+                    <ol>
+                        <li>Consultar <strong>ficha técnica oficial</strong> del medicamento</li>
+                        <li>Revisar <strong>bases de datos de embarazo/lactancia</strong> (e-lactancia.org, Drugs in Pregnancy & Lactation de Briggs)</li>
+                        <li>Si hay duda, <strong>contactar con médico prescriptor</strong></li>
+                        <li>Documentar tu decisión con fuentes consultadas</li>
+                        <li><strong>NUNCA</strong> basar decisión solo en IA</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>❌ Caso Prohibido 4: Cálculo de dosis sin verificación</h2>
+            
+            <h3>Ejemplo de mal uso</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>❌ Escenario - Dosis pediátrica:</strong></p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>NUNCA hagas esto:</strong></p>
+                    <pre>"Calcula la dosis de paracetamol para un niño de 3 años, 15 kg de peso."</pre>
+                    <p style="color: var(--red-danger); margin-top: var(--spacing-sm);"><strong>Y luego usar esa dosis SIN VERIFICAR</strong></p>
+                </div>
+            </div>
+
+            <h3>¿Por qué es peligroso?</h3>
+            <ul>
+                <li><strong>Errores de cálculo:</strong> La IA puede equivocarse en fórmulas o unidades</li>
+                <li><strong>Dosificación en niños es crítica:</strong> Margen terapéutico estrecho, riesgo de sobredosis</li>
+                <li><strong>Responsabilidad del farmacéutico:</strong> Verificar cálculos es obligación profesional</li>
+                <li><strong>Consecuencias graves:</strong> Intoxicación medicamentosa, daño hepático, incluso muerte</li>
+            </ul>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Método CORRECTO:</h4>
+                    <ol>
+                        <li><strong>Calcular manualmente</strong> con fórmula estándar (10-15 mg/kg/dosis paracetamol)</li>
+                        <li><strong>Verificar con tablas oficiales</strong> (AEMPS, ficha técnica)</li>
+                        <li><strong>Doble verificación</strong> con colega o calculadora médica validada</li>
+                        <li><strong>Documentar</strong> el cálculo realizado</li>
+                        <li>Si usas IA como verificación adicional, <strong>NO</strong> confíes solo en ella</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>❌ Caso Prohibido 5: Decisión de derivación a urgencias</h2>
+            
+            <h3>Ejemplo de mal uso</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>❌ Escenario:</strong></p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>NUNCA hagas esto:</strong></p>
+                    <pre>"Un paciente con fiebre de 39°C desde hace 3 días, tos con esputo amarillo, y dolor al respirar. ¿Lo derivo a urgencias o le doy algo en la farmacia?"</pre>
+                </div>
+            </div>
+
+            <h3>¿Por qué es inaceptable?</h3>
+            <ul>
+                <li><strong>Decisión clínica crítica:</strong> Determinar urgencia es acto médico, pero el farmacéutico debe reconocer signos de alarma</li>
+                <li><strong>La IA no evalúa gravedad real:</strong> No ve estado general, saturación O2, frecuencia respiratoria</li>
+                <li><strong>TÚ sabes identificar banderas rojas:</strong> Fiebre persistente + dolor pleurítico = posible neumonía</li>
+                <li><strong>Retraso en atención puede ser grave:</strong> Neumonías no tratadas pueden complicarse</li>
+            </ul>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Acción CORRECTA:</h4>
+                    <p>Ante síntomas de alarma (fiebre persistente, dolor torácico, dificultad respiratoria):</p>
+                    <ol>
+                        <li><strong>Valoración inmediata:</strong> Signos de gravedad presentes</li>
+                        <li><strong>Derivación a médico/urgencias:</strong> "Estos síntomas requieren valoración médica urgente"</li>
+                        <li><strong>Explicar al paciente:</strong> Por qué es importante ir ahora</li>
+                        <li><strong>NO automedicar:</strong> No dar antibióticos ni antitérmicos que enmascaren síntomas</li>
+                        <li><strong>NO consultar IA:</strong> Tu formación profesional es suficiente para reconocer esto</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>❌ Caso Prohibido 6: Información sin contrastar para decisiones inmediatas</h2>
+            
+            <h3>Ejemplo de mal uso</h3>
+            <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px; margin-bottom: var(--spacing-md);">
+                <p><strong>❌ Escenario - Consulta en mostrador:</strong></p>
+                <p>Un paciente pregunta si puede tomar su medicación con pomelo. No recuerdas la interacción exacta.</p>
+                <div class="code-example">
+                    <p style="color: var(--red-danger);"><strong>NUNCA hagas esto:</strong></p>
+                    <pre>1. Consultar rápido en IA: "¿[medicamento X] interactúa con pomelo?"
+2. Decir directamente al paciente lo que responde la IA SIN VERIFICAR</pre>
+                </div>
+            </div>
+
+            <h3>¿Por qué es incorrecto?</h3>
+            <ul>
+                <li><strong>Información potencialmente errónea:</strong> La IA puede inventar o dar info desactualizada</li>
+                <li><strong>Paciente actúa en base a tu respuesta:</strong> Si le das info incorrecta y tiene evento adverso, eres responsable</li>
+                <li><strong>Falta de verificación con fuente oficial:</strong> No sabes si la interacción es real o inventada</li>
+            </ul>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Acción CORRECTA:</h4>
+                    <ol>
+                        <li><strong>Respuesta honesta:</strong> "Déjame verificar esta información para darte la respuesta correcta"</li>
+                        <li><strong>Consulta fuente oficial:</strong> Bot PLUS, Micromedex, ficha técnica</li>
+                        <li><strong>Respuesta verificada:</strong> "He comprobado y sí, el pomelo puede interactuar con [medicamento]. Te recomiendo evitarlo"</li>
+                        <li><strong>Documentar:</strong> Si es consulta importante, anotar en registro de atención farmacéutica</li>
+                    </ol>
+                    <p><strong>Alternativa:</strong> Si tienes IA, puedes consultarla MIENTRAS buscas en fuente oficial (doble verificación), pero NUNCA respondas solo con IA.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>🚨 Señales de alarma: Detecta cuando estás a punto de mal usar IA</h2>
+            
+            <div class="alert alert-danger">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">PARA y NO USES IA si:</h4>
+                    <ul>
+                        <li>❌ Estás copiando datos de un paciente (nombre, DNI, historial, receta)</li>
+                        <li>❌ La decisión afecta directamente a un paciente AHORA (dispensar, derivar, recomendar)</li>
+                        <li>❌ No tienes tiempo de verificar la respuesta de IA antes de actuar</li>
+                        <li>❌ Estás ante una urgencia o síntomas de alarma</li>
+                        <li>❌ La consecuencia de un error sería grave (dosificación pediátrica, interacción crítica)</li>
+                        <li>❌ Tu instinto profesional te dice "esto no debería hacerlo"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>✅ Autoevaluación</h2>
+            <p>Verifica que has comprendido los casos prohibidos:</p>
+            <div class="checklist">
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="p1">
+                        <label for="p1">Entiendo que NUNCA debo introducir datos de pacientes en IA pública</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="p2">
+                        <label for="p2">Reconozco que las decisiones clínicas son MI responsabilidad, no de la IA</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="p3">
+                        <label for="p3">Sé identificar situaciones de urgencia que requieren derivación inmediata</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="p4">
+                        <label for="p4">Entiendo que no puedo dar información al paciente basada solo en IA sin verificar</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="p5">
+                        <label for="p5">Puedo explicar las consecuencias legales de estos malos usos</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="page-navigation">
+            <a href="permitidos.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Anterior</div>
+                    <div class="nav-link-title">← M2.1 - Casos Permitidos</div>
+                </div>
+            </a>
+            <a href="zona-gris.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Siguiente</div>
+                    <div class="nav-link-title">M2.3 - Zona Gris →</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>Los ejemplos de este módulo son casos de MAL USO para aprendizaje.</strong> NUNCA los repliques en la práctica real.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+</body>
+</html>

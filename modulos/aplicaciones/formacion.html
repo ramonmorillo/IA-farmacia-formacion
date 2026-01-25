@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4.3 - Formación y Docencia - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>M4.3 - Formación y Docencia</h1>
+            <p class="subtitle">Crear material educativo de calidad con IA</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <a href="informacion.html">Aplicaciones Prácticas</a>
+                <span>›</span>
+                <span>Formación</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="content-card">
+            <h2>🎯 Objetivos</h2>
+            <ul>
+                <li>Usar IA para preparar material formativo eficientemente</li>
+                <li>Crear presentaciones, folletos y recursos educativos</li>
+                <li>Adaptar contenido a diferentes públicos</li>
+                <li>Mantener rigor científico en material generado por IA</li>
+            </ul>
+            <p><span class="badge badge-info">Nivel: Práctico</span> <span class="badge badge-info">Tiempo: 25 min</span></p>
+        </section>
+
+        <div class="alert alert-caution">
+            <span class="alert-icon">📚</span>
+            <div class="alert-content">
+                <p><strong>Principio en formación:</strong></p>
+                <p>La IA puede ayudar con ESTRUCTURA y FORMATO, pero el contenido clínico SIEMPRE debe venir de fuentes oficiales que TÚ verificas. 
+                No enseñes nada que no hayas verificado personalmente.</p>
+            </div>
+        </div>
+
+        <section class="content-card">
+            <h2>📊 Tipos de material formativo y uso de IA</h2>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>IA puede ayudar con</th>
+                            <th>TÚ debes hacer</th>
+                            <th>Riesgo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Presentación (ppt)</td>
+                            <td>Estructura, títulos, organización</td>
+                            <td>TODO el contenido clínico</td>
+                            <td><span class="badge badge-caution">Medio</span></td>
+                        </tr>
+                        <tr>
+                            <td>Folleto para pacientes</td>
+                            <td>Simplificar lenguaje, formato</td>
+                            <td>Verificar info médica, adaptar</td>
+                            <td><span class="badge badge-caution">Medio</span></td>
+                        </tr>
+                        <tr>
+                            <td>Caso clínico docente</td>
+                            <td>Estructura del caso</td>
+                            <td>Crear caso basado en evidencia</td>
+                            <td><span class="badge badge-danger">Alto</span></td>
+                        </tr>
+                        <tr>
+                            <td>Examen/test</td>
+                            <td>Generar preguntas (borrador)</td>
+                            <td>Verificar respuestas correctas</td>
+                            <td><span class="badge badge-danger">Alto</span></td>
+                        </tr>
+                        <tr>
+                            <td>Manual de procedimientos</td>
+                            <td>Organización, índice</td>
+                            <td>Procedimientos basados en protocolos</td>
+                            <td><span class="badge badge-danger">Alto</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>📑 Caso 1: Preparar sesión clínica (presentación)</h2>
+            
+            <h3>Escenario</h3>
+            <p>Sesión de 30 minutos sobre "Manejo de anticoagulación en paciente quirúrgico" para residentes de cirugía.</p>
+
+            <h3>Workflow con IA (paso a paso):</h3>
+            
+            <div class="alert alert-info">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Fase 1: Estructura (5 min con IA)</h4>
+                    <div class="code-example">
+                        <pre>Prompt: "Necesito estructura para sesión clínica de 30 min sobre anticoagulación perioperatoria para residentes de cirugía.
+
+Público: Médicos residentes (R2-R3), nivel intermedio
+Objetivo: Que sepan cuándo suspender/reanudar anticoagulantes
+
+Dame SOLO:
+- Estructura de diapositivas (títulos)
+- Tiempo sugerido por sección
+- Qué tipo de contenido en cada sección (tabla, algoritmo, caso, etc.)
+
+NO desarrolles contenido clínico."</pre>
+                    </div>
+                    <p><strong>IA genera:</strong> Índice con 8-10 diapositivas sugeridas</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Fase 2: Investigación (40 min TÚ SOLO)</h4>
+                    <p><strong>Consultas fuentes oficiales:</strong></p>
+                    <ul>
+                        <li>Guía ESC/ESA sobre anticoagulación perioperatoria</li>
+                        <li>Protocolo de tu hospital (si existe)</li>
+                        <li>Fichas técnicas (tiempos suspensión, reinicio)</li>
+                        <li>Estudios clave sobre puentes con heparina</li>
+                    </ul>
+                    <p><strong>Extraes contenido TÚ MISMO</strong> de estas fuentes</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Fase 3: IA para formato/tablas (10 min)</h4>
+                    <div class="code-example">
+                        <pre>Prompt: "Convierte esta información en tabla clara para presentación:
+
+[Pegas extractos de guía oficial sobre tiempos de suspensión]
+
+Formato: Tabla 3 columnas
+- Anticoagulante | Suspender antes de cirugía | Reiniciar después
+
+Mantén EXACTAMENTE los tiempos que te he dado."</pre>
+                    </div>
+                    <p><strong>Verificas:</strong> La tabla tiene exactamente los datos de la guía</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">4</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Fase 4: TÚ creas diapositivas (30 min)</h4>
+                    <ul>
+                        <li>Usas estructura de IA como esqueleto</li>
+                        <li>Rellenas con contenido de fuentes oficiales</li>
+                        <li>Añades casos clínicos de tu experiencia</li>
+                        <li>Incluyes referencias a guías en cada diapo relevante</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">5</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Fase 5: Revisión final</h4>
+                    <p><strong>Checklist:</strong></p>
+                    <ul>
+                        <li>¿Cada dato crítico tiene fuente verificable?</li>
+                        <li>¿Los tiempos de suspensión coinciden con guías?</li>
+                        <li>¿Las recomendaciones son actuales?</li>
+                        <li>¿He citado correctamente las guías?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Resultado</h3>
+            <p><strong>Tiempo total:</strong> ~90 min</p>
+            <p><strong>Sin IA:</strong> ~120 min (30 min más pensando estructura)</p>
+            <p><strong>Calidad:</strong> Alta (contenido de fuentes oficiales)</p>
+        </section>
+
+        <section class="content-card">
+            <h2>📄 Caso 2: Folleto educativo para pacientes</h2>
+            
+            <h3>Escenario</h3>
+            <p>Folleto sobre "Cómo usar inhalador de polvo seco" para pacientes con EPOC.</p>
+
+            <h3>Proceso:</h3>
+            
+            <div class="alert alert-info">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">TÚ defines contenido basándote en guías</h4>
+                    <p>Consultas guía GEMA (asma) o GesEPOC:</p>
+                    <ul>
+                        <li>Pasos correctos de uso</li>
+                        <li>Errores comunes</li>
+                        <li>Limpieza del dispositivo</li>
+                        <li>Cuándo consultar al médico</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">IA simplifica lenguaje</h4>
+                    <div class="code-example">
+                        <pre>Prompt: "Convierte este texto técnico en lenguaje SIMPLE para pacientes con educación básica:
+
+'Realizar inspiración forzada y profunda. Mantener apnea 5-10 segundos. Espiración lenta alejada del dispositivo.'
+
+Requisitos:
+- Máximo educación primaria
+- Frases cortas (<10 palabras)
+- Sin palabras técnicas
+- Instrucciones numeradas paso a paso"</pre>
+                    </div>
+                    <p><strong>Salida IA:</strong> "1. Coge aire rápido y profundo. 2. Aguanta la respiración contando hasta 5..."</p>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">TÚ revisas y ajustas</h4>
+                    <ul>
+                        <li>¿El lenguaje simple mantiene precisión técnica?</li>
+                        <li>¿Falta algo importante de la guía?</li>
+                        <li>¿Se entiende sin ambigüedad?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">4</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Validación con paciente real (CRÍTICO)</h4>
+                    <p>Antes de imprimir 100 copias:</p>
+                    <ul>
+                        <li>Prueba con 2-3 pacientes: ¿Lo entienden?</li>
+                        <li>Ajusta según feedback</li>
+                        <li>Añade pictogramas si ayuda</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Disclaimer obligatorio en folleto</h3>
+            <div class="code-example">
+                <pre>"Esta información es orientativa. Consulte siempre con su farmacéutico o médico ante dudas sobre su medicación."</pre>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>❓ Caso 3: Generar preguntas de examen/test</h2>
+            
+            <h3>Escenario</h3>
+            <p>Test de autoevaluación para estudiantes sobre interacciones farmacológicas.</p>
+
+            <h3>Workflow seguro:</h3>
+            
+            <div class="alert alert-info">
+                <span class="alert-icon">1</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">IA genera preguntas (borrador)</h4>
+                    <div class="code-example">
+                        <pre>Prompt: "Genera 5 preguntas tipo test (4 opciones) sobre interacciones farmacológicas nivel FIR.
+
+Temas: Warfarina, IECAs, omeprazol, anticonceptivos orales
+
+Formato: Pregunta + 4 opciones (A-D) + respuesta correcta + breve explicación
+
+Nivel: Intermedio (no trivial, pero tampoco super especializado)"</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-danger">
+                <span class="alert-icon">2</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">VERIFICACIÓN EXHAUSTIVA (CRÍTICO)</h4>
+                    <p><strong>Para CADA pregunta generada:</strong></p>
+                    <ul>
+                        <li>¿La respuesta "correcta" es realmente correcta? (verificar en Micromedex/ficha técnica)</li>
+                        <li>¿Las 3 opciones "incorrectas" son realmente incorrectas? (pueden ser sutilmente correctas)</li>
+                        <li>¿La explicación es precisa? (verificar con fuente oficial)</li>
+                        <li>¿La pregunta está actualizada? (guías 2024, no 2019)</li>
+                    </ul>
+                    <p style="color: var(--red-danger);"><strong>Si tienes la más mínima duda en UNA pregunta → Descarta o rehaz completamente</strong></p>
+                </div>
+            </div>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">3</span>
+                <div class="alert-content">
+                    <h4 style="margin-top: 0;">Errores comunes de IA en preguntas</h4>
+                    <ul>
+                        <li><strong>Respuestas ambiguas:</strong> "Depende del contexto" podría ser más correcta que la marcada</li>
+                        <li><strong>Info desactualizada:</strong> Usa guías antiguas</li>
+                        <li><strong>Mezcla indicaciones:</strong> "Fármaco X está contraindicado en Y" (solo en ciertas formulaciones)</li>
+                        <li><strong>Múltiples respuestas correctas:</strong> 2 opciones técnicamente válidas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Alternativa más segura</h3>
+            <p><strong>TÚ creas las preguntas</strong> basándote en casos reales que conoces. IA solo ayuda con formato/organización.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>🎓 Caso 4: Adaptar contenido a diferentes públicos</h2>
+            
+            <h3>Mismo tema, 3 públicos diferentes</h3>
+            <p><strong>Tema:</strong> Anticoagulantes orales directos (ACOD)</p>
+
+            <h3>Para estudiantes (nivel básico):</h3>
+            <div class="code-example">
+                <pre>Prompt: "Explica anticoagulantes orales directos para estudiantes de farmacia (2º curso).
+
+Enfoque: Mecanismo acción, diferencia con warfarina, nombres principales
+Nivel: Conceptos básicos, sin casos complejos
+Longitud: 300 palabras
+Incluye: 1 ejemplo sencillo de indicación"</pre>
+            </div>
+            <p><strong>TÚ verificas:</strong> Contenido coincide con libro de farmacología estándar</p>
+
+            <h3>Para médicos AP (nivel intermedio):</h3>
+            <div class="code-example">
+                <pre>Prompt: "Explica anticoagulantes orales directos para médicos de atención primaria.
+
+Enfoque: Cuándo prescribir, qué ACOD elegir, interacciones principales
+Nivel: Práctico, orientado a decisión
+Longitud: 500 palabras
+Incluye: Tabla comparativa 3 principales ACOD"</pre>
+            </div>
+            <p><strong>TÚ verificas:</strong> Info coincide con guía ESC 2024 + fichas técnicas</p>
+
+            <h3>Para farmacéuticos hospitalarios (nivel avanzado):</h3>
+            <div class="code-example">
+                <pre>Prompt: "Explica farmacocinética clínica de ACOD para farmacéuticos hospitalarios.
+
+Enfoque: Ajustes en insuficiencia renal, interacciones P-gp/CYP3A4, reversión
+Nivel: Avanzado, detalle farmacocinético
+Longitud: 800 palabras
+Incluye: Protocolo ajuste dosis en IRC"</pre>
+            </div>
+            <p><strong>TÚ verificas:</strong> Datos farmacocinéticos en fichas técnicas + estudios PK específicos</p>
+
+            <h3>Lección</h3>
+            <p>IA puede ADAPTAR tono y complejidad eficientemente, pero TÚ verificas que contenido sea correcto para cada nivel.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>⚠️ Errores frecuentes al usar IA en formación</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                    <h4>❌ Error 1: Usar contenido de IA sin verificar</h4>
+                    <p><strong>Riesgo:</strong> Enseñar información incorrecta que perpetúa errores</p>
+                    <p><strong>Consecuencia:</strong> Daño a formación de estudiantes/profesionales</p>
+                </div>
+
+                <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                    <h4>❌ Error 2: No citar fuentes</h4>
+                    <p><strong>Problema:</strong> Estudiantes no saben dónde profundizar</p>
+                    <p><strong>Solución:</strong> Incluye bibliografía verificada en todo material</p>
+                </div>
+
+                <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                    <h4>❌ Error 3: Generar casos clínicos ficticios sin validar</h4>
+                    <p><strong>Peligro:</strong> Casos clínicamente incorrectos o poco realistas</p>
+                    <p><strong>Solución:</strong> Basar casos en tu experiencia real o literatura</p>
+                </div>
+
+                <div style="background: var(--red-danger-light); padding: var(--spacing-md); border-radius: 8px;">
+                    <h4>❌ Error 4: Simplificar tanto que pierdes precisión</h4>
+                    <p><strong>Ejemplo:</strong> "Los ACOD son más seguros" (depende del contexto)</p>
+                    <p><strong>Correcto:</strong> "Los ACOD tienen menos interacciones alimentarias que warfarina, pero..."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>✅ Checklist de material formativo</h2>
+            <div class="checklist">
+                <h3>Antes de usar material generado/asistido por IA:</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="form1">
+                        <label for="form1">¿He verificado TODO el contenido clínico con fuentes oficiales?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="form2">
+                        <label for="form2">¿He incluido citas/referencias a fuentes verificables?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="form3">
+                        <label for="form3">¿El nivel de complejidad es apropiado para mi público?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="form4">
+                        <label for="form4">¿He probado el material con al menos 1 persona del público objetivo?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="form5">
+                        <label for="form5">¿La información está actualizada? (guías/estudios recientes)</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="form6">
+                        <label for="form6">Si es para pacientes, ¿incluye disclaimer de consultar profesional?</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="form7">
+                        <label for="form7">¿Puedo defender cada afirmación si me preguntan de dónde salió?</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>💡 Mejores prácticas</h2>
+            <ul>
+                <li><strong>IA para acelerar, no para crear contenido clínico de cero</strong></li>
+                <li><strong>Documenta uso de IA:</strong> "Estructura asistida por IA, contenido de guías ESC 2024"</li>
+                <li><strong>Prueba piloto:</strong> Usa material con grupo pequeño antes de despliegue amplio</li>
+                <li><strong>Itera basándote en feedback:</strong> Pregunta si se entendió, ajusta</li>
+                <li><strong>Fecha de vigencia:</strong> Marca cuándo revisar/actualizar material</li>
+            </ul>
+        </section>
+
+        <div class="page-navigation">
+            <a href="automatizacion.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Anterior</div>
+                    <div class="nav-link-title">← M4.2 - Automatización</div>
+                </div>
+            </a>
+            <a href="investigacion.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Siguiente</div>
+                    <div class="nav-link-title">M4.4 - Investigación →</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>No enseñes nada que no hayas verificado.</strong> La IA ayuda con formato, tú garantizas rigor científico.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Enero 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+</body>
+</html>
