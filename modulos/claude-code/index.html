@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 - Uso de Claude Code para Farmacéuticos - IA en Farmacia</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1>M5 - Claude Code para Farmacéuticos</h1>
+            <p class="subtitle">Cómo pedir cambios en esta plataforma sin saber programar</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <span>›</span>
+                <span>Claude Code para Farmacéuticos</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- Objetivos -->
+        <section class="content-card">
+            <h2>🎯 Objetivos de aprendizaje</h2>
+            <ul>
+                <li>Entender qué es Claude Code y para qué sirve en este contexto</li>
+                <li>Saber formular peticiones claras que produzcan buenos resultados</li>
+                <li>Reconocer y evitar los errores más frecuentes al pedir cambios</li>
+                <li>Seguir un ejemplo práctico completo de principio a fin</li>
+            </ul>
+            <p>
+                <span class="badge badge-info">Tiempo estimado: 20 minutos</span>
+                <span class="badge badge-safe">Sin conocimientos técnicos requeridos</span>
+            </p>
+        </section>
+
+        <!-- Qué es Claude Code -->
+        <section class="content-card">
+            <h2>¿Qué es Claude Code?</h2>
+
+            <p>Claude Code es una herramienta de Anthropic (la empresa que fabrica el modelo de IA Claude) que permite <strong>modificar proyectos de software directamente mediante instrucciones en lenguaje natural</strong>. No necesitas saber programación: describes lo que quieres y Claude Code hace los cambios.</p>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">💡</span>
+                <div class="alert-content">
+                    <p><strong>Analogía para farmacéuticos:</strong></p>
+                    <p>Imagina que tienes un técnico informático disponible 24 horas, que habla español perfectamente, que conoce todos los archivos de tu plataforma y que ejecuta exactamente lo que le pides. Claude Code es ese técnico, con una diferencia importante: <strong>tú debes revisar su trabajo antes de darlo por bueno</strong>, igual que revisarías una dispensación antes de entregarla.</p>
+                </div>
+            </div>
+
+            <h3>¿Cómo funciona en la práctica?</h3>
+            <p>Claude Code opera directamente sobre los ficheros del proyecto (los archivos HTML, CSS y otros que forman esta web). Cuando le pides un cambio:</p>
+            <ol>
+                <li>Lee los archivos relevantes para entender el contexto actual</li>
+                <li>Planifica qué modificar y en qué orden</li>
+                <li>Hace los cambios en los archivos directamente</li>
+                <li>Te explica qué ha hecho y por qué</li>
+                <li>Sube los cambios al repositorio del proyecto</li>
+            </ol>
+
+            <div class="alert alert-caution">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <p><strong>Importante:</strong> Claude Code actúa, no solo responde. A diferencia de un chatbot donde la conversación no tiene efectos fuera de la pantalla, aquí los cambios se aplican a archivos reales. Por eso es fundamental <strong>revisar el resultado</strong> antes de aceptarlo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Para qué sirve en este contexto -->
+        <section class="content-card">
+            <h2>Para qué sirve en esta plataforma</h2>
+
+            <p>Esta plataforma formativa está hecha con archivos HTML y CSS. No tiene base de datos ni panel de administración. Para modificarla hay que tocar los archivos directamente, algo que normalmente requiere un perfil técnico. Claude Code elimina esa barrera.</p>
+
+            <h3>Usos habituales que puedes pedirle</h3>
+
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md); margin-top: var(--spacing-md);">
+
+                <div class="alert alert-safe">
+                    <span class="alert-icon">✓</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Contenido y texto</h4>
+                        <ul>
+                            <li>Corregir erratas o actualizar información en cualquier módulo</li>
+                            <li>Añadir un nuevo ejemplo o caso práctico a un módulo existente</li>
+                            <li>Cambiar la redacción de una sección para que sea más clara</li>
+                            <li>Actualizar fechas, referencias o nombres de medicamentos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-safe">
+                    <span class="alert-icon">✓</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Estructura y nuevas secciones</h4>
+                        <ul>
+                            <li>Crear un módulo formativo nuevo completo</li>
+                            <li>Añadir una sección dentro de un módulo ya existente</li>
+                            <li>Crear un nuevo caso interactivo con sus opciones y retroalimentación</li>
+                            <li>Añadir un perfil nuevo (por ejemplo, "Farmacia Rural")</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-safe">
+                    <span class="alert-icon">✓</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Navegación e integración</h4>
+                        <ul>
+                            <li>Añadir un módulo nuevo al menú de la portada</li>
+                            <li>Enlazar páginas entre sí</li>
+                            <li>Actualizar el footer o el aviso legal</li>
+                            <li>Modificar la versión y fecha visibles en la portada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">✗</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Lo que Claude Code no hace (ni debe hacer) por ti</h4>
+                        <ul>
+                            <li><strong>Verificar la exactitud científica del contenido</strong> — si añades información farmacológica, eres tú quien debe revisarla con fuentes validadas</li>
+                            <li><strong>Tomar decisiones editoriales</strong> — qué incluir o no es una decisión profesional tuya</li>
+                            <li><strong>Publicar cambios sin tu aprobación</strong> — siempre hay una fase de revisión antes de que algo llegue a los usuarios</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cómo pedir cambios correctamente -->
+        <section class="content-card">
+            <h2>Cómo pedir cambios correctamente</h2>
+
+            <p>La calidad del resultado depende directamente de cómo describes lo que quieres. No hace falta vocabulario técnico, pero sí <strong>claridad y contexto</strong>.</p>
+
+            <h3>Los cuatro ingredientes de una buena petición</h3>
+
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+
+                <div class="alert alert-info">
+                    <span class="alert-icon">1</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Dónde: localiza el lugar</h4>
+                        <p>Especifica en qué módulo, sección o página quieres el cambio.</p>
+                        <p><strong>Vago:</strong> "Cambia el ejemplo de interacciones"</p>
+                        <p><strong>Concreto:</strong> "En el módulo M2 (Casos de Uso), en la sección de usos permitidos, cambia el ejemplo de interacciones"</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <span class="alert-icon">2</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Qué: describe el cambio</h4>
+                        <p>Di qué quieres añadir, quitar o modificar, en lenguaje llano.</p>
+                        <p><strong>Vago:</strong> "Mejora el contenido"</p>
+                        <p><strong>Concreto:</strong> "Sustituye el ejemplo de warfarina por un ejemplo con anticoagulantes orales directos (rivaroxabán), explicando qué tipo de interacciones son relevantes y por qué la IA no debe ser la fuente de decisión"</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <span class="alert-icon">3</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Por qué: el objetivo formativo</h4>
+                        <p>Si explicas el propósito, Claude Code puede adaptar mejor el tono y la estructura.</p>
+                        <p><strong>Sin contexto:</strong> "Añade una advertencia"</p>
+                        <p><strong>Con contexto:</strong> "Añade una advertencia que recuerde que los ACODs tienen un rango terapéutico diferente a los AVK y que cualquier ajuste de dosis es siempre responsabilidad del médico o farmacéutico clínico, no de la IA"</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <span class="alert-icon">4</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Cómo: el formato si tienes preferencia</h4>
+                        <p>Puedes indicar si quieres una lista, una alerta visual, un ejemplo de prompt, etc. Si no lo dices, Claude Code elige el formato más coherente con el resto del módulo.</p>
+                        <p><strong>Ejemplo:</strong> "Muéstralo como una alerta roja (alert-danger), igual que las otras advertencias del módulo"</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 style="margin-top: var(--spacing-lg);">Comparativa: petición pobre vs. petición efectiva</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Petición pobre</th>
+                        <th>Petición efectiva</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"Actualiza el módulo de fundamentos"</td>
+                        <td>"En M1.1 (¿Qué es la IA?), añade un párrafo explicando qué significa 'corte temporal' con un ejemplo farmacéutico concreto"</td>
+                    </tr>
+                    <tr>
+                        <td>"Arregla la sección de recursos"</td>
+                        <td>"En la página de herramientas (recursos/herramientas.html), añade Elsevier ClinicalKey a la lista de bases de datos recomendadas, con una frase breve explicando para qué sirve"</td>
+                    </tr>
+                    <tr>
+                        <td>"Crea un módulo nuevo"</td>
+                        <td>"Crea un módulo nuevo sobre IA agéntica para farmacéuticos. Debe incluir: qué es, diferencia entre chatbot/workflow/agente, 3 ejemplos en farmacia sin uso clínico, y una sección de riesgos. Tono formativo, igual que el resto de módulos"</td>
+                    </tr>
+                    <tr>
+                        <td>"Cambia la portada"</td>
+                        <td>"Actualiza la portada para reflejar que es la versión 2 de marzo 2026. Añade una sección de novedades con los módulos nuevos. No modifiques la sección de perfiles ni los recursos adicionales"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Errores frecuentes -->
+        <section class="content-card">
+            <h2>Errores frecuentes (y cómo evitarlos)</h2>
+
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md); margin-top: var(--spacing-md);">
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">1</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Pedir demasiado de una vez</h4>
+                        <p><strong>Problema:</strong> "Crea cinco módulos nuevos, actualiza todos los perfiles, corrige el glosario y cambia los colores de la web"</p>
+                        <p><strong>Por qué falla:</strong> Las peticiones grandes aumentan la probabilidad de que algún detalle se interprete mal, y si hay que corregir algo es más difícil identificar qué salió mal.</p>
+                        <p><strong>Solución:</strong> Divide en peticiones independientes. Termina y revisa una antes de pedir la siguiente.</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">2</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">No revisar el resultado antes de aprobarlo</h4>
+                        <p><strong>Problema:</strong> Aceptar los cambios sin leer el contenido generado.</p>
+                        <p><strong>Por qué falla:</strong> Claude Code puede interpretar algo de forma diferente a lo que tenías en mente, o incluir un ejemplo que no se ajusta al contexto español. La IA no tiene criterio farmacéutico: tú sí.</p>
+                        <p><strong>Solución:</strong> Lee siempre el módulo o sección modificada completa antes de dar por cerrado el cambio. Sigue el mismo principio que con la dispensación: quien entrega es responsable de lo que entrega.</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">3</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Usar términos técnicos de programación sin necesidad</h4>
+                        <p><strong>Problema:</strong> "Añade un div con clase alert-info dentro del section de fundamentos con un p que diga..."</p>
+                        <p><strong>Por qué falla:</strong> No es incorrecto, pero no es necesario. Puede hacer la petición más confusa y llevar a malinterpretaciones.</p>
+                        <p><strong>Solución:</strong> Habla de contenido, no de código. "Añade una caja de información azul (como las que ya hay en el módulo) explicando que..."</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">4</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">No decir explícitamente qué no debe cambiar</h4>
+                        <p><strong>Problema:</strong> "Actualiza el módulo M3" sin aclarar qué partes quieres conservar.</p>
+                        <p><strong>Por qué falla:</strong> Claude Code puede reorganizar o reformular secciones que estaban bien, creyendo que estás pidiendo una revisión general.</p>
+                        <p><strong>Solución:</strong> Sé explícito: "Solo modifica la sección X. No cambies el resto del módulo."</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger">
+                    <span class="alert-icon">5</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Dar el cambio por hecho si la herramienta no confirma</h4>
+                        <p><strong>Problema:</strong> Asumir que el cambio se ha guardado si no aparece confirmación explícita.</p>
+                        <p><strong>Por qué falla:</strong> Si la sesión se interrumpe o hay un error, el cambio puede no haberse aplicado o guardado correctamente.</p>
+                        <p><strong>Solución:</strong> Pide siempre confirmación: "¿Se ha guardado el cambio? ¿Se ha subido al repositorio?" Y verifica abriendo la página en el navegador.</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-caution">
+                    <span class="alert-icon">⚠️</span>
+                    <div class="alert-content">
+                        <h4 style="margin-top: 0;">Error de confianza excesiva en el contenido generado</h4>
+                        <p>Claude Code puede redactar contenido farmacéutico que suena muy correcto pero que contiene imprecisiones. <strong>La herramienta no reemplaza la revisión experta.</strong> Si un módulo habla de dosis, interacciones o protocolos clínicos, valida siempre con las fichas técnicas oficiales o guías actualizadas.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Ejemplo práctico paso a paso -->
+        <section class="content-card">
+            <h2>Ejemplo práctico paso a paso</h2>
+
+            <p>Vamos a seguir un caso real completo: <strong>añadir un nuevo ejemplo de uso incorrecto de IA al módulo M2 (Casos Prohibidos)</strong>, porque hemos detectado que falta un escenario sobre el uso de IA para identificar medicamentos por fotografía.</p>
+
+            <div class="alert alert-info">
+                <span class="alert-icon">→</span>
+                <div class="alert-content">
+                    <p><strong>Situación de partida:</strong> Estás revisando el módulo M2 (modulos/casos-uso/prohibidos.html) y ves que no hay ningún ejemplo sobre identificar medicamentos por imagen. Es un error frecuente en farmacia comunitaria y quieres incluirlo.</p>
+                </div>
+            </div>
+
+            <h3>Paso 1 — Abre la herramienta y sitúate en el proyecto</h3>
+            <p>Accedes a Claude Code en el contexto del proyecto IA-farmacia-formacion. No necesitas abrir ningún archivo tú mismo; Claude Code los conoce.</p>
+
+            <h3>Paso 2 — Formula la petición</h3>
+            <p>Escribe en lenguaje natural, con los cuatro ingredientes que hemos visto (dónde, qué, por qué, cómo):</p>
+
+            <div class="code-example">
+                <pre>En el módulo M2, en la página de usos prohibidos (modulos/casos-uso/prohibidos.html),
+añade un nuevo ejemplo de uso incorrecto: "Identificar un medicamento por fotografía".
+
+El ejemplo debe explicar:
+- Qué hace el usuario: fotografía un comprimido desconocido y le pregunta a la IA qué medicamento es
+- Por qué es peligroso: la IA no puede identificar medicamentos con fiabilidad por imagen,
+  puede confundir fármacos similares visualmente, y una identificación incorrecta puede
+  llevar a una intoxicación o error de medicación
+- Qué debe hacer en su lugar: acudir al farmacéutico, consultar la ficha técnica,
+  o llamar al centro de información de medicamentos
+
+Usa el mismo formato visual que los otros ejemplos prohibidos del módulo.
+No modifiques ningún otro ejemplo existente.</pre>
+            </div>
+
+            <h3>Paso 3 — Claude Code lee el archivo y actúa</h3>
+            <p>Claude Code leerá el archivo actual para ver el estilo y estructura existentes, y luego hará el cambio. Te mostrará un resumen de lo que ha modificado.</p>
+
+            <h3>Paso 4 — Tú revisas el resultado</h3>
+            <p>Abre el módulo M2 en el navegador y lee la nueva sección. Comprueba:</p>
+            <ul>
+                <li>¿El ejemplo está en el lugar correcto, después de los ya existentes?</li>
+                <li>¿El tono es coherente con el resto del módulo?</li>
+                <li>¿La información es farmacológicamente correcta?</li>
+                <li>¿El resto del módulo no se ha tocado?</li>
+            </ul>
+
+            <h3>Paso 5 — Corriges si hace falta</h3>
+            <p>Si algo no está bien, lo describes con precisión:</p>
+
+            <div class="code-example">
+                <pre>El ejemplo está bien pero la alternativa que propones menciona "una app de identificación de
+medicamentos" como recurso. Elimina esa mención: no queremos recomendar apps no validadas.
+Sustitúyela únicamente por "consultar la ficha técnica oficial en la web de la AEMPS".</pre>
+            </div>
+
+            <h3>Paso 6 — Confirmas que se ha guardado y subido</h3>
+            <p>Claude Code habrá guardado el archivo y subido los cambios al repositorio. Puedes pedirle que confirme:</p>
+
+            <div class="code-example">
+                <pre>Confirma que el cambio se ha guardado correctamente y que está subido al repositorio.</pre>
+            </div>
+
+            <div class="alert alert-safe">
+                <span class="alert-icon">✓</span>
+                <div class="alert-content">
+                    <p><strong>Resultado:</strong> El módulo M2 tiene un nuevo ejemplo bien integrado, revisado por ti como profesional, y disponible para los usuarios de la plataforma. Todo el proceso sin escribir una sola línea de código.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen y reglas de oro -->
+        <section class="content-card">
+            <h2>Resumen: reglas de oro para usar Claude Code</h2>
+
+            <div style="background: var(--yellow-caution-light); padding: var(--spacing-lg); border-radius: 8px; border-left: 4px solid var(--yellow-caution); margin-bottom: var(--spacing-md);">
+                <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: var(--spacing-sm);">
+                    "Tú eres el experto farmacéutico. Claude Code es la herramienta técnica. Los dos juntos."
+                </p>
+                <p style="color: var(--text-medium); margin: 0;">
+                    Claude Code puede construir y modificar la plataforma; tú garantizas que el contenido es correcto, pertinente y seguro para su uso formativo.
+                </p>
+            </div>
+
+            <ul>
+                <li><strong>Sé específico:</strong> cuanto más contexto das, mejor resultado obtienes</li>
+                <li><strong>Una cosa a la vez:</strong> peticiones pequeñas y revisadas son más fiables que cambios masivos</li>
+                <li><strong>Revisa siempre:</strong> ningún cambio es definitivo hasta que tú lo validas</li>
+                <li><strong>Di lo que no debe cambiar:</strong> explícitamente, si quieres preservar algo</li>
+                <li><strong>Valida el contenido sanitario:</strong> la herramienta no tiene criterio clínico, tú sí</li>
+                <li><strong>Pide confirmación:</strong> asegúrate de que el cambio se ha guardado y subido</li>
+            </ul>
+        </section>
+
+        <!-- Autoevaluación -->
+        <section class="content-card">
+            <h2>Autoevaluación</h2>
+            <div class="checklist">
+                <h3>Antes de usar Claude Code por primera vez, comprueba que:</h3>
+                <ul class="checklist-items">
+                    <li class="checklist-item">
+                        <input type="checkbox" id="cc1">
+                        <label for="cc1">Entiendo que Claude Code modifica archivos reales, no solo responde en una conversación</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="cc2">
+                        <label for="cc2">Sé formular peticiones con los cuatro ingredientes: dónde, qué, por qué y cómo</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="cc3">
+                        <label for="cc3">Tengo claro que yo soy responsable de revisar el contenido generado antes de aprobarlo</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="cc4">
+                        <label for="cc4">Sé que si algo no me convence puedo pedir una corrección con una nueva petición concreta</label>
+                    </li>
+                    <li class="checklist-item">
+                        <input type="checkbox" id="cc5">
+                        <label for="cc5">Entiendo que la validación del contenido farmacéutico es siempre mi responsabilidad, no de la herramienta</label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+            <a href="../../index.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Volver</div>
+                    <div class="nav-link-title">← Inicio</div>
+                </div>
+            </a>
+            <a href="../aplicaciones/automatizacion.html" class="nav-link">
+                <div>
+                    <div class="nav-link-label">Relacionado</div>
+                    <div class="nav-link-title">M4.2 - Automatización →</div>
+                </div>
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-warning">⚠️ <strong>Esta herramienta es exclusivamente formativa.</strong> No sustituye formación reglada ni orientación profesional. Prohibido el uso con datos reales de pacientes.</p>
+            <p class="footer-meta"><strong>Creado por Ramón Morillo</strong> | Marzo 2026</p>
+            <p class="footer-meta" style="margin-top: 0.5rem;">Desarrollado para la formación responsable en el uso de IA en el ámbito farmacéutico. Licencia: CC BY-NC-SA 4.0</p>
+        </div>
+    </footer>
+
+</body>
+</html>
