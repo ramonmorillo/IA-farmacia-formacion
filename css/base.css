@@ -434,14 +434,194 @@ section {
 }
 
 /* ===========================
+   HEADER META (VERSIÓN / AUTOR)
+   =========================== */
+
+.header-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+}
+
+.header-version {
+    font-weight: 600;
+    color: var(--yellow-caution);
+}
+
+.header-separator {
+    color: rgba(255,255,255,0.4);
+}
+
+.header-author {
+    color: rgba(255,255,255,0.9);
+}
+
+/* ===========================
+   SECCIÓN SOBRE ESTA HERRAMIENTA
+   =========================== */
+
+.about-tool {
+    background-color: var(--bg-light);
+    padding: var(--spacing-xl) 0;
+    border-top: 3px solid var(--primary-blue);
+}
+
+.about-tool h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-blue-dark);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.about-card {
+    background: white;
+    border-radius: 10px;
+    padding: var(--spacing-lg);
+    border: 1px solid var(--bg-gray);
+    border-top: 4px solid var(--primary-blue);
+}
+
+.about-card-warning {
+    border-top-color: var(--yellow-caution);
+    background: var(--yellow-caution-light);
+}
+
+.about-card-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-card h3 {
+    color: var(--primary-blue-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-xs);
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    padding: var(--spacing-xs) 0;
+    padding-left: var(--spacing-md);
+    position: relative;
+    color: var(--text-medium);
+    font-size: 0.95rem;
+}
+
+.about-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--yellow-caution);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* ===========================
    FOOTER
    =========================== */
 
 .main-footer {
-    background-color: var(--text-dark);
+    background-color: var(--primary-blue-dark);
     color: white;
     padding: var(--spacing-lg) 0;
-    margin-top: var(--spacing-xl);
+    margin-top: 0;
+}
+
+.footer-notice {
+    background-color: rgba(255, 193, 7, 0.15);
+    border: 1px solid var(--yellow-caution);
+    border-radius: 6px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.footer-warning-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+}
+
+.footer-warning-text strong {
+    color: var(--yellow-caution);
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col-right {
+    text-align: right;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-copyright strong {
+    color: white;
+}
+
+.footer-license {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+.footer-version {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--yellow-caution);
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer-disclaimer {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+}
+
+/* Mantener compatibilidad con footer-meta en otras páginas */
+.footer-meta {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
 }
 
 .footer-warning {
@@ -457,13 +637,6 @@ section {
     color: var(--text-dark);
 }
 
-.footer-meta {
-    text-align: center;
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.7);
-    margin: 0;
-}
-
 /* ===========================
    RESPONSIVE
    =========================== */
@@ -472,28 +645,47 @@ section {
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     .main-header h1 {
         font-size: 2rem;
     }
-    
+
+    .header-meta {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .header-separator {
+        display: none;
+    }
+
     .key-message .container {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .purpose-statement {
         font-size: 1.1rem;
     }
-    
+
     .profiles-grid,
     .modules-grid,
-    .resources-grid {
+    .resources-grid,
+    .about-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .footer-col-right {
+        text-align: left;
     }
 }
 
