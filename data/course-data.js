@@ -5147,6 +5147,183 @@ window.COURSE_DATA = {
         }
       ],
       "previousModule": "cl-5",
+      "nextModule": "nlm-0"
+    },
+    {
+      "id": "nlm-0",
+      "title": "NLM-0. NotebookLM para farmacia hospitalaria",
+      "pathway": "notebooklm",
+      "route": "notebooklm",
+      "level": 1,
+      "deliveryModes": [
+        "self-paced",
+        "seminar"
+      ],
+      "estimatedMinutes": 75,
+      "minutes": 75,
+      "status": "published",
+      "author": "Ramón Morillo Verdugo",
+      "createdAt": "2026-07-14",
+      "updatedAt": "2026-07-14",
+      "reviewed": "2026-07-14",
+      "reviewedAt": "2026-07-14",
+      "prerequisites": [
+        "Fundamentos de uso seguro de IA",
+        "Fuentes documentales ficticias o documentos públicos no sensibles"
+      ],
+      "competencies": [
+        "Crear cuadernos documentales trazables",
+        "Organizar fuentes de información farmacoterapéutica",
+        "Generar resúmenes, preguntas y materiales docentes verificables",
+        "Separar exploración documental de decisión clínica"
+      ],
+      "concepts": [
+        "NotebookLM",
+        "fuentes",
+        "resumen fundamentado",
+        "guía de estudio",
+        "briefing documental",
+        "privacidad",
+        "verificación"
+      ],
+      "objectives": [
+        "Identificar cuándo NotebookLM aporta valor frente a un chatbot general",
+        "Construir un cuaderno con fuentes permitidas y objetivos profesionales claros",
+        "Verificar toda síntesis contra documentos fuente antes de usarla en farmacia hospitalaria"
+      ],
+      "sections": [
+        {
+          "title": "Por qué NotebookLM es clave en farmacia hospitalaria",
+          "body": "NotebookLM debe presentarse como una herramienta de trabajo documental basada en fuentes aportadas por el usuario. En farmacia hospitalaria puede ayudar a explorar guías, protocolos, fichas técnicas públicas, artículos, documentos docentes y materiales internos previamente anonimizados, siempre como apoyo formativo o de preparación y nunca como sustituto del juicio profesional ni de las fuentes oficiales."
+        },
+        {
+          "title": "Casos de uso prioritarios",
+          "body": "Los usos recomendados incluyen preparar sesiones clínicas con bibliografía seleccionada, comparar versiones de protocolos, generar preguntas para residentes, crear resúmenes de seguridad de medicamentos, localizar discrepancias entre documentos y preparar briefing previo a comisiones. El valor principal es acelerar lectura, estructuración y docencia cuando el profesional conserva la decisión final."
+        },
+        {
+          "title": "Flujo seguro de utilización",
+          "body": "El flujo mínimo es definir la pregunta, seleccionar documentos permitidos, excluir datos identificables o sensibles, cargar solo fuentes necesarias, solicitar una síntesis con referencias a fuente, contrastar citas y elaborar una salida profesional revisada. Si se usan documentos institucionales, debe existir autorización, minimización, política local y registro del uso."
+        },
+        {
+          "title": "Prompt docente recomendado",
+          "body": "Actúa como asistente documental para farmacia hospitalaria. Usa exclusivamente las fuentes del cuaderno. Resume los puntos relevantes para una sesión docente, separa evidencia, incertidumbres y recomendaciones que requieren verificación humana. No inventes datos, indica qué fuente respalda cada afirmación y lista preguntas que el farmacéutico debe revisar antes de presentar."
+        },
+        {
+          "title": "Limitaciones y riesgos",
+          "body": "NotebookLM puede omitir matices, priorizar documentos incompletos, resumir de forma excesiva o generar una falsa sensación de exhaustividad. No debe usarse para introducir datos reales de pacientes, sustituir evaluación clínica, validar compatibilidades, decidir tratamientos o reemplazar bases oficiales. La salida debe conservar trazabilidad documental y revisión farmacéutica."
+        },
+        {
+          "title": "Actividad práctica",
+          "body": "Con tres documentos públicos o ficticios sobre un medicamento, el alumno crea un cuaderno, solicita un resumen para sesión, una tabla de dudas pendientes y cinco preguntas de evaluación. Después marca en el texto qué afirmaciones tienen respaldo documental, cuáles requieren fuente externa y cuáles no deben usarse."
+        }
+      ],
+      "demonstration": "El docente muestra un cuaderno con documentos ficticios y compara una respuesta fundamentada en fuentes con una respuesta genérica de chatbot.",
+      "guidedPractice": "Crear un cuaderno docente sin datos reales, pedir resumen estructurado, preguntas y lista de incertidumbres.",
+      "independentPractice": "Diseñar un protocolo de uso de NotebookLM para una sesión clínica o revisión bibliográfica de servicio.",
+      "guidedActivity": "Trabajo por parejas: uno solicita la síntesis y otro audita trazabilidad, omisiones y riesgos.",
+      "independentActivity": "Entrega de una ficha de uso seguro con objetivo, fuentes, prompts, salida revisada y límites.",
+      "expertChallenge": "Diseñar una matriz para decidir cuándo usar NotebookLM, un chatbot, un gestor bibliográfico o una revisión manual.",
+      "repositoryExamples": [
+        {
+          "name": "NotebookLM",
+          "url": "https://notebooklm.google/"
+        }
+      ],
+      "prompts": [
+        "Usa solo las fuentes cargadas y separa evidencia, incertidumbre y tareas de verificación.",
+        "Convierte estas fuentes en una sesión docente para residentes, con preguntas y respuestas justificadas."
+      ],
+      "expectedOutputs": [
+        "Resumen con trazabilidad a fuentes",
+        "Tabla de dudas pendientes",
+        "Checklist de verificación humana"
+      ],
+      "tests": [
+        "Comprobar que no hay datos de pacientes",
+        "Verificar afirmaciones contra las fuentes",
+        "Registrar fecha, documentos y versión de la salida"
+      ],
+      "checklist": [
+        "He usado solo documentos permitidos",
+        "He evitado datos reales de pacientes",
+        "He revisado citas y afirmaciones",
+        "He separado resumen documental de recomendación clínica",
+        "He documentado límites y responsable de revisión"
+      ],
+      "assessment": [
+        {
+          "q": "¿Cuál es el uso más seguro de NotebookLM en farmacia hospitalaria?",
+          "options": [
+            "Explorar y resumir fuentes permitidas con revisión humana",
+            "Decidir un cambio terapéutico individual",
+            "Sustituir bases oficiales y protocolos locales"
+          ],
+          "feedback": [
+            "Correcto: su valor es documental y requiere verificación.",
+            "Incorrecto: la decisión clínica individual exige juicio profesional y fuentes validadas.",
+            "Incorrecto: puede apoyar lectura, pero no reemplaza fuentes oficiales."
+          ]
+        }
+      ],
+      "teacherGuide": {
+        "duration": "75 minutos",
+        "difficulty": "Básico profesional",
+        "objectives": [
+          "Practicar síntesis documental segura",
+          "Distinguir soporte documental de decisión clínica",
+          "Auditar trazabilidad y privacidad"
+        ],
+        "materials": [
+          "Documentos públicos o ficticios",
+          "Plantilla de verificación",
+          "Acceso a NotebookLM si está permitido institucionalmente"
+        ],
+        "essentialConcepts": [
+          "Fuentes controladas",
+          "Minimización de datos",
+          "Trazabilidad",
+          "Revisión humana"
+        ],
+        "predictableErrors": [
+          "Cargar documentos con datos sensibles",
+          "Aceptar resúmenes sin comprobar fuentes",
+          "Confundir síntesis con recomendación clínica"
+        ],
+        "debateQuestions": [
+          "¿Qué tareas del servicio se benefician de un cuaderno documental?",
+          "¿Qué documentos no deberían cargarse nunca?",
+          "¿Cómo registraríamos el uso en una política local?"
+        ],
+        "expectedAnswer": "El alumno debe proponer un caso documental, fuentes permitidas, prompt seguro, verificación contra fuentes y límites explícitos.",
+        "rubric": [
+          "Define objetivo y fuentes permitidas",
+          "Protege datos y confidencialidad",
+          "Verifica afirmaciones",
+          "Documenta límites y responsabilidad"
+        ]
+      },
+      "presentationSlides": [
+        {
+          "title": "NotebookLM como cuaderno documental",
+          "objective": "Entender su papel en farmacia hospitalaria",
+          "keyIdeas": [
+            "Trabaja sobre fuentes aportadas",
+            "Acelera lectura y docencia",
+            "Exige verificación humana"
+          ],
+          "example": "Preparar una sesión docente a partir de documentos públicos o ficticios.",
+          "question": "¿Qué documentos del servicio podrían usarse sin datos sensibles?",
+          "summary": "NotebookLM es útil para síntesis documental segura, no para decisión clínica autónoma."
+        }
+      ],
+      "references": [
+        {
+          "label": "NotebookLM",
+          "url": "https://notebooklm.google/",
+          "checked": "2026-07-14"
+        }
+      ],
+      "previousModule": "cl-6",
       "nextModule": "cc-0"
     },
     {
@@ -5400,7 +5577,7 @@ window.COURSE_DATA = {
           "checked": "2026-07-14"
         }
       ],
-      "previousModule": "cl-6",
+      "previousModule": "nlm-0",
       "nextModule": "cc-1"
     },
     {
@@ -9708,7 +9885,8 @@ window.COURSE_DATA = {
       "Claude Code",
       "Codex",
       "GitHub",
-      "ChatGPT"
+      "ChatGPT",
+      "NotebookLM"
     ]
   },
   "badges": [
@@ -9829,7 +10007,8 @@ window.COURSE_DATA = {
   "glossary": {
     "MCP": "Patrón para conectar modelos con herramientas y recursos bajo permisos controlados.",
     "Agente": "Sistema que planifica y usa herramientas con supervisión.",
-    "Validación clínica": "Proceso formal que no se presume por existir un repositorio público."
+    "Validación clínica": "Proceso formal que no se presume por existir un repositorio público.",
+    "NotebookLM": "Herramienta de cuaderno documental con IA para trabajar sobre fuentes aportadas; útil para síntesis, docencia y exploración, siempre con revisión humana y sin datos sensibles."
   },
   "cases": []
 };
