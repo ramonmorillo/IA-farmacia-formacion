@@ -1,0 +1,7 @@
+window.TOOLING_CURRENT = [
+  {tool:'GitHub', capability:'Repositorios, Issues, Pull Requests, Pages y Actions', verifiedAt:'2026-07-14', officialSource:'https://docs.github.com/', status:'estable con interfaz cambiante', notes:'No subir datos de pacientes, secretos ni bases reales.'},
+  {tool:'Codex', capability:'Análisis, edición, pruebas y documentación de repositorios con revisión humana', verifiedAt:'2026-07-14', officialSource:'https://openai.com/codex/', status:'susceptible de cambio', notes:'Usar tareas delimitadas, ramas y PR revisables.'},
+  {tool:'Claude', capability:'Trabajo conversacional con documentos, investigación, docencia y diseño', verifiedAt:'2026-07-14', officialSource:'https://www.anthropic.com/claude', status:'susceptible de cambio', notes:'Verificar referencias y separar dato, inferencia e interpretación.'},
+  {tool:'Claude Code', capability:'Trabajo local en terminal sobre proyectos con instrucciones, hooks y subagentes', verifiedAt:'2026-07-14', officialSource:'https://docs.anthropic.com/en/docs/claude-code', status:'susceptible de cambio', notes:'Revisar permisos, comandos y diffs antes de publicar.'},
+  {tool:'ChatGPT', capability:'Asistencia general, análisis, diseño de prompts y apoyo documental', verifiedAt:'2026-07-14', officialSource:'https://openai.com/chatgpt/', status:'susceptible de cambio', notes:'No asumir actualidad sin fuentes verificadas.'}
+];
