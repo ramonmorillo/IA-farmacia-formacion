@@ -1,0 +1,13 @@
+plantilla,campo,descripcion
+Inventario de herramientas,nombre,Nombre de la herramienta o sistema
+Ficha de caso de uso,finalidad,Finalidad profesional prevista
+Evaluación inicial de riesgo,tipo_dato,Público/interno/confidencial/personal
+Matriz de clasificación,consecuencia_error,Baja/media/alta/crítica
+Registro de responsables,responsable,Propietario del caso y revisor experto
+Plan de validación,dataset,Descripción de casos normales límite y adversariales
+Declaración de uso,transparencia,Cuándo y cómo declarar uso de IA
+Registro de incidencias,incidente,Descripción fecha impacto y mitigación
+Control de versiones,version,Versión del sistema prompt datos y evaluación
+Revisión periódica,fecha_revision,Fecha responsable y decisión
+Retirada de herramienta,criterio,Criterios de retirada o suspensión
+Checklist adquisición,garantias,Privacidad seguridad trazabilidad soporte y reversibilidad
