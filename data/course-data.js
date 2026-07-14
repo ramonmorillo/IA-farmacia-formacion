@@ -9887,7 +9887,69 @@ window.COURSE_DATA = {
       "GitHub",
       "ChatGPT",
       "NotebookLM"
-    ]
+    ],
+    "matrix": {
+      "Claude": {
+        "tipo de tarea": "Redacción extensa, análisis de documentos, preparación de clases, revisión de protocolos y síntesis razonada.",
+        "entorno": "Web o app conversacional; útil cuando se trabaja por bloques y no hace falta tocar un repositorio completo.",
+        "archivos": "Puede trabajar con documentos adjuntos; subir solo material permitido, anonimizado y con versión identificada.",
+        "repositorios": "No es la opción principal para navegar un repositorio vivo; usarlo para revisar fragmentos o explicar cambios.",
+        "código": "Adecuado para prototipos, revisión conceptual y explicación; todo código debe probarse fuera de la conversación.",
+        "privacidad": "No introducir datos de pacientes, credenciales ni documentos internos sin autorización institucional explícita.",
+        "trazabilidad": "Guardar prompt, fuentes usadas, versión del documento y decisión humana final en una ficha de uso.",
+        "nivel requerido": "Básico-intermedio: formular contexto, detectar alucinaciones y contrastar con fuentes oficiales."
+      },
+      "Claude Code": {
+        "tipo de tarea": "Cambios en proyectos locales: editar archivos, ejecutar pruebas, revisar diffs y documentar incidencias.",
+        "entorno": "Terminal local con acceso al proyecto; exige entender permisos, comandos, rama activa y estado de git.",
+        "archivos": "Trabaja sobre el árbol de archivos; revisar siempre qué ficheros modifica antes de aceptar o publicar.",
+        "repositorios": "Muy útil en repositorios docentes o de desarrollo; evitar producción clínica sin controles y revisión por pares.",
+        "código": "Fuerte para refactor, pruebas y documentación técnica; confirmar con tests, lint y revisión manual del diff.",
+        "privacidad": "No exponer secretos, historiales clínicos ni variables de entorno; limpiar datos de ejemplo antes de compartir.",
+        "trazabilidad": "Registrar comandos ejecutados, tests, commit, PR y motivo de cada cambio relevante.",
+        "nivel requerido": "Intermedio-avanzado: terminal, git básico, lectura de errores y criterio para revertir cambios."
+      },
+      "Codex": {
+        "tipo de tarea": "Implementar cambios acotados, corregir bugs, crear tests y preparar pull requests en un repo.",
+        "entorno": "Agente de desarrollo sobre una copia del código; conviene darle objetivos, límites y criterios de aceptación.",
+        "archivos": "Puede modificar varios archivos; definir alcance y revisar que no toque contenido clínico sensible o ajeno.",
+        "repositorios": "Encaja con flujos GitHub: rama, commit, PR, revisión y CI antes de integrar.",
+        "código": "Adecuado para tareas verificables; pedir pruebas automáticas y explicación de riesgos residuales.",
+        "privacidad": "Usar repositorios sin datos reales; proteger tokens, configuraciones privadas y documentación interna.",
+        "trazabilidad": "Conservar resumen, diff, pruebas ejecutadas, commit y PR como evidencia docente.",
+        "nivel requerido": "Intermedio: saber describir la tarea, interpretar tests y revisar un pull request."
+      },
+      "GitHub": {
+        "tipo de tarea": "Alojamiento, control de versiones, colaboración, issues, pull requests, Pages y evidencias del proyecto.",
+        "entorno": "Plataforma web y git; ideal para publicar materiales docentes estáticos y coordinar revisión.",
+        "archivos": "Gestiona archivos versionados; no subir datos personales, documentos con derechos dudosos ni secretos.",
+        "repositorios": "Es el repositorio y registro principal; configurar visibilidad, ramas, permisos y protección antes de trabajar.",
+        "código": "No genera por sí mismo la solución, pero permite revisar cambios, ejecutar Actions y publicar versiones.",
+        "privacidad": "La visibilidad pública es irreversible en la práctica; revisar licencias, historial y archivos antes de publicar.",
+        "trazabilidad": "Excelente: commits, issues, PR, releases y Actions documentan quién cambió qué, cuándo y por qué.",
+        "nivel requerido": "Básico para navegar; intermedio para ramas, PR, Pages, Actions y permisos."
+      },
+      "ChatGPT": {
+        "tipo de tarea": "Lluvia de ideas, explicación, generación de borradores, tutoría, simulación de casos y apoyo a evaluación.",
+        "entorno": "Conversacional; funciona bien para aprendizaje guiado, prompts iterativos y aclaración de conceptos.",
+        "archivos": "Puede analizar adjuntos según el entorno; usar copias anonimizadas y comprobar límites de carga.",
+        "repositorios": "Útil para razonar sobre fragmentos o planes; para cambios reales conviene usar un flujo con git y pruebas.",
+        "código": "Puede proponer código y pruebas; nunca asumir que compila o que cumple normativa sin verificación.",
+        "privacidad": "Aplicar minimización: sin pacientes, sin credenciales, sin datos institucionales si no está autorizado.",
+        "trazabilidad": "Exportar o resumir conversación, prompt final, fuentes consultadas y validación humana.",
+        "nivel requerido": "Básico: preguntar bien, pedir límites, contrastar respuestas y reconocer incertidumbre."
+      },
+      "NotebookLM": {
+        "tipo de tarea": "Síntesis documental basada en fuentes aportadas: guías, artículos, protocolos docentes y material bibliográfico.",
+        "entorno": "Cuaderno con documentos seleccionados; mejor para estudiar corpus cerrado que para consultar conocimiento general.",
+        "archivos": "La calidad depende de las fuentes cargadas; nombrar versiones, retirar datos sensibles y evitar documentos no autorizados.",
+        "repositorios": "No está pensado para repositorios de código; puede apoyar la lectura de documentación exportada.",
+        "código": "No es herramienta principal de programación; usarlo para resumir documentación técnica o requisitos.",
+        "privacidad": "Solo fuentes permitidas y anonimizadas; especial cuidado con protocolos internos y material con copyright.",
+        "trazabilidad": "Muy útil si se exige citar fuente y página; aun así comprobar citas, omisiones y contexto.",
+        "nivel requerido": "Básico-intermedio: seleccionar buenas fuentes, detectar sesgos del corpus y validar conclusiones."
+      }
+    }
   },
   "badges": [
     {
