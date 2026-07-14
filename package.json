@@ -1,0 +1,1 @@
+{"scripts":{"validate-content":"node scripts/validate-content.js","test":"node scripts/validate-content.js"},"devDependencies":{}}
