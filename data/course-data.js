@@ -169,10 +169,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -186,14 +182,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 0,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 0,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -205,8 +199,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -240,80 +233,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 0",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "repositorio",
-          "commit",
-          "rama",
-          "pull request",
-          "GitHub Pages",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "GH-0. Comprender GitHub",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "repositorio",
-            "commit",
-            "rama"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -423,10 +347,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -440,14 +360,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 1,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 1,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -459,8 +377,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -494,80 +411,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 1",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "repositorio",
-          "commit",
-          "rama",
-          "pull request",
-          "GitHub Pages",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "GH-1. Crear un primer repositorio",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "repositorio",
-            "commit",
-            "rama"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -677,10 +525,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -694,14 +538,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 2,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 2,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -713,8 +555,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -748,80 +589,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 2",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "repositorio",
-          "commit",
-          "rama",
-          "pull request",
-          "GitHub Pages",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "GH-2. Trabajar de forma segura",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "repositorio",
-            "commit",
-            "rama"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -931,10 +703,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -948,14 +716,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 3,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 3,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -967,8 +733,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -1002,80 +767,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 3",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "repositorio",
-          "commit",
-          "rama",
-          "pull request",
-          "GitHub Pages",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "GH-3. GitHub Pages y aplicaciones estáticas",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "repositorio",
-            "commit",
-            "rama"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -1185,10 +881,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -1202,14 +894,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -1221,8 +911,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -1256,80 +945,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "repositorio",
-          "commit",
-          "rama",
-          "pull request",
-          "GitHub Pages",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "GH-4. GitHub para proyectos sanitarios",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "repositorio",
-            "commit",
-            "rama"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -1439,10 +1059,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -1456,14 +1072,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -1475,8 +1089,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -1510,80 +1123,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "repositorio",
-          "commit",
-          "rama",
-          "pull request",
-          "GitHub Pages",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "GH-5. GitHub avanzado",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "repositorio",
-            "commit",
-            "rama"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -1692,10 +1236,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -1709,14 +1249,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 0,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 0,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -1728,8 +1266,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -1763,79 +1300,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 0",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "especificación",
-          "diff",
-          "pruebas",
-          "regresión",
-          "documentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CX-0. Primer contacto",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "especificación",
-            "diff",
-            "pruebas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -1944,10 +1413,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -1961,14 +1426,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 1,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 1,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -1980,8 +1443,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -2015,79 +1477,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 1",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "especificación",
-          "diff",
-          "pruebas",
-          "regresión",
-          "documentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CX-1. Especificar antes de construir",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "especificación",
-            "diff",
-            "pruebas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -2196,10 +1590,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -2213,14 +1603,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 2,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 2,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -2232,8 +1620,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -2267,79 +1654,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 2",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "especificación",
-          "diff",
-          "pruebas",
-          "regresión",
-          "documentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CX-2. Crear una herramienta básica",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "especificación",
-            "diff",
-            "pruebas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -2448,10 +1767,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -2465,14 +1780,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 3,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 3,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -2484,8 +1797,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -2519,79 +1831,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 3",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "especificación",
-          "diff",
-          "pruebas",
-          "regresión",
-          "documentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CX-3. Modificar sin romper",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "especificación",
-            "diff",
-            "pruebas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -2700,10 +1944,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -2717,14 +1957,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -2736,8 +1974,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -2771,79 +2008,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "especificación",
-          "diff",
-          "pruebas",
-          "regresión",
-          "documentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CX-4. Depuración sistemática",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "especificación",
-            "diff",
-            "pruebas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -2952,10 +2121,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -2969,14 +2134,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -2988,8 +2151,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -3023,79 +2185,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "especificación",
-          "diff",
-          "pruebas",
-          "regresión",
-          "documentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CX-5. Auditoría de código generado",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "especificación",
-            "diff",
-            "pruebas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -3204,10 +2298,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -3221,14 +2311,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -3240,8 +2328,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -3275,79 +2362,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "especificación",
-          "diff",
-          "pruebas",
-          "regresión",
-          "documentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CX-6. Codex como agente de calidad",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "especificación",
-            "diff",
-            "pruebas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -3456,10 +2475,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -3473,14 +2488,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 0,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 0,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -3492,8 +2505,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -3527,79 +2539,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 0",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "documentos",
-          "investigación",
-          "rúbricas",
-          "verificación",
-          "privacidad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CL-0. Uso conversacional responsable",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "documentos",
-            "investigación",
-            "rúbricas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -3708,10 +2652,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -3725,14 +2665,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 1,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 1,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -3744,8 +2682,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -3779,79 +2716,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 1",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "documentos",
-          "investigación",
-          "rúbricas",
-          "verificación",
-          "privacidad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CL-1. Claude para documentos extensos",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "documentos",
-            "investigación",
-            "rúbricas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -3960,10 +2829,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -3977,14 +2842,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 2,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 2,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -3996,8 +2859,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -4031,79 +2893,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 2",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "documentos",
-          "investigación",
-          "rúbricas",
-          "verificación",
-          "privacidad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CL-2. Claude para investigación farmacéutica",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "documentos",
-            "investigación",
-            "rúbricas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -4212,10 +3006,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -4229,14 +3019,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 3,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 3,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -4248,8 +3036,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -4283,79 +3070,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 3",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "documentos",
-          "investigación",
-          "rúbricas",
-          "verificación",
-          "privacidad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CL-3. Claude para formación",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "documentos",
-            "investigación",
-            "rúbricas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -4464,10 +3183,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -4481,14 +3196,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -4500,8 +3213,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -4535,79 +3247,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "documentos",
-          "investigación",
-          "rúbricas",
-          "verificación",
-          "privacidad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CL-4. Proyectos, instrucciones y conocimiento especializado",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "documentos",
-            "investigación",
-            "rúbricas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -4716,10 +3360,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -4733,14 +3373,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -4752,8 +3390,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -4787,79 +3424,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "documentos",
-          "investigación",
-          "rúbricas",
-          "verificación",
-          "privacidad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CL-5. Skills especializadas",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "documentos",
-            "investigación",
-            "rúbricas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -4968,10 +3537,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -4985,14 +3550,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -5004,8 +3567,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -5039,79 +3601,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "documentos",
-          "investigación",
-          "rúbricas",
-          "verificación",
-          "privacidad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CL-6. Elegir entre Claude, Codex y Claude Code",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "documentos",
-            "investigación",
-            "rúbricas"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -5259,61 +3753,10 @@ window.COURSE_DATA = {
             "Sustituir bases oficiales y protocolos locales"
           ],
           "feedback": [
-            "Correcto: su valor es documental y requiere verificación.",
-            "Incorrecto: la decisión clínica individual exige juicio profesional y fuentes validadas.",
-            "Incorrecto: puede apoyar lectura, pero no reemplaza fuentes oficiales."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "duration": "75 minutos",
-        "difficulty": "Básico profesional",
-        "objectives": [
-          "Practicar síntesis documental segura",
-          "Distinguir soporte documental de decisión clínica",
-          "Auditar trazabilidad y privacidad"
-        ],
-        "materials": [
-          "Documentos públicos o ficticios",
-          "Plantilla de verificación",
-          "Acceso a NotebookLM si está permitido institucionalmente"
-        ],
-        "essentialConcepts": [
-          "Fuentes controladas",
-          "Minimización de datos",
-          "Trazabilidad",
-          "Revisión humana"
-        ],
-        "predictableErrors": [
-          "Cargar documentos con datos sensibles",
-          "Aceptar resúmenes sin comprobar fuentes",
-          "Confundir síntesis con recomendación clínica"
-        ],
-        "debateQuestions": [
-          "¿Qué tareas del servicio se benefician de un cuaderno documental?",
-          "¿Qué documentos no deberían cargarse nunca?",
-          "¿Cómo registraríamos el uso en una política local?"
-        ],
-        "expectedAnswer": "El alumno debe proponer un caso documental, fuentes permitidas, prompt seguro, verificación contra fuentes y límites explícitos.",
-        "rubric": [
-          "Define objetivo y fuentes permitidas",
-          "Protege datos y confidencialidad",
-          "Verifica afirmaciones",
-          "Documenta límites y responsabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "NotebookLM como cuaderno documental",
-          "objective": "Entender su papel en farmacia hospitalaria",
-          "keyIdeas": [
-            "Trabaja sobre fuentes aportadas",
-            "Acelera lectura y docencia",
-            "Exige verificación humana"
-          ],
-          "example": "Preparar una sesión docente a partir de documentos públicos o ficticios.",
-          "question": "¿Qué documentos del servicio podrían usarse sin datos sensibles?",
-          "summary": "NotebookLM es útil para síntesis documental segura, no para decisión clínica autónoma."
         }
       ],
       "references": [
@@ -5398,10 +3841,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -5415,14 +3854,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 0,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 0,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -5434,8 +3871,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -5469,80 +3905,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 0",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-0. Entorno y conceptos básicos",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -5652,10 +4019,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -5669,14 +4032,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 1,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 1,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -5688,8 +4049,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -5723,80 +4083,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 1",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-1. CLAUDE.md e instrucciones del proyecto",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -5906,10 +4197,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -5923,14 +4210,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 2,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 2,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -5942,8 +4227,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -5977,80 +4261,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 2",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-2. Desarrollo guiado",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -6160,10 +4375,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -6177,14 +4388,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 3,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 3,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -6196,8 +4405,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -6231,80 +4439,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 3",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-3. Depuración de aplicaciones reales",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -6414,10 +4553,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -6431,14 +4566,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -6450,8 +4583,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -6485,80 +4617,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-4. Subagentes y división del trabajo",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -6668,10 +4731,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -6685,14 +4744,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -6704,8 +4761,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -6739,80 +4795,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-5. MCP, conectores y herramientas externas",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -6922,10 +4909,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -6939,14 +4922,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -6958,8 +4939,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -6993,80 +4973,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-6. Hooks, skills y automatización",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -7176,10 +5087,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -7193,14 +5100,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -7212,8 +5117,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -7247,80 +5151,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-7. Seguridad y supervisión",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -7430,10 +5265,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -7447,14 +5278,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -7466,8 +5295,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -7501,80 +5329,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "terminal",
-          "instrucciones",
-          "subagentes",
-          "MCP",
-          "hooks",
-          "seguridad"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "CC-8. Proyecto experto",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "terminal",
-            "instrucciones",
-            "subagentes"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -7683,10 +5442,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -7700,14 +5455,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 1,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 1,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -7719,8 +5472,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -7754,79 +5506,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 1",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "producto final",
-          "pruebas",
-          "despliegue",
-          "evidencia",
-          "presentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "De cero a herramienta A. Página educativa",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "producto final",
-            "pruebas",
-            "despliegue"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -7935,10 +5619,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -7952,14 +5632,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 2,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 2,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -7971,8 +5649,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -8006,79 +5683,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 2",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "producto final",
-          "pruebas",
-          "despliegue",
-          "evidencia",
-          "presentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "De cero a herramienta B. Calculadora docente",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "producto final",
-            "pruebas",
-            "despliegue"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -8187,10 +5796,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -8204,14 +5809,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 3,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 3,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -8223,8 +5826,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -8258,79 +5860,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 3",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "producto final",
-          "pruebas",
-          "despliegue",
-          "evidencia",
-          "presentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "De cero a herramienta C. Registro local",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "producto final",
-            "pruebas",
-            "despliegue"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -8439,10 +5973,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -8456,14 +5986,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 3,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 3,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -8475,8 +6003,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -8510,79 +6037,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 3",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "producto final",
-          "pruebas",
-          "despliegue",
-          "evidencia",
-          "presentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "De cero a herramienta D. Herramienta basada en reglas",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "producto final",
-            "pruebas",
-            "despliegue"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -8691,10 +6150,6 @@ window.COURSE_DATA = {
         {
           "title": "Microevaluación",
           "body": "La evaluación exige evidencia: especificación, prueba, explicación de límites, comparación con fuente o diff revisado. Las preguntas tipo test son apoyo, no sustituyen desempeño observable."
-        },
-        {
-          "title": "Solución y siguiente paso",
-          "body": "La solución esperada incluye resultado funcional o documento verificable, advertencia de validación, registro de uso de IA, trazabilidad y propuesta de mejora. El siguiente paso conecta con el proyecto escalonado correspondiente."
         }
       ],
       "demonstration": {
@@ -8708,14 +6163,12 @@ window.COURSE_DATA = {
       "guidedPractice": {
         "title": "Práctica guiada",
         "level": 4,
-        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias.",
-        "solution": "Solución: salida limitada, verificada, con advertencia y checklist completo."
+        "instructions": "Ejecute la práctica con datos ficticios y registre evidencias."
       },
       "independentPractice": {
         "title": "Práctica autónoma",
         "level": 4,
-        "instructions": "Repita con un caso diferente y documente el proceso.",
-        "solution": "Debe entregar prompt, resultado, revisión, evidencia y reflexión."
+        "instructions": "Repita con un caso diferente y documente el proceso."
       },
       "guidedActivity": {
         "title": "Práctica guiada",
@@ -8727,8 +6180,7 @@ window.COURSE_DATA = {
       },
       "expertChallenge": {
         "title": "Reto experto",
-        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción.",
-        "solution": "Informe técnico con riesgos, pruebas y decisión de publicación."
+        "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
       "repositoryExamples": [
         {
@@ -8762,79 +6214,11 @@ window.COURSE_DATA = {
             "Cuando existe evidencia verificada, pruebas y límites documentados",
             "Cuando se publica sin revisar"
           ],
-          "answer": 1,
           "feedback": [
-            "No basta una respuesta.",
-            "Correcto.",
-            "Publicar sin revisar es inseguro."
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente.",
+            "Respuesta registrada. La revisión razonada se realiza con el docente."
           ]
-        }
-      ],
-      "teacherGuide": {
-        "objectives": [
-          "Activar práctica",
-          "Gestionar grupos mixtos",
-          "Revisar evidencias"
-        ],
-        "duration": "60-90 min",
-        "difficulty": "Nivel 4",
-        "preparation": "Preparar datos ficticios y enlace a plantilla.",
-        "materials": [
-          "Proyector",
-          "Plantilla",
-          "Repositorio de entrenamiento"
-        ],
-        "essentialConcepts": [
-          "producto final",
-          "pruebas",
-          "despliegue",
-          "evidencia",
-          "presentación"
-        ],
-        "predictableErrors": [
-          "Trabajar en main",
-          "No verificar fuentes",
-          "No guardar evidencias"
-        ],
-        "debateQuestions": [
-          "¿Qué puede delegarse y qué no?",
-          "¿Qué prueba faltaría antes de publicar?"
-        ],
-        "shortActivity": "Capa esencial: identificar problema y riesgo.",
-        "extendedActivity": "Capa ampliada: revisar estructura o salida.",
-        "discussionCase": "Herramienta que funciona pero no declara limitaciones.",
-        "expectedAnswer": "No publicarla para uso real sin alcance, pruebas, advertencia y revisión.",
-        "mustNotOmit": [
-          "Autoría",
-          "No uso de datos reales",
-          "No validación clínica automática"
-        ],
-        "controversies": [
-          "Velocidad frente a seguridad"
-        ],
-        "finalMessages": [
-          "La responsabilidad final sigue siendo humana."
-        ],
-        "evaluation": "Rúbrica transversal por evidencias.",
-        "rubric": [
-          "Problema",
-          "Seguridad",
-          "Pruebas",
-          "Trazabilidad"
-        ]
-      },
-      "presentationSlides": [
-        {
-          "title": "De cero a herramienta E. Ecosistema experto",
-          "objective": "Convertir conocimiento en práctica verificable",
-          "keyIdeas": [
-            "producto final",
-            "pruebas",
-            "despliegue"
-          ],
-          "example": "Caso ficticio de farmacia hospitalaria",
-          "question": "¿Qué evidencia demuestra competencia?",
-          "summary": "Aprender haciendo con revisión humana."
         }
       ],
       "references": [
@@ -9490,21 +6874,6 @@ window.COURSE_DATA = {
       "offlinePlan": {
         "summary": "Usar capturas, ZIP local, fichas impresas y datos ficticios si falla internet."
       },
-      "teacherNotes": [
-        "Ocultar soluciones",
-        "Revelar pistas progresivas",
-        "Registrar incidencias localmente"
-      ],
-      "solutions": [
-        "Solución con checklist y límites, no publicación clínica."
-      ],
-      "rubric": [
-        "Problema",
-        "Seguridad",
-        "Pruebas",
-        "Trazabilidad",
-        "Explicación"
-      ],
       "resources": [
         "Hoja de sesión",
         "Rúbrica imprimible",
@@ -9579,21 +6948,6 @@ window.COURSE_DATA = {
       "offlinePlan": {
         "summary": "Usar capturas, ZIP local, fichas impresas y datos ficticios si falla internet."
       },
-      "teacherNotes": [
-        "Ocultar soluciones",
-        "Revelar pistas progresivas",
-        "Registrar incidencias localmente"
-      ],
-      "solutions": [
-        "Solución con checklist y límites, no publicación clínica."
-      ],
-      "rubric": [
-        "Problema",
-        "Seguridad",
-        "Pruebas",
-        "Trazabilidad",
-        "Explicación"
-      ],
       "resources": [
         "Hoja de sesión",
         "Rúbrica imprimible",
@@ -9668,21 +7022,6 @@ window.COURSE_DATA = {
       "offlinePlan": {
         "summary": "Usar capturas, ZIP local, fichas impresas y datos ficticios si falla internet."
       },
-      "teacherNotes": [
-        "Ocultar soluciones",
-        "Revelar pistas progresivas",
-        "Registrar incidencias localmente"
-      ],
-      "solutions": [
-        "Solución con checklist y límites, no publicación clínica."
-      ],
-      "rubric": [
-        "Problema",
-        "Seguridad",
-        "Pruebas",
-        "Trazabilidad",
-        "Explicación"
-      ],
       "resources": [
         "Hoja de sesión",
         "Rúbrica imprimible",
@@ -9757,21 +7096,6 @@ window.COURSE_DATA = {
       "offlinePlan": {
         "summary": "Usar capturas, ZIP local, fichas impresas y datos ficticios si falla internet."
       },
-      "teacherNotes": [
-        "Ocultar soluciones",
-        "Revelar pistas progresivas",
-        "Registrar incidencias localmente"
-      ],
-      "solutions": [
-        "Solución con checklist y límites, no publicación clínica."
-      ],
-      "rubric": [
-        "Problema",
-        "Seguridad",
-        "Pruebas",
-        "Trazabilidad",
-        "Explicación"
-      ],
       "resources": [
         "Hoja de sesión",
         "Rúbrica imprimible",
@@ -9846,21 +7170,6 @@ window.COURSE_DATA = {
       "offlinePlan": {
         "summary": "Usar capturas, ZIP local, fichas impresas y datos ficticios si falla internet."
       },
-      "teacherNotes": [
-        "Ocultar soluciones",
-        "Revelar pistas progresivas",
-        "Registrar incidencias localmente"
-      ],
-      "solutions": [
-        "Solución con checklist y límites, no publicación clínica."
-      ],
-      "rubric": [
-        "Problema",
-        "Seguridad",
-        "Pruebas",
-        "Trazabilidad",
-        "Explicación"
-      ],
       "resources": [
         "Hoja de sesión",
         "Rúbrica imprimible",
