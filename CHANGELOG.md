@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.1.0 - 2026-09-10
+
+- Reposicionamiento de la portada como plataforma de formación, consultoría y laboratorio aplicado.
+- Incorporación de tres programas formativos con resultados observables.
+- Nueva ruta de consultoría desde el diagnóstico hasta la implantación y el mantenimiento.
+- Recuperación de los 32 casos prácticos perdidos durante el rediseño anterior.
+- Reparación y ampliación del módulo de NotebookLM.
+- Actualización del laboratorio con herramientas CMO recientes y descripciones específicas.
+- Sincronización de versiones, fechas, fuentes de herramientas y validación automática.
+
 ## 3.1.0 - 2026-07-14
 
 - Corrección integral de contenidos: 15 módulos con modelo centralizado, actividades, microevaluación, fuentes, autoría, fechas, navegación y guía docente.

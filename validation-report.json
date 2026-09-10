@@ -1,15 +1,16 @@
 {
-  "checkedAt": "2026-07-14T16:43:15.602Z",
-  "totalModules": 34,
+  "checkedAt": "2026-09-10T17:01:48.499Z",
+  "totalModules": 35,
   "pathways": [
     "github",
     "codex",
     "claude",
+    "notebooklm",
     "claude-code",
     "proyectos"
   ],
   "totalSeminars": 5,
-  "portfolioItems": 21,
+  "portfolioItems": 26,
   "brokenRoutes": 0,
   "buttonsWithoutAction": 0,
   "errors": []

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const vm = require('vm');
-const src = fs.readFileSync('data/course-data.js','utf8');
+const src = ['data/course-data.js','data/cases.js','data/site-v5.js'].map(file=>fs.readFileSync(file,'utf8')).join('\n');
 const context = {window:{}}; vm.createContext(context); vm.runInContext(src, context);
 const data = context.window.COURSE_DATA;
 const banned = [/próximamente/i,/contenido pendiente/i,/lorem ipsum/i,/\bTODO\b/,/por desarrollar/i];
@@ -9,6 +9,9 @@ function words(s){return String(s||'').split(/\s+/).filter(Boolean).length}
 function req(cond,msg){if(!cond)errors.push(msg)}
 function hasUrl(u){return /^https:\/\//.test(String(u||''))}
 const requiredPaths=['github','codex','claude','claude-code'];
+req(data.meta?.version==='4.1.0','Versión pública y modelo de datos no sincronizados');
+req(data.cases?.length===32,'La biblioteca debe contener 32 casos prácticos');
+req(data.programs?.length===3,'Deben existir tres programas formativos principales');
 req(data.levels?.length===5,'Deben existir cinco niveles reales');
 for (const p of requiredPaths) req(data.modules?.some(m=>(m.pathway||m.route)===p),`Falta ruta ${p}`);
 for (const m of data.modules){
