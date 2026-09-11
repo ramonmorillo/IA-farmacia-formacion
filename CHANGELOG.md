@@ -1,5 +1,15 @@
 # Changelog
 
+## 5.0.0 - 2026-09-11
+
+- Reorientación de la plataforma desde un catálogo técnico hacia un recurso docente utilizable en directo.
+- Tres cursos completos con nivel, duración, transformación esperada, productos y programa público.
+- Nueva aula con 14 sesiones preparadas para proyectar e impartir.
+- Cada sesión incorpora pregunta de apertura, objetivos, conceptos, demostración, actividad y evidencia final.
+- Navegación simplificada alrededor de cursos, aula, herramientas y casos.
+- Laboratorio actualizado para abrir directamente las herramientas publicadas sin mostrar enlaces al código.
+- Versión imprimible de cada sesión y adaptación específica para móvil.
+
 ## 4.2.0 - 2026-09-11
 
 - Nuevo configurador de propuestas para hospitales, sociedades científicas, universidades y laboratorios.
