@@ -1,5 +1,13 @@
 # Changelog
 
+## 5.1.0 - 2026-09-11
+
+- Incorporación de un ejemplo farmacéutico ficticio específico en cada una de las 14 sesiones.
+- Fichas de trabajo descargables en Markdown, preparadas para participantes y sin respuestas.
+- Conexión de cada sesión con entre dos y cuatro casos prácticos coherentes con sus objetivos.
+- Adaptación de las fichas para impresión, móvil y trabajo en equipo durante la formación.
+- Validación automática de materiales, campos descargables y enlaces internos a casos.
+
 ## 5.0.0 - 2026-09-11
 
 - Reorientación de la plataforma desde un catálogo técnico hacia un recurso docente utilizable en directo.

@@ -32,11 +32,48 @@ function sessionLinks(links){
   return links.map(([label,url])=>`<a class="btn secondary" href="${url}" ${url.startsWith('#')?'':'target="_blank" rel="noreferrer"'}>${label}</a>`).join('');
 }
 
+function relatedCases(ids){
+  return (ids||[]).map(id=>(data.cases||[]).find(item=>item.id===id)).filter(Boolean);
+}
+
+function downloadTeachingTemplate(sessionId){
+  const found=findTeachingSession(sessionId);
+  if(!found)return;
+  const {program,session}=found;
+  const content=[
+    `# ${session.template.title}`,
+    '',
+    `Curso: ${program.title}`,
+    `Sesión: ${session.title}`,
+    '',
+    '## Ejemplo de trabajo',
+    '',
+    `**Contexto:** ${session.example.context}`,
+    '',
+    `**Tarea:** ${session.example.task}`,
+    '',
+    `**Evidencia esperada:** ${session.example.expectedEvidence}`,
+    '',
+    '## Ficha del participante',
+    '',
+    ...session.template.fields.flatMap(field=>[`### ${field}`,'','________________________________________________________________','']),
+    '---',
+    'Utiliza únicamente información pública, efectivamente anonimizada o ficticia. Revisa el resultado con criterio profesional.'
+  ].join('\n');
+  const filename=`${session.id}-ficha-participante.md`;
+  const blob=new Blob([content],{type:'text/markdown;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement('a');
+  link.href=url; link.download=filename; link.click();
+  URL.revokeObjectURL(url);
+}
+
 function renderTeachingSession(found){
   const {program,session,index}=found;
   const previous=program.sessions[index-1];
   const next=program.sessions[index+1];
-  shell(session.title,`<div class="session-shell"><aside class="session-agenda"><p class="section-kicker">Curso ${program.number}</p><a href="#${program.id}">${program.shortTitle}</a><dl><dt>Duración</dt><dd>${session.duration}</dd><dt>Producto</dt><dd>${session.outcome}</dd></dl><ol><li>Apertura y objetivo</li><li>Tres ideas clave</li><li>Demostración</li><li>Actividad</li><li>Comprobación</li></ol><button class="btn secondary" type="button" onclick="window.print()">Imprimir sesión</button></aside><article class="session-content"><section class="opening-question"><p class="section-kicker">Pregunta de apertura</p><h2>${session.question}</h2></section><section><h2>Al terminar, el participante podrá</h2><ul class="objective-list">${session.objectives.map(x=>`<li>${x}</li>`).join('')}</ul></section><section><p class="section-kicker">Explicación</p><h2>Tres ideas que deben quedar claras</h2><div class="concept-grid">${session.concepts.map((x,i)=>`<article><span>0${i+1}</span><p>${x}</p></article>`).join('')}</div></section><section class="demo-block"><p class="section-kicker">Demostración en directo</p><h2>${session.demo.title}</h2><ol>${session.demo.steps.map(x=>`<li>${x}</li>`).join('')}</ol><div class="hero-actions">${sessionLinks(session.demo.links)}</div></section><section class="activity-block"><div><p class="section-kicker">Actividad del participante · ${session.activity.time}</p><h2>${session.activity.title}</h2><ol>${session.activity.instructions.map(x=>`<li>${x}</li>`).join('')}</ol></div><aside><strong>Entrega</strong><p>${session.activity.deliverable}</p></aside></section><section><p class="section-kicker">Comprobación</p><h2>Evidencia mínima antes de cerrar</h2><ul class="check-list">${session.checklist.map(x=>`<li>${x}</li>`).join('')}</ul><p class="private-note">La solución razonada, la rúbrica y las notas de facilitación se encuentran en el kit docente privado.</p></section><nav class="session-nav">${previous?`<a class="btn secondary" href="#${previous.id}">← Sesión anterior</a>`:`<a class="btn secondary" href="#${program.id}">← Programa</a>`}<a class="btn secondary" href="#aula">Todas las sesiones</a>${next?`<a class="btn" href="#${next.id}">Siguiente sesión →</a>`:`<a class="btn" href="#casos">Practicar con casos →</a>`}</nav></article></div>`,'teaching-session');
+  const cases=relatedCases(session.caseIds);
+  shell(session.title,`<div class="session-shell"><aside class="session-agenda"><p class="section-kicker">Curso ${program.number}</p><a href="#${program.id}">${program.shortTitle}</a><dl><dt>Duración</dt><dd>${session.duration}</dd><dt>Producto</dt><dd>${session.outcome}</dd></dl><ol><li>Apertura y objetivo</li><li>Tres ideas clave</li><li>Demostración</li><li>Ejemplo farmacéutico</li><li>Actividad y ficha</li><li>Casos y comprobación</li></ol><button class="btn secondary" type="button" onclick="window.print()">Imprimir sesión</button></aside><article class="session-content"><section class="opening-question"><p class="section-kicker">Pregunta de apertura</p><h2>${session.question}</h2></section><section><h2>Al terminar, el participante podrá</h2><ul class="objective-list">${session.objectives.map(x=>`<li>${x}</li>`).join('')}</ul></section><section><p class="section-kicker">Explicación</p><h2>Tres ideas que deben quedar claras</h2><div class="concept-grid">${session.concepts.map((x,i)=>`<article><span>0${i+1}</span><p>${x}</p></article>`).join('')}</div></section><section class="demo-block"><p class="section-kicker">Demostración en directo</p><h2>${session.demo.title}</h2><ol>${session.demo.steps.map(x=>`<li>${x}</li>`).join('')}</ol><div class="hero-actions">${sessionLinks(session.demo.links)}</div></section><section class="pharmacy-example"><p class="section-kicker">Ejemplo farmacéutico ficticio</p><h2>${session.example.title}</h2><p><strong>Contexto:</strong> ${session.example.context}</p><p><strong>Encargo al grupo:</strong> ${session.example.task}</p><p><strong>Evidencia esperada:</strong> ${session.example.expectedEvidence}</p></section><section class="activity-block"><div><p class="section-kicker">Actividad del participante · ${session.activity.time}</p><h2>${session.activity.title}</h2><ol>${session.activity.instructions.map(x=>`<li>${x}</li>`).join('')}</ol></div><aside><strong>Entrega</strong><p>${session.activity.deliverable}</p></aside></section><section class="participant-sheet"><div class="section-heading"><div><p class="section-kicker">Material de trabajo</p><h2>${session.template.title}</h2></div><button class="btn" type="button" onclick="downloadTeachingTemplate('${session.id}')">Descargar ficha .md</button></div><p>Complétala individualmente o en equipo. La descarga incluye el ejemplo y campos en blanco; no contiene la solución.</p><div class="template-fields">${session.template.fields.map(field=>`<div><strong>${field}</strong><span aria-hidden="true"></span></div>`).join('')}</div></section><section><p class="section-kicker">Práctica conectada</p><h2>Casos relacionados</h2><div class="related-cases">${cases.map(item=>`<a href="#${item.id}"><span>${item.professionalArea}</span><strong>${item.title}</strong><small>${item.competency} · ${item.estimatedMinutes} min</small></a>`).join('')}</div></section><section><p class="section-kicker">Comprobación</p><h2>Evidencia mínima antes de cerrar</h2><ul class="check-list">${session.checklist.map(x=>`<li>${x}</li>`).join('')}</ul><p class="private-note">La solución razonada, la rúbrica y las notas de facilitación se encuentran en el kit docente privado.</p></section><nav class="session-nav">${previous?`<a class="btn secondary" href="#${previous.id}">← Sesión anterior</a>`:`<a class="btn secondary" href="#${program.id}">← Programa</a>`}<a class="btn secondary" href="#aula">Todas las sesiones</a>${next?`<a class="btn" href="#${next.id}">Siguiente sesión →</a>`:`<a class="btn" href="#casos">Practicar con casos →</a>`}</nav></article></div>`,'teaching-session');
 }
 
 function renderToolLab(){

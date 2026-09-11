@@ -116,3 +116,83 @@ window.TEACHING_DATA = {
     ['CMO en oncohematología','Aplicar el modelo de 38 variables en un entorno docente','https://ramonmorillo.github.io/cmoncologia/']
   ]
 };
+
+// Material público del participante. No contiene respuestas, rúbricas ni notas de facilitación.
+(function addParticipantMaterials(){
+  const materials = {
+    'sesion-mapa-ia': {
+      example:{title:'Priorización de tareas en una consulta externa',context:'Un servicio quiere reducir el tiempo dedicado a preparar información, resumir documentos y redactar materiales educativos, sin automatizar decisiones clínicas.',task:'Clasificar cada tarea por tipo, riesgo y necesidad de fuentes; después, seleccionar la herramienta adecuada o decidir no utilizar IA.',expectedEvidence:'Una matriz que justifique herramienta, riesgo, fuente y control humano para cada tarea.'},
+      template:{title:'Matriz tarea–herramienta–riesgo',fields:['Tarea profesional','Resultado necesario','Tipo de apoyo de IA','Herramienta candidata','Impacto de un error','Fuentes exigidas','Control humano','Decisión: usar, probar o descartar']},
+      caseIds:['c06-modelo-incorrecto','c30-eval-app']
+    },
+    'sesion-privacidad': {
+      example:{title:'Preparación de una consulta de telefarmacia',context:'Se desea preparar un resumen previo a una videollamada a partir de un caso ficticio que incluye edad, diagnóstico raro, fechas y centro de referencia.',task:'Detectar identificadores directos e indirectos, minimizar el contenido y establecer una regla de parada para los datos dudosos.',expectedEvidence:'Una versión depurada del caso y una tabla de datos permitidos, prohibidos y sujetos a autorización.'},
+      template:{title:'Ficha de privacidad y límites',fields:['Finalidad','Datos estrictamente necesarios','Datos prohibidos','Identificadores indirectos','Transformación o minimización','Herramienta autorizada','Responsable de revisión','Regla de parada y escalado']},
+      caseIds:['c31-telefarmacia','c23-consultas-externas','c19-confidencialidad-auto']
+    },
+    'sesion-instrucciones': {
+      example:{title:'Material educativo para una persona con tratamiento complejo',context:'El equipo necesita un texto comprensible sobre conservación y administración de un medicamento ficticio, adaptado a lectura sencilla y basado solo en una ficha técnica simulada.',task:'Convertir la petición vaga en una instrucción con destinatario, corpus, exclusiones, proceso, formato y criterios de aceptación.',expectedEvidence:'La instrucción final, el resultado obtenido y una lista breve de comprobaciones.'},
+      template:{title:'Especificación de una instrucción profesional',fields:['Objetivo','Destinatario','Contexto permitido','Fuentes o corpus','Tareas solicitadas','Exclusiones y límites','Formato de salida','Criterios de aceptación','Comprobación humana']},
+      caseIds:['c03-prompt-insuficiente','c04-material-paciente']
+    },
+    'sesion-documentos': {
+      example:{title:'Revisión de un PNT generado a partir de documentos controlados',context:'Se comparan una versión vigente y otra obsoleta de un procedimiento ficticio. La síntesis mezcla requisitos de ambas.',task:'Identificar qué afirmaciones proceden de cada versión, comprobar cinco pasajes y declarar las lagunas del corpus.',expectedEvidence:'Una matriz afirmación–fuente–pasaje–estado y una conclusión corregida.'},
+      template:{title:'Matriz de verificación documental',fields:['Afirmación','Impacto si es incorrecta','Documento y versión','Página o pasaje','Estado: confirmada, matizable, no localizada o contradictoria','Corrección necesaria','Revisor y fecha']},
+      caseIds:['c26-calidad','c09-tabla-pdf','c05-instruccion-maliciosa']
+    },
+    'sesion-flujo': {
+      example:{title:'Informe breve para una comisión de farmacia',context:'El servicio quiere preparar un borrador estructurado a partir de fuentes públicas, manteniendo visibles la incertidumbre y la decisión final del comité.',task:'Diseñar el flujo completo desde la pregunta hasta el archivo de evidencias, asignando responsables, controles e indicadores.',expectedEvidence:'Un flujo de una página que otra persona pueda repetir y auditar.'},
+      template:{title:'Ficha de flujo profesional',fields:['Problema y resultado esperado','Entradas permitidas','Etapas y herramientas','Salida de cada etapa','Responsable','Control de calidad','Evidencia conservada','Indicadores','Casos límite','Revisión o retirada']},
+      caseIds:['c32-comision','c24-info-medicamentos']
+    },
+    'sesion-pregunta-protocolo': {
+      example:{title:'Estudio observacional sobre persistencia terapéutica',context:'Un equipo plantea analizar datos agregados ficticios, pero todavía no ha fijado población, desenlace, exclusiones ni funciones permitidas para la IA.',task:'Delimitar la pregunta y repartir las decisiones entre investigadores, herramientas y revisores antes de iniciar la búsqueda o el análisis.',expectedEvidence:'Un protocolo operativo con pregunta, etapas, responsables, productos y criterios de calidad.'},
+      template:{title:'Contrato de proyecto asistido por IA',fields:['Necesidad y pregunta','Población o alcance','Producto y audiencia','Fuentes previstas','Funciones permitidas para la IA','Decisiones exclusivamente humanas','Criterios de calidad','Registro del uso de IA','Responsables']},
+      caseIds:['c18-protocolo-mezcla','c28-investigacion-hosp']
+    },
+    'sesion-busqueda-evidencia': {
+      example:{title:'Búsqueda sobre una intervención farmacéutica',context:'Una búsqueda asistida ofrece cinco referencias convincentes, aunque una no existe, otra tiene un DOI incorrecto y falta un estudio con resultado contrario.',task:'Reconstruir la búsqueda, abrir las fuentes primarias y justificar inclusiones, exclusiones y lagunas.',expectedEvidence:'Un registro reproducible de consultas y una tabla de referencias verificadas.'},
+      template:{title:'Registro de búsqueda y comprobación',fields:['Pregunta','Base o fuente','Consulta exacta','Fecha','Resultados relevantes','Fuente primaria abierta','DOI o PMID comprobado','Decisión de inclusión','Justificación','Lagunas detectadas']},
+      caseIds:['c01-ref-inexistente','c02-doi-incorrecto','c07-omite-estudio']
+    },
+    'sesion-extraccion-sintesis': {
+      example:{title:'Extracción para un estudio multicéntrico ficticio',context:'Dos revisores extraen variables de un artículo y discrepan en población, seguimiento y tratamiento de datos ausentes.',task:'Aplicar un diccionario previo, separar dato literal e interpretación y resolver discrepancias contra el documento original.',expectedEvidence:'Una matriz de extracción auditada con localización y decisión de revisión.'},
+      template:{title:'Matriz de extracción auditada',fields:['Documento','Variable','Definición operativa','Dato extraído','Página o localización','Interpretación','Dato ausente o incierto','Discrepancia','Resolución y revisor']},
+      caseIds:['c28-investigacion-hosp','c11-datos-faltantes','c09-tabla-pdf']
+    },
+    'sesion-escritura-revision': {
+      example:{title:'Respuesta a un revisor sobre un análisis secundario',context:'El revisor solicita aclarar una conclusión. Un borrador generado afirma que se ha repetido un análisis que en realidad no se ha realizado.',task:'Clasificar la petición, decidir la respuesta científicamente válida y asegurar coherencia entre carta, manuscrito y datos.',expectedEvidence:'Una fila comentario–decisión–justificación–cambio–comprobación.'},
+      template:{title:'Registro de escritura y revisión',fields:['Comentario o necesidad','Decisión del equipo','Evidencia consultada','Texto anterior','Cambio propuesto','Localización del cambio','Comprobación contra datos','Contribución de IA declarada','Aprobación del autor']},
+      caseIds:['c14-revisores','c13-manuscrito-inferencias']
+    },
+    'sesion-comunicacion-docente': {
+      example:{title:'Microclase sobre comunicación segura al paciente',context:'Hay que transformar una revisión extensa en diez minutos de aprendizaje para residentes de farmacia hospitalaria.',task:'Definir una conducta observable, elegir tres ideas, mostrar un ejemplo y diseñar una comprobación final de un minuto.',expectedEvidence:'Un guion de microclase que alinee objetivo, práctica y evidencia de aprendizaje.'},
+      template:{title:'Guion de microclase',fields:['Participantes y punto de partida','Objetivo observable','Tres ideas imprescindibles','Pregunta de apertura','Ejemplo o demostración','Actividad breve','Evidencia de aprendizaje','Mensaje de cierre','Recursos necesarios']},
+      caseIds:['c04-material-paciente','c12-grafico-enganoso','c25-docencia']
+    },
+    'sesion-requisitos': {
+      example:{title:'Prototipo para priorizar revisiones farmacéuticas',context:'El servicio quiere una herramienta docente que ordene casos ficticios por necesidad de revisión, pero la petición inicial solo dice “hacer una app de priorización”.',task:'Definir usuario, decisión, entradas, reglas con propietario, salidas, exclusiones y criterios de aceptación comprobables.',expectedEvidence:'Una especificación funcional de una página sin decidir todavía la tecnología.'},
+      template:{title:'Especificación funcional',fields:['Usuario','Problema','Decisión apoyada','Entradas mínimas','Reglas y fuente','Salidas','Casos fuera de alcance','Criterios de aceptación','Riesgo principal','Responsable profesional']},
+      caseIds:['c17-regla-clinica','c30-eval-app']
+    },
+    'sesion-prototipo': {
+      example:{title:'Calculadora docente de impacto presupuestario',context:'Se construirá con datos ficticios una pantalla que multiplique número de pacientes, unidades y coste, mostrando supuestos y versión.',task:'Dividir la función en cambios pequeños, pedir un plan, revisar las diferencias y probar cada incremento antes de aceptarlo.',expectedEvidence:'Un prototipo navegable y un registro breve del cambio, la prueba y la decisión de aceptación.'},
+      template:{title:'Registro de incremento de prototipo',fields:['Función mínima','Estado estable inicial','Plan acordado','Archivos afectados','Cambio observado','Prueba ejecutada','Resultado esperado y observado','Incidencia','Decisión: aceptar, corregir o revertir']},
+      caseIds:['c16-app-costes','c15-agente-no-autorizado']
+    },
+    'sesion-validacion': {
+      example:{title:'Prueba de una regla de estratificación ficticia',context:'La herramienta asigna correctamente los casos habituales, pero no se sabe cómo responde ante campos vacíos, valores extremos o criterios contradictorios.',task:'Diseñar y ejecutar casos normales, límite, incompletos y contradictorios; clasificar los fallos por impacto.',expectedEvidence:'Una matriz de al menos diez pruebas con resultado esperado, observado e incidencia.'},
+      template:{title:'Matriz de pruebas y validación',fields:['ID de prueba','Regla o función','Tipo de caso','Entrada ficticia','Resultado esperado','Resultado observado','Estado','Impacto del fallo','Acción o bloqueo','Revisor']},
+      caseIds:['c20-falla-limite','c17-regla-clinica','c08-error-unidad','c16-app-costes']
+    },
+    'sesion-publicacion': {
+      example:{title:'Liberación de una herramienta docente en GitHub Pages',context:'El prototipo funciona localmente, pero la rama publicada no coincide con la revisada y no muestra versión, limitaciones ni responsable.',task:'Preparar la liberación, comprobar la URL pública y definir revisión, canal de incidencias y criterio de retirada.',expectedEvidence:'Una ficha de liberación vinculada a la versión pública y a sus pruebas críticas.'},
+      template:{title:'Ficha de publicación y mantenimiento',fields:['Nombre y versión','Finalidad y usuarios','URL pública','Rama o versión revisada','Pruebas críticas superadas','Limitaciones visibles','Responsable','Fecha de revisión','Canal de incidencias','Criterio de retirada']},
+      caseIds:['c22-github-despliegue','c30-eval-app']
+    }
+  };
+
+  window.TEACHING_DATA.programs.forEach(program => program.sessions.forEach(session => {
+    if (materials[session.id]) Object.assign(session, materials[session.id]);
+  }));
+})();
