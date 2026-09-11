@@ -30,7 +30,13 @@ Web estática compatible con GitHub Pages, sin backend, sin cuentas y sin depend
 - Nivel intermedio: investigación profunda, PDF, evidencia, escritura, datos, hojas de cálculo, multimodalidad y flujos.
 - Nivel avanzado: agentes, herramientas conectadas, skills/MCP, desarrollo asistido, GitHub, Codex, Claude Code, evaluación y gobernanza.
 - Ruta de farmacia hospitalaria: consultas externas, atención farmacéutica, información de medicamentos, investigación, docencia, gestión, calidad, seguridad, farmacovigilancia, automatización y evaluación de aplicaciones IA.
-- 32 casos prácticos ficticios con errores deliberados, feedback, verificación y rúbrica.
+- 32 casos prácticos ficticios con escenario y tarea pública. Las soluciones, errores deliberados, procesos de verificación y rúbricas se mantienen en un kit docente privado.
+
+## Separación entre contenido público y material docente
+
+La versión pública actual contiene los módulos, actividades, casos y recursos destinados a participantes. Las soluciones, claves de respuesta, rúbricas, notas de facilitación y presentaciones docentes no deben almacenarse ni ocultarse mediante JavaScript en GitHub Pages: se conservan fuera de la rama pública y son de uso exclusivo del autor.
+
+Contacto profesional: [ralejandro.morillo.sspa@juntadeandalucia.es](mailto:ralejandro.morillo.sspa@juntadeandalucia.es).
 
 ## Ejecución local
 
@@ -46,7 +52,7 @@ Abra `http://127.0.0.1:8765/`.
 npm run validate-content
 ```
 
-El script falla si detecta módulos o casos sin campos esenciales, feedback incompleto, rutas rotas o texto provisional.
+El script falla si detecta módulos o casos sin campos esenciales, feedback incompleto, rutas rotas, texto provisional o material docente reservado dentro de los datos públicos.
 
 ## Despliegue
 

@@ -9,6 +9,8 @@
 - Reparación y ampliación del módulo de NotebookLM.
 - Actualización del laboratorio con herramientas CMO recientes y descripciones específicas.
 - Sincronización de versiones, fechas, fuentes de herramientas y validación automática.
+- Separación efectiva entre contenidos públicos y material docente privado; retirada del repositorio de soluciones, rúbricas, claves y presentaciones reservadas.
+- Incorporación del correo profesional en navegación, llamadas a la acción y documentación.
 
 ## 3.1.0 - 2026-07-14
 

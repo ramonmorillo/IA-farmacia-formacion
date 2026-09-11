@@ -21,15 +21,16 @@ for (const m of data.modules){
  req(m.objectives?.length>=3,`Módulo ${m.id} sin objetivos suficientes`);
  req(m.sections?.length>=8,`Módulo ${m.id} sin desarrollo suficiente`);
  req(words(m.sections?.map(s=>s.body).join(' '))>=250,`Módulo ${m.id} demasiado breve`);
- req(m.guidedPractice?.instructions&&m.guidedPractice?.solution,`Módulo ${m.id} sin práctica guiada y solución`);
- req(m.independentPractice?.instructions&&m.independentPractice?.solution,`Módulo ${m.id} sin práctica autónoma y solución`);
- req(m.expertChallenge?.instructions&&m.expertChallenge?.solution,`Módulo ${m.id} sin reto experto y solución`);
+ req(m.guidedPractice?.instructions,`Módulo ${m.id} sin práctica guiada`);
+ req(m.independentPractice?.instructions,`Módulo ${m.id} sin práctica autónoma`);
+ req(m.expertChallenge?.instructions,`Módulo ${m.id} sin reto experto`);
  req(m.tests?.length,`Módulo ${m.id} sin pruebas`);
  req(m.checklist?.length,`Módulo ${m.id} sin checklist`);
  req(m.repositoryExamples?.every(r=>hasUrl(r.url)),`Módulo ${m.id} con enlaces de repositorio rotos`);
  req(m.assessment?.[0]?.feedback?.length===m.assessment?.[0]?.options?.length,`Módulo ${m.id} sin feedback por respuesta`);
- req(m.teacherGuide?.rubric?.length,`Módulo ${m.id} sin guía docente`);
- req(m.presentationSlides?.length,`Módulo ${m.id} sin diapositivas`);
+ req(!m.guidedPractice?.solution&&!m.independentPractice?.solution&&!m.expertChallenge?.solution,`Módulo ${m.id} expone soluciones reservadas`);
+ req(!m.teacherGuide&&!m.presentationSlides,`Módulo ${m.id} expone material docente reservado`);
+ req((m.assessment||[]).every(item=>typeof item.answer==='undefined'),`Módulo ${m.id} expone respuestas de evaluación`);
  banned.forEach(r=>req(!r.test(JSON.stringify(m)),`Módulo ${m.id} contiene texto provisional ${r}`));
  req(!/modificar producción|editar producción/i.test(JSON.stringify(m)) || /no modificar producción|sin tocar producción/i.test(JSON.stringify(m)),`Módulo ${m.id} puede inducir modificación de producción`);
 }
@@ -39,7 +40,10 @@ for (const s of data.seminars||[]){
  req(s.roles?.length>=6,`Taller ${s.id} sin roles mixtos`);
  req(s.activities?.length>=3,`Taller ${s.id} sin capas de actividad`);
  req(s.offlinePlan?.summary,`Taller ${s.id} sin plan offline`);
- req(s.rubric?.length,`Taller ${s.id} sin rúbrica`);
+ req(!s.teacherNotes&&!s.solutions&&!s.rubric,`Taller ${s.id} expone material docente reservado`);
+}
+for (const c of data.cases||[]){
+ req(!c.resolution&&!c.deliberateErrors&&!c.verificationProcess&&!c.rubric&&!c.questions&&!c.simulatedOutput,`Caso ${c.id} expone solución o evaluación reservada`);
 }
 for (const t of data.portfolio||[]){
  req(hasUrl(t.repository),`Herramienta ${t.name} sin repositorio válido`);
@@ -50,6 +54,7 @@ for (const p of ['proyecto-a','proyecto-b','proyecto-c','proyecto-d','proyecto-e
 const ids = new Set(data.modules.map(m=>m.id));
 for (const m of data.modules){ req(!m.previousModule||ids.has(m.previousModule),`previous roto en ${m.id}`); req(!m.nextModule||ids.has(m.nextModule),`next roto en ${m.id}`); }
 const app = fs.readFileSync('js/app.js','utf8');
+req(!/function renderTeacher|function renderPresentation|function downloadGuide/.test(app),'La aplicación pública conserva funciones docentes reservadas');
 const buttons = [...app.matchAll(/data-action="([^"]+)"/g)].map(m=>m[1]);
 for (const b of buttons) req(app.includes(`'${b}'`)||app.includes(`===\"${b}\"`),`Botón sin acción registrada: ${b}`);
 const report = {checkedAt:new Date().toISOString(), totalModules:data.modules.length, pathways:[...new Set(data.modules.map(m=>m.pathway||m.route))], totalSeminars:(data.seminars||[]).length, portfolioItems:(data.portfolio||[]).length, brokenRoutes:errors.filter(e=>/roto|enlace/.test(e)).length, buttonsWithoutAction:errors.filter(e=>/Botón/.test(e)).length, errors};
