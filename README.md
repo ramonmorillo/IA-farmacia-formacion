@@ -9,8 +9,8 @@ Desarrollo y actualización técnica asistidos mediante herramientas de intelige
 - Creación original verificada: enero de 2026 (primer commit del repositorio: 2026-01-25).
 - Versión pública previa verificada: 2.0, marzo de 2026.
 - Rediseño integral: julio de 2026.
-- Última actualización: 2026-09-10.
-- Versión actual: 4.1.0.
+- Última actualización: 2026-09-11.
+- Versión actual: 4.2.0.
 
 ## Público destinatario
 
@@ -18,13 +18,14 @@ Farmacéuticos hospitalarios, docentes, investigadores, responsables de innovaci
 
 ## Arquitectura
 
-Web estática compatible con GitHub Pages, sin backend, sin cuentas y sin dependencias obligatorias. Los contenidos principales están centralizados en `data/course-data.js`; la lógica de navegación, progreso, presentación, modo docente e informe está en `js/app.js`; los estilos están en `css/`.
+Web estática compatible con GitHub Pages, sin backend, sin cuentas y sin dependencias obligatorias. Los contenidos principales están centralizados en `data/course-data.js`; la lógica de navegación, progreso, configurador de propuestas e informe está en `js/app.js`; los estilos están en `css/`.
 
 ## Propuesta profesional y estructura formativa
 
 - Portada orientada a formación de equipos, consultoría y academia abierta.
 - Tres programas principales: IA esencial; investigación, docencia y producción científica; y creación de herramientas.
 - Consultoría estructurada desde diagnóstico y priorización hasta evaluación, gobernanza e implantación.
+- Configurador local de propuestas para recomendar programa, alcance y preparar una solicitud estructurada sin almacenar datos.
 
 - Nivel inicial: fundamentos, herramientas, privacidad, prompting y verificación.
 - Nivel intermedio: investigación profunda, PDF, evidencia, escritura, datos, hojas de cálculo, multimodalidad y flujos.

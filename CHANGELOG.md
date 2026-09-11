@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.2.0 - 2026-09-11
+
+- Nuevo configurador de propuestas para hospitales, sociedades científicas, universidades y laboratorios.
+- Recomendación inicial según necesidad, nivel, formato y tamaño del grupo.
+- Preparación local de un correo estructurado sin enviar ni almacenar la información introducida.
+- Advertencias explícitas para evitar datos personales, clínicos o confidenciales.
+- Condición de independencia docente y declaración de posibles conflictos para encargos de laboratorios.
+
 ## 4.1.0 - 2026-09-10
 
 - Reposicionamiento de la portada como plataforma de formación, consultoría y laboratorio aplicado.
