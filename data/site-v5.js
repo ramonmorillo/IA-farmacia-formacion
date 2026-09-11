@@ -2,9 +2,9 @@
   const data = window.COURSE_DATA;
   if (!data) return;
 
-  data.meta.version = '4.1.0';
-  data.meta.updatedAt = '2026-09-10';
-  data.meta.reviewed = '2026-09-10';
+  data.meta.version = '4.2.0';
+  data.meta.updatedAt = '2026-09-11';
+  data.meta.reviewed = '2026-09-11';
   data.meta.tagline = 'Formación y consultoría especializada';
   data.meta.valueProposition = 'Incorporar inteligencia artificial a la práctica farmacéutica con criterio profesional, evidencia, seguridad y resultados evaluables.';
   data.toolComparator.reviewedAt = '2026-09-10';
@@ -103,5 +103,8 @@
     notebook.expertChallenge = {title:'Reto experto', instructions:'Construya una matriz para decidir entre NotebookLM, un chatbot general, un gestor bibliográfico o una revisión manual.'};
   }
 
-  data.versionHistory.unshift({version:'4.1.0', date:'2026-09-10', type:'Estabilización y reposicionamiento', changes:'Recuperación de casos, reparación de validación, portada profesional, programas, consultoría y actualización del laboratorio.', responsible:data.meta.author});
+  data.versionHistory.unshift(
+    {version:'4.2.0', date:'2026-09-11', type:'Conversión profesional', changes:'Configurador de propuestas para orientar solicitudes de formación y consultoría sin almacenar datos.', responsible:data.meta.author},
+    {version:'4.1.0', date:'2026-09-10', type:'Estabilización y reposicionamiento', changes:'Recuperación de casos, reparación de validación, portada profesional, programas, consultoría y actualización del laboratorio.', responsible:data.meta.author}
+  );
 })();

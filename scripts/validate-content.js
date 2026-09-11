@@ -9,7 +9,8 @@ function words(s){return String(s||'').split(/\s+/).filter(Boolean).length}
 function req(cond,msg){if(!cond)errors.push(msg)}
 function hasUrl(u){return /^https:\/\//.test(String(u||''))}
 const requiredPaths=['github','codex','claude','claude-code'];
-req(data.meta?.version==='4.1.0','Versión pública y modelo de datos no sincronizados');
+req(data.meta?.version==='4.2.0','Versión pública y modelo de datos no sincronizados');
+req(/function renderProposal/.test(fs.readFileSync('js/app.js','utf8')),'Falta el configurador de propuestas');
 req(data.cases?.length===32,'La biblioteca debe contener 32 casos prácticos');
 req(data.programs?.length===3,'Deben existir tres programas formativos principales');
 req(data.levels?.length===5,'Deben existir cinco niveles reales');

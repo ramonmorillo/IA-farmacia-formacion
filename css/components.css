@@ -43,11 +43,24 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
 .consulting-flow h2 { margin: 0; font-size: 1.3rem; }
 .consulting-flow p { margin: .25rem 0; color: var(--muted); }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; margin-bottom: 2rem; }
+.proposal-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: 1.5rem; align-items: start; }
+.proposal-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.proposal-form label { display: block; margin-bottom: .35rem; font-weight: 800; }
+.proposal-form input, .proposal-form select, .proposal-form textarea { width: 100%; min-height: 48px; padding: .75rem; border: 1px solid var(--line); border-radius: .7rem; background: var(--panel); color: var(--text); font: inherit; }
+.proposal-form textarea { resize: vertical; }
+.proposal-form small { display: block; margin-top: .35rem; color: var(--muted); }
+.proposal-form .full { grid-column: 1 / -1; }
+.proposal-result { position: sticky; top: 8rem; border-top: 5px solid var(--brand2); box-shadow: none; }
+.proposal-result h2 { margin-top: .35rem; }
+.proposal-result dl { display: grid; grid-template-columns: minmax(110px, .7fr) 1.3fr; gap: .35rem .75rem; }
+.proposal-result dt { font-weight: 800; }
+.proposal-result dd { margin: 0; }
 @media (max-width: 800px) {
   .proof-band { grid-template-columns: repeat(2, 1fr); }
-  .split-feature, .about-grid { grid-template-columns: 1fr; }
+  .split-feature, .about-grid, .proposal-layout, .proposal-form { grid-template-columns: 1fr; }
   .program-card { grid-template-columns: 1fr; }
   .program-number { font-size: 2rem; }
   .continue-card, .proposal-card { align-items: flex-start; flex-direction: column; }
   .hero-actions .btn { width: 100%; text-align: center; }
+  .proposal-result { position: static; }
 }
