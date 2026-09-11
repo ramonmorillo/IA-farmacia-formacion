@@ -1,5 +1,23 @@
 # Changelog
 
+## 5.2.0 - 2026-09-11
+
+- Conversión de “IA práctica y segura para farmacia hospitalaria” en la primera formación insignia.
+- Tres formatos definidos: jornada presencial, programa modular e introducción ejecutiva.
+- Preparación previa del participante y checklist logístico para la organización.
+- Agenda completa de 5 horas y 30 minutos con accesos directos a cada sesión.
+- Proyecto final con carpeta de evidencias y límites de uso explícitos.
+- Cuaderno integral del participante descargable en Markdown.
+- Plan de transferencia a 48 horas, 2 semanas y 30 días.
+
+## 5.1.0 - 2026-09-11
+
+- Incorporación de un ejemplo farmacéutico ficticio específico en cada una de las 14 sesiones.
+- Fichas de trabajo descargables en Markdown, preparadas para participantes y sin respuestas.
+- Conexión de cada sesión con entre dos y cuatro casos prácticos coherentes con sus objetivos.
+- Adaptación de las fichas para impresión, móvil y trabajo en equipo durante la formación.
+- Validación automática de materiales, campos descargables y enlaces internos a casos.
+
 ## 5.0.0 - 2026-09-11
 
 - Reorientación de la plataforma desde un catálogo técnico hacia un recurso docente utilizable en directo.

@@ -10,13 +10,27 @@ function words(s){return String(s||'').split(/\s+/).filter(Boolean).length}
 function req(cond,msg){if(!cond)errors.push(msg)}
 function hasUrl(u){return /^https:\/\//.test(String(u||''))}
 const requiredPaths=['github','codex','claude','claude-code'];
-req(data.meta?.version==='5.0.0','Versión pública y modelo de datos no sincronizados');
+req(data.meta?.version==='5.2.0','Versión pública y modelo de datos no sincronizados');
 req(/function renderProposal/.test(fs.readFileSync('js/app.js','utf8')),'Falta el configurador de propuestas');
 req(teaching?.programs?.length===3,'Deben existir tres cursos docentes principales');
 req(teaching?.programs?.reduce((n,p)=>n+p.sessions.length,0)===14,'El aula debe contener 14 sesiones listas para impartir');
+const flagship=teaching?.programs?.find(p=>p.id==='curso-ia-practica');
+req(flagship?.featured&&flagship?.delivery,'Falta la formación insignia');
+req(flagship?.delivery?.formats?.length===3,'La formación insignia debe ofrecer tres formatos');
+req(flagship?.delivery?.participantPreparation?.length>=5&&flagship?.delivery?.roomSetup?.length>=5,'La formación insignia no está preparada para convocar e impartir');
+req(flagship?.delivery?.liveAgenda?.length>=8,'La formación insignia no tiene una agenda completa');
+req(flagship?.delivery?.capstone?.evidence?.length>=5,'La formación insignia no define la carpeta de evidencias');
+req(flagship?.delivery?.followUp?.length===3,'La formación insignia no tiene seguimiento 48 h, 2 semanas y 30 días');
+const caseIds = new Set((data.cases||[]).map(c=>c.id));
 for(const p of teaching?.programs||[]){
  req(p.before?.length>=4&&p.after?.length>=4&&p.outcomes?.length>=4,`Curso ${p.id} sin transformación o productos suficientes`);
- for(const s of p.sessions||[]) req(s.objectives?.length>=3&&s.concepts?.length>=3&&s.demo?.steps?.length>=3&&s.activity?.deliverable&&s.checklist?.length>=3,`Sesión ${s.id} incompleta`);
+ for(const s of p.sessions||[]){
+  req(s.objectives?.length>=3&&s.concepts?.length>=3&&s.demo?.steps?.length>=3&&s.activity?.deliverable&&s.checklist?.length>=3,`Sesión ${s.id} incompleta`);
+  req(s.example?.title&&s.example?.context&&s.example?.task&&s.example?.expectedEvidence,`Sesión ${s.id} sin ejemplo farmacéutico completo`);
+  req(s.template?.title&&s.template?.fields?.length>=6,`Sesión ${s.id} sin ficha de participante suficiente`);
+  req(s.caseIds?.length>=2,`Sesión ${s.id} sin casos relacionados suficientes`);
+  for(const id of s.caseIds||[]) req(caseIds.has(id),`Sesión ${s.id} enlaza un caso inexistente: ${id}`);
+ }
 }
 req((teaching?.featuredTools||[]).every(t=>/^https:\/\/ramonmorillo\.github\.io\//.test(t[2])),'El acceso destacado debe abrir herramientas publicadas');
 req(data.cases?.length===32,'La biblioteca debe contener 32 casos prácticos');

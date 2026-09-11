@@ -2,7 +2,7 @@
   const data = window.COURSE_DATA;
   if (!data) return;
 
-  data.meta.version = '5.0.0';
+  data.meta.version = '5.2.0';
   data.meta.updatedAt = '2026-09-11';
   data.meta.reviewed = '2026-09-11';
   data.meta.tagline = 'Aula y formación aplicada';
@@ -104,6 +104,8 @@
   }
 
   data.versionHistory.unshift(
+    {version:'5.2.0', date:'2026-09-11', type:'Formación insignia', changes:'Programa completo de IA práctica y segura con formatos, preparación, agenda presencial, cuaderno y plan de transferencia.', responsible:data.meta.author},
+    {version:'5.1.0', date:'2026-09-11', type:'Materiales del participante', changes:'Ejemplos farmacéuticos, fichas descargables y casos relacionados incorporados a las 14 sesiones del aula.', responsible:data.meta.author},
     {version:'5.0.0', date:'2026-09-11', type:'Rediseño docente', changes:'Cursos transparentes, aula por sesiones, actividades listas para impartir y laboratorio con acceso directo a las herramientas.', responsible:data.meta.author},
     {version:'4.2.0', date:'2026-09-11', type:'Conversión profesional', changes:'Configurador de propuestas para orientar solicitudes de formación y consultoría sin almacenar datos.', responsible:data.meta.author},
     {version:'4.1.0', date:'2026-09-10', type:'Estabilización y reposicionamiento', changes:'Recuperación de casos, reparación de validación, portada profesional, programas, consultoría y actualización del laboratorio.', responsible:data.meta.author}
