@@ -91,6 +91,19 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
 .session-meta { margin: 0; color: var(--muted); font-size: .9rem; }
 .session-list h3 { margin: .15rem 0; font-size: 1.35rem; }
 .session-list p { margin: .25rem 0; }
+.flagship-course { margin: 4rem 0; padding: clamp(1.4rem, 4vw, 3rem); border: 1px solid var(--line); border-radius: 1.5rem; background: color-mix(in srgb, var(--panel) 92%, var(--brand2) 8%); }
+.delivery-facts, .delivery-formats, .delivery-preflight { display: grid; gap: 1rem; margin: 1.25rem 0 2.5rem; }
+.delivery-facts, .delivery-preflight { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.delivery-formats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.delivery-facts article, .delivery-formats article, .delivery-preflight article { padding: 1.25rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--panel); }
+.delivery-formats span { color: var(--brand2); font-weight: 900; }
+.delivery-formats h4 { margin: .35rem 0; font-size: 1.15rem; }
+.live-agenda { margin: 1rem 0 2.5rem; border-top: 1px solid var(--line); }
+.live-agenda article { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.live-agenda time { color: var(--brand2); font-weight: 900; }
+.live-agenda h4, .live-agenda p { margin: 0; }
+.live-agenda p { margin-top: .25rem; color: var(--muted); }
+.capstone { margin: 2rem 0; padding: 1.5rem; border-left: 6px solid var(--brand2); background: var(--panel); }
 .classroom-course { margin-bottom: 3.5rem; }
 .classroom-sessions { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
 .classroom-sessions > a { display: flex; gap: 1rem; padding: 1rem; border: 1px solid var(--line); border-radius: .9rem; background: var(--panel); text-decoration: none; }
@@ -143,7 +156,8 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
   .hero-actions .btn { width: 100%; text-align: center; }
   .proposal-result { position: static; }
   .course-card, .course-card:nth-child(2), .course-card:nth-child(3) { grid-template-columns: 1fr; margin-left: 0; padding: 1.3rem; }
-  .teaching-sequence, .tool-strip, .classroom-sessions, .concept-grid, .tool-lab, .template-fields, .related-cases { grid-template-columns: 1fr; }
+  .teaching-sequence, .tool-strip, .classroom-sessions, .concept-grid, .tool-lab, .template-fields, .related-cases, .delivery-facts, .delivery-formats, .delivery-preflight { grid-template-columns: 1fr; }
+  .live-agenda article { grid-template-columns: 1fr; gap: .25rem; }
   .teaching-sequence > div { border-right: 0; border-bottom: 1px solid var(--line); }
   .session-list > article { grid-template-columns: 48px minmax(0, 1fr); }
   .session-list .btn { grid-column: 1 / -1; }
@@ -152,9 +166,9 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
 }
 
 @media print {
-  .site-header, .progress-wrap, .site-footer, .session-nav, .session-agenda button, .participant-sheet button { display: none !important; }
+  .site-header, .progress-wrap, .site-footer, .session-nav, .session-agenda button, .participant-sheet button, .flagship-course .section-heading button { display: none !important; }
   .container { max-width: none; padding: 0; }
   .session-shell { grid-template-columns: 190px 1fr; }
   .session-agenda { position: static; }
-  .opening-question, .activity-block, .demo-block, .pharmacy-example, .participant-sheet, .related-cases > a { break-inside: avoid; }
+  .opening-question, .activity-block, .demo-block, .pharmacy-example, .participant-sheet, .related-cases > a, .delivery-formats article, .live-agenda article, .capstone { break-inside: avoid; }
 }

@@ -196,3 +196,55 @@ window.TEACHING_DATA = {
     if (materials[session.id]) Object.assign(session, materials[session.id]);
   }));
 })();
+
+(function addFlagshipCourse(){
+  const program=window.TEACHING_DATA.programs.find(item=>item.id==='curso-ia-practica');
+  if(!program)return;
+  program.featured=true;
+  program.delivery={
+    label:'Formación insignia',
+    proposition:'Un recorrido completo para que el participante salga con un método de uso seguro, una tarea profesional rediseñada y evidencias que pueda revisar con su equipo.',
+    audience:'Farmacéuticos de hospital, residentes, responsables de calidad, investigación, docencia o innovación. No requiere experiencia previa con IA.',
+    groupSize:'8–24 participantes para conservar práctica, contraste y devolución.',
+    formats:[
+      {title:'Jornada presencial',duration:'5 h 30 min',description:'Cinco bloques, una pausa y proyecto final. Es el formato recomendado para equipos de un mismo hospital.'},
+      {title:'Programa modular',duration:'5 × 60 min',description:'Una sesión semanal con aplicación entre encuentros y revisión del producto al inicio del siguiente.'},
+      {title:'Introducción ejecutiva',duration:'90 min',description:'Mapa, privacidad y demostración. Sirve para decidir si la organización continúa con el recorrido completo.'}
+    ],
+    participantPreparation:[
+      'Traer una tarea profesional frecuente descrita sin datos sensibles.',
+      'Disponer de acceso a una herramienta conversacional aprobada o a la alternativa preparada por la organización.',
+      'Reunir uno o dos documentos públicos que puedan utilizarse en la práctica.',
+      'No aportar historias clínicas, datos identificables, documentos internos ni información confidencial.',
+      'Completar una frase: “Al terminar quiero poder…”.'
+    ],
+    roomSetup:[
+      'Ordenador por participante o por pareja y navegador actualizado.',
+      'Proyección con acceso a la web del aula y a las herramientas de demostración.',
+      'Documentos públicos o ficticios descargados como alternativa sin conexión.',
+      'Fichas impresas o cuaderno del participante descargado.',
+      'Canal acordado para recoger productos sin datos personales ni clínicos.'
+    ],
+    liveAgenda:[
+      {time:'00:00–00:15',title:'Encuadre y diagnóstico',detail:'Objetivo, reglas de seguridad, pregunta inicial y tarea que cada persona quiere mejorar.'},
+      {time:'00:15–01:05',sessionId:'sesion-mapa-ia',title:'Elegir bien antes de preguntar',detail:'Mapa de tareas, herramientas, riesgo y decisión humana.'},
+      {time:'01:05–02:00',sessionId:'sesion-privacidad',title:'Privacidad y límites',detail:'Minimización, autorización institucional y regla de parada.'},
+      {time:'02:00–02:15',title:'Pausa',detail:'Guardar las fichas y preparar el corpus documental.'},
+      {time:'02:15–03:15',sessionId:'sesion-instrucciones',title:'Instrucciones revisables',detail:'De una petición vaga a una especificación profesional.'},
+      {time:'03:15–04:20',sessionId:'sesion-documentos',title:'Documentos y verificación',detail:'Auditoría de afirmaciones contra pasajes originales.'},
+      {time:'04:20–05:20',sessionId:'sesion-flujo',title:'Proyecto de integración',detail:'Diseño del flujo profesional, responsables, controles e indicadores.'},
+      {time:'05:20–05:30',title:'Cierre y transferencia',detail:'Compromiso de aplicación, evidencia final y siguiente revisión en el servicio.'}
+    ],
+    capstone:{
+      title:'Proyecto final: rediseñar una tarea profesional',
+      task:'Seleccionar una tarea de bajo o moderado riesgo y describir un flujo que incluya objetivo, entradas permitidas, herramienta, instrucción, fuentes, verificación, decisión humana, evidencia e indicador.',
+      evidence:['Mapa tarea–herramienta–riesgo','Regla de privacidad y parada','Instrucción profesional reutilizable','Matriz de verificación','Flujo operativo con responsable e indicador'],
+      boundary:'El producto es una propuesta de trabajo para revisión interna; no autoriza por sí mismo uso asistencial ni tratamiento de datos reales.'
+    },
+    followUp:[
+      'En 48 horas: aplicar el flujo a un ejemplo ficticio y registrar una dificultad.',
+      'En 2 semanas: revisión breve con un compañero utilizando la política institucional disponible.',
+      'En 30 días: decidir mantener, modificar o abandonar el flujo según utilidad, calidad y riesgo.'
+    ]
+  };
+})();

@@ -10,7 +10,7 @@ Desarrollo y actualización técnica asistidos mediante herramientas de intelige
 - Versión pública previa verificada: 2.0, marzo de 2026.
 - Rediseño integral: julio de 2026.
 - Última actualización: 2026-09-11.
-- Versión actual: 5.1.0.
+- Versión actual: 5.2.0.
 
 ## Público destinatario
 
@@ -28,6 +28,7 @@ Web estática compatible con GitHub Pages, sin backend, sin cuentas y sin depend
 - Configurador local de propuestas para recomendar programa, alcance y preparar una solicitud estructurada sin almacenar datos.
 - Aula docente con 14 sesiones listas para impartir: apertura, objetivos, ideas clave, demostración, ejemplo farmacéutico, actividad y evidencia.
 - Ficha de trabajo descargable y casos prácticos relacionados en cada sesión.
+- Primera formación insignia lista para impartir: formatos, preparación, agenda presencial, proyecto final, transferencia y cuaderno completo del participante.
 - Programas transparentes con punto de partida, resultado esperado y productos concretos.
 - Laboratorio con acceso prioritario a las aplicaciones publicadas, no al código fuente.
 - Biblioteca técnica secundaria con 35 módulos para ampliar GitHub, Codex, Claude, NotebookLM y Claude Code.
