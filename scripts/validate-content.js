@@ -1,16 +1,24 @@
 const fs = require('fs');
 const vm = require('vm');
-const src = ['data/course-data.js','data/cases.js','data/site-v5.js'].map(file=>fs.readFileSync(file,'utf8')).join('\n');
+const src = ['data/course-data.js','data/cases.js','data/site-v5.js','data/teaching-programs.js'].map(file=>fs.readFileSync(file,'utf8')).join('\n');
 const context = {window:{}}; vm.createContext(context); vm.runInContext(src, context);
 const data = context.window.COURSE_DATA;
+const teaching = context.window.TEACHING_DATA;
 const banned = [/próximamente/i,/contenido pendiente/i,/lorem ipsum/i,/\bTODO\b/,/por desarrollar/i];
 let errors=[];
 function words(s){return String(s||'').split(/\s+/).filter(Boolean).length}
 function req(cond,msg){if(!cond)errors.push(msg)}
 function hasUrl(u){return /^https:\/\//.test(String(u||''))}
 const requiredPaths=['github','codex','claude','claude-code'];
-req(data.meta?.version==='4.2.0','Versión pública y modelo de datos no sincronizados');
+req(data.meta?.version==='5.0.0','Versión pública y modelo de datos no sincronizados');
 req(/function renderProposal/.test(fs.readFileSync('js/app.js','utf8')),'Falta el configurador de propuestas');
+req(teaching?.programs?.length===3,'Deben existir tres cursos docentes principales');
+req(teaching?.programs?.reduce((n,p)=>n+p.sessions.length,0)===14,'El aula debe contener 14 sesiones listas para impartir');
+for(const p of teaching?.programs||[]){
+ req(p.before?.length>=4&&p.after?.length>=4&&p.outcomes?.length>=4,`Curso ${p.id} sin transformación o productos suficientes`);
+ for(const s of p.sessions||[]) req(s.objectives?.length>=3&&s.concepts?.length>=3&&s.demo?.steps?.length>=3&&s.activity?.deliverable&&s.checklist?.length>=3,`Sesión ${s.id} incompleta`);
+}
+req((teaching?.featuredTools||[]).every(t=>/^https:\/\/ramonmorillo\.github\.io\//.test(t[2])),'El acceso destacado debe abrir herramientas publicadas');
 req(data.cases?.length===32,'La biblioteca debe contener 32 casos prácticos');
 req(data.programs?.length===3,'Deben existir tres programas formativos principales');
 req(data.levels?.length===5,'Deben existir cinco niveles reales');

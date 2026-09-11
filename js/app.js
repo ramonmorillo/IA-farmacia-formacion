@@ -5,9 +5,35 @@ function save(){localStorage.setItem(KEY,JSON.stringify(state));renderProgress()
 function init(){document.documentElement.dataset.theme=state.theme; renderNav(); bindGlobal(); route();}
 function bindGlobal(){document.addEventListener('click',e=>{const t=e.target.closest('[data-action]'); if(!t)return; const a=t.dataset.action,id=t.dataset.id; if(a==='theme'){state.theme=state.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=state.theme;save()} if(a==='done-module'){toggle(state.doneModules,id);save();route()} if(a==='done-case'){toggle(state.doneCases,id);save();route()} if(a==='fav'){toggle(state.fav,id);save();route()} if(a==='reset'&&confirm('¿Reiniciar progreso local?')){localStorage.removeItem(KEY);location.reload()} if(a==='certificate')downloadCertificate();}); window.addEventListener('hashchange',route);}
 function toggle(arr,id){const i=arr.indexOf(id); i>-1?arr.splice(i,1):arr.push(id)}
-function renderNav(){ $('#app-nav').innerHTML=`<a href="#inicio">Inicio</a><a href="#programas">Programas</a><a href="#consultoria">Consultoría</a><a href="#propuesta">Diseñar formación</a><a href="#portfolio">Laboratorio</a><a href="#catalogo">Academia</a><a href="#casos">Casos</a><a href="#acerca">Sobre Ramón</a><a href="mailto:ralejandro.morillo.sspa@juntadeandalucia.es">Contacto</a><button data-action="theme" aria-label="Cambiar tema de color">Claro/oscuro</button>`; renderProgress();}
+function renderNav(){ $('#app-nav').innerHTML=`<a href="#inicio">Inicio</a><a href="#cursos">Cursos</a><a href="#aula">Aula</a><a href="#portfolio">Herramientas</a><a href="#casos">Casos</a><a href="#catalogo">Biblioteca técnica</a><a href="#propuesta">Para organizaciones</a><a href="#acerca">Sobre Ramón</a><button data-action="theme" aria-label="Cambiar tema de color">Claro/oscuro</button>`; renderProgress();}
 function renderProgress(){const n=data.modules.length,c=data.cases.length; $('#progressText').textContent=`${state.doneModules.length}/${n} módulos · ${state.doneCases.length}/${c} casos completados`; $('#progressBar').style.width=Math.round((state.doneModules.length+state.doneCases.length)/(n+c)*100)+'%';}
-function route(){const h=location.hash.replace('#','')||'inicio'; const m=data.modules.find(x=>x.id===h); const c=data.cases.find(x=>x.id===h); if(m)return renderModule(m); if(c)return renderCase(c); if(h==='programas')return renderPrograms(); if(h==='consultoria')return renderConsulting(); if(h==='propuesta')return renderProposal(); if(h==='github-herramienta')return renderGithubRoute(); if(h==='catalogo')return renderCatalog(); if(h==='portfolio')return renderPortfolio(); if(h==='seminarios')return renderSeminars(); if(h==='comparador')return renderComparator(); if(h==='casos')return renderCases(); if(h==='presentacion'||h==='docente')return renderPrivateNotice(); if(h==='acerca')return renderAbout(); if(h==='historial')return renderHistory(); if(h==='recursos')return renderResources(); renderHome();}
+function route(){
+  const h=location.hash.replace('#','')||'inicio';
+  const program=teachingData.programs.find(x=>x.id===h);
+  const session=findTeachingSession(h);
+  const m=data.modules.find(x=>x.id===h);
+  const c=data.cases.find(x=>x.id===h);
+  document.body.classList.toggle('technical-progress',Boolean(m||c||['catalogo','casos'].includes(h)));
+  if(program)return renderTeachingCourse(program);
+  if(session)return renderTeachingSession(session);
+  if(m)return renderModule(m);
+  if(c)return renderCase(c);
+  if(h==='cursos'||h==='programas')return renderCourseIndex();
+  if(h==='aula')return renderClassroom();
+  if(h==='consultoria')return renderConsulting();
+  if(h==='propuesta')return renderProposal();
+  if(h==='github-herramienta')return renderGithubRoute();
+  if(h==='catalogo')return renderCatalog();
+  if(h==='portfolio')return renderToolLab();
+  if(h==='seminarios')return renderSeminars();
+  if(h==='comparador')return renderComparator();
+  if(h==='casos')return renderCases();
+  if(h==='presentacion'||h==='docente')return renderPrivateNotice();
+  if(h==='acerca')return renderAbout();
+  if(h==='historial')return renderHistory();
+  if(h==='recursos')return renderResources();
+  renderTeachingHome();
+}
 function shell(title,html,cls=''){ $('#app').className='container '+cls; $('#app').innerHTML=`<section class="hero"><p class="eyebrow">${data.meta.tagline} · Versión ${data.meta.version} · Actualizado ${data.meta.updatedAt}</p><h1>${title}</h1></section>${html}`; $('#app').focus();}
 function renderHome(){shell('Inteligencia artificial para transformar la farmacia hospitalaria',`<section class="home-intro"><p class="lead">${data.meta.valueProposition}</p><p>Una plataforma creada y dirigida por <strong>${data.meta.authorFull}</strong> para profesionales y organizaciones que necesitan pasar de probar herramientas a mejorar procesos reales.</p><div class="hero-actions"><a class="btn" href="#programas">Ver programas formativos</a><a class="btn secondary" href="#consultoria">Explorar consultoría</a></div></section><section aria-labelledby="elige-ruta"><p class="section-kicker">Tres formas de trabajar</p><h2 id="elige-ruta">Elige el resultado que necesitas</h2><div class="grid three audience-grid">${data.audiences.map((a,i)=>`<article class="card audience-card"><span class="step">0${i+1}</span><h3>${a.title}</h3><p>${a.text}</p><a href="${a.href}">${a.action} →</a></article>`).join('')}</div></section><section class="proof-band" aria-label="Experiencia y alcance"><div><strong>${data.programs.length}</strong><span>programas insignia</span></div><div><strong>${data.cases.length}</strong><span>casos de entrenamiento</span></div><div><strong>${data.portfolio.length}</strong><span>herramientas en el laboratorio</span></div><div><strong>5</strong><span>niveles de progresión</span></div></section><section class="split-feature"><div><p class="section-kicker">La diferencia</p><h2>Conocimiento farmacéutico antes que fascinación tecnológica</h2><p>Los participantes trabajan con problemas profesionales, información ficticia o permitida, fuentes verificables, rúbricas y decisiones humanas explícitas. La herramienta cambia; el método permanece.</p><a class="text-link" href="#portfolio">Ver herramientas y decisiones reales →</a></div><article class="card principles"><h3>Todo trabajo debe dejar evidencia</h3><ul><li>Problema y alcance definidos</li><li>Datos permitidos y riesgos identificados</li><li>Resultado contrastado con la fuente</li><li>Decisión profesional documentada</li><li>Limitaciones y mantenimiento previstos</li></ul></article></section><section class="card continue-card"><div><p class="section-kicker">Academia abierta</p><h2>Continúa tu recorrido</h2><p>El progreso se conserva únicamente en este navegador: ${state.doneModules.length}/${data.modules.length} módulos y ${state.doneCases.length}/${data.cases.length} casos.</p></div><div><a class="btn" href="#${nextId()}">Continuar</a><a class="btn secondary" href="#catalogo">Ver academia</a></div></section>`)}
 
