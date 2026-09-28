@@ -126,12 +126,7 @@ window.TEACHING_DATA = {
     }
   ],
   featuredTools: [
-    ['Estratificación CMO en VIH','Aplicar el modelo CMO actualizado y orientar intervenciones','https://ramonmorillo.github.io/cmo-vih-app/'],
-    ['CMO en enfermedades respiratorias','Priorizar necesidades farmacéuticas y planificar intervenciones','https://ramonmorillo.github.io/cmorespiratorio/'],
-    ['CMO en migraña','Trabajar con un modelo específico de estratificación','https://ramonmorillo.github.io/estratificacionmigrana/'],
-    ['CMO en enfermedades inmunomediadas','Explorar extracción, estratificación e intervenciones','https://ramonmorillo.github.io/cmoinmunomediadas/'],
-    ['CMO en pediatría','Revisar la adaptación del modelo a población pediátrica','https://ramonmorillo.github.io/cmopediatria/'],
-    ['CMO en oncohematología','Aplicar el modelo de 38 variables en un entorno docente','https://ramonmorillo.github.io/cmoncologia/']
+    ['Hub de Estratificación CMO','Acceso unificado a las herramientas de estratificación','https://ramonmorillo.github.io/hub-estratificacionCMO/']
   ]
 };
 
