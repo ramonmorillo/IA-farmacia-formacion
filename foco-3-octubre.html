@@ -1,217 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FOCO 3 OCTUBRE · IA aplicada a la farmacia hospitalaria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c70a3d">
   <meta name="author" content="Ramón Morillo Verdugo">
-  <meta name="description" content="Curso presencial sobre Claude para farmacéuticos de hospital que atienden a pacientes con VIH en consultas externas.">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <style>
-    .course-section { scroll-margin-top: 9rem; }
-    .course-section h2 { margin-top: .25rem; }
-    .course-section h3 { margin-bottom: .25rem; }
-    .prompt-template { position: relative; margin: 1rem 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: 1rem; background: color-mix(in srgb, var(--panel) 88%, var(--brand) 12%); }
-    .prompt-template pre { margin: 0 0 1rem; color: var(--text); font: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
-    .copy-status { min-height: 1.6em; margin: .25rem 0 0; color: var(--brand2); font-weight: 800; }
-    .responsible-use { border-left: 6px solid var(--brand2); }
-    .internal-index ol { columns: 2; }
-    .internal-index li { break-inside: avoid; margin-bottom: .45rem; }
-    .starter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
-    .starter-grid > div { padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; }
-    .course-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.4rem; }
-    .course-actions a { display: inline-block; padding: .8rem 1.1rem; border-radius: .8rem; background: #075985; color: white; font-weight: 800; text-decoration: none; }
-    .course-actions a + a { background: var(--panel); color: var(--text); border: 1px solid var(--line); }
-    @media (max-width: 800px) {
-      .course-section { scroll-margin-top: 1rem; }
-      .internal-index ol { columns: 1; }
-    }
-  </style>
+  <meta name="description" content="Material del taller de introducción práctica a Claude para farmacéuticos de hospital en FOCO VIH, Madrid, 3 de octubre de 2026.">
+  <title>Introducción práctica a Claude · FOCO VIH 2026</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/foco-vih.css">
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="site-header">
-  <div class="brand"><span aria-hidden="true">IA</span><div><strong>Farmacia hospitalaria aumentada</strong><small>Formación · Consultoría · Laboratorio aplicado</small></div></div>
-  <nav aria-label="Navegación principal">
-    <a href="index.html#inicio">Inicio</a><a href="index.html#cursos">Cursos</a><a href="index.html#aula">Aula</a><a href="foco-3-octubre.html" aria-current="page">FOCO 3 OCTUBRE</a><a href="index.html#portfolio">Herramientas</a><a href="index.html#casos">Casos</a><a href="index.html#catalogo">Biblioteca técnica</a><a href="index.html#propuesta">Para organizaciones</a><a href="index.html#acerca">Sobre Ramón</a>
-  </nav>
-</header>
-
-<main id="contenido" class="container" tabindex="-1">
-  <section class="hero">
-    <p class="eyebrow">Curso presencial · 3 de octubre de 2026 · 90 minutos</p>
-    <h1>De una idea clínica a una herramienta verificable</h1>
-    <p class="lead">Claude para farmacéuticos de hospital · FOCO 3 OCTUBRE</p>
-    <p>En 90 minutos trabajarás un caso ficticio, mejorarás tus instrucciones y crearás un prototipo de adherencia que podrás contrastar con un resultado conocido.</p>
-    <div class="course-facts large"><span>3 de octubre de 2026</span><span>90 minutos</span></div>
-    <div class="course-actions"><a href="#antes-de-empezar">Prepararme para el curso</a><a href="#materiales">Descargar materiales</a></div>
-  </section>
-
-  <section class="card" id="antes-de-empezar">
-    <p class="section-kicker">Empieza aquí · antes de la sesión</p>
-    <h2>Tu ruta en 3 pasos</h2>
-    <div class="starter-grid">
-      <div><h3>1. Prepara el acceso</h3><p>Abre <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a> e inicia sesión antes del curso. Usa un navegador actualizado. Comprueba que puedes abrir un chat nuevo y descargar un archivo.</p></div>
-      <div><h3>2. Descarga el material</h3><p>Guarda la <a href="#materiales">skill y el CSV ficticio</a>. El CSV sirve para practicar sin datos de pacientes.</p></div>
-      <div><h3>3. Elige tu meta</h3><p>Si partes de cero, sigue el caso guiado de adherencia. Si ya usas Claude, adapta el prompt a un problema de tu servicio y añade una prueba verificable.</p></div>
-    </div>
-    <p><strong>Al salir sabrás:</strong> escribir un prompt con contexto y límites, probar una skill y construir un primer prototipo con un resultado que puedas comprobar. Si no aparece una opción en tu cuenta o se agotan los mensajes, sigue la demostración y lleva el prompt y los datos descargados para repetirlo después.</p>
-  </section>
-
-  <section class="card" aria-labelledby="agenda-title">
-    <p class="section-kicker">Programa</p>
-    <h2 id="agenda-title">Agenda</h2>
-    <table>
-      <thead><tr><th scope="col">Apartado</th><th scope="col">Duración</th></tr></thead>
-      <tbody>
-        <tr><td>1. Qué es el vibe coding</td><td>5 min</td></tr>
-        <tr><td>2. Conceptos básicos de IA</td><td>10 min</td></tr>
-        <tr><td>3. Configurar Claude</td><td>12 min</td></tr>
-        <tr><td>4. El prompt</td><td>18 min</td></tr>
-        <tr><td>5. Las skills</td><td>12 min</td></tr>
-        <tr><td>6. Los proyectos</td><td>5 min</td></tr>
-        <tr><td>7. Los artefactos</td><td>23 min</td></tr>
-        <tr><td>8. Cómo llevar más allá tu idea</td><td>5 min</td></tr>
-        <tr><th scope="row">Total</th><th>90 min</th></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="vibe-coding" class="card course-section">
-    <p class="section-kicker">01 · 5 minutos</p><h2>Qué es el vibe coding</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> entender que se puede crear software describiendo lo que se necesita en lenguaje natural, sin saber programar.</p>
-    <h3>Contenidos clave</h3><p>La persona aporta el conocimiento del problema clínico y la IA escribe el código. El papel del farmacéutico es especificar bien y verificar el resultado. El riesgo principal es que una herramienta que funciona visualmente no está necesariamente validada.</p>
-    <h3>Actividad práctica</h3><p>Describe en lenguaje natural una necesidad concreta de la consulta y anota qué resultado tendrías que verificar.</p>
-  </section>
-
-  <section id="conceptos-ia" class="card course-section">
-    <p class="section-kicker">02 · 10 minutos</p><h2>Conceptos básicos de IA</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> calibrar cuánto confiar en las respuestas.</p>
-    <h3>Contenidos clave</h3><p>Un modelo de lenguaje genera texto probable, no consulta una base de datos verificada. Puede producir respuestas plausibles pero incorrectas (alucinaciones), incluidas referencias inexistentes. Tiene una fecha de corte de conocimiento. La misma pregunta puede dar respuestas distintas. La responsabilidad de verificar es siempre del profesional.</p>
-    <h3>Actividad práctica</h3><p>Revisa una respuesta generada e identifica sus afirmaciones y referencias que necesitarías verificar antes de utilizarla.</p>
-  </section>
-
-  <section id="configurar-claude" class="card course-section">
-    <p class="section-kicker">03 · 12 minutos</p><h2>Configurar Claude</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> comprobar qué cambia cuando Claude sabe quién eres y cómo quieres que responda.</p>
-    <h3>Contenidos clave</h3><p>Configura tus preferencias personales. Revisa también, en la configuración de tu cuenta, el ajuste de privacidad sobre el uso de las conversaciones y la memoria.</p>
-    <div class="prompt-template">
-      <h3>Plantilla de preferencias</h3>
-      <pre id="preferencias">Soy farmacéutico/a de hospital y trabajo en consultas externas de VIH.
-Responde en español, de forma estructurada y concisa.
-Distingue entre datos objetivos, interpretación y recomendación.
-Si no estás seguro de algo, dilo explícitamente. No inventes referencias, dosis ni datos.
-Si falta información relevante para responder, pregúntame antes de continuar.
-Cuando cites evidencia, indica la fuente para que pueda verificarla.
-Asume que tengo formación clínica avanzada: evita explicaciones básicas.</pre>
-      <button type="button" data-copy="preferencias">Copiar plantilla</button><p class="copy-status" aria-live="polite"></p>
-    </div>
-    <p><strong>Qué no poner en las preferencias:</strong> “responde siempre con seguridad”, “no me digas que no sabes”, “dame siempre la dosis exacta” y “no me hagas preguntas”.</p>
-    <h3>Actividad práctica: antes y después</h3><ol><li>En una conversación nueva, pregunta: “Caso ficticio: una persona con VIH en tratamiento con dolutegravir/lamivudina tiene una carga viral de 85 copias/mL. ¿Qué datos faltan y qué comprobarías antes de interpretarla?”.</li><li>Configura las preferencias personales con la plantilla.</li><li>Repite la misma pregunta en <strong>otra conversación nueva</strong> y compara ambas respuestas.</li></ol>
-  </section>
-
-  <section id="el-prompt" class="card course-section">
-    <p class="section-kicker">04 · 18 minutos</p><h2>El prompt</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> pasar de una pregunta a una especificación.</p>
-    <h3>Contenidos clave: RCTFR y la analogía de la receta</h3>
-    <table><thead><tr><th scope="col">Elemento</th><th scope="col">Analogía de la receta</th></tr></thead><tbody><tr><td>Rol</td><td>Quién prescribe</td></tr><tr><td>Contexto</td><td>Datos del paciente</td></tr><tr><td>Tarea</td><td>Indicación y fármaco</td></tr><tr><td>Formato</td><td>Posología y presentación</td></tr><tr><td>Restricciones</td><td>Advertencias y contraindicaciones</td></tr></tbody></table>
-    <blockquote class="feedback">“Un prompt incompleto es como una receta incompleta: alguien tendrá que suponer lo que falta. Y en un prompt, quien supone es la IA.” <strong>Regla: empieza y acaba en R.</strong></blockquote>
-    <h3>Actividad práctica en tres pasos</h3><p>Trabaja el mismo caso simulado con un prompt libre, un prompt RCTFR y metaprompting.</p>
-    <div class="pharmacy-example"><p class="section-kicker">Caso ficticio</p><p>Varón de 52 años, dolutegravir/lamivudina desde hace 3 años, 6 cargas virales previas indetectables, última carga viral de 85 copias/mL, recogidas puntuales, toma desde hace 2 meses un suplemento de magnesio con el desayuno a la misma hora que el antirretroviral.</p></div>
-    <div class="prompt-template">
-      <h3>Plantilla de metaprompting</h3>
-      <pre id="metaprompting">Quiero construir un buen prompt para Claude. Antes de escribirlo, hazme las preguntas que necesites, de una en una, para completar: rol, contexto, tarea, formato y restricciones.
-Mi objetivo es: [describe tu objetivo].
-Cuando tengas la información, escribe el prompt final y señala qué supuestos has hecho que yo no te haya dado.</pre>
-      <button type="button" data-copy="metaprompting">Copiar plantilla</button><p class="copy-status" aria-live="polite"></p>
-    </div>
-  </section>
-
-  <section id="skills" class="card course-section">
-    <p class="section-kicker">05 · 12 minutos</p><h2>Las skills</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> convertir un buen prompt en un procedimiento reutilizable que Claude activa solo.</p>
-    <h3>Contenidos clave</h3><p>Una skill clínica es un protocolo y debe revisarse como tal. Instala solo skills de fuentes de confianza.</p>
-    <h3>Actividad práctica</h3><ol><li>En <strong>Settings &gt; Capabilities</strong>, comprueba que “Code execution and file creation” está activado.</li><li>Descarga la skill “Valoración farmacéutica en consulta externa de VIH”.</li><li>Súbela en <strong>Customize &gt; Skills</strong> si esa opción aparece en tu cuenta.</li><li>Pruébala en una conversación nueva con el prompt “Caso ficticio: paciente con Biktarvy, carga viral de 120 copias/mL, toma hierro. Organiza los datos que faltan, los puntos que deben comprobarse y las fuentes a consultar; no decidas un cambio de tratamiento”.</li></ol>
-    <p><strong>Nota para Mac:</strong> Safari descomprime automáticamente los .zip; si ves una carpeta, haz clic derecho &gt; Comprimir para volver a obtener el .zip.</p>
-  </section>
-
-  <section id="proyectos" class="card course-section">
-    <p class="section-kicker">06 · 5 minutos · Demostración del docente</p><h2>Los proyectos</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> reunir el contexto de un área de trabajo en un solo espacio.</p>
-    <h3>Contenidos clave</h3><p>Un proyecto agrupa instrucciones específicas y documentos de referencia. Incluye solo documentos públicos, como fichas técnicas y guías publicadas; nunca documentos internos del hospital en una cuenta personal.</p>
-    <table><thead><tr><th scope="col">Elemento</th><th scope="col">Para qué sirve</th></tr></thead><tbody><tr><td>Preferencias</td><td>Cómo me responde siempre</td></tr><tr><td>Prompt</td><td>Qué necesita en cada caso</td></tr><tr><td>Skill</td><td>Cómo hacer una tarea que repito</td></tr><tr><td>Artefacto</td><td>La herramienta que uso</td></tr><tr><td>Proyecto</td><td>El espacio donde reúno el contexto de un área</td></tr></tbody></table>
-    <h3>Actividad práctica</h3><p>Sigue la demostración del docente e identifica qué instrucciones específicas y qué documentos públicos reunirías para un área de trabajo.</p>
-  </section>
-
-  <section id="artefactos" class="card course-section">
-    <p class="section-kicker">07 · 23 minutos</p><h2>Los artefactos</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> crear una herramienta útil para el día a día de la consulta.</p>
-    <h3>Contenidos clave</h3><p>Las herramientas que organizan o calculan con una fórmula conocida son verificables. Las que incluyen contenido clínico generado por la IA —interacciones, dosis o recomendaciones— requieren fuentes y revisión antes de usarse.</p>
-    <p><strong>Ejemplos:</strong> checklist de primera visita, calculadora de adherencia, registro de intervenciones farmacéuticas, hojas informativas para el paciente y planificador de citas y dispensaciones.</p>
-    <h3>Actividad práctica</h3><ol><li>Elige una necesidad concreta y frecuente.</li><li>Escribe el prompt con RCTFR o con metaprompting, no los dos, para no agotar mensajes.</li><li>Genera el artefacto y haz como máximo 2 mejoras concretas.</li><li>Comparte la herramienta y el prompt.</li></ol>
-    <div class="feedback"><p><strong>Si eliges una herramienta de adherencia:</strong> utiliza el CSV simulado con las columnas <code>id_paciente</code>, <code>fecha_dispensacion</code> y <code>dias_suministro</code>, para el periodo del 01/01/2026 al 29/06/2026 (180 días).</p><p><strong>Valor de comprobación:</strong> el paciente P02 debe dar un PDC de 66,7 % (120/180).</p></div>
-    <div class="prompt-template"><h3>Prompt guiado para crear tu primer artefacto</h3><pre id="artefacto-prompt">Actúa como desarrollador de una herramienta docente para farmacia hospitalaria. Crea un artefacto interactivo que acepte el CSV ficticio adjunto (id_paciente, fecha_dispensacion, dias_suministro) y muestre el PDC por paciente entre el 01/01/2026 y el 29/06/2026, ambos incluidos (180 días). Cuenta los días cubiertos únicos, sin duplicar solapamientos; limita el resultado al 100 %. Muestra numerador, denominador y porcentaje con un decimal. Valida columnas, fechas y días de suministro; explica cualquier fila rechazada. No envíes datos a servicios externos ni incluyas recomendaciones clínicas. Prueba el archivo: P02 debe tener 120 días cubiertos y PDC 66,7 %. Si no coincide, corrige el cálculo antes de entregarlo. Explica cómo probarlo y sus límites.</pre><button type="button" data-copy="artefacto-prompt">Copiar prompt guiado</button><p class="copy-status" aria-live="polite"></p></div>
-    <p><strong>Comprobación humana:</strong> abre el artefacto, carga el CSV y verifica P02. Después prueba un CSV sin una columna y una dispensación solapada. Que se vea bien no demuestra que calcule bien.</p>
-  </section>
-
-  <section id="llevar-mas-alla" class="card course-section">
-    <p class="section-kicker">08 · 5 minutos</p><h2>Cómo llevar más allá tu idea</h2>
-    <p><strong>Objetivo de aprendizaje:</strong> saber cuál es el siguiente paso cuando una herramienta merece crecer.</p>
-    <h3>Contenidos clave</h3><p>Guarda y versiona el código en GitHub; publica herramientas estáticas; usa agentes de programación para proyectos más grandes; valida antes de usar en práctica clínica.</p>
-    <h3>Actividad práctica: tareas posteriores al curso</h3><ul><li>Crea tu propia skill a partir de tu prompt RCTFR.</li><li>Crea tu propio proyecto.</li><li>Prueba tu herramienta con datos simulados antes de plantear cualquier otro uso.</li></ul>
-  </section>
-
-  <section id="materiales" class="card course-section">
-    <p class="section-kicker">Para la sesión</p><h2>Materiales descargables</h2>
-    <a class="download" href="assets/foco-3-octubre/valoracion-farmaceutica-vih.zip" download>Skill: Valoración farmacéutica en consulta externa de VIH (.zip)</a>
-    <a class="download" href="assets/foco-3-octubre/dispensaciones_simuladas.csv" download>CSV simulado de dispensaciones (.csv)</a>
-    <p>Los dos archivos son ejemplos docentes ficticios. La skill ordena una valoración; no contiene protocolos locales ni valida decisiones clínicas.</p>
-  </section>
-
-  <section class="card" id="glosario">
-    <p class="section-kicker">Consulta rápida · sin tiempo de clase</p><h2>Seis palabras para no perderte</h2>
-    <p><strong>Prompt:</strong> tu instrucción concreta. <strong>Modelo de lenguaje:</strong> sistema que genera respuestas a partir de patrones aprendidos. <strong>Skill:</strong> instrucciones reutilizables para un procedimiento. <strong>Proyecto:</strong> espacio con contexto y documentos de un área. <strong>Artefacto:</strong> contenido o herramienta interactiva creada en Claude. <strong>PDC:</strong> proporción de días cubiertos por dispensaciones en un intervalo definido; exige aclarar cómo se tratan solapamientos y límites del periodo.</p>
-  </section>
-
-  <section id="uso-responsable" class="card responsible-use course-section">
-    <p class="section-kicker">Antes de terminar</p><h2>Uso responsable</h2>
-    <p>Todo el trabajo del curso se hace con datos simulados. No introduzcas datos de pacientes reales en cuentas personales de Claude. El uso de cualquier herramienta con datos reales requiere un entorno autorizado por tu hospital y la validación previa de la herramienta. Las herramientas creadas en este curso son prototipos docentes, no productos sanitarios.</p>
-  </section>
-
-  <nav class="card internal-index" aria-labelledby="index-title">
-    <p class="section-kicker">Navegación de la clase</p><h2 id="index-title">Índice del curso</h2>
-    <ol><li><a href="#vibe-coding">Qué es el vibe coding</a></li><li><a href="#conceptos-ia">Conceptos básicos de IA</a></li><li><a href="#configurar-claude">Configurar Claude</a></li><li><a href="#el-prompt">El prompt</a></li><li><a href="#skills">Las skills</a></li><li><a href="#proyectos">Los proyectos</a></li><li><a href="#artefactos">Los artefactos</a></li><li><a href="#llevar-mas-alla">Cómo llevar más allá tu idea</a></li></ol>
-  </nav>
+<header class="event-header"><div class="wrap header-inner"><div class="event-mark" aria-label="FOCO VIH, powered by LAI+">FOCO VIH<span>POWERED BY LAI+</span></div><a class="back-link" href="index.html#conferencias">← Volver a la web de Ramón Morillo</a></div></header>
+<section class="event-hero" aria-labelledby="titulo"><div class="wrap hero-grid"><div><p class="hero-kicker">FOCO VIH · Madrid · sábado 3 de octubre de 2026</p><h1 id="titulo">Introducción práctica a Claude para farmacia hospitalaria</h1><p class="hero-lead">Un taller para empezar con criterio: aprender a formular instrucciones, trabajar con información ficticia y comprobar el resultado de una herramienta sencilla.</p><div class="hero-meta"><span>Dos pases del mismo taller</span><span>75 minutos por pase</span><span>Sin experiencia previa</span></div><div class="actions"><a class="button" href="#preparacion">Cómo prepararte</a><a class="button ghost" href="#materiales">Descargar materiales</a></div></div><aside class="hero-side"><p>Sesión del sábado</p><strong>Casos de uso hospitalario powered by AI</strong><small>Material de introducción a Claude preparado por Ramón Morillo para FOCO VIH.</small><div class="time"><strong>09:30–10:45<br>11:15–12:30</strong><small>Dos grupos · mismo contenido</small></div></aside></div></section>
+<div class="partner-band" aria-label="Identidad y apoyo del evento"><div class="wrap partner-inner"><div class="partner lai"><small>La identidad del encuentro</small><strong>FOCO VIH <span style="font-size:.48em;white-space:nowrap">powered by LAI+</span></strong><p>Un espacio para conversar sobre innovación en VIH.</p></div><div class="partner viiv"><small>Con el apoyo de</small><strong>ViiV <em>Healthcare</em></strong><p>Patrocinador del encuentro FOCO VIH.</p></div></div></div>
+<main id="contenido" class="wrap">
+  <section class="section" aria-labelledby="sesiones"><p class="section-label">Tu sesión</p><h2 id="sesiones">Elige el pase que te corresponde</h2><p class="section-intro">El taller se imparte dos veces el sábado con el mismo contenido. Basta con acudir al horario asignado por la organización.</p><div class="schedule"><article><span>Primer pase</span><strong>09:30 – 10:45</strong><p>Introducción práctica a Claude y caso guiado.</p></article><article><span>Segundo pase</span><strong>11:15 – 12:30</strong><p>El mismo taller para el segundo grupo.</p></article></div><p class="venue"><strong>Lugar:</strong> Espacio BLOKE, calle de Cedaceros 11, Madrid. Confirma tu grupo y acceso con la organización del evento.</p></section>
+  <section class="section" id="preparacion" aria-labelledby="preparacion-titulo"><p class="section-label">Antes de llegar</p><h2 id="preparacion-titulo">Tres cosas y estarás preparado</h2><div class="steps"><article><b>1</b><h3>Accede a Claude</h3><p>Entra en <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">claude.ai</a> e inicia sesión. Comprueba que puedes crear una conversación nueva.</p></article><article><b>2</b><h3>Trae un equipo</h3><p>Ven con tu portátil y un navegador actualizado si quieres hacer la práctica. Podrás seguir la demostración aunque alguna función no aparezca en tu cuenta.</p></article><article><b>3</b><h3>Guarda el material</h3><p>Descarga el CSV ficticio. La skill es un recurso complementario para explorar después o durante la demostración.</p></article></div></section>
+  <section class="section" aria-labelledby="aprendizaje"><p class="section-label">Durante el taller</p><h2 id="aprendizaje">De tu primera instrucción a un resultado comprobable</h2><p class="section-intro">La práctica utiliza un caso ficticio de adherencia en VIH. Empezaremos por lo básico y avanzaremos solo hasta donde permita el tiempo del grupo.</p><div class="panel"><ol class="agenda-list"><li><b>10 min</b><div><strong>Qué puede hacer Claude y dónde están sus límites</strong><span>Conversación, documentos, errores plausibles y privacidad.</span></div></li><li><b>15 min</b><div><strong>Escribir una instrucción útil</strong><span>Contexto, tarea, formato, límites y comprobación de la respuesta.</span></div></li><li><b>15 min</b><div><strong>Conocer proyectos y skills</strong><span>Cómo reutilizar contexto y procedimientos; demostración con un ejemplo farmacéutico.</span></div></li><li><b>30 min</b><div><strong>Construir y comprobar un artefacto sencillo</strong><span>Dashboard docente de adherencia a partir de dispensaciones simuladas.</span></div></li><li><b>5 min</b><div><strong>Qué hacer después</strong><span>Guardar el trabajo, probar casos límite y reconocer cuándo requiere revisión profesional.</span></div></li></ol></div></section>
+  <section class="section" id="materiales" aria-labelledby="materiales-titulo"><p class="section-label">Material del participante</p><h2 id="materiales-titulo">Descarga lo que usaremos</h2><p class="section-intro">Son datos y ejemplos docentes. Ningún archivo contiene información de pacientes reales.</p><div class="materials"><article class="material"><strong>Dispensaciones simuladas</strong><p>CSV para construir y probar la herramienta de adherencia.</p><a href="assets/foco-3-octubre/dispensaciones_simuladas.csv" download>Descargar CSV ↗</a></article><article class="material"><strong>Skill de valoración farmacéutica</strong><p>Ejemplo reutilizable para conocer cómo Claude puede seguir un procedimiento. Uso complementario.</p><a href="assets/foco-3-octubre/valoracion-farmaceutica-vih.zip" download>Descargar ZIP ↗</a></article></div></section>
+  <section class="section" aria-labelledby="caso-titulo"><p class="section-label">La práctica</p><h2 id="caso-titulo">Un caso ficticio con respuesta conocida</h2><div class="case"><h3>Dashboard de adherencia por días cubiertos</h3><p>Utiliza el CSV para calcular la proporción de días cubiertos (PDC) entre el 1 de enero y el 29 de junio de 2026, ambos incluidos: 180 días. La herramienta debe mostrar los días cubiertos, el denominador y el porcentaje, sin contar dos veces los solapamientos.</p><p class="check">Punto de control: P02 debe tener 120/180 días cubiertos, PDC 66,7 %.</p><p>Si el resultado difiere, revisa el cálculo antes de compartir el artefacto. Un diseño atractivo no demuestra que la fórmula sea correcta.</p></div><div class="prompt"><strong>Prompt de partida para Claude</strong><pre id="prompt-caso">Soy farmacéutico/a de hospital y estoy aprendiendo a crear una herramienta docente. Con el CSV ficticio adjunto, construye un artefacto que calcule el PDC por paciente entre el 01/01/2026 y el 29/06/2026 (180 días, ambos incluidos). Usa días cubiertos únicos, sin duplicar solapamientos y con máximo del 100 %. Muestra numerador, denominador y porcentaje con un decimal. Valida columnas y fechas; explica las filas rechazadas. No envíes datos a servicios externos ni generes recomendaciones clínicas. Comprueba el resultado: P02 debe dar 120/180 días, 66,7 %. Si no coincide, corrige el cálculo y explica qué falló.</pre><button type="button" data-copy="prompt-caso">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></section>
+  <section class="section safety" aria-labelledby="seguridad"><h2 id="seguridad">Datos ficticios y revisión humana</h2><p>No introduzcas datos de pacientes reales en una cuenta personal de Claude. Para un uso profesional con datos reales hacen falta un entorno autorizado por tu institución, reglas verificadas y evaluación específica. Este ejercicio produce un prototipo docente.</p></section>
 </main>
-
-<footer class="site-footer"><p>Proyecto creado y dirigido por Ramón Morillo Verdugo · Actualizado en septiembre de 2026 · Versión 5.2.0.</p><p><a href="mailto:ralejandro.morillo.sspa@juntadeandalucia.es">ralejandro.morillo.sspa@juntadeandalucia.es</a></p><p>Uso formativo. No sustituye políticas institucionales, asesoramiento jurídico, validación clínica ni juicio profesional.</p></footer>
+<footer class="footer"><div class="wrap footer-grid"><div><strong>FOCO VIH · 3 de octubre de 2026</strong><p>Material formativo de Ramón Morillo Verdugo para la sesión de casos de uso hospitalario. Programa y horarios según la agenda del evento.</p><p><a href="index.html#inicio">Web de Ramón Morillo</a> · <a href="mailto:ralejandro.morillo.sspa@juntadeandalucia.es">Contacto</a></p></div><div class="footer-partner"><span>Con el apoyo de</span>ViiV Healthcare</div></div></footer>
 <script>
-  document.querySelectorAll('[data-copy]').forEach(button => {
-    button.addEventListener('click', async () => {
-      const text = document.getElementById(button.dataset.copy).textContent;
-      const status = button.nextElementSibling;
-      try {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(text);
-        } else {
-          const field = document.createElement('textarea');
-          field.value = text;
-          field.setAttribute('readonly', '');
-          field.style.position = 'fixed';
-          field.style.opacity = '0';
-          document.body.appendChild(field);
-          field.select();
-          const copied = document.execCommand('copy');
-          field.remove();
-          if (!copied) throw new Error('No se pudo copiar');
-        }
-        status.textContent = 'Plantilla copiada.';
-      } catch (error) {
-        status.textContent = 'No se pudo copiar automáticamente. Selecciona el texto y cópialo manualmente.';
-      }
-    });
-  });
+  document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
+    const status=button.nextElementSibling;
+    try{await navigator.clipboard.writeText(document.getElementById(button.dataset.copy).textContent);status.textContent='Prompt copiado.'}
+    catch{status.textContent='Selecciona el texto y cópialo manualmente.'}
+  }));
 </script>
 </body>
 </html>
