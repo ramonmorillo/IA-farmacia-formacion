@@ -42,6 +42,80 @@ function relatedCases(ids){
   return (ids||[]).map(id=>(data.cases||[]).find(item=>item.id===id)).filter(Boolean);
 }
 
+function teachingTable(block){
+  return `<div class="session-table-wrap"><table><thead><tr>${block.headers.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${block.rows.map(row=>`<tr>${row.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+
+function renderPromptBuilder(session){
+  if(!session.promptBuilder)return '';
+  const requirements=findTeachingSession('sesion-requisitos').session.template.fields;
+  const fields=requirements.map((label,index)=>{
+    const key=`requirement-${index}`;
+    const required=label==='Problema'||label==='Criterios de aceptación';
+    return `<div class="prompt-field"><label for="${key}">${label}${required?' *':''}</label><textarea id="${key}" data-requirement="${label}" ${required?'required aria-describedby="'+key+'-error"':''}></textarea>${required?`<span class="field-error" id="${key}-error"></span>`:''}</div>`;
+  }).join('');
+  return `<section class="card prompt-builder" id="prompt-builder"><p class="section-kicker">Asistente</p><h2>${session.promptBuilder.title}</h2><p>Nada de lo que escribas se guarda ni sale de este navegador. Copia o descarga tu resultado antes de cerrar.</p><form id="first-prompt-form" novalidate><div class="prompt-field"><label for="tool-name">Nombre de la herramienta *</label><input id="tool-name" required aria-describedby="tool-name-error"><span class="field-error" id="tool-name-error"></span></div><fieldset><legend>¿La herramienta manejará datos de pacientes?</legend><label><input type="radio" name="patient-data" value="Sí"> Sí</label><label><input type="radio" name="patient-data" value="No" checked> No</label></fieldset><fieldset><legend>Agente que usarás</legend><label><input type="radio" name="code-agent" value="Codex" checked> Codex</label><label><input type="radio" name="code-agent" value="Claude Code"> Claude Code</label></fieldset><p class="patient-warning" id="patient-warning" role="alert" hidden>El repositorio y la web serán públicos. No uses nunca datos reales de pacientes, ni siquiera seudonimizados, en el código, en los ejemplos ni en el repositorio.</p><div class="prompt-fields">${fields}</div><button class="btn" type="submit">Generar</button></form><div id="prompt-results" class="prompt-results" hidden><article><h3>PRIMER PROMPT</h3><pre id="first-prompt-output" tabindex="0"></pre><div class="hero-actions"><button class="btn secondary" type="button" data-copy-output="first-prompt-output">Copiar</button><button class="btn secondary" type="button" data-download-output="first-prompt-output" data-filename="primer-prompt.md">Descargar .md</button></div></article><article><h3>ARCHIVO DE INSTRUCCIONES: <span id="instructions-filename">AGENTS.md</span></h3><pre id="instructions-output" tabindex="0"></pre><div class="hero-actions"><button class="btn secondary" type="button" data-copy-output="instructions-output">Copiar</button><button class="btn secondary" type="button" data-download-output="instructions-output" id="instructions-download" data-filename="AGENTS.md">Descargar .md</button></div></article></div><article class="change-prompt"><h3>Prompt de cambio (fase B)</h3><pre id="change-prompt-output"># Prompt de cambio (fase B)\n\n## Qué cambiar\n\n## Qué no tocar\n\n## Criterios de aceptación\n\n## Pruebas\n\n## Entrega\nEntrega el cambio como pull request.</pre><button class="btn secondary" type="button" data-copy-output="change-prompt-output">Copiar</button></article></section>`;
+}
+
+function renderSessionExtras(session){
+  const parts=[];
+  if(session.prerequisites)parts.push(`<section class="card session-prerequisites"><p class="section-kicker">Preparación</p><h2>${session.prerequisites.title}</h2><ul class="check-list">${session.prerequisites.items.map(x=>`<li>${x}</li>`).join('')}</ul></section>`);
+  if(session.repoAnatomy)parts.push(`<section class="card repo-anatomy"><p class="section-kicker">Orientación</p><h2>${session.repoAnatomy.title}</h2>${teachingTable(session.repoAnatomy)}<p><a href="${session.repoAnatomy.link[1]}">${session.repoAnatomy.link[0]}</a></p></section>`);
+  parts.push(renderPromptBuilder(session));
+  if(session.workflow)parts.push(`<section class="session-workflow"><p class="section-kicker">Método</p><h2>${session.workflow.title}</h2><div class="workflow-grid">${session.workflow.phases.map(phase=>`<article class="card"><h3>${phase.title}</h3><ol>${phase.steps.map(step=>`<li><p>${step}</p><small><strong>Qué deberías ver:</strong> el resultado descrito en este paso.</small></li>`).join('')}</ol></article>`).join('')}</div><p class="private-note">${session.workflow.note}</p></section>`);
+  if(session.troubleshooting)parts.push(`<section class="card troubleshooting"><p class="section-kicker">Ayuda</p><h2>${session.troubleshooting.title}</h2>${teachingTable(session.troubleshooting)}</section>`);
+  if(session.security)parts.push(`<section class="card session-security"><p class="section-kicker">Límites</p><h2>${session.security.title}</h2><ul class="check-list">${session.security.items.map(x=>`<li>${x}</li>`).join('')}</ul></section>`);
+  return parts.join('');
+}
+
+function promptValue(label){
+  return document.querySelector(`[data-requirement="${label}"]`)?.value.trim()||'';
+}
+
+function patientClauses(){
+  return ['No enviar datos a ningún servidor.','No guardar datos introducidos por el usuario en el navegador salvo petición expresa.','Usar ejemplos solo con datos ficticios marcados como tales.','Incluir un aviso de uso en el README.'];
+}
+
+function initializePromptBuilder(){
+  const form=document.getElementById('first-prompt-form');
+  if(!form)return;
+  const warning=document.getElementById('patient-warning');
+  form.addEventListener('change',()=>{warning.hidden=form.elements['patient-data'].value!=='Sí';});
+  form.addEventListener('submit',event=>{
+    event.preventDefault();
+    document.querySelectorAll('.field-error').forEach(x=>x.textContent='');
+    const required=[{element:document.getElementById('tool-name'),message:'Indica el nombre de la herramienta.'},{element:document.querySelector('[data-requirement="Problema"]'),message:'Describe el problema.'},{element:document.querySelector('[data-requirement="Criterios de aceptación"]'),message:'Añade al menos un criterio de aceptación.'}];
+    const missing=required.find(item=>!item.element.value.trim());
+    if(missing){
+      document.getElementById(`${missing.element.id}-error`).textContent=missing.message;
+      missing.element.setAttribute('aria-invalid','true');
+      missing.element.focus();
+      document.getElementById('prompt-results').hidden=true;
+      return;
+    }
+    required.forEach(item=>item.element.removeAttribute('aria-invalid'));
+    const values=Object.fromEntries([...form.querySelectorAll('[data-requirement]')].map(x=>[x.dataset.requirement,x.value.trim()]));
+    const criteria=values['Criterios de aceptación'].split('\n').map(x=>x.trim()).filter(Boolean).map(x=>`- ${x}`).join('\n');
+    const patient=form.elements['patient-data'].value==='Sí';
+    const protection=patient?`\n\n## Protección de datos\n${patientClauses().map(x=>`- ${x}`).join('\n')}`:'';
+    const prompt=`# ${document.getElementById('tool-name').value.trim()}\n\n## Objetivo\nCrear la herramienta descrita en esta especificación.\n\n## Contexto de uso\n- Usuario: ${values.Usuario||''}\n- Problema: ${values.Problema}\n- Decisión apoyada: ${values['Decisión apoyada']||''}\n\n## Entradas, reglas con su fuente y salidas\n- Entradas: ${values['Entradas mínimas']||''}\n- Reglas y fuente: ${values['Reglas y fuente']||''}\n- Salidas: ${values.Salidas||''}\n\n## Fuera de alcance\n${values['Casos fuera de alcance']||''}\n\n## Tecnología\nHTML, CSS y JavaScript sin compilación, compatible con GitHub Pages, sin dependencias ni servicios externos.\n\n## Qué no hacer\nNo ampliar el alcance ni usar datos reales de pacientes.\n\n## Criterios de aceptación\n${criteria}\n\n## Pruebas a realizar antes de terminar\nComprobar cada criterio de aceptación.\n\n## Entrega\nEntregar como pull request con una descripción de los cambios y el resultado de cada criterio.${protection}`;
+    const agent=form.elements['code-agent'].value;
+    const filename=agent==='Codex'?'AGENTS.md':'CLAUDE.md';
+    const instructions=`# Instrucciones permanentes\n\n- Crear una web estática sin compilación.\n- No añadir dependencias ni servicios externos sin permiso.\n- No romper funcionalidades existentes y verificarlas tras cada cambio.\n- Trabajar siempre mediante pull request con cambios pequeños.\n- Mantener el README con finalidad, uso y limitaciones.\n- La herramienta es docente y no sustituye el juicio clínico ni está validada clínicamente.${patient?`\n${patientClauses().map(x=>`- ${x}`).join('\n')}`:''}`;
+    document.getElementById('first-prompt-output').textContent=prompt;
+    document.getElementById('instructions-output').textContent=instructions;
+    document.getElementById('instructions-filename').textContent=filename;
+    document.getElementById('instructions-download').dataset.filename=filename;
+    document.getElementById('prompt-results').hidden=false;
+  });
+  document.querySelectorAll('[data-copy-output]').forEach(button=>button.addEventListener('click',()=>navigator.clipboard.writeText(document.getElementById(button.dataset.copyOutput).textContent)));
+  document.querySelectorAll('[data-download-output]').forEach(button=>button.addEventListener('click',()=>{
+    const content=document.getElementById(button.dataset.downloadOutput).textContent;
+    const url=URL.createObjectURL(new Blob([content],{type:'text/markdown;charset=utf-8'}));
+    const link=document.createElement('a'); link.href=url; link.download=button.dataset.filename; link.click(); URL.revokeObjectURL(url);
+  }));
+}
+
 function downloadTeachingTemplate(sessionId){
   const found=findTeachingSession(sessionId);
   if(!found)return;
@@ -132,7 +206,8 @@ function renderTeachingSession(found){
   const previous=program.sessions[index-1];
   const next=program.sessions[index+1];
   const cases=relatedCases(session.caseIds);
-  shell(session.title,`<div class="session-shell"><aside class="session-agenda"><p class="section-kicker">Curso ${program.number}</p><a href="#${program.id}">${program.shortTitle}</a><dl><dt>Duración</dt><dd>${session.duration}</dd><dt>Producto</dt><dd>${session.outcome}</dd></dl><ol><li>Apertura y objetivo</li><li>Tres ideas clave</li><li>Demostración</li><li>Ejemplo farmacéutico</li><li>Actividad y ficha</li><li>Casos y comprobación</li></ol><button class="btn secondary" type="button" onclick="window.print()">Imprimir sesión</button></aside><article class="session-content"><section class="opening-question"><p class="section-kicker">Pregunta de apertura</p><h2>${session.question}</h2></section><section><h2>Al terminar, el participante podrá</h2><ul class="objective-list">${session.objectives.map(x=>`<li>${x}</li>`).join('')}</ul></section><section><p class="section-kicker">Explicación</p><h2>Tres ideas que deben quedar claras</h2><div class="concept-grid">${session.concepts.map((x,i)=>`<article><span>0${i+1}</span><p>${x}</p></article>`).join('')}</div></section><section class="demo-block"><p class="section-kicker">Demostración en directo</p><h2>${session.demo.title}</h2><ol>${session.demo.steps.map(x=>`<li>${x}</li>`).join('')}</ol><div class="hero-actions">${sessionLinks(session.demo.links)}</div></section><section class="pharmacy-example"><p class="section-kicker">Ejemplo farmacéutico ficticio</p><h2>${session.example.title}</h2><p><strong>Contexto:</strong> ${session.example.context}</p><p><strong>Encargo al grupo:</strong> ${session.example.task}</p><p><strong>Evidencia esperada:</strong> ${session.example.expectedEvidence}</p></section><section class="activity-block"><div><p class="section-kicker">Actividad del participante · ${session.activity.time}</p><h2>${session.activity.title}</h2><ol>${session.activity.instructions.map(x=>`<li>${x}</li>`).join('')}</ol></div><aside><strong>Entrega</strong><p>${session.activity.deliverable}</p></aside></section><section class="participant-sheet"><div class="section-heading"><div><p class="section-kicker">Material de trabajo</p><h2>${session.template.title}</h2></div><button class="btn" type="button" onclick="downloadTeachingTemplate('${session.id}')">Descargar ficha .md</button></div><p>Complétala individualmente o en equipo. La descarga incluye el ejemplo y campos en blanco; no contiene la solución.</p><div class="template-fields">${session.template.fields.map(field=>`<div><strong>${field}</strong><span aria-hidden="true"></span></div>`).join('')}</div></section><section><p class="section-kicker">Práctica conectada</p><h2>Casos relacionados</h2><div class="related-cases">${cases.map(item=>`<a href="#${item.id}"><span>${item.professionalArea}</span><strong>${item.title}</strong><small>${item.competency} · ${item.estimatedMinutes} min</small></a>`).join('')}</div></section><section><p class="section-kicker">Comprobación</p><h2>Evidencia mínima antes de cerrar</h2><ul class="check-list">${session.checklist.map(x=>`<li>${x}</li>`).join('')}</ul><p class="private-note">La solución razonada, la rúbrica y las notas de facilitación se encuentran en el kit docente privado.</p></section><nav class="session-nav">${previous?`<a class="btn secondary" href="#${previous.id}">← Sesión anterior</a>`:`<a class="btn secondary" href="#${program.id}">← Programa</a>`}<a class="btn secondary" href="#aula">Todas las sesiones</a>${next?`<a class="btn" href="#${next.id}">Siguiente sesión →</a>`:`<a class="btn" href="#casos">Practicar con casos →</a>`}</nav></article></div>`,'teaching-session');
+  shell(session.title,`<div class="session-shell"><aside class="session-agenda"><p class="section-kicker">Curso ${program.number}</p><a href="#${program.id}">${program.shortTitle}</a><dl><dt>Duración</dt><dd>${session.duration}</dd><dt>Producto</dt><dd>${session.outcome}</dd></dl><ol>${session.promptBuilder?'<li>Apertura y objetivo</li><li>Tres ideas clave</li><li>Demostración</li><li>Antes de la sesión</li><li>Partes del repositorio</li><li>Asistente de primer prompt</li><li>Dos ciclos de trabajo</li><li>Resolución de problemas</li><li>Datos y responsabilidad</li><li>Ejemplo farmacéutico</li><li>Actividad y ficha</li><li>Casos y comprobación</li>':'<li>Apertura y objetivo</li><li>Tres ideas clave</li><li>Demostración</li><li>Ejemplo farmacéutico</li><li>Actividad y ficha</li><li>Casos y comprobación</li>'}</ol><button class="btn secondary" type="button" onclick="window.print()">Imprimir sesión</button></aside><article class="session-content"><section class="opening-question"><p class="section-kicker">Pregunta de apertura</p><h2>${session.question}</h2></section><section><h2>Al terminar, el participante podrá</h2><ul class="objective-list">${session.objectives.map(x=>`<li>${x}</li>`).join('')}</ul></section><section><p class="section-kicker">Explicación</p><h2>Tres ideas que deben quedar claras</h2><div class="concept-grid">${session.concepts.map((x,i)=>`<article><span>0${i+1}</span><p>${x}</p></article>`).join('')}</div></section><section class="demo-block"><p class="section-kicker">Demostración en directo</p><h2>${session.demo.title}</h2><ol>${session.demo.steps.map(x=>`<li>${x}</li>`).join('')}</ol><div class="hero-actions">${sessionLinks(session.demo.links)}</div></section>${renderSessionExtras(session)}<section class="pharmacy-example"><p class="section-kicker">Ejemplo farmacéutico ficticio</p><h2>${session.example.title}</h2><p><strong>Contexto:</strong> ${session.example.context}</p><p><strong>Encargo al grupo:</strong> ${session.example.task}</p><p><strong>Evidencia esperada:</strong> ${session.example.expectedEvidence}</p></section><section class="activity-block"><div><p class="section-kicker">Actividad del participante · ${session.activity.time}</p><h2>${session.activity.title}</h2><ol>${session.activity.instructions.map(x=>`<li>${x}</li>`).join('')}</ol></div><aside><strong>Entrega</strong><p>${session.activity.deliverable}</p></aside></section><section class="participant-sheet"><div class="section-heading"><div><p class="section-kicker">Material de trabajo</p><h2>${session.template.title}</h2></div><button class="btn" type="button" onclick="downloadTeachingTemplate('${session.id}')">Descargar ficha .md</button></div><p>Complétala individualmente o en equipo. La descarga incluye el ejemplo y campos en blanco; no contiene la solución.</p><div class="template-fields">${session.template.fields.map(field=>`<div><strong>${field}</strong><span aria-hidden="true"></span></div>`).join('')}</div></section><section><p class="section-kicker">Práctica conectada</p><h2>Casos relacionados</h2><div class="related-cases">${cases.map(item=>`<a href="#${item.id}"><span>${item.professionalArea}</span><strong>${item.title}</strong><small>${item.competency} · ${item.estimatedMinutes} min</small></a>`).join('')}</div></section><section><p class="section-kicker">Comprobación</p><h2>Evidencia mínima antes de cerrar</h2><ul class="check-list">${session.checklist.map(x=>`<li>${x}</li>`).join('')}</ul><p class="private-note">La solución razonada, la rúbrica y las notas de facilitación se encuentran en el kit docente privado.</p></section><nav class="session-nav">${previous?`<a class="btn secondary" href="#${previous.id}">← Sesión anterior</a>`:`<a class="btn secondary" href="#${program.id}">← Programa</a>`}<a class="btn secondary" href="#aula">Todas las sesiones</a>${next?`<a class="btn" href="#${next.id}">Siguiente sesión →</a>`:`<a class="btn" href="#casos">Practicar con casos →</a>`}</nav></article></div>`,'teaching-session');
+  initializePromptBuilder();
 }
 
 function renderToolLab(){

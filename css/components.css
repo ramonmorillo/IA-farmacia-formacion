@@ -172,3 +172,35 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
   .session-agenda { position: static; }
   .opening-question, .activity-block, .demo-block, .pharmacy-example, .participant-sheet, .related-cases > a, .delivery-formats article, .live-agenda article, .capstone { break-inside: avoid; }
 }
+
+/* Taller de publicación: componentes opcionales de sesion-prototipo. */
+.session-table-wrap { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; }
+.session-table-wrap table { min-width: 680px; }
+.prompt-builder { overflow: hidden; }
+.prompt-builder form, .prompt-fields { display: grid; gap: 1rem; }
+.prompt-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 1rem 0; }
+.prompt-field { min-width: 0; }
+.prompt-field label, .prompt-field input, .prompt-field textarea { display: block; width: 100%; }
+.prompt-field label { margin-bottom: .35rem; font-weight: 800; }
+.prompt-field textarea { min-height: 7rem; resize: vertical; }
+.prompt-builder fieldset { display: flex; flex-wrap: wrap; gap: 1rem; }
+.prompt-builder fieldset label { display: inline-flex; align-items: center; gap: .35rem; }
+.patient-warning, .field-error { color: #a62921; font-weight: 750; }
+.field-error { display: block; min-height: 1.5em; font-size: .9rem; }
+.prompt-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.prompt-results article, .change-prompt { min-width: 0; padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--panel); }
+.prompt-results pre, .change-prompt pre { max-height: 32rem; overflow: auto; padding: 1rem; border-radius: .5rem; background: color-mix(in srgb, var(--panel) 80%, var(--ink) 20%); color: var(--text); white-space: pre-wrap; overflow-wrap: anywhere; }
+.change-prompt { margin-top: 1rem; }
+.workflow-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.workflow-grid li { margin-bottom: 1rem; }
+.workflow-grid li p { margin-bottom: .2rem; }
+.workflow-grid small { color: var(--muted); }
+.session-security { border-left: 6px solid var(--brand2); }
+@media (max-width: 800px) {
+  .prompt-fields, .prompt-results, .workflow-grid { grid-template-columns: 1fr; }
+}
+@media print {
+  .prompt-builder form, .prompt-builder button, .change-prompt, .patient-warning { display: none !important; }
+  .session-table-wrap { overflow: visible; }
+  .session-table-wrap table { min-width: 0; }
+}
