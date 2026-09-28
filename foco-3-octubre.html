@@ -18,6 +18,11 @@
     .responsible-use { border-left: 6px solid var(--brand2); }
     .internal-index ol { columns: 2; }
     .internal-index li { break-inside: avoid; margin-bottom: .45rem; }
+    .starter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+    .starter-grid > div { padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; }
+    .course-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.4rem; }
+    .course-actions a { display: inline-block; padding: .8rem 1.1rem; border-radius: .8rem; background: #075985; color: white; font-weight: 800; text-decoration: none; }
+    .course-actions a + a { background: var(--panel); color: var(--text); border: 1px solid var(--line); }
     @media (max-width: 800px) {
       .course-section { scroll-margin-top: 1rem; }
       .internal-index ol { columns: 1; }
@@ -36,9 +41,22 @@
 <main id="contenido" class="container" tabindex="-1">
   <section class="hero">
     <p class="eyebrow">Curso presencial · 3 de octubre de 2026 · 90 minutos</p>
-    <h1>FOCO 3 OCTUBRE</h1>
-    <p class="lead">Claude para farmacéuticos de hospital: de cero a tu primera herramienta</p>
+    <h1>De una idea clínica a una herramienta verificable</h1>
+    <p class="lead">Claude para farmacéuticos de hospital · FOCO 3 OCTUBRE</p>
+    <p>En 90 minutos trabajarás un caso ficticio, mejorarás tus instrucciones y crearás un prototipo de adherencia que podrás contrastar con un resultado conocido.</p>
     <div class="course-facts large"><span>3 de octubre de 2026</span><span>90 minutos</span></div>
+    <div class="course-actions"><a href="#antes-de-empezar">Prepararme para el curso</a><a href="#materiales">Descargar materiales</a></div>
+  </section>
+
+  <section class="card" id="antes-de-empezar">
+    <p class="section-kicker">Empieza aquí · antes de la sesión</p>
+    <h2>Tu ruta en 3 pasos</h2>
+    <div class="starter-grid">
+      <div><h3>1. Prepara el acceso</h3><p>Abre <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a> e inicia sesión antes del curso. Usa un navegador actualizado. Comprueba que puedes abrir un chat nuevo y descargar un archivo.</p></div>
+      <div><h3>2. Descarga el material</h3><p>Guarda la <a href="#materiales">skill y el CSV ficticio</a>. El CSV sirve para practicar sin datos de pacientes.</p></div>
+      <div><h3>3. Elige tu meta</h3><p>Si partes de cero, sigue el caso guiado de adherencia. Si ya usas Claude, adapta el prompt a un problema de tu servicio y añade una prueba verificable.</p></div>
+    </div>
+    <p><strong>Al salir sabrás:</strong> escribir un prompt con contexto y límites, probar una skill y construir un primer prototipo con un resultado que puedas comprobar. Si no aparece una opción en tu cuenta o se agotan los mensajes, sigue la demostración y lleva el prompt y los datos descargados para repetirlo después.</p>
   </section>
 
   <section class="card" aria-labelledby="agenda-title">
@@ -114,7 +132,7 @@ Cuando tengas la información, escribe el prompt final y señala qué supuestos 
     <p class="section-kicker">05 · 12 minutos</p><h2>Las skills</h2>
     <p><strong>Objetivo de aprendizaje:</strong> convertir un buen prompt en un procedimiento reutilizable que Claude activa solo.</p>
     <h3>Contenidos clave</h3><p>Una skill clínica es un protocolo y debe revisarse como tal. Instala solo skills de fuentes de confianza.</p>
-    <h3>Actividad práctica</h3><ol><li>En <strong>Settings &gt; Capabilities</strong>, comprueba que “Code execution and file creation” está activado.</li><li>Descarga la skill “Valoración farmacéutica en consulta externa de VIH”.</li><li>Súbela en <strong>Customize &gt; Skills</strong>.</li><li>Pruébala en una conversación nueva con el prompt “Paciente con Biktarvy, carga viral 120, toma hierro”.</li></ol>
+    <h3>Actividad práctica</h3><ol><li>En <strong>Settings &gt; Capabilities</strong>, comprueba que “Code execution and file creation” está activado.</li><li>Descarga la skill “Valoración farmacéutica en consulta externa de VIH”.</li><li>Súbela en <strong>Customize &gt; Skills</strong> si esa opción aparece en tu cuenta.</li><li>Pruébala en una conversación nueva con el prompt “Caso ficticio: paciente con Biktarvy, carga viral de 120 copias/mL, toma hierro. Organiza los datos que faltan, los puntos que deben comprobarse y las fuentes a consultar; no decidas un cambio de tratamiento”.</li></ol>
     <p><strong>Nota para Mac:</strong> Safari descomprime automáticamente los .zip; si ves una carpeta, haz clic derecho &gt; Comprimir para volver a obtener el .zip.</p>
   </section>
 
@@ -133,6 +151,8 @@ Cuando tengas la información, escribe el prompt final y señala qué supuestos 
     <p><strong>Ejemplos:</strong> checklist de primera visita, calculadora de adherencia, registro de intervenciones farmacéuticas, hojas informativas para el paciente y planificador de citas y dispensaciones.</p>
     <h3>Actividad práctica</h3><ol><li>Elige una necesidad concreta y frecuente.</li><li>Escribe el prompt con RCTFR o con metaprompting, no los dos, para no agotar mensajes.</li><li>Genera el artefacto y haz como máximo 2 mejoras concretas.</li><li>Comparte la herramienta y el prompt.</li></ol>
     <div class="feedback"><p><strong>Si eliges una herramienta de adherencia:</strong> utiliza el CSV simulado con las columnas <code>id_paciente</code>, <code>fecha_dispensacion</code> y <code>dias_suministro</code>, para el periodo del 01/01/2026 al 29/06/2026 (180 días).</p><p><strong>Valor de comprobación:</strong> el paciente P02 debe dar un PDC de 66,7 % (120/180).</p></div>
+    <div class="prompt-template"><h3>Prompt guiado para crear tu primer artefacto</h3><pre id="artefacto-prompt">Actúa como desarrollador de una herramienta docente para farmacia hospitalaria. Crea un artefacto interactivo que acepte el CSV ficticio adjunto (id_paciente, fecha_dispensacion, dias_suministro) y muestre el PDC por paciente entre el 01/01/2026 y el 29/06/2026, ambos incluidos (180 días). Cuenta los días cubiertos únicos, sin duplicar solapamientos; limita el resultado al 100 %. Muestra numerador, denominador y porcentaje con un decimal. Valida columnas, fechas y días de suministro; explica cualquier fila rechazada. No envíes datos a servicios externos ni incluyas recomendaciones clínicas. Prueba el archivo: P02 debe tener 120 días cubiertos y PDC 66,7 %. Si no coincide, corrige el cálculo antes de entregarlo. Explica cómo probarlo y sus límites.</pre><button type="button" data-copy="artefacto-prompt">Copiar prompt guiado</button><p class="copy-status" aria-live="polite"></p></div>
+    <p><strong>Comprobación humana:</strong> abre el artefacto, carga el CSV y verifica P02. Después prueba un CSV sin una columna y una dispensación solapada. Que se vea bien no demuestra que calcule bien.</p>
   </section>
 
   <section id="llevar-mas-alla" class="card course-section">
@@ -146,6 +166,7 @@ Cuando tengas la información, escribe el prompt final y señala qué supuestos 
     <p class="section-kicker">Para la sesión</p><h2>Materiales descargables</h2>
     <a class="download" href="assets/foco-3-octubre/valoracion-farmaceutica-vih.zip" download>Skill: Valoración farmacéutica en consulta externa de VIH (.zip)</a>
     <a class="download" href="assets/foco-3-octubre/dispensaciones_simuladas.csv" download>CSV simulado de dispensaciones (.csv)</a>
+    <p>Los dos archivos son ejemplos docentes ficticios. La skill ordena una valoración; no contiene protocolos locales ni valida decisiones clínicas.</p>
   </section>
 
   <section id="uso-responsable" class="card responsible-use course-section">
@@ -165,20 +186,25 @@ Cuando tengas la información, escribe el prompt final y señala qué supuestos 
     button.addEventListener('click', async () => {
       const text = document.getElementById(button.dataset.copy).textContent;
       const status = button.nextElementSibling;
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(text);
-      } else {
-        const field = document.createElement('textarea');
-        field.value = text;
-        field.setAttribute('readonly', '');
-        field.style.position = 'fixed';
-        field.style.opacity = '0';
-        document.body.appendChild(field);
-        field.select();
-        document.execCommand('copy');
-        field.remove();
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const field = document.createElement('textarea');
+          field.value = text;
+          field.setAttribute('readonly', '');
+          field.style.position = 'fixed';
+          field.style.opacity = '0';
+          document.body.appendChild(field);
+          field.select();
+          const copied = document.execCommand('copy');
+          field.remove();
+          if (!copied) throw new Error('No se pudo copiar');
+        }
+        status.textContent = 'Plantilla copiada.';
+      } catch (error) {
+        status.textContent = 'No se pudo copiar automáticamente. Selecciona el texto y cópialo manualmente.';
       }
-      status.textContent = 'Plantilla copiada.';
     });
   });
 </script>
