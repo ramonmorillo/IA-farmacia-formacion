@@ -1,5 +1,7 @@
 # IA aplicada a la farmacia hospitalaria
 
+La portada pública presenta la formación, las conferencias y los proyectos de Ramón Morillo. El aula y la biblioteca técnica siguen disponibles en sus rutas. Véase [WEB_PROFESIONAL.md](WEB_PROFESIONAL.md) para la arquitectura editorial y los materiales pendientes antes del dominio propio.
+
 Curso creado y dirigido por **Ramón Morillo Verdugo**, farmacéutico hospitalario, investigador y profesor universitario, para la formación de profesionales farmacéuticos en el uso crítico, seguro y aplicado de la inteligencia artificial.
 
 Desarrollo y actualización técnica asistidos mediante herramientas de inteligencia artificial, bajo dirección y revisión del autor.
