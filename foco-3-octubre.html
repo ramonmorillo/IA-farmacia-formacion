@@ -22,7 +22,7 @@
     <p class="section-label">Durante el taller · 75 minutos</p><h2 id="aprendizaje">De una idea a una herramienta que puedas comprobar</h2>
     <p class="section-intro">Siete conceptos, una misma historia: describir una necesidad de farmacia hospitalaria, construir un prototipo con Claude y verificarlo. Los dos pases siguen esta misma ruta; los tiempos son orientativos.</p>
     <div class="panel"><ol class="agenda-list">
-      <li><b>5 min</b><div><strong>01 · Vibe coding</strong><span>Definir el problema y una prueba antes de crear.</span></div></li>
+      <li><b>5 min</b><div><strong>01 · Vibe coding</strong><span>Crear herramientas propias describiendo lo que necesitas.</span></div></li>
       <li><b>12 min</b><div><strong>02 · El prompt</strong><span>Dar contexto, tarea, formato, límites y criterio de aceptación.</span></div></li>
       <li><b>8 min</b><div><strong>03 · Skills</strong><span>Reutilizar un procedimiento revisable.</span></div></li>
       <li><b>7 min</b><div><strong>04 · Proyectos</strong><span>Organizar instrucciones y fuentes de un área.</span></div></li>
@@ -103,7 +103,7 @@ Sabré que funciona si ___ (cómo lo compruebo).</pre><button type="button" data
         <p><strong>Siguiente paso:</strong> publicar y mantener tus herramientas con GitHub se trabaja en el curso <a href="index.html#curso-herramientas">«De una necesidad farmacéutica a una herramienta funcional»</a> (nivel intermedio–avanzado) de la plataforma.</p>
       </details>
     </article>
-    <article class="lesson" id="prompt"><div class="lesson-heading"><span>02 · 12 min</span><h3>El prompt: de pregunta a encargo claro</h3></div><p>Un prompt útil especifica <strong>rol, contexto, tarea, formato y restricciones</strong>. Termina con un criterio de comprobación. Si falta un dato, pide a Claude que pregunte o haga explícita su suposición.</p><div class="compare"><div><small>Vago</small><p>«Hazme una calculadora de adherencia».</p></div><div><small>Específico</small><p>«Con este CSV ficticio, calcula días cubiertos únicos en 180 días, muestra numerador y porcentaje, y verifica P02».</p></div></div><div class="prompt"><strong>Plantilla para cualquier idea</strong><pre id="prompt-plantilla">Rol: Actúa como asistente de diseño de una herramienta docente para farmacia hospitalaria.
+    <article class="lesson" id="prompt"><div class="lesson-heading"><span>02 · 12 min</span><h3>El prompt: de pregunta a encargo claro</h3></div><p>Un prompt útil especifica <strong>rol, contexto, tarea, formato y restricciones</strong>. Termina con un criterio de comprobación. Si falta un dato, pide a Claude que pregunte o haga explícita su suposición.</p><div class="compare"><div><small>Vago</small><p>«Hazme una calculadora de adherencia».</p></div><div><small>Específico</small><p>«Con este CSV ficticio, calcula días cubiertos únicos en 180 días, muestra numerador y porcentaje, y comprueba que el paciente ficticio P02 da 120/180 días (66,7 %)».</p></div></div><div class="prompt"><strong>Plantilla para cualquier idea</strong><pre id="prompt-plantilla">Rol: Actúa como asistente de diseño de una herramienta docente para farmacia hospitalaria.
 Contexto: Trabajo con [datos ficticios o fuentes públicas] sobre [problema].
 Tarea: Crea [resultado concreto] para [persona usuaria].
 Formato: Entrega [pantalla, tabla o pasos] e instrucciones de uso.
