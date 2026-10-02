@@ -33,7 +33,7 @@
   </section>
   <section class="section course" aria-labelledby="curso-titulo">
     <p class="section-label">Guía de la sesión</p><h2 id="curso-titulo">Los siete pasos, con ejemplos de consulta externa</h2>
-    <article class="lesson vibe" id="vibe-coding"><div class="lesson-heading"><span>01 · 5 min</span><h3>Vibe coding: crear describiendo</h3></div>
+    <article class="lesson lesson-extended" id="vibe-coding"><div class="lesson-heading"><span>01 · 5 min</span><h3>Vibe coding: crear describiendo</h3></div>
       <h4>Qué es, en una frase</h4>
       <p>Crear pequeñas herramientas propias describiendo con tus palabras lo que necesitas. Claude escribe el código, y tú decides si el resultado es correcto, porque el criterio clínico sigue siendo tuyo.</p>
       <p>En tu consulta conviven muchos pequeños problemas que ningún programa del hospital resuelve, porque son demasiado específicos o demasiado pequeños para que alguien los desarrolle. El vibe coding te permite resolverlos tú: la parte difícil (saber qué hace falta y si el resultado es correcto) ya la tienes; el código ahora lo pone la IA.</p>
@@ -118,7 +118,56 @@ Usa solo lo que está en mis fuentes; lo que no aparezca, márcalo como "pendien
 Al final, dame 3 peticiones que deberían activar la skill y 2 que no.</pre><button type="button" data-copy="prompt-skill">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div><div class="lesson-action"><strong>Skill no es lo mismo que Proyecto</strong><p>Pegar el texto de una skill en un <a href="#proyectos">proyecto</a> funciona como una instrucción fija de ese proyecto, pero no la instala como skill. Una skill instalada se activa por su descripción en cualquier conversación y puede incluir archivos auxiliares.</p></div><p class="source-note">Instrucciones verificadas el 1 de octubre de 2026; la interfaz de Claude puede cambiar.</p></article>
     <article class="lesson" id="proyectos"><div class="lesson-heading"><span>04 · 7 min</span><h3>Proyectos: contexto compartido entre conversaciones</h3></div><p>Un proyecto agrupa instrucciones y documentos de referencia para un área de trabajo. Puedes crear «Docencia VIH» con el objetivo del curso, una guía pública y una regla de respuesta como «separa hechos, supuestos y puntos por verificar». Las conversaciones del proyecto usan ese contexto; no asumas que una conversación recuerda automáticamente otra.</p><div class="lesson-action"><strong>Mini ejercicio</strong><p>Escribe tres elementos para tu proyecto: objetivo, una fuente pública verificable y una instrucción permanente. Mantén los datos de pacientes y documentos internos fuera de una cuenta personal.</p></div></article>
     <article class="lesson featured" id="artefacto"><div class="lesson-heading"><span>05 · 27 min · práctica central</span><h3>Artefacto: construir, ejecutar y corregir</h3></div><p>Un artefacto es una pieza que Claude puede crear y mostrar para trabajar con ella, como una página o una pequeña herramienta interactiva. Aquí haremos un dashboard docente de PDC. Descarga el CSV, copia el prompt de la práctica, ejecuta el resultado y contrasta P02.</p><ol class="practice-list"><li><strong>Construye:</strong> adjunta el CSV ficticio y usa el prompt guiado de abajo.</li><li><strong>Comprueba:</strong> P02 = 120/180 = 66,7 %; observa numerador, denominador y redondeo.</li><li><strong>Rompe y mejora:</strong> prueba un archivo sin una columna y dispensaciones solapadas. Pide un mensaje de error claro y evita contar días dos veces.</li></ol><a class="inline-cta" href="#caso-titulo">Ir al caso y copiar el prompt completo →</a></article>
-    <article class="lesson" id="plugins-mcp"><div class="lesson-heading"><span>06 · 8 min</span><h3>Plugin y MCP: ampliar capacidades con criterio</h3></div><div class="concept-grid"><div><strong>Plugin</strong><p>Paquete de capacidades que puede reunir skills, comandos y conectores para un flujo de trabajo.</p></div><div><strong>MCP</strong><p>Protocolo técnico para que una aplicación de IA se comunique con herramientas y fuentes externas.</p></div><div><strong>Conector</strong><p>Acceso concreto a una aplicación o servicio, sujeto a autenticación y permisos.</p></div></div><div class="lesson-action"><strong>Demostración segura</strong><p>Explora el catálogo de Claude sin conectar ninguna cuenta institucional. Antes de instalar, identifica quién publica el plugin, qué herramientas incluye, qué datos puede consultar y qué acciones permite. La disponibilidad cambia según cuenta, entorno y administrador.</p></div></article>
+    <article class="lesson lesson-extended" id="plugins-mcp"><div class="lesson-heading"><span>06 · 8 min</span><h3>Plugin y MCP: ampliar capacidades con criterio</h3></div><div class="concept-grid"><div><strong>Plugin</strong><p>Paquete de capacidades que puede reunir skills, comandos y conectores para un flujo de trabajo.</p></div><div><strong>MCP</strong><p>Protocolo técnico para que una aplicación de IA se comunique con herramientas y fuentes externas.</p></div><div><strong>Conector</strong><p>Acceso concreto a una aplicación o servicio, sujeto a autenticación y permisos.</p></div></div>
+      <div class="lesson-action"><h4>Regla de oro</h4><p>Explora el catálogo de Claude sin conectar ninguna cuenta institucional. Antes de instalar o conectar nada, identifica quién lo publica, qué herramientas incluye, qué datos puede consultar y qué acciones permite. La disponibilidad cambia según la cuenta, el entorno y el administrador.</p></div>
+      <details>
+        <summary><h4>Ejercicio 1 — Un conector a una fuente pública: PubMed</h4></summary>
+        <p>El conector de PubMed trabaja con datos públicos y no requiere conectar ninguna cuenta personal ni institucional. Lo usarás para algo habitual en la consulta: resolver una duda con bibliografía verificable.</p>
+        <ol class="practice-list">
+          <li><strong>Sin conector.</strong> Desactiva la búsqueda web en los dos chats. En un chat nuevo, pregunta:
+            <div class="prompt"><strong>Pregunta para los dos chats</strong><pre id="prompt-pubmed">¿Qué estudios publicados en los últimos 3 años evalúan la adherencia en pacientes con tratamiento antirretroviral inyectable de acción prolongada? Dame el PMID de cada uno.</pre><button type="button" data-copy="prompt-pubmed">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+          </li>
+          <li><strong>Con conector.</strong> Activa el conector de PubMed y repite la misma pregunta en otro chat nuevo.</li>
+          <li><strong>Verifica.</strong> Busca 2 o 3 PMID de cada respuesta en PubMed y comprueba que el título, los autores y el año coinciden.</li>
+          <li><strong>Compara:</strong>
+            <ul>
+              <li>¿Qué respuesta puedes verificar entera?</li>
+              <li>¿Ha aparecido alguna referencia que no existe o que no coincide?</li>
+              <li>¿Qué ha hecho el conector exactamente: buscar, leer resúmenes, leer texto completo?</li>
+            </ul>
+          </li>
+          <li><strong>Conclusión.</strong> Escribe una línea: ¿usarías este conector en tu práctica? ¿Para qué sí y para qué no?</li>
+        </ol>
+        <p>Si el conector de PubMed no aparece en tu cuenta, pasa directamente al Ejercicio 2.</p>
+        <h5>Qué aprendes</h5>
+        <ul>
+          <li><strong>Conector:</strong> es un acceso concreto a una fuente, con su propio alcance.</li>
+          <li><strong>MCP:</strong> es lo que hace posible que Claude consulte PubMed «en vivo» en lugar de responder de memoria.</li>
+          <li><strong>Criterio:</strong> tener un conector no exime de verificar. Mejora la trazabilidad, no garantiza la interpretación.</li>
+        </ul>
+        <div class="safety" role="note"><strong>Atención</strong><p>Lo que escribes en tu pregunta se envía como búsqueda a una fuente externa. Nunca incluyas datos de pacientes.</p></div>
+      </details>
+      <details>
+        <summary><h4>Ejercicio 2 — Ficha de auditoría de un conector (sin conectarlo)</h4></summary>
+        <p>Elige del catálogo un conector que podría tentarte en tu trabajo (correo, calendario, almacenamiento de archivos…) y completa esta ficha sin conectarlo:</p>
+        <div class="table-scroll" role="region" aria-labelledby="ficha-conector" tabindex="0">
+          <table class="audit-table">
+            <caption id="ficha-conector">Ficha de auditoría de un conector</caption>
+            <thead><tr><th scope="col">Pregunta</th><th scope="col">Respuesta</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">¿Quién lo publica?</th><td></td></tr>
+              <tr><th scope="row">¿Qué herramientas incluye?</th><td></td></tr>
+              <tr><th scope="row">¿Solo lee o también puede escribir, enviar o borrar?</th><td></td></tr>
+              <tr><th scope="row">¿A qué datos accedería en mi caso?</th><td></td></tr>
+              <tr><th scope="row">¿Podría acabar ahí información de pacientes?</th><td></td></tr>
+              <tr><th scope="row">¿Mi hospital permitiría conectarlo? ¿A quién preguntaría?</th><td></td></tr>
+              <tr><th scope="row">Decisión: lo conectaría / no / solo con cuenta personal y para…</th><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Para el grupo:</strong> ¿qué conector conectaríais todos sin dudar y cuál ninguno?</p>
+      </details>
+    </article>
     <article class="lesson" id="github"><div class="lesson-heading"><span>07 · 8 min</span><h3>GitHub: guardar y compartir una versión</h3></div><p>El artefacto sirve para prototipar. Si merece continuar, exporta sus archivos y guárdalos en un repositorio: así podrás revisar los cambios, volver a una versión anterior y colaborar. Publicar una web requiere además configurar el alojamiento y comprobar que no hay datos sensibles.</p><ol class="practice-list"><li>Descarga o copia los archivos generados por Claude y comprueba que funcionan fuera del chat.</li><li>Crea un repositorio en GitHub, sube los archivos y registra una primera versión (<em>commit</em>).</li><li>Revisa la vista previa y, si es una web estática, configura GitHub Pages desde el repositorio. Cada cambio posterior debe volver a probarse.</li></ol><div class="lesson-action"><strong>Enlazar Claude con GitHub</strong><p>Si la integración aparece en tu cuenta, añade archivos del repositorio a un chat o a un proyecto de Claude para darle contexto. Esta conexión lee los archivos seleccionados; no publica por sí sola el artefacto ni incorpora automáticamente cambios al repositorio. Revisa los permisos antes de autorizar el acceso.</p></div><p class="resource-links"><a href="https://github.com/ramonmorillo/IA-farmacia-formacion" target="_blank" rel="noopener noreferrer">Ver este repositorio como ejemplo ↗</a> · <a href="https://docs.github.com/en/pages/quickstart" target="_blank" rel="noopener noreferrer">Guía oficial de GitHub Pages ↗</a> · <a href="https://support.claude.com/en/articles/10167454-use-the-github-integration" target="_blank" rel="noopener noreferrer">Integración de GitHub con Claude ↗</a></p></article>
   </section>
   <section class="section" id="materiales" aria-labelledby="materiales-titulo"><p class="section-label">Material del participante</p><h2 id="materiales-titulo">Descarga lo que usaremos</h2><p class="section-intro">Son datos y ejemplos docentes. Ningún archivo contiene información de pacientes reales.</p><div class="materials"><article class="material"><strong>Dispensaciones simuladas</strong><p>CSV para construir y probar la herramienta de adherencia.</p><a href="assets/foco-3-octubre/dispensaciones_simuladas.csv" download>Descargar CSV ↗</a></article><article class="material"><strong>Skill de valoración farmacéutica</strong><p>Ejemplo reutilizable para conocer cómo Claude puede seguir un procedimiento. Uso complementario.</p><a href="assets/foco-3-octubre/valoracion-farmaceutica-vih.zip" download>Descargar ZIP ↗</a></article></div></section>
