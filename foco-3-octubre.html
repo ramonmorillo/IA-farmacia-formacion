@@ -22,7 +22,7 @@
     <p class="section-label">Durante el taller · 75 minutos</p><h2 id="aprendizaje">De una idea a una herramienta que puedas comprobar</h2>
     <p class="section-intro">Siete conceptos, una misma historia: describir una necesidad de farmacia hospitalaria, construir un prototipo con Claude y verificarlo. Los dos pases siguen esta misma ruta; los tiempos son orientativos.</p>
     <div class="panel"><ol class="agenda-list">
-      <li><b>5 min</b><div><strong>01 · Vibe coding</strong><span>Definir el problema y una prueba antes de crear.</span></div></li>
+      <li><b>5 min</b><div><strong>01 · Vibe coding</strong><span>Crear herramientas propias describiendo lo que necesitas.</span></div></li>
       <li><b>12 min</b><div><strong>02 · El prompt</strong><span>Dar contexto, tarea, formato, límites y criterio de aceptación.</span></div></li>
       <li><b>8 min</b><div><strong>03 · Skills</strong><span>Reutilizar un procedimiento revisable.</span></div></li>
       <li><b>7 min</b><div><strong>04 · Proyectos</strong><span>Organizar instrucciones y fuentes de un área.</span></div></li>
@@ -33,8 +33,77 @@
   </section>
   <section class="section course" aria-labelledby="curso-titulo">
     <p class="section-label">Guía de la sesión</p><h2 id="curso-titulo">Los siete pasos, con ejemplos de consulta externa</h2>
-    <article class="lesson" id="vibe-coding"><div class="lesson-heading"><span>01 · 5 min</span><h3>Vibe coding: crear describiendo</h3></div><p>Consiste en pedir a una IA que escriba o modifique software a partir de lenguaje natural. Tú defines el problema, los datos, el comportamiento esperado y las pruebas; Claude propone el código. El resultado sigue necesitando revisión.</p><div class="lesson-action"><strong>Hazlo ahora</strong><p>Formula una necesidad en una frase: «Quiero visualizar la cobertura de dispensaciones simuladas por paciente». Añade una prueba: «P02 debe dar 120 días de 180». Esa prueba es más útil que «hazlo bonito».</p></div></article>
-    <article class="lesson" id="prompt"><div class="lesson-heading"><span>02 · 12 min</span><h3>El prompt: de pregunta a encargo claro</h3></div><p>Un prompt útil especifica <strong>rol, contexto, tarea, formato y restricciones</strong>. Termina con un criterio de comprobación. Si falta un dato, pide a Claude que pregunte o haga explícita su suposición.</p><div class="compare"><div><small>Vago</small><p>«Hazme una calculadora de adherencia».</p></div><div><small>Específico</small><p>«Con este CSV ficticio, calcula días cubiertos únicos en 180 días, muestra numerador y porcentaje, y verifica P02».</p></div></div><div class="prompt"><strong>Plantilla para cualquier idea</strong><pre id="prompt-plantilla">Rol: Actúa como asistente de diseño de una herramienta docente para farmacia hospitalaria.
+    <article class="lesson vibe" id="vibe-coding"><div class="lesson-heading"><span>01 · 5 min</span><h3>Vibe coding: crear describiendo</h3></div>
+      <h4>Qué es, en una frase</h4>
+      <p>Crear pequeñas herramientas propias describiendo con tus palabras lo que necesitas. Claude escribe el código, y tú decides si el resultado es correcto, porque el criterio clínico sigue siendo tuyo.</p>
+      <p>En tu consulta conviven muchos pequeños problemas que ningún programa del hospital resuelve, porque son demasiado específicos o demasiado pequeños para que alguien los desarrolle. El vibe coding te permite resolverlos tú: la parte difícil (saber qué hace falta y si el resultado es correcto) ya la tienes; el código ahora lo pone la IA.</p>
+      <details>
+        <summary><h4>Para qué te sirve en la consulta de VIH</h4></summary>
+        <h5>Material para el paciente</h5>
+        <ul>
+          <li>Un plan de toma visual e imprimible para quien inicia o cambia de TAR: horario, relación con las comidas y qué hacer si olvida una dosis.</li>
+          <li>Una explicación interactiva de un cambio de tratamiento: qué cambia, qué se mantiene y qué vigilar.</li>
+          <li>Una hoja de «antes de tomar algo nuevo, consúltanos», adaptada a cada paciente.</li>
+        </ul>
+        <h5>Apoyo a tu entrevista</h5>
+        <ul>
+          <li>Una lista estructurada de la visita (adherencia, medicación nueva, productos de herbolario, efectos adversos) que te genera un texto ordenado para copiar a la historia.</li>
+          <li>Un guion de entrevista motivacional con las preguntas que tú usas.</li>
+        </ul>
+        <h5>Tareas repetitivas</h5>
+        <ul>
+          <li>Un calculador de fechas de próxima visita o dispensación según tu circuito.</li>
+          <li>Una plantilla de informe farmacoterapéutico que completas con campos y te devuelve el texto redactado.</li>
+        </ul>
+        <h5>Docencia e investigación</h5>
+        <ul>
+          <li>Casos clínicos simulados interactivos para residentes o alumnos.</li>
+          <li>El prototipo de un cuestionario o cuaderno de recogida de datos, para probarlo antes de montarlo «de verdad».</li>
+          <li>La prueba de concepto de un modelo de estratificación, para ver si la lógica funciona antes de pedir recursos.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4>Para qué NO</h4></summary>
+        <ul>
+          <li>Sustituir sistemas validados del hospital (prescripción, historia clínica, dispensación).</li>
+          <li>Almacenar o tratar datos reales de pacientes.</li>
+          <li>Tomar decisiones clínicas de forma automática. Si la herramienta orienta decisiones sobre pacientes concretos, entra en terreno de validación y posiblemente de regulación como producto sanitario.</li>
+          <li>Rehacer lo que ya existe y está bien mantenido, como los comprobadores de interacciones de referencia.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4>¿Merece la pena? Cuatro preguntas antes de empezar</h4></summary>
+        <ol class="practice-list">
+          <li><strong>¿Lo hago a menudo?</strong> Si es una vez al año, no compensa.</li>
+          <li><strong>¿No existe ya algo que lo haga bien?</strong> Busca antes de construir.</li>
+          <li><strong>¿Puedo comprobar si el resultado es correcto?</strong> Si no sabes cómo verificarlo, no lo uses.</li>
+          <li><strong>¿Funciona sin datos identificables de pacientes?</strong> Si la respuesta es no, replantéalo.</li>
+        </ol>
+        <p>Si respondes «sí» a las cuatro, es un buen candidato.</p>
+      </details>
+      <details>
+        <summary><h4>Ejemplo guiado: plan de toma para un paciente que inicia TAR</h4></summary>
+        <p>Este ejemplo enseña la regla más importante: tú aportas el contenido clínico, Claude aporta la forma.</p>
+        <div class="prompt"><strong>Prompt de ejemplo</strong><pre id="prompt-vibe-plan">Quiero una herramienta web sencilla para generar planes de toma imprimibles para pacientes que inician tratamiento antirretroviral.
+Yo introduciré: el nombre comercial del fármaco, el número de comprimidos, la hora de toma, si debe tomarse con comida o no y una instrucción para olvidos. No inventes ninguna de estas indicaciones: usa solo lo que yo escriba.
+Salida: una página en lenguaje sencillo, con letra grande, iconos de sol/luna y comida, y lista para imprimir en A4.
+Sin nombre del paciente ni otros datos identificables.
+Antes de escribir código, resúmeme lo que has entendido y dime qué dudas tienes.</pre><button type="button" data-copy="prompt-vibe-plan">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p>Fíjate en «no inventes ninguna de estas indicaciones». Sin esa frase, Claude rellenaría las recomendaciones por su cuenta, y podrían ser incorrectas o no coincidir con las de tu servicio.</p>
+      </details>
+      <details class="lesson-action">
+        <summary><h4>Hazlo ahora: tu propia herramienta</h4></summary>
+        <p>Completa esta plantilla con un problema real de tu consulta:</p>
+        <div class="prompt"><strong>Plantilla</strong><pre id="prompt-vibe-plantilla">En mi consulta, cada vez que ___ (situación),
+tengo que ___ (tarea repetitiva o que hago de memoria).
+Me ayudaría una herramienta que ___ (qué hace),
+usando ___ (qué datos, siempre sin identificar al paciente).
+Sabré que funciona si ___ (cómo lo compruebo).</pre><button type="button" data-copy="prompt-vibe-plantilla">Copiar plantilla</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p>Pégala en Claude y añade: «Antes de construir nada, hazme las preguntas que necesites».</p>
+        <p><strong>Siguiente paso:</strong> publicar y mantener tus herramientas con GitHub se trabaja en el curso <a href="index.html#curso-herramientas">«De una necesidad farmacéutica a una herramienta funcional»</a> (nivel intermedio–avanzado) de la plataforma.</p>
+      </details>
+    </article>
+    <article class="lesson" id="prompt"><div class="lesson-heading"><span>02 · 12 min</span><h3>El prompt: de pregunta a encargo claro</h3></div><p>Un prompt útil especifica <strong>rol, contexto, tarea, formato y restricciones</strong>. Termina con un criterio de comprobación. Si falta un dato, pide a Claude que pregunte o haga explícita su suposición.</p><div class="compare"><div><small>Vago</small><p>«Hazme una calculadora de adherencia».</p></div><div><small>Específico</small><p>«Con este CSV ficticio, calcula días cubiertos únicos en 180 días, muestra numerador y porcentaje, y comprueba que el paciente ficticio P02 da 120/180 días (66,7 %)».</p></div></div><div class="prompt"><strong>Plantilla para cualquier idea</strong><pre id="prompt-plantilla">Rol: Actúa como asistente de diseño de una herramienta docente para farmacia hospitalaria.
 Contexto: Trabajo con [datos ficticios o fuentes públicas] sobre [problema].
 Tarea: Crea [resultado concreto] para [persona usuaria].
 Formato: Entrega [pantalla, tabla o pasos] e instrucciones de uso.

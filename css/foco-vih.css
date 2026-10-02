@@ -9,3 +9,18 @@
     @media(max-width:780px){.showcase{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     @media(max-width:780px){.lesson-heading{display:block}.lesson-heading span{display:block;margin-bottom:.45rem}.compare,.concept-grid,.glossary-grid{grid-template-columns:1fr}.lesson{padding:1.25rem}.prompt{padding:1rem}}
+    /* Lección 01 · Vibe coding: subapartados desplegables (details/summary), subtítulos h5 y listas con viñetas.
+       Solo afecta a .lesson.vibe; reutiliza las variables de color y el foco visible del resto de la página. */
+    .vibe details{border-top:1px solid var(--line);margin-top:1rem}
+    .vibe summary{display:flex;align-items:center;gap:.7rem;padding:.8rem 0;cursor:pointer;list-style:none}
+    .vibe summary::-webkit-details-marker{display:none}
+    .vibe summary::before{content:"+";flex:0 0 1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:50%;background:var(--red);color:#fff;font-weight:850;line-height:1}
+    .vibe details[open]>summary::before{content:"−"}
+    .vibe summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    .vibe summary h4{margin:0}
+    .vibe details>:last-child{margin-bottom:1rem}
+    .vibe h5{font-size:1rem;letter-spacing:-.01em;margin:1.1rem 0 .2rem;color:var(--purple)}
+    .vibe ul{padding-left:1.4rem;margin:.3rem 0}.vibe ul li{margin:.35rem 0}
+    .vibe details.lesson-action{border-top:0;margin-top:1.4rem}
+    .vibe details.lesson-action summary{padding:.2rem 0}
+    .vibe details.lesson-action[open]>summary{margin-bottom:.4rem}
