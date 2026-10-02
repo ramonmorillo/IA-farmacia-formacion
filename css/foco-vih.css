@@ -9,18 +9,33 @@
     @media(max-width:780px){.showcase{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     @media(max-width:780px){.lesson-heading{display:block}.lesson-heading span{display:block;margin-bottom:.45rem}.compare,.concept-grid,.glossary-grid{grid-template-columns:1fr}.lesson{padding:1.25rem}.prompt{padding:1rem}}
-    /* Lección 01 · Vibe coding: subapartados desplegables (details/summary), subtítulos h5 y listas con viñetas.
-       Solo afecta a .lesson.vibe; reutiliza las variables de color y el foco visible del resto de la página. */
-    .vibe details{border-top:1px solid var(--line);margin-top:1rem}
-    .vibe summary{display:flex;align-items:center;gap:.7rem;padding:.8rem 0;cursor:pointer;list-style:none}
-    .vibe summary::-webkit-details-marker{display:none}
-    .vibe summary::before{content:"+";flex:0 0 1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:50%;background:var(--red);color:#fff;font-weight:850;line-height:1}
-    .vibe details[open]>summary::before{content:"−"}
-    .vibe summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-    .vibe summary h4{margin:0}
-    .vibe details>:last-child{margin-bottom:1rem}
-    .vibe h5{font-size:1rem;letter-spacing:-.01em;margin:1.1rem 0 .2rem;color:var(--purple)}
-    .vibe ul{padding-left:1.4rem;margin:.3rem 0}.vibe ul li{margin:.35rem 0}
-    .vibe details.lesson-action{border-top:0;margin-top:1.4rem}
-    .vibe details.lesson-action summary{padding:.2rem 0}
-    .vibe details.lesson-action[open]>summary{margin-bottom:.4rem}
+    /* Lecciones ampliadas (01 · Vibe coding y 06 · Plugin y MCP): subapartados desplegables (details/summary), subtítulos h5 y listas con viñetas.
+       Solo afecta a .lesson.lesson-extended; reutiliza las variables de color y el foco visible del resto de la página. */
+    .lesson-extended details{border-top:1px solid var(--line);margin-top:1rem}
+    .lesson-extended summary{display:flex;align-items:center;gap:.7rem;padding:.8rem 0;cursor:pointer;list-style:none}
+    .lesson-extended summary::-webkit-details-marker{display:none}
+    .lesson-extended summary::before{content:"+";flex:0 0 1.6rem;height:1.6rem;display:grid;place-items:center;border-radius:50%;background:var(--red);color:#fff;font-weight:850;line-height:1}
+    .lesson-extended details[open]>summary::before{content:"−"}
+    .lesson-extended summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    .lesson-extended summary h4{margin:0}
+    .lesson-extended details>:last-child{margin-bottom:1rem}
+    .lesson-extended h5{font-size:1rem;letter-spacing:-.01em;margin:1.1rem 0 .2rem;color:var(--purple)}
+    .lesson-extended ul{padding-left:1.4rem;margin:.3rem 0}.lesson-extended ul li{margin:.35rem 0}
+    .lesson-extended details.lesson-action{border-top:0;margin-top:1.4rem}
+    .lesson-extended details.lesson-action summary{padding:.2rem 0}
+    .lesson-extended details.lesson-action[open]>summary{margin-bottom:.4rem}
+    /* Lección 06: título h4 dentro de la caja .lesson-action y aviso .safety dentro de un desplegable. */
+    .lesson-extended .lesson-action>h4{margin:0}
+    .lesson-extended .safety{margin-top:1rem;padding:1rem 1.2rem}.lesson-extended .safety strong{color:#9d0747}
+    .lesson-extended .practice-list .prompt{margin:.8rem 0}
+    /* Lección 06 · Ficha de auditoría: única tabla de la página. El contenedor se desplaza en horizontal en móvil
+       (y con teclado, por tabindex) sin ensanchar la página; la columna «Respuesta» queda vacía para escribir a mano. */
+    .lesson-extended{min-width:0} /* la lección es hija de una rejilla: sin esto, el ancho mínimo de la tabla ensancharía la página */
+    .table-scroll{max-width:100%;overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:.6rem;background:#fff}
+    .table-scroll:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+    .audit-table{width:100%;min-width:420px;border-collapse:collapse;font-size:.95rem}
+    .audit-table caption{text-align:left;padding:.8rem 1rem;font-weight:800}
+    .audit-table th,.audit-table td{border-top:1px solid var(--line);padding:.75rem 1rem;text-align:left;vertical-align:top}
+    .audit-table thead th{background:#f8f2f7;color:var(--purple);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+    .audit-table tbody th{font-weight:700;width:48%}
+    .audit-table td{height:3.2rem;border-left:1px solid var(--line)}
