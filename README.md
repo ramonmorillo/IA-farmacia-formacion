@@ -45,7 +45,7 @@ Web estática compatible con GitHub Pages, sin backend, sin cuentas y sin depend
 
 La versión pública actual contiene los módulos, actividades, casos y recursos destinados a participantes. Las soluciones, claves de respuesta, rúbricas, notas de facilitación y presentaciones docentes no deben almacenarse ni ocultarse mediante JavaScript en GitHub Pages: se conservan fuera de la rama pública y son de uso exclusivo del autor.
 
-Contacto profesional: [ralejandro.morillo.sspa@juntadeandalucia.es](mailto:ralejandro.morillo.sspa@juntadeandalucia.es).
+Contacto profesional: [ramon.morillo.verdugo@gmail.com](mailto:ramon.morillo.verdugo@gmail.com).
 
 ## Ejecución local
 
