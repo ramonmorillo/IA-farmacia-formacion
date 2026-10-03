@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-03 · FOCO VIH
+
+- Foto de recuerdo de la sesión del 3 de octubre en la página del taller (`foco-3-octubre.html#recuerdo`), en WebP y sin metadatos.
+
 ## 5.2.0 - 2026-09-11
 
 - Conversión de “IA práctica y segura para farmacia hospitalaria” en la primera formación insignia.
