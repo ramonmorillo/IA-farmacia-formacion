@@ -23,7 +23,7 @@ for (const item of items) {
 }
 assert.equal(new Set(categories).size,categories.length);
 for (const category of categories) assert(items.some(t=>t.categories.includes(category)),`Categoría vacía: ${category}`);
-for (const file of ['diccionario-ia.html','herramientas-ia.html','sevilla-14-octubre.html','encuesta-previa.html']) {
+for (const file of ['diccionario-ia.html','herramientas-ia.html','sevilla-14-octubre.html','santiago-16-noviembre.html','encuesta-previa.html']) {
  const html=fs.readFileSync(file,'utf8');
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  assert.equal(new Set(ids).size,ids.length,`IDs duplicados: ${file}`);
