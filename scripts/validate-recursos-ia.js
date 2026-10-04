@@ -23,13 +23,13 @@ for (const item of items) {
 }
 assert.equal(new Set(categories).size,categories.length);
 for (const category of categories) assert(items.some(t=>t.categories.includes(category)),`Categoría vacía: ${category}`);
-for (const file of ['diccionario-ia.html','herramientas-ia.html','sevilla-14-octubre.html']) {
+for (const file of ['diccionario-ia.html','herramientas-ia.html','sevilla-14-octubre.html','encuesta-previa.html']) {
  const html=fs.readFileSync(file,'utf8');
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
  assert.equal(new Set(ids).size,ids.length,`IDs duplicados: ${file}`);
  for (const [,url] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
   if (/^(?:https?:|mailto:)/.test(url)) continue;
-  const [path,hash]=url.split('#');const target=path||file;
+  const [path,hash]=url.split('#').map((x,i)=>i?x:x.split('?')[0]);const target=path||file;
   assert(fs.existsSync(target),`${file}: ${url} no existe`);
   // index.html usa un router de hash, no anclas estáticas.
   if(hash && target!=='index.html') assert(fs.readFileSync(target,'utf8').includes(`id="${hash}"`),`${file}: ${url} no existe`);
