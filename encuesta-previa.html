@@ -104,7 +104,8 @@
 <script>
 // Una línea por formación: clave usada en ?formacion= → nombre visible y página de vuelta.
 const FORMACIONES = {
-  'sevilla-14-octubre': {nombre: 'Taller de IA · Sevilla, 14 de octubre de 2026', volver: 'sevilla-14-octubre.html'}
+  'sevilla-14-octubre': {nombre: 'Taller de IA · Sevilla, 14 de octubre de 2026', volver: 'sevilla-14-octubre.html'},
+  'santiago-16-noviembre': {nombre: 'Taller de IA · Santiago de Compostela, 16 de noviembre de 2026', volver: 'santiago-16-noviembre.html'}
 };
 const clave = new URLSearchParams(location.search).get('formacion');
 const f = FORMACIONES[clave] || {nombre: 'Formación en IA · Ramón Morillo', volver: 'index.html#inicio'};
