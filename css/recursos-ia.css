@@ -1,0 +1,57 @@
+/* Extensión acotada a las páginas de recursos y la sección nueva del taller. */
+#recursos h3{margin:0;font-size:1.5rem;letter-spacing:-.03em}
+#recursos .material{border-top:4px solid var(--navy);gap:1rem}
+#recursos .material:nth-child(2){border-top-color:var(--wine)}
+#recursos .button{margin-top:auto;align-self:flex-start;background:var(--navy);color:#fff}
+#recursos .button:hover{background:var(--wine)}
+.resource-page [hidden]{display:none!important}
+.resource-page .resource-hero{position:relative;z-index:1;padding:3.5rem 0}
+.resource-page .event-hero h1{font-size:clamp(2.3rem,5vw,3.8rem);max-width:920px}
+.resource-page .hero-lead{max-width:790px}
+.resource-crosslink{color:#fff;text-underline-offset:4px;font-weight:700}
+.resource-page main{padding-top:2rem}
+.resource-controls{border-top:4px solid var(--navy)}
+.resource-controls label,.resource-controls legend{font-weight:750}
+.resource-controls .search-label{display:block;font-size:1.25rem;margin-bottom:.6rem}
+.resource-controls input[type=search],.resource-controls select{font:inherit;color:var(--navy);background:#fff;border:1px solid #7b879e;border-radius:.5rem;padding:.75rem;width:100%;min-height:48px}
+.resource-controls input[type=search]{font-size:1.05rem}
+.resource-controls input::placeholder{color:var(--muted);opacity:1}
+.resource-controls fieldset{border:0;margin:1.2rem 0 0;padding:0;min-width:0}
+.resource-controls legend{padding:0;margin-bottom:.65rem;font-size:.95rem}
+.filter-chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.filter-chips button,.reset-button{font:inherit;font-size:.87rem;font-weight:650;cursor:pointer;min-height:44px;padding:.5rem .85rem;border:1px solid #7b879e;border-radius:1.4rem;background:#fff;color:var(--navy)}
+.filter-chips button:hover{background:#edf2fb}
+.filter-chips button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.resource-page :is(a,button,input,select,summary):focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+.resource-page :is(.event-hero,.footer) a:focus-visible{outline-color:var(--sun)}
+.filter-row{display:flex;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-top:1rem}
+.level-select label{display:block;font-size:.95rem;margin-bottom:.4rem}
+.check-label{display:flex;gap:.65rem;align-items:center;min-height:48px;cursor:pointer}
+.check-label input{width:1.2rem;height:1.2rem;accent-color:var(--navy)}
+.filter-footer{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.1rem;border-top:1px solid var(--line);padding-top:1rem}
+.filter-footer p{margin:0;color:var(--muted);font-size:.9rem}
+.reset-button{border-radius:.5rem}
+.resource-note{font-size:.9rem;color:var(--muted);border-left:3px solid var(--mauve);padding:.25rem 1rem;margin:1.5rem 0}
+.resource-note p{margin:.4rem 0}
+.catalog-notes{font-size:.9rem;color:var(--muted);margin:0 0 1.5rem}
+.catalog-notes summary{cursor:pointer;color:var(--navy);font-weight:700;min-height:44px;padding:.5rem 0}
+.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem;align-items:start}
+.resource-card{background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:1.5rem;min-width:0;border-top:3px solid var(--navy);overflow-wrap:anywhere}
+.resource-card h2{font-size:1.4rem;line-height:1.25;letter-spacing:-.025em;margin:.8rem 0}
+.resource-card p{font-size:.95rem;margin:.6rem 0;color:var(--muted)}
+.resource-card dl{margin:1rem 0 0;font-size:.95rem}
+.resource-card dt{font-weight:750;margin-top:.8rem}
+.resource-card dd{margin:.2rem 0 0;color:var(--muted)}
+.card-chips{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.card-chip{display:inline-block;background:#eef2f9;color:var(--navy);border-radius:1rem;padding:.2rem .65rem;font-size:.75rem;font-weight:750}
+.card-chip.recommended{background:#fbefcf;color:#614700}
+.card-chip.category{background:#f9eef4;color:#781443;font-weight:600}
+.resource-card .category-list{margin:1.1rem 0}
+.resource-card .official-link{display:inline-flex;align-items:center;min-height:44px;font-size:.92rem;font-weight:800;text-underline-offset:3px}
+.resource-card details{font-size:.82rem;border-top:1px solid var(--line);margin-top:.75rem;padding-top:.4rem;color:var(--muted)}
+.resource-card summary{cursor:pointer;min-height:44px;padding:.5rem 0}
+.resource-card details p{font-size:.82rem}
+.empty-state{text-align:center;margin:1rem 0}
+@media(max-width:780px){.resource-page .header-inner{flex-direction:column;align-items:flex-start}.resource-page .resource-hero{padding:2.5rem 0}.resource-grid{grid-template-columns:1fr}.resource-controls{padding:1.1rem}.filter-chips button{font-size:.8rem;text-align:left}.filter-footer{flex-wrap:wrap}.resource-card{padding:1.2rem}.level-select{width:100%}}
+/* Oscurece también los tramos claros del degradado bajo el texto blanco. */
+.resource-page .event-hero:before{background:rgba(18,30,72,.5)}
