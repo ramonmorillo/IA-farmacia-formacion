@@ -1,0 +1,153 @@
+ATAJOS DE PROMPT PARA FARMACIA HOSPITALARIA
+Taller de IA en farmacia hospitalaria · Sevilla, 14 de octubre de 2026 · Ramón Morillo Verdugo
+No son funciones oficiales de ninguna herramienta: copia el prompt completo o instala el bloque del final en tus instrucciones personalizadas.
+Nunca incluyas datos de pacientes reales.
+
+============================================================
+/4k · Más nitidez para una imagen (imagen)
+Para mejorar una imagen propia y sin datos sensibles: la foto de una pizarra, un esquema escaneado o un gráfico antiguo que quieres usar en una diapositiva.
+
+PROMPT:
+Vuelve a generar la imagen que te adjunto con la máxima nitidez y detalle, como si fuera una fotografía de alta resolución.
+No cambies la composición, los colores, los textos ni ningún elemento.
+Si algo no se puede mantener exactamente igual (por ejemplo, un texto ilegible), dímelo antes de generar.
+
+CUIDADO: No es una ampliación real: la herramienta vuelve a dibujar la imagen y puede cambiar letras, cifras o detalles. Compárala con el original. Nunca subas fotos de pacientes ni de documentos con datos.
+
+============================================================
+/apuntes · Apuntes manuscritos de un tema (imagen)
+El famoso estilo «medical handwritten»: un resumen de un tema con aspecto de apuntes de estudiante, ideal para repasar o para una sesión de residentes.
+
+PROMPT:
+Quiero unos apuntes visuales sobre: [TEMA].
+Paso 1: escribe primero el contenido en texto, como máximo 120 palabras, organizado en títulos, ideas clave y una advertencia final. Espera a que yo lo revise y te diga OK.
+Paso 2: cuando te dé el OK, genera una imagen vertical de apuntes manuscritos de estudiante de Farmacia en papel cuadriculado, con títulos, flechas, recuadros y subrayados en colores, usando EXACTAMENTE ese texto, sin añadir ni quitar nada.
+
+CUIDADO: El texto dentro de una imagen generada suele traer errores: letras cambiadas, palabras inventadas o cifras distintas. Por eso el atajo te pide revisar el texto antes de dibujarlo. Revisa la imagen igualmente.
+
+============================================================
+/infografia · Infografía para pacientes (imagen)
+Convierte unas indicaciones que tú das en una infografía vertical para imprimir, como en el ejercicio 2.1.
+
+PROMPT:
+Crea una infografía vertical, para imprimir en A4, dirigida a pacientes, con este contenido: [PEGA AQUÍ TUS INDICACIONES].
+Usa el texto exacto, un bloque por indicación y un icono sencillo en cada bloque.
+Letra grande, colores suaves, mucho espacio en blanco, sin logotipos.
+No añadas ninguna indicación, cifra ni consejo que no esté en mi texto.
+
+CUIDADO: Revisa cada palabra y cada cifra. Un icono mal elegido también puede transmitir una indicación que no has dado.
+
+============================================================
+/pictos · Hoja de toma con pictogramas (imagen)
+Para pacientes con dificultades de lectura o idioma: un horario de toma con dibujos de sol, luna y comida a partir de los datos que tú escribes.
+
+PROMPT:
+Crea una hoja de horario de medicación con pictogramas, en formato A4 horizontal, para un paciente con dificultades de lectura.
+Usa SOLO estos datos: [medicamento, número de comprimidos, momento del día y relación con las comidas].
+Una fila por medicamento, columnas de mañana, mediodía, tarde y noche, con iconos de sol, luna y plato, y el número de comprimidos dibujado.
+Texto mínimo y letra muy grande. No añadas medicamentos, dosis ni horarios que no te haya dado.
+
+CUIDADO: Cuenta los comprimidos dibujados en cada casilla y compáralos con tus datos. No escribas el nombre del paciente.
+
+============================================================
+/esquema · Esquema visual de un proceso (imagen)
+Para explicar un circuito del servicio: la dispensación en pacientes externos, la validación de una prescripción o la recepción de una muestra de ensayo clínico.
+
+PROMPT:
+Dibuja un diagrama de flujo claro y profesional del siguiente proceso: [DESCRIBE LOS PASOS EN ORDEN].
+Usa cajas para las acciones, rombos para las decisiones y flechas numeradas.
+Usa solo los pasos que te doy, con mis mismas palabras. Si ves un paso ambiguo o una decisión sin salida, dímelo antes de dibujar.
+
+CUIDADO: Comprueba que el número de pasos y de decisiones coincide con tu descripción y que ninguna flecha lleva a un paso equivocado.
+
+============================================================
+/claro · Lenguaje claro sin perder datos (texto)
+Reescribe un texto técnico para pacientes o familiares, como en el ejercicio 2.4.
+
+PROMPT:
+Reescribe este texto en lenguaje claro para pacientes: [PEGA EL TEXTO].
+Frases de menos de 20 palabras, de tú, sin tecnicismos; si un término es imprescindible, explícalo entre paréntesis.
+No cambies ninguna cifra, plazo, dosis ni condición.
+Al final, lista las cifras y los plazos del original y confirma que siguen en tu versión.
+
+CUIDADO: Simplificar tiende a eliminar matices como «en días distintos» o «al menos». Compara la lista final con el original.
+
+============================================================
+/r1 · Explícamelo como a un R1 (texto)
+Para residentes que empiezan una rotación, o para adjuntos que preparan una sesión docente.
+
+PROMPT:
+Explícame [TEMA] como si yo fuera residente de primer año de Farmacia Hospitalaria.
+Estructura: idea principal en dos frases, un ejemplo con un caso ficticio, los tres errores más frecuentes y 3 preguntas tipo test con 4 opciones, una correcta y su explicación.
+Si alguna afirmación necesita una fuente, indícalo con [VERIFICAR] en lugar de inventar la referencia.
+
+CUIDADO: Lo marcado como [VERIFICAR] se comprueba en la ficha técnica, la guía o el artículo antes de usarlo en una sesión.
+
+============================================================
+/tabla · Tabla comparativa con fuentes (texto)
+Para comparar fármacos, presentaciones, procedimientos o herramientas sin que se cuelen datos sin respaldo.
+
+PROMPT:
+Haz una tabla comparativa de [ELEMENTOS QUE QUIERES COMPARAR] según estos criterios: [CRITERIOS].
+Añade una última columna «Fuente» en cada fila.
+Si no tienes una fuente concreta para un dato, escribe «sin fuente» en lugar del dato.
+No rellenes huecos por aproximación.
+
+CUIDADO: Cada fila con «sin fuente» es una tarea pendiente, no un dato. Las fuentes que sí cita, ábrelas y compruébalas.
+
+============================================================
+/critica · Lectura crítica de un artículo (texto)
+Para preparar una sesión bibliográfica o el club de lectura de residentes.
+
+PROMPT:
+Haz una lectura crítica del artículo adjunto.
+Apartados: pregunta de investigación, diseño, población y ámbito, intervención o exposición, variable principal, resultados principales con sus cifras, sesgos posibles, limitaciones que reconocen los autores y aplicabilidad a un servicio de farmacia hospitalaria.
+Indica la página o la sección de donde sale cada dato. Si un dato no aparece en el artículo, escribe «no consta».
+
+CUIDADO: Comprueba en el PDF las cifras de los resultados principales. Usa solo artículos que puedas compartir legalmente.
+
+============================================================
+/checklist · Convertir un texto en lista de comprobación (texto)
+Convierte un procedimiento, una circular o un protocolo en una lista para usar en el puesto de trabajo.
+
+PROMPT:
+Convierte este texto en una lista de comprobación numerada para usar en el puesto de trabajo: [PEGA EL TEXTO].
+Una acción por línea, empezando por un verbo, con una casilla para marcar.
+No añadas pasos que no estén en el texto. Si el texto es ambiguo en algún punto, señálalo al final como «Dudas para resolver».
+
+CUIDADO: Cuenta los pasos del texto original y los de la lista. Si la lista tiene más, alguno se ha inventado.
+
+============================================================
+/diapo · Una diapositiva en un minuto (texto)
+Para sesiones clínicas, docencia o congresos: el contenido de una diapositiva, con sus notas.
+
+PROMPT:
+Prepara el contenido de UNA diapositiva sobre: [IDEA].
+Incluye: título de menos de 8 palabras, 3 ideas clave de menos de 12 palabras cada una, notas del orador para 1 minuto y una sugerencia de imagen o gráfico.
+No incluyas cifras que yo no te haya dado.
+
+CUIDADO: Si necesitas una cifra en la diapositiva, aporta tú la fuente.
+
+============================================================
+/correo · Correo profesional breve (texto)
+Correos a otros servicios, a la dirección o a un comité: claros, cortos y con una petición concreta.
+
+PROMPT:
+Redacta un correo profesional breve.
+Destinatario: [A QUIÉN]. Objetivo: [QUÉ QUIERO CONSEGUIR]. Datos clave: [DATOS].
+Formato: asunto de menos de 10 palabras, saludo, como máximo 3 párrafos cortos y una petición concreta con plazo, si lo hay.
+Tono cordial e institucional. No añadas compromisos ni datos que no te haya dado.
+
+CUIDADO: No incluyas datos de pacientes en el borrador. Revisa los compromisos antes de enviarlo: los firmas tú.
+
+============================================================
+BLOQUE PARA INSTALAR 7 ATAJOS (instrucciones personalizadas):
+
+Atajos: si mi mensaje empieza por uno de estos comandos, aplica su instrucción. Si falta información, pregúntame.
+/4k: regenera la imagen adjunta con máxima nitidez, sin cambiar composición, colores ni textos; avisa si algo no se puede mantener.
+/apuntes [tema]: escribe primero el contenido (máx. 120 palabras) y espera mi OK; luego genera una imagen vertical de apuntes manuscritos en papel cuadriculado, con flechas y subrayados de colores, usando exactamente ese texto.
+/infografia [texto]: infografía vertical A4 para pacientes con mi texto exacto, iconos sencillos y letra grande; no añadas nada.
+/claro [texto]: lenguaje claro, frases de menos de 20 palabras, sin cambiar cifras, plazos ni dosis.
+/r1 [tema]: explícalo a un residente de primer año con un ejemplo ficticio y 3 preguntas tipo test; marca [VERIFICAR] lo que necesite fuente.
+/tabla [tema]: tabla comparativa con columna «Fuente»; si no hay fuente, escribe «sin fuente».
+/checklist [texto]: lista numerada de comprobación, una acción por línea, sin añadir pasos.
