@@ -47,7 +47,7 @@ function renderConsulting(){shell('Consultoría para transformar un proceso',`<p
 
 const CONFERENCE_EVENTS=[
   {date:'2026-10-03',end:'2026-10-03T12:30',title:'FOCO-VIH',place:'Madrid · 3 de octubre de 2026',href:'foco-3-octubre.html',upcoming:'El material del encuentro está disponible para los participantes.',past:'Material del encuentro y foto de recuerdo de la sesión.',cta:'Ver materiales del encuentro'},
-  {date:'2026-10-14',end:'2026-10-14T19:40',title:'Taller de IA en farmacia hospitalaria',place:'Sevilla · 14 de octubre de 2026',href:'sevilla-14-octubre.html',upcoming:'El programa del taller ya está disponible. Los materiales para participantes se incorporarán antes de la sesión.',past:'Programa y materiales del taller.',cta:'Ver página del taller'},
+  {date:'2026-10-14',end:'2026-10-14T19:40',title:'Taller de IA en farmacia hospitalaria',place:'Sevilla · 14 de octubre de 2026',href:'sevilla-14-octubre.html',upcoming:'Guía de la sesión, ejercicios y materiales ficticios ya disponibles.',past:'Programa y materiales del taller.',cta:'Ver página del taller'},
   {date:'2026-11-16',end:'2026-11-16T19:00',title:'Taller de IA en farmacia hospitalaria',place:'Santiago de Compostela · 16 de noviembre de 2026',href:'santiago-16-noviembre.html',upcoming:'Taller práctico de 16:00 a 19:00. Sede y programa detallado por confirmar.',past:'Programa y materiales del taller.',cta:'Ver página del taller'}
 ];
 // Próximas primero (la más cercana arriba); después las pasadas, de la más reciente a la más antigua. Un evento pasa a «anterior» al terminar (end, hora local).
