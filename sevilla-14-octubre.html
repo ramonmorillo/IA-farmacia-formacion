@@ -53,7 +53,7 @@
     <p class="section-intro">La sesión tiene dos partes. En la <strong>parte centauro</strong> aprendes a usar cuatro herramientas y a repartir el trabajo con ellas: tú decides qué delegas y compruebas lo que vuelve. En la <strong>parte ciborg</strong> das el paso siguiente: integras la IA en tu forma de trabajar hasta construir una pequeña herramienta propia.</p>
     <div class="panel"><ol class="agenda-list">
       <li><b>10 min</b><div><strong>00 · Apertura: centauros, ciborgs y tres reglas</strong><span>Qué vamos a hacer, con qué datos y cómo sabremos si el resultado es bueno.</span></div></li>
-      <li><b>30 min</b><div><strong>01 · Claude: del encargo vago al encargo claro</strong><span>Prompt estructurado y proyecto con un caso ficticio de paciente externo.</span></div></li>
+      <li><b>30 min</b><div><strong>01 · Claude: del encargo vago al encargo claro</strong><span>Encargo claro y proyectos con ejemplos de consulta externa, hospitalización, oncohematología, farmacotecnia, gestión, CFT e investigación. Skills y conectores, para después.</span></div></li>
       <li><b>25 min</b><div><strong>02 · ChatGPT: misma tarea, otra herramienta</strong><span>Comparar respuestas y comprobar un cálculo con respuesta conocida.</span></div></li>
       <li><b>30 min</b><div><strong>03 · Gemini Notebook: responder solo con tus fuentes</strong><span>Preguntar a dos documentos, verificar citas y detectar contradicciones.</span></div></li>
       <li><b>10 min</b><div><strong>Pausa</strong><span>Cargar portátiles y estirar las piernas.</span></div></li>
@@ -96,10 +96,26 @@
     </article>
 
     <article class="lesson lesson-extended" id="claude"><div class="lesson-heading"><span>01 · 30 min · centauro</span><h3>Claude: del encargo vago al encargo claro</h3></div>
-      <p>Trabajaremos con el <a href="assets/sevilla-14-octubre/caso-ficticio-paciente-externo.txt" download>caso ficticio de una paciente externa</a>. El objetivo no es que Claude «resuelva» el caso, sino que ordene la información y te diga qué falta, sin inventar nada.</p>
+      <p>Claude no es solo un chat. Tiene cinco piezas que conviene distinguir, porque cada una resuelve un problema distinto. En la sesión trabajaremos las dos primeras con ejemplos de varias áreas de la farmacia; las demás quedan explicadas aquí para que las pruebes después, y los artefactos son el centro de la <a href="#ciborg">parte ciborg</a>.</p>
+      <div class="table-scroll" role="region" aria-labelledby="tabla-piezas-claude" tabindex="0">
+        <table class="audit-table">
+          <caption id="tabla-piezas-claude">Las piezas de Claude y cuándo usar cada una</caption>
+          <thead><tr><th scope="col">Pieza</th><th scope="col">Qué resuelve</th><th scope="col">Ejemplo en farmacia hospitalaria</th><th scope="col">En el taller</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Encargo (prompt)</th><td>Que la respuesta sea revisable y no invente.</td><td>Ordenar un caso de paciente externo antes de la entrevista.</td><td>Ejercicios 1.1 y 1.3</td></tr>
+            <tr><th scope="row">Proyecto</th><td>No repetir instrucciones ni documentos en cada chat.</td><td>«Docencia de residentes» con tus reglas para preguntas tipo test.</td><td>Ejercicio 1.2</td></tr>
+            <tr><th scope="row">Skill</th><td>Que Claude siga siempre el mismo procedimiento para una tarea repetida.</td><td>Nota estructurada de validación farmacéutica con el formato de tu servicio.</td><td>1.4 · para después</td></tr>
+            <tr><th scope="row">Conector (MCP)</th><td>Consultar una fuente externa en lugar de responder de memoria.</td><td>Buscar en PubMed y devolver PMID verificables.</td><td>1.5 · para después</td></tr>
+            <tr><th scope="row">Artefacto</th><td>Crear una pequeña herramienta que funciona en el propio chat.</td><td>Calculadora de cobertura y próxima cita.</td><td>Bloque 05 · ciborg</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source-note">Proyectos, skills y conectores dependen del plan de la cuenta y de su configuración. Si alguna opción no aparece en tu cuenta gratuita, sigue la demostración.</p>
+
       <div class="compare"><div><small>Vago</small><p>«Revisa este caso y dime qué hago».</p></div><div><small>Encargo claro</small><p>Rol, contexto, tarea, formato, límites y un criterio para comprobar el resultado.</p></div></div>
       <details>
-        <summary><h4>Ejercicio 1.1 · El mismo caso, dos prompts (10 min)</h4></summary>
+        <summary><h4>Ejercicio 1.1 · El mismo caso, dos prompts (8 min) · consulta externa</h4></summary>
+        <p>Trabajaremos con el <a href="assets/sevilla-14-octubre/caso-ficticio-paciente-externo.txt" download>caso ficticio de una paciente externa</a>. El objetivo no es que Claude «resuelva» el caso, sino que ordene la información y te diga qué falta, sin inventar nada.</p>
         <ol class="practice-list">
           <li>En un chat nuevo, pega el caso y escribe solo: «Revisa este caso y dime qué hago».</li>
           <li>En otro chat nuevo, pega el caso con el prompt estructurado de abajo.</li>
@@ -119,10 +135,10 @@ Comprobación: al final, dime cuántos medicamentos aparecen en el caso y enumé
         <p class="check-note"><strong>Punto de control:</strong> el caso menciona 6 productos: adalimumab, metotrexato, ácido fólico, omeprazol, enalapril e ibuprofeno, más un preparado de herbolario sin identificar. Una respuesta correcta lista esos 6 y menciona el preparado de herbolario aparte o como séptimo producto, sin ponerle nombre. Si omite alguno, o identifica el preparado de herbolario, ha perdido o añadido información.</p>
       </details>
       <details>
-        <summary><h4>Ejercicio 1.2 · Un proyecto para no repetir instrucciones (10 min)</h4></summary>
-        <p>Un proyecto reúne instrucciones y documentos de un área de trabajo. Todas las conversaciones dentro del proyecto los usan, así que no tienes que repetir el contexto en cada chat. La cuenta gratuita permite crear un número limitado de proyectos.</p>
+        <summary><h4>Ejercicio 1.2 · Un proyecto para no repetir instrucciones (7 min) · docencia</h4></summary>
+        <p>Un proyecto reúne instrucciones y documentos de un área de trabajo. Todas las conversaciones dentro del proyecto los usan, así que no tienes que repetir el contexto en cada chat. Ojo: una conversación no recuerda automáticamente lo que dijiste en otra. La cuenta gratuita permite crear un número limitado de proyectos.</p>
         <ol class="practice-list">
-          <li>Crea un proyecto llamado «Pacientes externos · docencia».</li>
+          <li>Crea un proyecto llamado «Docencia de residentes».</li>
           <li>Pega en sus instrucciones el texto de abajo.</li>
           <li>Abre un chat dentro del proyecto y pide solo: «Prepara 5 preguntas tipo test para residentes a partir de este caso» (pega el caso). Comprueba si la respuesta respeta las instrucciones sin que las repitas.</li>
         </ol>
@@ -131,9 +147,146 @@ Usa solo datos ficticios. Si un dato no está en lo que te doy, dilo en lugar de
 Separa siempre: datos, interpretación y recomendaciones.
 Para preguntas tipo test: 4 opciones, una sola correcta, y una línea que explique por qué es correcta citando la parte del caso en la que se basa.
 Escribe en español de España, en lenguaje claro.</pre><button type="button" data-copy="prompt-claude-proyecto">Copiar instrucciones</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <div class="table-scroll" role="region" aria-labelledby="tabla-proyectos-area" tabindex="0">
+          <table class="audit-table">
+            <caption id="tabla-proyectos-area">Ideas de proyecto según tu área (sin datos de pacientes ni documentos internos)</caption>
+            <thead><tr><th scope="col">Área</th><th scope="col">Proyecto</th><th scope="col">Instrucción permanente</th><th scope="col">Fuente pública que podrías añadir</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Consulta externa</th><td>Entrevista y educación al paciente</td><td>Lenguaje claro, frases cortas, sin cambios de tratamiento.</td><td>Prospectos y fichas técnicas del CIMA.</td></tr>
+              <tr><th scope="row">Hospitalización</th><td>Notas de validación</td><td>Formato SOAP; separa hallazgo, recomendación propuesta y datos pendientes.</td><td>Guía pública de ajuste de dosis que use tu servicio.</td></tr>
+              <tr><th scope="row">Oncohematología</th><td>Material para pacientes con antineoplásicos orales</td><td>Usa solo las indicaciones que yo te dé; nada de memoria.</td><td>Fichas técnicas de los fármacos.</td></tr>
+              <tr><th scope="row">Farmacotecnia</th><td>Redacción de PNT</td><td>Estructura fija de PNT; lo no indicado, «pendiente de definir».</td><td>Formulario Nacional (fórmulas publicadas).</td></tr>
+              <tr><th scope="row">Residencia</th><td>Preparar sesiones y rotaciones</td><td>Señala qué afirmaciones necesitan cita y cuáles son opinión.</td><td>Programa oficial de la especialidad.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <p><strong>Ejercicio 1.3 · Elige tu área (15 min).</strong> Adjuntos y residentes trabajáis en sitios distintos, así que cada persona elige el ejemplo más cercano a su trabajo. Todos siguen el mismo patrón: datos ficticios, límites explícitos y un punto de control con respuesta conocida. Si terminas pronto, haz un segundo ejemplo.</p>
+      <details>
+        <summary><h4>Hospitalización · Aclaramiento de creatinina antes de validar</h4></summary>
+        <div class="prompt"><strong>Prompt</strong><pre id="prompt-area-hospital">Rol: asistente de un farmacéutico que valida prescripciones en hospitalización.
+Contexto: paciente FICTICIA, mujer, 70 años, 60 kg de peso real, creatinina sérica 1,2 mg/dL.
+Tarea: calcula el aclaramiento de creatinina con la fórmula de Cockcroft-Gault.
+Formato: escribe la fórmula, sustituye los valores paso a paso y da el resultado en mL/min con un decimal.
+Límites: no propongas dosis ni ajustes de ningún medicamento. Si para el cálculo hace falta una decisión (por ejemplo, qué peso usar), dímelo como pregunta en lugar de decidirlo tú.
+Comprobación: indica si has aplicado algún factor de corrección y por qué.</pre><button type="button" data-copy="prompt-area-hospital">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="check-note"><strong>Punto de control:</strong> (140 − 70) × 60 / (72 × 1,2) = 4.200 / 86,4 = 48,6; por 0,85 al ser mujer = <strong>41,3 mL/min</strong>. Si da 48,6, ha olvidado el factor de sexo. Una buena respuesta, además, te pregunta o te avisa sobre qué peso usar: esa decisión es tuya.</p>
+      </details>
+      <details>
+        <summary><h4>Oncohematología · Hoja para un paciente con antineoplásico oral</h4></summary>
+        <div class="prompt"><strong>Prompt</strong><pre id="prompt-area-onco">Rol: asistente de un farmacéutico de oncohematología que prepara material para pacientes.
+Contexto: medicamento FICTICIO «Ficticinib». Estas son las ÚNICAS indicaciones que puedes usar:
+1. Tomar 1 comprimido cada 12 horas, con o sin comida.
+2. Si olvida una dosis y faltan menos de 6 horas para la siguiente, no tomar la dosis olvidada.
+3. No tomar pomelo ni zumo de pomelo.
+4. Llamar al servicio de farmacia si tiene fiebre de 38 °C o más.
+Tarea: redacta una hoja informativa para el paciente.
+Formato: título, frases cortas, lenguaje claro, máximo una página.
+Límites: no añadas ninguna indicación, efecto adverso ni consejo que no esté en la lista. Si crees que falta algo importante, escríbelo aparte, al final, como «Sugerencias para el farmacéutico», nunca dentro de la hoja.
+Comprobación: al final, enumera qué indicación de la lista corresponde a cada frase de la hoja.</pre><button type="button" data-copy="prompt-area-onco">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="check-note"><strong>Punto de control:</strong> la hoja contiene las 4 indicaciones y ninguna más. Si aparece un consejo nuevo dentro de la hoja (protección solar, anticoncepción, náuseas…), aunque sea razonable, ha incumplido el encargo: en un material real, ese contenido lo decides y lo revisas tú.</p>
+      </details>
+      <details>
+        <summary><h4>Farmacotecnia · De las notas de elaboración a un PNT</h4></summary>
+        <div class="prompt"><strong>Prompt</strong><pre id="prompt-area-farmacotecnia">Rol: asistente de un farmacéutico del área de farmacotecnia.
+Contexto: notas FICTICIAS de elaboración: «Suspensión oral de principio X 10 mg/mL, 100 mL. Pesar 1 g de principio X, triturar en mortero, añadir 50 mL de vehículo Y poco a poco, pasar a probeta y enrasar a 100 mL con vehículo Y. Envasar en frasco topacio. Caducidad 30 días en nevera».
+Tarea: conviértelas en un borrador de procedimiento normalizado de trabajo (PNT).
+Formato: apartados de objetivo, composición, material, procedimiento numerado, envasado y etiquetado, conservación y caducidad, controles de calidad.
+Límites: no añadas cantidades, excipientes, controles ni plazos que no estén en las notas. Lo que falte, escríbelo como «PENDIENTE DE DEFINIR».
+Comprobación: confirma que la cantidad pesada y el volumen final corresponden a la concentración indicada.</pre><button type="button" data-copy="prompt-area-farmacotecnia">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="check-note"><strong>Punto de control:</strong> 1 g en 100 mL son 10 mg/mL, así que la concentración es coherente. Las notas no dicen nada de controles de calidad ni de etiquetado: esos apartados deben aparecer como «PENDIENTE DE DEFINIR». Si Claude rellena controles por su cuenta (pH, aspecto, uniformidad…), ha inventado contenido.</p>
+      </details>
+      <details>
+        <summary><h4>Gestión y logística · Días de cobertura del stock</h4></summary>
+        <div class="prompt"><strong>Prompt</strong><pre id="prompt-area-gestion">Rol: asistente del área de gestión de un servicio de farmacia.
+Contexto: datos FICTICIOS de consumo (unidades) en julio, agosto y septiembre, y stock actual:
+- Medicamento A: 120, 90, 150. Stock actual: 100.
+- Medicamento B: 30, 30, 45. Stock actual: 20.
+- Medicamento C: 0, 10, 20. Stock actual: 60.
+Reglas: consumo medio mensual = media de los tres meses. Consumo diario = consumo medio mensual / 30. Días de cobertura = stock actual / consumo diario, redondeado HACIA ABAJO.
+Tarea: calcula los días de cobertura de cada medicamento y dime cuáles tienen MENOS de 21 días.
+Formato: tabla con consumo medio, consumo diario y días de cobertura; muestra un cálculo paso a paso.
+Límites: no apliques otras reglas ni supongas datos que no estén aquí.</pre><button type="button" data-copy="prompt-area-gestion">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="check-note"><strong>Punto de control:</strong> A = 25 días; B = 17 días (17,1 redondeado hacia abajo); C = 180 días. Solo B tiene menos de 21 días. La lección para gestión: el resultado depende por completo de las reglas (meses de 30 días, media simple, redondeo); si no las escribes, la herramienta elegirá las suyas.</p>
+      </details>
+      <details>
+        <summary><h4>Información de medicamentos y CFT · Esqueleto de un informe de evaluación</h4></summary>
+        <div class="prompt"><strong>Prompt</strong><pre id="prompt-area-cft">Rol: asistente de un farmacéutico que prepara informes para la Comisión de Farmacia y Terapéutica.
+Contexto: vamos a evaluar un medicamento nuevo para una indicación concreta. Todavía no te doy ningún dato.
+Tarea: prepara el esqueleto del informe para que yo lo complete.
+Formato: apartados de identificación del fármaco, indicación evaluada, alternativas disponibles, eficacia, seguridad, evaluación económica, conclusiones y propuesta de posicionamiento. En cada apartado, una línea explicando qué debe contener y qué fuente lo respaldaría.
+Límites: no escribas ningún dato de eficacia, seguridad ni coste. Donde iría un dato, escribe [PENDIENTE: fuente]. No propongas el posicionamiento.
+Comprobación: al final, lista todos los [PENDIENTE] que has dejado.</pre><button type="button" data-copy="prompt-area-cft">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="check-note"><strong>Punto de control:</strong> el informe no debe contener ni una cifra. Si aparece un porcentaje, una mediana de supervivencia o un precio, aunque parezca correcto, sale de la memoria del modelo y no de una fuente que tú hayas revisado. Este patrón sirve también para residentes que preparan su primer informe.</p>
+      </details>
+      <details>
+        <summary><h4>Investigación · Variables del cuaderno de recogida de datos</h4></summary>
+        <div class="prompt"><strong>Prompt</strong><pre id="prompt-area-investigacion">Rol: asistente metodológico de un farmacéutico de hospital que diseña un estudio observacional.
+Contexto: objetivo FICTICIO: «Describir la adherencia, medida como proporción de días cubiertos (PDC), a los inhibidores de JAK en pacientes con artritis reumatoide atendidos en la consulta de pacientes externos durante 2025».
+Tarea: propón las variables del cuaderno de recogida de datos.
+Formato: tabla con nombre de la variable, definición operativa, tipo (cuantitativa o cualitativa), unidad o categorías y fuente del dato.
+Límites: no incluyas variables que identifiquen al paciente; usa un código de estudio. Si una definición depende de una decisión del investigador (periodo de observación, umbral de adherencia…), márcala como «DECISIÓN DEL INVESTIGADOR» y explica las opciones sin elegir tú.
+Comprobación: explica cómo se calcula el PDC con las variables que propones.</pre><button type="button" data-copy="prompt-area-investigacion">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="check-note"><strong>Punto de control:</strong> deben aparecer las variables necesarias para el PDC (fechas de dispensación y días cubiertos por dispensación, más el periodo de observación como denominador), ninguna variable identificativa (nombre, número de historia) y el umbral de adherencia marcado como decisión del investigador, no fijado por la herramienta.</p>
+      </details>
+
+      <details>
+        <summary><h4>1.4 · Skills: un procedimiento que Claude repite igual cada vez (para después)</h4></summary>
+        <p>Una skill reúne instrucciones y recursos para una tarea repetida. Una vez instalada, Claude la activa por su descripción en cualquier conversación. Es la diferencia entre explicar cada vez cómo quieres algo y tenerlo ya enseñado. Como ejemplo, puedes descargar la <a href="assets/foco-3-octubre/valoracion-farmaceutica-vih.zip" download>skill de valoración farmacéutica (.zip)</a> que usamos en el taller FOCO-VIH y revisar su contenido antes de instalarla.</p>
+        <div class="table-scroll" role="region" aria-labelledby="tabla-skills-area" tabindex="0">
+          <table class="audit-table">
+            <caption id="tabla-skills-area">Tareas repetidas que podrían convertirse en una skill</caption>
+            <thead><tr><th scope="col">Área</th><th scope="col">Tarea repetida</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Consulta externa</th><td>Nota estructurada tras la entrevista: adherencia, medicación nueva, productos de herbolario, efectos adversos y datos pendientes.</td></tr>
+              <tr><th scope="row">Hospitalización</th><td>Nota de intervención farmacéutica con el formato y la clasificación de tu servicio.</td></tr>
+              <tr><th scope="row">Urgencias y transiciones</th><td>Tabla de conciliación: lista previa, lista actual y discrepancias, sin resolverlas.</td></tr>
+              <tr><th scope="row">Oncohematología</th><td>Hoja de paciente con la estructura fija de tu servicio, a partir de las indicaciones que tú das.</td></tr>
+              <tr><th scope="row">Residencia</th><td>Preparar una sesión bibliográfica: pregunta, diseño, resultados principales y limitaciones, con cita de página.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ol class="practice-list">
+          <li><strong>Elige una tarea</strong> que repitas cada semana y cuyo resultado sepas revisar.</li>
+          <li><strong>Reúne tus fuentes sin datos de pacientes:</strong> plantillas anonimizadas, procedimientos que puedas compartir y guías públicas.</li>
+          <li><strong>Pide a Claude el borrador</strong> del archivo SKILL.md con el prompt de abajo. Es un borrador, no una skill validada.</li>
+          <li><strong>Revisa antes de instalar.</strong> La descripción debe decir qué hace y cuándo usarla, porque de ella depende que se active. Comprueba que hay límites explícitos y que lo que falta aparece como «pendiente de definir».</li>
+          <li><strong>Instala y prueba.</strong> Guarda el SKILL.md en una carpeta con el nombre de la skill, comprímela en ZIP y súbela desde el apartado de skills de tu cuenta (<a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" target="_blank" rel="noopener noreferrer">guía oficial ↗</a>). Prueba tres peticiones que deberían activarla y dos que no. Si no aparece la opción, puede depender del plan o del administrador de tu cuenta.</li>
+        </ol>
+        <div class="prompt"><strong>Prompt para redactar tu skill</strong><pre id="prompt-skill">Ayúdame a redactar una skill para Claude (archivo SKILL.md).
+Tarea repetida: [describe la tarea].
+Quién la usa: farmacéutico/a de hospital del área de [tu área] (adjunto/a o residente).
+Fuentes: [adjunta documentos sin datos de pacientes].
+Requisitos: frontmatter con name (minúsculas y guiones) y description (qué hace y cuándo usarla); cuerpo con pasos, formato de salida, un ejemplo con un caso ficticio y límites: no emitir recomendaciones clínicas, separar datos disponibles, datos pendientes y fuentes a consultar, y preguntar si falta información.
+Usa solo lo que está en mis fuentes; lo que no aparezca, márcalo como "pendiente de definir".
+Al final, dame 3 peticiones que deberían activar la skill y 2 que no.</pre><button type="button" data-copy="prompt-skill">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="source-note"><strong>Skill no es lo mismo que proyecto.</strong> Pegar el texto de una skill en las instrucciones de un proyecto funciona solo dentro de ese proyecto. Una skill instalada se activa en cualquier conversación y puede incluir archivos auxiliares.</p>
+      </details>
+      <details>
+        <summary><h4>1.5 · Conectores y MCP: consultar fuentes en lugar de recordar (para después)</h4></summary>
+        <p>Un <strong>conector</strong> da a Claude acceso a una aplicación o fuente concreta. <strong>MCP</strong> es el protocolo técnico que lo hace posible. Con un conector a PubMed, Claude busca en vivo en lugar de responder de memoria. Regla de oro: explora el catálogo sin conectar ninguna cuenta institucional, y antes de conectar nada averigua quién lo publica, qué datos puede ver y qué acciones permite.</p>
+        <p><strong>Ejercicio A · Con y sin conector de PubMed.</strong> Desactiva la búsqueda web. Haz la misma pregunta de tu área en dos chats nuevos, uno sin conector y otro con el conector de PubMed activado. Después busca 2 o 3 PMID de cada respuesta en PubMed y comprueba que título, autores y año coinciden.</p>
+        <div class="prompt"><strong>Pregunta de ejemplo (cámbiala por una de tu área)</strong><pre id="prompt-conector">¿Qué estudios publicados en los últimos 3 años evalúan intervenciones del farmacéutico de hospital en la conciliación de la medicación al ingreso? Dame el PMID de cada uno y una línea con su diseño.</pre><button type="button" data-copy="prompt-conector">Copiar pregunta</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="check-note"><strong>Punto de control:</strong> cada PMID debe existir y corresponder al artículo descrito. Si en el chat sin conector aparece una referencia que no existe o no coincide, has visto en directo por qué no se cita de memoria. Tener conector mejora la trazabilidad, pero no exime de leer el artículo. Lo que escribes en la pregunta se envía como búsqueda a una fuente externa: nunca incluyas datos de pacientes.</p>
+        <p><strong>Ejercicio B · Ficha de auditoría de un conector, sin conectarlo.</strong> Elige del catálogo uno que podría tentarte (correo, calendario, almacenamiento de archivos) y responde:</p>
+        <div class="table-scroll" role="region" aria-labelledby="tabla-auditoria-conector" tabindex="0">
+          <table class="audit-table">
+            <caption id="tabla-auditoria-conector">Ficha de auditoría de un conector</caption>
+            <thead><tr><th scope="col">Pregunta</th><th scope="col">Respuesta</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">¿Quién lo publica?</th><td></td></tr>
+              <tr><th scope="row">¿Solo lee, o también puede escribir, enviar o borrar?</th><td></td></tr>
+              <tr><th scope="row">¿A qué datos accedería en mi caso? ¿Podría acabar ahí información de pacientes?</th><td></td></tr>
+              <tr><th scope="row">¿Lo permitiría mi hospital? ¿A quién lo preguntaría?</th><td></td></tr>
+              <tr><th scope="row">Decisión: lo conectaría / no / solo con cuenta personal y para…</th><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Si el conector de PubMed no aparece en tu cuenta, haz solo el ejercicio B. La disponibilidad de conectores cambia según el plan y la configuración de la cuenta.</p>
       </details>
       <details class="lesson-action">
-        <summary><h4>Hazlo con tu propio tema (10 min)</h4></summary>
+        <summary><h4>Plantilla para tu propio encargo</h4></summary>
         <p>Escribe un encargo con esta plantilla para una tarea que repites en tu trabajo (docencia, informe, sesión clínica, carta…). Mantén cualquier dato de paciente fuera.</p>
         <div class="prompt"><strong>Plantilla</strong><pre id="prompt-claude-plantilla">Rol: actúa como [tipo de asistente].
 Contexto: [situación, con datos ficticios o fuentes públicas].
@@ -287,6 +440,21 @@ Reglas que debe aplicar: ___ (escríbelas tú; no dejes que la IA las invente).
 No debe nunca: ___ (por ejemplo, dar recomendaciones clínicas, guardar datos).
 Sabré que funciona si con ___ (un caso de prueba) obtengo ___ (el resultado que ya conozco).
 Antes de construir nada, hazme las preguntas que necesites.</pre><button type="button" data-copy="prompt-ciborg-plantilla">Copiar plantilla</button><span class="copy-status" role="status" aria-live="polite"></span></div>
+        <div class="table-scroll" role="region" aria-labelledby="tabla-ideas-area" tabindex="0">
+          <table class="audit-table">
+            <caption id="tabla-ideas-area">Ideas por área, con la regla que pones tú y un caso de prueba</caption>
+            <thead><tr><th scope="col">Área</th><th scope="col">Herramienta</th><th scope="col">Regla que escribes tú</th><th scope="col">Caso de prueba</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Hospitalización</th><td>Calculadora de aclaramiento de creatinina</td><td>Cockcroft-Gault; factor 0,85 en mujeres; qué peso usar.</td><td>Mujer, 70 años, 60 kg, creatinina 1,2 mg/dL → 41,3 mL/min</td></tr>
+              <tr><th scope="row">Oncohematología</th><td>Calculadora de superficie corporal</td><td>Fórmula de Mosteller: √(talla en cm × peso en kg / 3.600).</td><td>170 cm y 70 kg → 1,82 m²</td></tr>
+              <tr><th scope="row">Nutrición y fluidoterapia</th><td>Calculadora de velocidad de infusión</td><td>Velocidad = volumen / horas, con un decimal.</td><td>2.000 mL en 24 h → 83,3 mL/h</td></tr>
+              <tr><th scope="row">Farmacotecnia</th><td>Calculadora de cantidad a pesar</td><td>Cantidad = concentración × volumen final.</td><td>10 mg/mL y 100 mL → 1.000 mg (1 g)</td></tr>
+              <tr><th scope="row">Gestión</th><td>Semáforo de cobertura de stock</td><td>Las reglas del ejemplo de gestión del bloque 01.</td><td>Medicamento B del ejemplo → 17 días</td></tr>
+              <tr><th scope="row">Residencia y docencia</th><td>Caso clínico interactivo con tres decisiones</td><td>El caso, las opciones y la explicación de cada una las redactas tú.</td><td>Cada opción lleva a la explicación que escribiste</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">Los casos de prueba sirven para comprobar que la herramienta calcula lo que tú le has pedido. No validan la fórmula ni su uso clínico: eso depende de los criterios de tu servicio.</p>
         <p>La regla más importante: <strong>el contenido clínico lo pones tú</strong>. Si la herramienta necesita una dosis, un criterio o un plazo, escríbelo en la plantilla. Si dejas que Claude lo rellene, puede inventarlo o no coincidir con el de tu servicio.</p>
       </details>
       <details>
@@ -313,7 +481,8 @@ Antes de construir nada, hazme las preguntas que necesites.</pre><button type="b
       <p>Tres ideas: un encargo claro vale más que una herramienta cara; cada resultado necesita una respuesta conocida con la que compararlo; y crear tus propias herramientas está a tu alcance si el criterio lo pones tú.</p>
       <div class="lesson-action"><strong>Tarea para después del taller (30 minutos, cuando puedas)</strong>
         <ol class="practice-list">
-          <li>Elige una tarea real de tu semana y escribe el encargo con la plantilla del bloque 01.</li>
+          <li>Elige una tarea real de tu semana y escribe el encargo con la plantilla del bloque 01. Si en la sesión hiciste un solo ejemplo del ejercicio 1.3, prueba otro de un área distinta a la tuya.</li>
+          <li>Convierte esa tarea en una skill (1.4) o prueba el conector de PubMed y rellena la ficha de auditoría (1.5).</li>
           <li>Haz el ejercicio de SciSpace si no dio tiempo en la sesión.</li>
           <li>Mejora tu herramienta de la parte ciborg con un caso de prueba nuevo y pide a un compañero o compañera que la use.</li>
         </ol>
