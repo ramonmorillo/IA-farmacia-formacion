@@ -1,0 +1,26 @@
+PROTOCOLO FICTICIO CON FINES DOCENTES · Taller de IA en farmacia hospitalaria · Sevilla, 14-10-2026
+No corresponde a ningún hospital real. Plazos y criterios inventados: no lo uses como referencia clínica.
+
+HOSPITAL FICTICIO · SERVICIO DE FARMACIA
+Conciliación de la medicación al ingreso hospitalario · Versión 2 · Marzo de 2026
+
+1. Objetivo
+Detectar y resolver las discrepancias entre la medicación que el paciente tomaba antes del ingreso
+y la prescrita en el hospital.
+
+2. Ámbito
+Se aplica a los pacientes que ingresan con 65 años o más y 5 o más medicamentos crónicos.
+El resto de pacientes se concilia si hay disponibilidad, sin plazos obligatorios.
+
+3. Plazo
+La conciliación se realiza como máximo 24 horas después del ingreso.
+
+4. Fuentes
+Se consultan al menos 2 fuentes distintas (por ejemplo, entrevista con el paciente y receta electrónica).
+
+5. Discrepancias no justificadas
+Se comunican al médico responsable como máximo 24 horas después de detectarlas. Se registra la hora
+de la comunicación.
+
+6. Registro
+El resultado de la conciliación se registra en la historia clínica.

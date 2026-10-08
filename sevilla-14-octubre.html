@@ -54,7 +54,7 @@
     <div class="panel"><ol class="agenda-list">
       <li><b>10 min</b><div><strong>00 · Apertura: centauros, ciborgs y tres reglas</strong><span>Qué vamos a hacer, con qué datos y cómo sabremos si el resultado es bueno.</span></div></li>
       <li><b>30 min</b><div><strong>01 · Claude: del encargo vago al encargo claro</strong><span>Encargo claro y proyectos con ejemplos de consulta externa, hospitalización, oncohematología, farmacotecnia, gestión, CFT e investigación. Skills y conectores, para después.</span></div></li>
-      <li><b>25 min</b><div><strong>02 · ChatGPT: imagen, datos, voz y edición</strong><span>Infografía para pacientes, análisis de datos con código, ensayo de entrevista y lenguaje claro en el lienzo.</span></div></li>
+      <li><b>25 min</b><div><strong>02 · ChatGPT: imagen, datos, voz y edición</strong><span>Infografía para pacientes, análisis de datos con código, ensayo de entrevista y lenguaje claro en el lienzo. Mapa interactivo del menú + con diez casos de farmacia hospitalaria.</span></div></li>
       <li><b>30 min</b><div><strong>03 · Gemini Notebook: responder solo con tus fuentes</strong><span>Preguntar a dos documentos, verificar citas y detectar contradicciones.</span></div></li>
       <li><b>10 min</b><div><strong>Pausa</strong><span>Cargar portátiles y estirar las piernas.</span></div></li>
       <li><b>10 min</b><div><strong>04 · SciSpace: buscar y leer literatura (si da tiempo)</strong><span>Demostración breve. Si no da tiempo, queda como tarea para después.</span></div></li>
@@ -412,6 +412,30 @@ Si no sabes algo, dilo.</pre><button type="button" data-copy="prompt-chatgpt-gpt
         </ol>
         <p class="check-note"><strong>Punto de control:</strong> si alguna fuente no dice lo que se le atribuye, o el enlace no lleva a ella, el informe no se puede citar tal cual. Compáralo con el ejercicio de PubMed del bloque 01 (1.5).</p>
       </details>
+    </article>
+
+    <article class="lesson lesson-extended menu-chatgpt" id="menu-chatgpt"><div class="lesson-heading"><span>02 bis · mapa</span><h3>El menú + de ChatGPT: de la función al caso práctico</h3></div>
+      <p>El signo <strong>+</strong> junto a la caja de texto de ChatGPT abre accesos a distintas formas de trabajar. Aquí tienes las diez opciones que aparecen en la cuenta del docente, cada una con un caso de farmacia hospitalaria, un prompt y cómo comprobar el resultado. Filtra por tipo o nivel, abre el ejercicio de la que te interese y pon a prueba lo aprendido con el quiz.</p>
+      <div class="mc-families">
+        <div><strong>Traer información</strong><span>Archivos y biblioteca</span></div>
+        <div><strong>Crear contenido</strong><span>Imágenes y presentaciones</span></div>
+        <div><strong>Organizar y consultar</strong><span>Proyectos y búsqueda web</span></div>
+        <div><strong>Conectar y automatizar</strong><span>GitHub, Supabase, skills y plantillas</span></div>
+      </div>
+      <p><strong>Función general o integración instalada.</strong> Las cuatro primeras familias incluyen funciones que tiene cualquier cuenta, con límites. GitHub, Supabase, skill-creator, Template Creator y Presentations son <strong>integraciones instaladas en la cuenta del docente</strong>: probablemente no las verás en tu menú y se muestran como demostración. Cada tarjeta lo indica.</p>
+      <p class="mc-notice" role="note">Las herramientas mostradas corresponden a una captura del menú del docente del 8 de octubre de 2026. Pueden variar según la cuenta, el plan, la organización, la región y los permisos. El mensaje «No se han podido cargar los modelos…» que aparecía en la captura es un aviso del selector de modelos, no una opción del menú.</p>
+      <div class="mc-rules">
+        <h4>Cinco reglas que valen para las diez opciones</h4>
+        <ol>
+          <li><strong>Nada identificable.</strong> Ni datos de pacientes, ni historias o informes reales, ni contraseñas, claves o información interna sin autorización. Seudonimizar no equivale automáticamente a anonimizar.</li>
+          <li><strong>Verifica la farmacoterapia en fuentes primarias actualizadas</strong> (ficha técnica de la AEMPS o la EMA, guías, artículos originales y protocolos locales), con fuente, fecha y versión. No aceptes bibliografía inventada ni enlaces sin abrir.</li>
+          <li><strong>Buscar en la web no es validar la evidencia.</strong> Un resumen no sustituye la lectura crítica: revisa sesgos, actualidad, población, desenlaces y calidad metodológica.</li>
+          <li><strong>GitHub y Supabase, solo con proyectos de demostración</strong> y datos sintéticos. Nunca producción, políticas de acceso (RLS) ni bases con pacientes.</li>
+          <li><strong>Una integración puede leer o también escribir</strong>, según sus permisos. Revísalos y pide ver los cambios antes de que se ejecuten.</li>
+        </ol>
+      </div>
+      <div id="menu-chatgpt-app" class="mc-app"><noscript><p>Este bloque interactivo necesita JavaScript. El contenido completo está en el archivo <a href="data/menu-chatgpt.js">data/menu-chatgpt.js</a>.</p></noscript></div>
+      <p class="source-note">¿Dudas con términos como prompt, API, repositorio o base de datos? Están explicados en el <a href="diccionario-ia.html">Diccionario IA</a>.</p>
     </article>
 
     <article class="lesson lesson-extended" id="notebook"><div class="lesson-heading"><span>03 · 30 min · centauro</span><h3>Gemini Notebook: responder solo con tus fuentes</h3></div>
@@ -788,6 +812,8 @@ No inventes datos sobre el servicio: donde falte uno, escribe [COMPLETAR].</pre>
 </main>
 
 <footer class="footer"><div class="wrap footer-grid"><div><strong>Taller de IA en farmacia hospitalaria · Sevilla, 14 de octubre de 2026</strong><p>Material formativo de Ramón Morillo Verdugo. Programa y horarios según la agenda del evento.</p><p><a href="index.html#inicio">Web de Ramón Morillo</a> · <a href="mailto:ramon.morillo.verdugo@gmail.com">Contacto</a></p></div><div class="footer-partner"><span>Con la colaboración de</span>BeOne</div></div></footer>
+<script src="data/menu-chatgpt.js"></script>
+<script src="js/menu-chatgpt.js"></script>
 <script>
   document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
     const status=button.nextElementSibling;
