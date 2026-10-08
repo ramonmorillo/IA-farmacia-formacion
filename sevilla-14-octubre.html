@@ -20,7 +20,7 @@
   <h1 id="titulo">Taller práctico de inteligencia artificial aplicada a la farmacia hospitalaria</h1>
   <p class="hero-lead">Herramientas esenciales de IA para el profesional sanitario: qué usar, para qué y cómo comprobar el resultado antes de llevarlo a tu trabajo.</p>
   <div class="hero-meta"><span>16:30 – 19:40</span><span>Trae tu portátil</span><span>Sin experiencia previa</span></div>
-  <div class="actions"><a class="button" href="encuesta-previa.html?formacion=sevilla-14-octubre">Cuestionario previo · 2 min</a><a class="button ghost" href="#preparacion">Cómo prepararte</a><a class="button ghost" href="#ruta">Ver la sesión</a><a class="button ghost" href="#materiales">Materiales</a><a class="button ghost" href="#atajos">Regalo: 12 atajos</a></div>
+  <div class="actions"><a class="button" href="encuesta-previa.html?formacion=sevilla-14-octubre">Cuestionario previo · 2 min</a><a class="button ghost" href="#preparacion">Cómo prepararte</a><a class="button ghost" href="#ruta">Ver la sesión</a><a class="button ghost" href="#materiales">Materiales</a><a class="button ghost" href="#atajos">Regalo: 12 atajos</a><a class="button ghost" href="#codigos">¿Códigos secretos?</a></div>
 </div><aside class="hero-side"><p>Sesión principal</p><strong>Herramientas esenciales de IA para el profesional sanitario</strong><small>Ramón Morillo · Farmacia Hospitalaria, Hospital Universitario de Valme</small><div class="time"><strong>16:40 – 19:30</strong><small>Parte centauro: usar las herramientas · Parte ciborg: crear la tuya</small></div></aside></div></section>
 
 <div class="partner-band" aria-label="Identidad y apoyo del evento"><div class="wrap partner-inner">
@@ -659,6 +659,100 @@ Tono cordial e institucional. No añadas compromisos ni datos que no te haya dad
           <p class="shortcut-warn"><strong>Cuidado:</strong> No incluyas datos de pacientes en el borrador. Revisa los compromisos antes de enviarlo: los firmas tú.</p></article>
     </div>
     <p class="gift-download"><a class="button" href="assets/sevilla-14-octubre/atajos-de-prompt.txt" download>Descargar los 12 atajos (TXT)</a> <span>Para guardarlos en tus notas y tenerlos siempre a mano.</span></p>
+  </section>
+
+  <section class="section myths" id="codigos" aria-labelledby="codigos-titulo">
+    <p class="section-label">Mitos y realidades</p><h2 id="codigos-titulo">¿Códigos secretos de Claude? Lo que funciona de verdad</h2>
+    <p class="section-intro">Por redes circulan listas de «códigos secretos» como <code>KILL</code>, <code>L99</code> u <code>/godmode</code> que, supuestamente, desbloquean funciones ocultas. <strong>Claude no tiene comandos secretos.</strong> Ninguna de estas palabras activa una función especial: el modelo las lee como una instrucción más y deduce lo que quieres, con mejor o peor resultado. Detrás de varias hay, eso sí, una buena idea. Aquí tienes once, con lo que pasa en realidad y el prompt que consigue lo que prometen.</p>
+    <div class="myth-legend"><span class="myth-util">Útil con instrucción explícita</span><span class="myth-funcion">Función real o parecida</span><span class="myth-cautela">Con cautela</span><span class="myth-mito">Mito sin efecto</span></div>
+    <div class="myth-grid">
+      <article class="myth-card myth-util"><div class="shortcut-top"><code class="shortcut-name">KILL</code><span class="myth-verdict">Útil con instrucción explícita</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>Escribe KILL delante de una idea y Claude la destroza sin piedad.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>Claude deduce que quieres una crítica dura, pero no sabe con qué criterios ni hasta dónde llegar. Una instrucción explícita da un resultado más fiable y más útil.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-kill">Actúa como el miembro más escéptico de la Comisión de Farmacia y Terapéutica.
+Te presento mi proyecto: [DESCRÍBELO; por ejemplo, un programa de telefarmacia con envío a domicilio para pacientes externos].
+Dame las 5 razones más sólidas por las que podría rechazarse o fracasar, ordenadas de más a menos grave.
+Para cada una: qué dato o argumento la desmontaría y quién en el hospital podría aportarlo.
+No suavices las críticas, pero no inventes datos sobre mi hospital.</pre><button type="button" data-copy="mito-kill">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-util"><div class="shortcut-top"><code class="shortcut-name">CRITIC</code><span class="myth-verdict">Útil con instrucción explícita</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>CRITIC activa un modo de revisor experto.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>No hay ningún modo revisor. Funciona igual que pedir una revisión, pero sin decir qué revisar. Cuanto más concretes los criterios, mejor revisión obtienes.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-critic">Revisa este texto como un evaluador exigente de una revista de farmacia hospitalaria: [PEGA EL RESUMEN O EL TEXTO].
+Señala, por este orden:
+1) errores o afirmaciones sin respaldo;
+2) supuestos no justificados;
+3) qué falta para que la conclusión se sostenga;
+4) frases ambiguas.
+Cita la frase exacta en cada observación. No reescribas el texto entero.</pre><button type="button" data-copy="mito-critic">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-util"><div class="shortcut-top"><code class="shortcut-name">ALLTHREE</code><span class="myth-verdict">Útil si defines qué significa</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>ALLTHREE te da todas las opciones a la vez.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>No tiene un significado estándar: circula con varios sentidos, como tres versiones o tres perspectivas. Si no lo defines, Claude elegirá un sentido por ti.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-allthree">Dame tres alternativas realmente distintas para [OBJETIVO; por ejemplo, reducir los retrasos en la recogida de medicación en pacientes externos].
+Para cada una: en qué consiste, qué recursos necesita, ventajas, inconvenientes y cómo mediríamos si funciona.
+Termina con una tabla comparativa. No elijas tú: la decisión es mía.</pre><button type="button" data-copy="mito-allthree">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-util"><div class="shortcut-top"><code class="shortcut-name">OODA</code><span class="myth-verdict">Marco real, no código</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>OODA es un comando oculto para tomar mejores decisiones.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>No es un comando: es un marco de decisión real, de origen militar (observar, orientar, decidir, actuar). Claude lo conoce, y por eso responde bien cuando lo nombras. Su valor está en el marco, no en la palabra.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-ooda">Analiza esta situación con el ciclo OODA (observar, orientar, decidir, actuar): [SITUACIÓN; por ejemplo, un desabastecimiento de un medicamento de uso hospitalario sin alternativa clara].
+Observar: qué datos tengo y cuáles me faltan.
+Orientar: qué factores condicionan la decisión.
+Decidir: dos o tres opciones con sus riesgos.
+Actuar: primeros pasos y qué vigilaría para revisar la decisión.
+Separa siempre los datos de tus suposiciones.</pre><button type="button" data-copy="mito-ooda">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-util"><div class="shortcut-top"><code class="shortcut-name">ELI10</code><span class="myth-verdict">Útil, adaptándolo</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>ELI10 (explain like I&#x27;m 10, explícamelo como si tuviera 10 años) da explicaciones que entiende cualquiera.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>Viene de ELI5 (explain like I&#x27;m five), una expresión popular en internet. No es un código: es una forma corta de pedir sencillez. Con pacientes adultos, «como a un niño de 10 años» puede resultar infantil. Es mejor pedir lenguaje claro para un adulto sin formación sanitaria.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-eli10">Explica [CONCEPTO; por ejemplo, por qué un medicamento biológico no se puede dejar fuera de la nevera] a un adulto sin formación sanitaria.
+Frases cortas, sin tecnicismos y con una comparación de la vida diaria.
+Tono respetuoso, nada infantil. Máximo 120 palabras.
+Al final, una pregunta para comprobar que lo ha entendido.</pre><button type="button" data-copy="mito-eli10">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-funcion"><div class="shortcut-top"><code class="shortcut-name">ARTIFACTS</code><span class="myth-verdict">Función real, no código</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>Escribir ARTIFACTS desbloquea las herramientas interactivas de Claude.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>Los artefactos existen y son una función real de Claude: herramientas, documentos o páginas que se crean y se usan en el propio chat. Pero no se activan con una palabra clave: basta con pedir lo que quieres construir. Es lo que hacemos en la parte ciborg.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-artifacts">Crea un artefacto interactivo: una calculadora de superficie corporal con la fórmula de Mosteller, √(talla en cm × peso en kg / 3.600).
+Entradas: talla y peso. Salida: superficie corporal en m² con dos decimales.
+Si falta un dato o es cero o negativo, muestra un error claro.
+Comprobación: con 170 cm y 70 kg debe dar 1,82 m².</pre><button type="button" data-copy="mito-artifacts">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-funcion"><div class="shortcut-top"><code class="shortcut-name">X10THINKS</code><span class="myth-verdict">Existe algo parecido, pero no así</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>X10THINKS hace que Claude piense diez veces más.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>Escribir la palabra no multiplica el razonamiento. Lo que sí existe es el razonamiento extendido, que se activa desde la interfaz, según el plan y el modelo. Sin él, pedir que analice paso a paso y revise su respuesta suele mejorar los problemas con varios pasos.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-x10thinks">Antes de responder, analiza el problema paso a paso. Después revisa tu propio cálculo y corrige lo que esté mal.
+Problema: [por ejemplo, con un consumo medio de 35 unidades al mes y un stock de 20 unidades, ¿cuántos días de cobertura quedan si el mes tiene 30 días y se redondea hacia abajo?].
+Muestra el razonamiento y el resultado final por separado.</pre><button type="button" data-copy="mito-x10thinks">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-cautela"><div class="shortcut-top"><code class="shortcut-name">L99</code><span class="myth-verdict">Con cautela</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>L99 pone a Claude en nivel 99 de experto.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>A veces da respuestas más técnicas, pero también puede hacer que suenen más seguras sin ser más exactas. Es el riesgo: más confianza aparente, no más evidencia. Es mejor definir para quién escribe y pedir que separe evidencia de opinión.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-l99">Responde para un farmacéutico de hospital con 10 años de experiencia en [ÁREA].
+Pregunta: [TU PREGUNTA].
+Separa claramente: lo que está respaldado por evidencia (indica de qué tipo), lo que es práctica habitual y lo que es tu opinión.
+Si no estás seguro de algo, dilo.</pre><button type="button" data-copy="mito-l99">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-cautela"><div class="shortcut-top"><code class="shortcut-name">/human</code><span class="myth-verdict">Con cautela ética</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>/human hace que el texto parezca escrito por una persona.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>No hay ningún modo humano. Suele usarse para que un texto no se detecte como hecho con IA. En trabajos de residencia, memorias o artículos, eso choca con las normas de declaración del uso de IA de revistas y universidades. Para dar un tono cercano a una carta a pacientes, en cambio, es legítimo.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-human">Reescribe esta carta para pacientes con un tono natural y cercano: [PEGA EL TEXTO].
+Frases de longitud variada, sin fórmulas hechas ni exceso de adjetivos, de tú.
+No cambies ningún dato, plazo ni instrucción.</pre><button type="button" data-copy="mito-human">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-cautela"><div class="shortcut-top"><code class="shortcut-name">/ghost</code><span class="myth-verdict">Con cautela ética</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>/ghost escribe por ti con tu propia voz, sin dejar rastro.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>No hay un modo fantasma. Lo que sí funciona es darle un ejemplo de tu estilo para que lo imite. Las mismas cautelas que con /human: si el texto se presenta como tuyo en un contexto académico o científico, declara el uso de IA según las normas que correspondan.</p>
+        <details><summary><h4>Lo que sí funciona: prompt con ejemplo de farmacia</h4></summary><div class="prompt"><pre id="mito-ghost">Este es un texto escrito por mí: [PEGA UN EJEMPLO TUYO].
+Analiza mi estilo: longitud de frases, vocabulario y estructura.
+Con ese estilo, redacta [QUÉ; por ejemplo, el correo de bienvenida para los nuevos residentes del servicio].
+No inventes datos sobre el servicio: donde falte uno, escribe [COMPLETAR].</pre><button type="button" data-copy="mito-ghost">Copiar prompt</button><span class="copy-status" role="status" aria-live="polite"></span></div></details></article>
+      <article class="myth-card myth-mito"><div class="shortcut-top"><code class="shortcut-name">/godmode</code><span class="myth-verdict">Mito sin efecto</span></div>
+        <p class="myth-claim"><small>Lo que dicen</small>/godmode desbloquea a Claude y elimina sus límites.</p>
+        <p class="myth-real"><small>Lo que pasa de verdad</small>No desbloquea nada. Circula como intento de saltarse los límites del modelo, y no cambia lo que Claude puede o no puede hacer. En un entorno profesional, además, esos límites protegen: datos, seguridad y responsabilidad.</p>
+        <p class="myth-none"><strong>Lo que sí funciona:</strong> nada que añadir. Si una respuesta no te sirve, reformula el encargo con más contexto, límites y un criterio de comprobación.</p></article>
+    </div>
+    <div class="lesson-action myth-experiment"><strong>Experimento de 3 minutos: compruébalo tú</strong>
+      <ol class="practice-list">
+        <li>En un chat nuevo escribe: «L99 ¿Qué ventajas tiene la telefarmacia para los pacientes externos?».</li>
+        <li>En otro chat nuevo, usa el prompt de la tarjeta L99 con la misma pregunta.</li>
+        <li>Compara: ¿cuál separa evidencia de opinión? ¿Cuál puedes comprobar? ¿Ha cambiado algo el «código»?</li>
+      </ol>
+      <p>Es la idea de todo el taller: <strong>comprobar en lugar de creer</strong>. Un atajo solo funciona de forma fiable si tú defines qué significa, como los <a href="#atajos">12 atajos de regalo</a> de esta página.</p>
+    </div>
+    <p class="source-note">Lo que se dice de cada «código» resume cómo circula en redes y puede variar según la fuente. Lo que sí existe en Claude se escribe con palabras normales: los artefactos, los proyectos, las skills y, según el plan, el razonamiento extendido. Las funciones y los planes de Claude cambian con frecuencia.</p>
   </section>
 
   <section class="section" id="materiales" aria-labelledby="materiales-titulo"><p class="section-label">Material del participante</p><h2 id="materiales-titulo">Descarga lo que usaremos</h2><p class="section-intro">Son datos y documentos ficticios creados para el taller. El hospital, los criterios y los plazos son inventados: no los uses como referencia clínica.</p>
