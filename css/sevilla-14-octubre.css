@@ -84,3 +84,7 @@ main{padding:4.5rem 0 5rem}.section{margin-bottom:4.7rem;scroll-margin-top:1rem}
 .gift-intro{margin:2.2rem 0 1rem;padding-top:1.6rem;border-top:2px dashed var(--line)}.gift-intro h4{font-size:clamp(1.4rem,2.6vw,1.9rem);letter-spacing:-.03em;margin:.3rem 0 .3rem}.gift-intro p:last-child{color:var(--muted);margin:0}
 .lesson .section.gift,.lesson .section.myths{margin:1.4rem 0 0}.gift-head .gift-title{color:#fff;font-size:clamp(1.6rem,3.2vw,2.5rem);letter-spacing:-.04em;line-height:1.12;margin:.35rem 0 1rem}.myths .myth-title{font-size:clamp(1.5rem,3vw,2.3rem);letter-spacing:-.04em;line-height:1.15;margin:.35rem 0 1rem}.lesson .myths{padding:1.4rem;border:1px solid var(--line);border-radius:1.1rem;background:var(--soft)}
 @media(max-width:780px){.takeaways{grid-template-columns:1fr}.lesson .myths{padding:1rem}}
+
+/* Galería con cuatro herramientas: cuadrícula 2 × 2 en escritorio */
+.showcase-card:nth-child(4){border-top-color:var(--blue)}
+@media(min-width:781px){.showcase:has(>.showcase-card:nth-child(4)){grid-template-columns:repeat(2,minmax(0,1fr))}}

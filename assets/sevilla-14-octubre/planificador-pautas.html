@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="Ramón Morillo Verdugo">
+<meta name="description" content="Ejemplo docente: planificador de calendario de tratamiento, hoja del paciente y dispensaciones para consultas externas de farmacia hospitalaria. Solo datos ficticios.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>Planificador de Pautas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;800&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: panel de configuración a la izquierda, resultados con pestañas a la derecha; una columna en móvil.
+   Tipografía hiperlegible pensada para la hoja del paciente (población mayor). */
+:root{
+  --bg:#F4F7F6; --surface:#FFFFFF; --sunk:#EAF0EE; --ink:#16201D; --muted:#56645F; --line:#D5DEDA;
+  --accent:#0E5D70; --accent-ink:#FFFFFF; --accent-soft:#DCEEF1;
+  --hosp:#B4531A; --hosp-soft:#FBE7DA; --disp:#4B3FA3; --disp-soft:#E7E4F8;
+  --warn:#B42318; --warn-soft:#FDE4E1; --ok:#1B7A4A; --ok-soft:#DDF3E6;
+  --off:#EEF1F0; --hol:#F6E9E8;
+  --d1:#0F7B8A; --d2:#7A4FB5; --d3:#6B7D1E; --d4:#B83C6B; --d5:#2F5FB3; --d6:#8A5A2B;
+  --f-body:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Atkinson Hyperlegible Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0F1614; --surface:#17211E; --sunk:#111A17; --ink:#E6EEEB; --muted:#9AABA5; --line:#2B3833;
+  --accent:#5CC0D3; --accent-ink:#06272F; --accent-soft:#163940;
+  --hosp:#F0935A; --hosp-soft:#3B2417; --disp:#A89CF2; --disp-soft:#28244A;
+  --warn:#FF8A7A; --warn-soft:#3D1D19; --ok:#6FD39C; --ok-soft:#17321F;
+  --off:#141D1A; --hol:#2A1C1B;
+  --d1:#4FC3D2; --d2:#B897EC; --d3:#B5C960; --d4:#F07FA8; --d5:#7FA6F2; --d6:#D6A574; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0F1614; --surface:#17211E; --sunk:#111A17; --ink:#E6EEEB; --muted:#9AABA5; --line:#2B3833;
+  --accent:#5CC0D3; --accent-ink:#06272F; --accent-soft:#163940;
+  --hosp:#F0935A; --hosp-soft:#3B2417; --disp:#A89CF2; --disp-soft:#28244A;
+  --warn:#FF8A7A; --warn-soft:#3D1D19; --ok:#6FD39C; --ok-soft:#17321F;
+  --off:#141D1A; --hol:#2A1C1B;
+  --d1:#4FC3D2; --d2:#B897EC; --d3:#B5C960; --d4:#F07FA8; --d5:#7FA6F2; --d6:#D6A574; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45}
+.wrap{max-width:1380px;margin:0 auto;padding-inline:20px;padding-block:20px 48px}
+header.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+h1{font-size:1.9rem;font-weight:800;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:2px 0 0;font-size:.95rem}
+.eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.note{display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);border-radius:var(--r);padding:10px 14px;margin:14px 0;font-size:.9rem}
+.note b{white-space:nowrap}
+.examples{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0 18px}
+.examples span{color:var(--muted);font-size:.85rem;margin-right:4px}
+button{font:inherit;cursor:pointer}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:.85rem}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.panel h2{font-size:1rem;margin:0;font-weight:800}
+.sec{display:flex;flex-direction:column;gap:8px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+label{display:flex;flex-direction:column;gap:3px;font-size:.78rem;color:var(--muted);font-weight:600}
+input,select,textarea{font:inherit;font-size:.92rem;color:var(--ink);background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:6px 8px;min-width:0;width:100%}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+textarea{font-family:var(--f-mono);font-size:.8rem;resize:vertical}
+.phase{border:1px solid var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px;background:var(--surface)}
+.phase-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.phase-h strong{font-size:.85rem}
+.item{display:grid;grid-template-columns:14px minmax(0,1.4fr) minmax(0,1fr);gap:6px;align-items:end;padding-top:8px;border-top:1px dashed var(--line)}
+.item .sw{width:14px;height:14px;border-radius:4px;margin-bottom:9px}
+.item .full{grid-column:2 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:6px;align-items:end}
+.ghost{background:none;border:1px dashed var(--line);color:var(--accent);border-radius:7px;padding:6px 10px;font-size:.85rem}
+.ghost:hover{border-color:var(--accent)}
+.x{background:none;border:none;color:var(--muted);font-size:1.1rem;padding:4px 8px;border-radius:6px}
+.x:hover{color:var(--warn);background:var(--warn-soft)}
+.hint{font-size:.78rem;color:var(--muted);margin:0}
+.main{display:flex;flex-direction:column;gap:14px;min-width:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px}
+.stat .k{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.stat .v{font-size:1.25rem;font-weight:800;font-variant-numeric:tabular-nums}
+.stat.alert{border-color:var(--warn);background:var(--warn-soft)}
+.stat.alert .v{color:var(--warn)}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tab{background:none;border:none;border-bottom:3px solid transparent;padding:8px 12px;color:var(--muted);font-weight:600}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent)}
+.tab .n{font-family:var(--f-mono);font-size:.75rem;background:var(--sunk);border-radius:999px;padding:1px 7px;margin-left:4px}
+.tab .n.w{background:var(--warn-soft);color:var(--warn)}
+.view{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.82rem;color:var(--muted);margin-bottom:12px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+.months{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.month h3{font-size:.95rem;margin:0 0 6px}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:2px}
+.cal .wd{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);text-align:center;padding-bottom:2px}
+.day{position:relative;min-height:46px;border-radius:5px;background:var(--sunk);padding:3px 4px;font-size:.72rem;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;gap:2px}
+.day.out{background:transparent}
+.day.idle{opacity:.45}
+.day.we{background:var(--off)}
+.day.hol{background:var(--hol)}
+.day.conf{outline:2px solid var(--warn);outline-offset:-2px}
+.day .num{font-weight:600;color:var(--muted)}
+.day .bars{display:flex;flex-direction:column;gap:2px}
+.day .bar{height:4px;border-radius:2px}
+.badges{position:absolute;top:3px;right:3px;display:flex;gap:2px}
+.bH,.bD{font-family:var(--f-mono);font-size:.6rem;font-weight:600;line-height:1;padding:2px 3px;border-radius:3px}
+.bH{background:var(--hosp);color:var(--surface)}
+.bD{background:var(--disp);color:var(--surface)}
+.cstart{box-shadow:inset 3px 0 0 var(--ink)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+td.num,td.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.tbl{overflow-x:auto}
+.pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:.78rem;font-weight:600}
+.pill.w{background:var(--warn-soft);color:var(--warn)}
+.pill.o{background:var(--ok-soft);color:var(--ok)}
+.pill.d{background:var(--disp-soft);color:var(--disp)}
+.pill.h{background:var(--hosp-soft);color:var(--hosp)}
+.warn-list{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.warn-list li{display:flex;gap:10px;align-items:baseline;padding:8px 10px;border-radius:8px;background:var(--sunk)}
+.warn-list li.err{background:var(--warn-soft)}
+.warn-list .date{font-family:var(--f-mono);font-size:.82rem;white-space:nowrap}
+.empty{color:var(--muted);font-style:italic}
+/* Hoja del paciente */
+.sheet-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:end;margin-bottom:14px}
+.sheet-tools label{min-width:180px}
+.btn{background:var(--accent);color:var(--accent-ink);border:none;border-radius:8px;padding:8px 14px;font-weight:600}
+.btn.sec2{background:var(--sunk);color:var(--ink);border:1px solid var(--line)}
+.sheet{border:2px solid var(--ink);border-radius:12px;padding:18px;background:var(--surface);font-size:17px}
+.sheet h3{font-size:1.4rem;margin:0}
+.sheet .meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin:6px 0 14px;font-size:1rem}
+.sheet .meta b{font-weight:800}
+.wk{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.wkwrap{overflow-x:auto}
+.wkwrap .wk{min-width:760px}
+.sd{min-width:0;overflow-wrap:anywhere;border:1px solid var(--line);border-radius:8px;padding:6px;min-height:92px;display:flex;flex-direction:column;gap:4px;background:var(--surface)}
+.sd.blank{border-style:dashed;opacity:.35}
+.sd.hosp{border:2px solid var(--hosp);background:var(--hosp-soft)}
+.sd .dt{font-weight:800;font-size:.95rem;text-transform:capitalize}
+.sd .it{display:flex;gap:6px;align-items:flex-start;font-size:.85rem;line-height:1.25}
+.sd .bx{flex:none;width:16px;height:16px;border:2px solid var(--ink);border-radius:3px;margin-top:1px}
+.sd .tag{font-size:.78rem;font-weight:800;color:var(--hosp)}
+.sd .tagd{font-size:.78rem;font-weight:800;color:var(--disp)}
+.sheet .foot{margin-top:14px;font-size:.95rem;color:var(--muted)}
+.copied{color:var(--ok);font-size:.85rem}
+footer{margin-top:28px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:12px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+@media print{.panel,.tabs,.stats,.examples,.note,header.top,footer,.sheet-tools,.view:not(#v-sheet){display:none!important} .grid{display:block} .view{border:none;padding:0}}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<div class="wrap">
+<header class="top">
+  <div>
+    <div class="eyebrow">Consultas externas · Farmacia hospitalaria</div>
+    <h1>Planificador de Pautas</h1>
+    <p class="sub">Calendario de tratamiento, visitas al hospital y dispensaciones a partir de la pauta que usted introduce.</p>
+  </div>
+  <div class="eyebrow" style="color:var(--muted)"><a href="../../sevilla-14-octubre.html#ciborg" style="color:inherit">← Volver al taller de Sevilla</a></div>
+</header>
+
+<div class="note"><b>Antes de usar:</b><span>La herramienta no propone pautas, dosis ni duraciones: calcula fechas a partir de lo que introduce el farmacéutico, que es quien valida. Use solo datos ficticios o seudonimizados, sin nombre, NHC ni fecha de nacimiento.</span></div>
+
+<div class="examples" id="examples"><span>Casos de ejemplo (ficticios):</span></div>
+
+<div class="grid">
+  <aside class="panel" aria-label="Configuración de la pauta">
+    <div class="sec">
+      <h2>Paciente y tratamiento</h2>
+      <div class="row">
+        <label>Identificador (alias)<input id="alias" placeholder="p. ej. PAC-07"></label>
+        <label>Fecha de inicio<input id="start" type="date"></label>
+        <label>Nº de ciclos<input id="cycles" type="number" min="1" max="60"></label>
+      </div>
+    </div>
+    <div class="sec">
+      <h2>Fases de la pauta</h2>
+      <p class="hint">Días del ciclo: rangos o listas, p. ej. <code>1-21</code> o <code>1,8,15,22</code>. Un tratamiento continuo es un ciclo de 28 días con días <code>1-28</code>. Deje “hasta” vacío para “en adelante”.</p>
+      <div id="phases" class="sec"></div>
+      <button class="ghost" id="addPhase" type="button">+ Añadir fase</button>
+    </div>
+    <div class="sec">
+      <h2>Dispensación en farmacia</h2>
+      <div class="row">
+        <label>Modo<select id="dmode">
+          <option value="ciclo">Al inicio de cada ciclo</option>
+          <option value="intervalo">Cada N días</option>
+          <option value="ninguna">Sin dispensaciones</option>
+        </select></label>
+        <label>Cada (días)<input id="devery" type="number" min="1" max="365"></label>
+      </div>
+      <p class="hint">Si una dispensación cae en fin de semana o festivo, se adelanta al día laborable anterior para que el paciente no se quede sin medicación. Las siguientes mantienen el ritmo original.</p>
+    </div>
+    <div class="sec">
+      <h2>Festivos</h2>
+      <label>Una fecha por línea (AAAA-MM-DD)<textarea id="hol" rows="6"></textarea></label>
+      <p class="hint">Precargados: festivos nacionales 2026–2027. Añada los de su comunidad y su localidad y compruébelos con el calendario oficial.</p>
+    </div>
+  </aside>
+
+  <section class="main">
+    <div class="stats" id="stats"></div>
+    <nav class="tabs" role="tablist">
+      <button class="tab on" data-v="cal" role="tab">Calendario</button>
+      <button class="tab" data-v="sheet" role="tab">Hoja del paciente</button>
+      <button class="tab" data-v="disp" role="tab">Dispensaciones</button>
+      <button class="tab" data-v="warn" role="tab">Avisos <span class="n" id="nWarn">0</span></button>
+      <button class="tab" data-v="test" role="tab">Verificación</button>
+    </nav>
+    <div class="view" id="v-cal"></div>
+    <div class="view" id="v-sheet" hidden></div>
+    <div class="view" id="v-disp" hidden></div>
+    <div class="view" id="v-warn" hidden></div>
+    <div class="view" id="v-test" hidden></div>
+  </section>
+</div>
+<footer>Apoyo a la organización de la consulta. No sustituye la prescripción, el protocolo del centro ni la ficha técnica. Los cálculos de los casos de ejemplo están comprobados en la pestaña Verificación. Licencia CC BY 4.0 · v1.0</footer>
+</div>
+<script>
+// Motor del planificador. Fechas en UTC para evitar saltos por horario de verano.
+const DAY = 86400000;
+function toDate(iso){ const [y,m,d]=iso.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)); }
+function iso(dt){ return dt.toISOString().slice(0,10); }
+function addDays(dt,n){ return new Date(dt.getTime()+n*DAY); }
+
+// "1-21" · "1,8,15,22" · "1-3,8" -> [1..] dentro de 1..len
+function parseDays(str,len){
+  const out=new Set(), errs=[];
+  String(str||'').split(/[,;\s]+/).filter(Boolean).forEach(tok=>{
+    const m=tok.match(/^(\d+)(?:[-–](\d+))?$/);
+    if(!m){ errs.push(`"${tok}" no es un día ni un rango`); return; }
+    const a=+m[1], b=m[2]?+m[2]:a;
+    if(b<a){ errs.push(`rango invertido "${tok}"`); return; }
+    for(let d=a; d<=b; d++){ if(d>=1 && d<=len) out.add(d); else errs.push(`día ${d} fuera del ciclo (1–${len})`); }
+  });
+  return {days:[...out].sort((x,y)=>x-y), errs:[...new Set(errs)]};
+}
+
+function phaseFor(reg,c){ return reg.phases.find(p=>c>=p.from && (p.to==null || p.to==='' || c<=+p.to)); }
+
+function isWorking(dt,hol){ const w=dt.getUTCDay(); return w!==0 && w!==6 && !hol.has(iso(dt)); }
+function why(dt,hol){ if(hol.has(iso(dt))) return 'festivo'; const w=dt.getUTCDay(); return w===0?'domingo':w===6?'sábado':null; }
+function prevWorking(dt,hol){ let d=dt; let guard=0; while(!isWorking(d,hol) && guard++<15) d=addDays(d,-1); return d; }
+
+function plan(reg,startISO,holidays){
+  const hol=new Set(holidays||[]);
+  const errors=[], events=[], cycles=[];
+  let cur=toDate(startISO);
+  for(let c=1; c<=reg.cycles; c++){
+    const ph=phaseFor(reg,c);
+    if(!ph){ errors.push(`El ciclo ${c} no pertenece a ninguna fase.`); break; }
+    const len=+ph.len;
+    cycles.push({cycle:c, start:iso(cur), end:iso(addDays(cur,len-1)), len, label:ph.label||''});
+    ph.items.forEach(it=>{
+      const {days,errs}=parseDays(it.days,len);
+      errs.forEach(e=>errors.push(`${it.drug} (ciclo ${c}): ${e}`));
+      days.forEach(d=>events.push({date:iso(addDays(cur,d-1)), cycle:c, day:d, drug:it.drug, dose:it.dose||'', where:it.where}));
+    });
+    cur=addDays(cur,len);
+  }
+  events.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:0);
+  const endDate=cycles.length?cycles[cycles.length-1].end:startISO;
+  const hospitalDays=[...new Set(events.filter(e=>e.where==='hospital').map(e=>e.date))].sort();
+  const warnings=[];
+  hospitalDays.forEach(d=>{ const r=why(toDate(d),hol); if(r) warnings.push({type:'visita', date:d, reason:r, text:`Visita al hospital en ${r}`}); });
+
+  const disp=[]; const dm=reg.dispensing||{mode:'ninguna'};
+  let sched=[];
+  if(dm.mode==='ciclo') sched=cycles.map(c=>({date:c.start, cycle:c.cycle}));
+  else if(dm.mode==='intervalo' && +dm.every>0){ for(let d=toDate(startISO), k=0; iso(d)<=endDate; d=addDays(d,+dm.every), k++) sched.push({date:iso(d)}); }
+  sched.forEach(s=>{
+    const r=why(toDate(s.date),hol);
+    const real=r?iso(prevWorking(toDate(s.date),hol)):s.date;
+    disp.push({scheduled:s.date, date:real, moved:!!r, reason:r, cycle:s.cycle});
+    if(r) warnings.push({type:'dispensacion', date:s.date, real, reason:r, text:`Dispensación prevista en ${r}: se adelanta al día laborable anterior`});
+  });
+  warnings.sort((a,b)=>a.date<b.date?-1:1);
+  const lastDose=events.length?events[events.length-1].date:null;
+  return {cycles, events, endDate, lastDose, hospitalDays, dispensations:disp, warnings, errors};
+}
+
+const HOLIDAYS_ES=['2026-01-01','2026-01-06','2026-04-03','2026-05-01','2026-08-15','2026-10-12','2026-11-01','2026-12-06','2026-12-08','2026-12-25',
+ '2027-01-01','2027-01-06','2027-03-26','2027-05-01','2027-08-15','2027-10-12','2027-11-01','2027-12-06','2027-12-08','2027-12-25'];
+
+const CASES=[
+ {id:'bio', area:'Inmunomediadas / reumatología', name:'Biológico SC cada 14 días', start:'2026-10-13',
+  reg:{cycles:13, phases:[{from:1,to:null,len:14,label:'Mantenimiento',items:[{drug:'Biológico SC',dose:'1 jeringa',where:'casa',days:'1'}]}], dispensing:{mode:'intervalo',every:56}}},
+ {id:'oral', area:'Hematología / oncología oral', name:'Oral 21/7 + corticoide semanal', start:'2026-11-02',
+  reg:{cycles:4, phases:[{from:1,to:null,len:28,label:'Ciclos 1–4',items:[{drug:'Fármaco oral A',dose:'1 cápsula',where:'casa',days:'1-21'},{drug:'Corticoide',dose:'según pauta',where:'casa',days:'1,8,15,22'}]}], dispensing:{mode:'ciclo'}}},
+ {id:'vih', area:'VIH / patologías víricas', name:'TAR oral diario, recogida trimestral', start:'2026-10-14',
+  reg:{cycles:13, phases:[{from:1,to:null,len:28,label:'Continuo',items:[{drug:'TAR oral',dose:'1 comprimido',where:'casa',days:'1-28'}]}], dispensing:{mode:'intervalo',every:84}}},
+ {id:'mix', area:'Hematología (pauta por fases)', name:'Anticuerpo SC en hospital + oral en casa', start:'2026-11-10',
+  reg:{cycles:8, phases:[
+   {from:1,to:2,len:28,label:'C1–2 semanal',items:[{drug:'Anticuerpo SC',dose:'en hospital de día',where:'hospital',days:'1,8,15,22'},{drug:'Fármaco oral B',dose:'1 cápsula',where:'casa',days:'1-21'}]},
+   {from:3,to:6,len:28,label:'C3–6 quincenal',items:[{drug:'Anticuerpo SC',dose:'en hospital de día',where:'hospital',days:'1,15'},{drug:'Fármaco oral B',dose:'1 cápsula',where:'casa',days:'1-21'}]},
+   {from:7,to:null,len:28,label:'C7 en adelante',items:[{drug:'Anticuerpo SC',dose:'en hospital de día',where:'hospital',days:'1'},{drug:'Fármaco oral B',dose:'1 cápsula',where:'casa',days:'1-21'}]}],
+   dispensing:{mode:'ciclo'}}}
+];
+
+// ---------- Interfaz ----------
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt=(isoS,opt)=>toDate(isoS).toLocaleDateString('es-ES',Object.assign({timeZone:'UTC'},opt||{day:'2-digit',month:'2-digit',year:'numeric'}));
+const fmtL=isoS=>fmt(isoS,{weekday:'short',day:'numeric',month:'short'});
+const COLORS=['--d1','--d2','--d3','--d4','--d5','--d6'];
+
+// Resultados esperados calculados de forma independiente (Python) para los casos de ejemplo
+const EXPECTED={
+ bio:{end:'2027-04-12',hosp:0,home:13,disp:['2026-10-13','2026-12-07','2027-02-02','2027-03-30'],moved:1,hospConf:0},
+ oral:{end:'2027-02-21',hosp:0,home:100,disp:['2026-11-02','2026-11-30','2026-12-28','2027-01-25'],moved:0,hospConf:0},
+ vih:{end:'2027-10-12',hosp:0,home:364,disp:['2026-10-14','2027-01-05','2027-03-31','2027-06-23','2027-09-15'],moved:1,hospConf:0},
+ mix:{end:'2027-06-21',hosp:18,home:168,disp:['2026-11-10','2026-12-07','2027-01-05','2027-02-02','2027-03-02','2027-03-30','2027-04-27','2027-05-25'],moved:1,hospConf:1}
+};
+
+let state, activeCase=null, view='cal', sheetCycle=1;
+const clone=o=>JSON.parse(JSON.stringify(o));
+function fromCase(c){ return {alias:'PAC-'+c.id.toUpperCase(), start:c.start, reg:clone(c.reg), holidays:HOLIDAYS_ES.join('\n')}; }
+function save(){ try{ localStorage.setItem('planificador-pautas-v1',JSON.stringify({state,activeCase})); }catch(e){} }
+function load(){ try{ const s=JSON.parse(localStorage.getItem('planificador-pautas-v1')); if(s&&s.state&&s.state.reg) return s; }catch(e){} return null; }
+
+function drugList(){ const names=[]; state.reg.phases.forEach(p=>p.items.forEach(i=>{ const n=(i.drug||'').trim(); if(n && !names.includes(n)) names.push(n); })); return names; }
+function colorOf(name){ const i=drugList().indexOf(name); return `var(${COLORS[(i<0?0:i)%COLORS.length]})`; }
+
+// ----- Editor -----
+function renderEditor(){
+  $('#alias').value=state.alias; $('#start').value=state.start; $('#cycles').value=state.reg.cycles;
+  $('#dmode').value=state.reg.dispensing.mode; $('#devery').value=state.reg.dispensing.every||'';
+  $('#devery').disabled=state.reg.dispensing.mode!=='intervalo';
+  $('#hol').value=state.holidays;
+  const box=$('#phases'); box.innerHTML='';
+  state.reg.phases.forEach((p,pi)=>{
+    const el=document.createElement('div'); el.className='phase';
+    el.innerHTML=`<div class="phase-h"><strong>Fase ${pi+1}</strong>${state.reg.phases.length>1?`<button class="x" type="button" data-delphase="${pi}" aria-label="Eliminar fase ${pi+1}">×</button>`:''}</div>
+      <div class="row">
+        <label>Ciclo desde<input id="p${pi}-from" type="number" min="1" data-p="${pi}" data-k="from" value="${esc(p.from)}"></label>
+        <label>hasta<input id="p${pi}-to" type="number" min="1" data-p="${pi}" data-k="to" value="${p.to==null?'':esc(p.to)}" placeholder="en adelante"></label>
+        <label>Días/ciclo<input id="p${pi}-len" type="number" min="1" max="120" data-p="${pi}" data-k="len" value="${esc(p.len)}"></label>
+      </div>
+      <label>Etiqueta<input id="p${pi}-label" data-p="${pi}" data-k="label" value="${esc(p.label)}"></label>
+      ${p.items.map((it,ii)=>`<div class="item">
+        <span class="sw" style="background:${colorOf(it.drug)}"></span>
+        <label>Fármaco<input id="p${pi}i${ii}-drug" data-p="${pi}" data-i="${ii}" data-k="drug" value="${esc(it.drug)}"></label>
+        <label>Dosis / indicación<input id="p${pi}i${ii}-dose" data-p="${pi}" data-i="${ii}" data-k="dose" value="${esc(it.dose)}"></label>
+        <div class="full">
+          <label>Días del ciclo<input id="p${pi}i${ii}-days" data-p="${pi}" data-i="${ii}" data-k="days" value="${esc(it.days)}"></label>
+          <label>Dónde<select id="p${pi}i${ii}-where" data-p="${pi}" data-i="${ii}" data-k="where"><option value="casa"${it.where==='casa'?' selected':''}>En casa</option><option value="hospital"${it.where==='hospital'?' selected':''}>En el hospital</option></select></label>
+          <button class="x" type="button" data-delitem="${pi}:${ii}" aria-label="Eliminar fármaco">×</button>
+        </div></div>`).join('')}
+      <button class="ghost" type="button" data-additem="${pi}">+ Añadir fármaco</button>`;
+    box.appendChild(el);
+  });
+}
+$('#phases').addEventListener('input',e=>{
+  const t=e.target, pi=t.dataset.p; if(pi==null) return;
+  const p=state.reg.phases[pi]; const k=t.dataset.k;
+  if(t.dataset.i!=null){ p.items[t.dataset.i][k]=t.value; }
+  else if(k==='to'){ p.to=t.value===''?null:+t.value; }
+  else if(k==='label'){ p.label=t.value; }
+  else { p[k]=+t.value; }
+  activeCase=null; update(false);
+});
+$('#phases').addEventListener('click',e=>{
+  const t=e.target.closest('button'); if(!t) return;
+  if(t.dataset.additem!=null){ state.reg.phases[t.dataset.additem].items.push({drug:'Nuevo fármaco',dose:'',where:'casa',days:'1'}); }
+  else if(t.dataset.delitem){ const [a,b]=t.dataset.delitem.split(':'); state.reg.phases[a].items.splice(b,1); }
+  else if(t.dataset.delphase!=null){ state.reg.phases.splice(t.dataset.delphase,1); }
+  else return;
+  activeCase=null; renderEditor(); update(false);
+});
+$('#addPhase').addEventListener('click',()=>{
+  const last=state.reg.phases[state.reg.phases.length-1];
+  const from=(last.to!=null?+last.to:+last.from)+1;
+  if(last.to==null) last.to=from-1;
+  state.reg.phases.push({from,to:null,len:last.len,label:'',items:clone(last.items)});
+  activeCase=null; renderEditor(); update(false);
+});
+['alias','start','cycles','dmode','devery','hol'].forEach(id=>$('#'+id).addEventListener('input',e=>{
+  const v=e.target.value;
+  if(id==='alias') state.alias=v; if(id==='start'&&v) state.start=v; if(id==='cycles') state.reg.cycles=Math.max(1,Math.min(60,+v||1));
+  if(id==='dmode'){ state.reg.dispensing.mode=v; $('#devery').disabled=v!=='intervalo'; if(v==='intervalo'&&!state.reg.dispensing.every){ state.reg.dispensing.every=28; $('#devery').value=28; } }
+  if(id==='devery') state.reg.dispensing.every=+v; if(id==='hol') state.holidays=v;
+  activeCase=null; update(false);
+}));
+
+// ----- Ejemplos -----
+const exBox=$('#examples');
+CASES.forEach(c=>{ const b=document.createElement('button'); b.className='chip'; b.type='button'; b.dataset.case=c.id; b.textContent=c.name; b.title=c.area; exBox.appendChild(b); });
+exBox.addEventListener('click',e=>{ const b=e.target.closest('[data-case]'); if(!b) return; const c=CASES.find(x=>x.id===b.dataset.case); state=fromCase(c); activeCase=c.id; sheetCycle=1; renderEditor(); update(true); });
+
+// ----- Tabs -----
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{ view=t.dataset.v; document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t)); document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!=='v-'+view); try{localStorage.setItem('planificador-pautas-tab',view);}catch(e){} }));
+
+// ----- Cálculo y vistas -----
+let R;
+function holidays(){ return state.holidays.split(/\s+/).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x)); }
+function update(){
+  exBox.querySelectorAll('.chip').forEach(b=>b.classList.toggle('on',b.dataset.case===activeCase));
+  R=plan(state.reg,state.start,holidays());
+  renderStats(); renderCal(); renderSheet(); renderDisp(); renderWarn(); renderTest(); save();
+}
+function renderStats(){
+  const nW=R.warnings.length+R.errors.length;
+  $('#stats').innerHTML=[
+    ['Inicio',fmt(state.start)],['Fin del último ciclo',fmt(R.endDate)],['Visitas al hospital',R.hospitalDays.length],
+    ['Dispensaciones',R.dispensations.length],['Avisos',nW,nW>0]
+  ].map(([k,v,a])=>`<div class="stat${a?' alert':''}"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+  $('#nWarn').textContent=nW; $('#nWarn').classList.toggle('w',nW>0);
+}
+function byDate(){ const m={}; R.events.forEach(e=>(m[e.date]=m[e.date]||[]).push(e)); return m; }
+function renderCal(){
+  const ev=byDate(), hol=new Set(holidays()), dispD=new Set(R.dispensations.map(d=>d.date)),
+        conf=new Set(R.warnings.filter(w=>w.type==='visita').map(w=>w.date)), starts=new Set(R.cycles.map(c=>c.start));
+  const s=toDate(state.start), e=toDate(R.endDate);
+  let html=`<div class="legend">${drugList().map(n=>`<span><i style="background:${colorOf(n)}"></i>${esc(n)}</span>`).join('')}
+    <span><span class="bH">H</span> visita al hospital</span><span><span class="bD">D</span> dispensación</span>
+    <span><i style="background:var(--hol)"></i>festivo</span><span><i style="background:var(--off);border:1px solid var(--line)"></i>fin de semana</span>
+    <span><i style="background:var(--ink);width:3px"></i>inicio de ciclo</span></div><div class="months">`;
+  for(let m=new Date(Date.UTC(s.getUTCFullYear(),s.getUTCMonth(),1)); m<=e; m=new Date(Date.UTC(m.getUTCFullYear(),m.getUTCMonth()+1,1))){
+    let title=m.toLocaleDateString('es-ES',{month:'long',year:'numeric',timeZone:'UTC'}); title=title.charAt(0).toUpperCase()+title.slice(1);
+    html+=`<div class="month"><h3>${title}</h3><div class="cal">${['L','M','X','J','V','S','D'].map(d=>`<div class="wd">${d}</div>`).join('')}`;
+    const lead=(m.getUTCDay()+6)%7; for(let i=0;i<lead;i++) html+='<div class="day out"></div>';
+    const dim=new Date(Date.UTC(m.getUTCFullYear(),m.getUTCMonth()+1,0)).getUTCDate();
+    for(let d=1; d<=dim; d++){
+      const dt=new Date(Date.UTC(m.getUTCFullYear(),m.getUTCMonth(),d)), k=iso(dt), w=dt.getUTCDay();
+      const inRange=dt>=s && dt<=e, items=ev[k]||[];
+      const cls=['day']; if(!inRange) cls.push('idle'); if(hol.has(k)) cls.push('hol'); else if(w===0||w===6) cls.push('we');
+      if(conf.has(k)) cls.push('conf'); if(starts.has(k)) cls.push('cstart');
+      const H=items.some(i=>i.where==='hospital'), D=dispD.has(k);
+      const tip=items.map(i=>`${i.drug} ${i.dose} (${i.where==='hospital'?'hospital':'casa'})`).concat(D?['Dispensación en farmacia']:[]).join(' · ');
+      html+=`<div class="${cls.join(' ')}" title="${esc(tip)}"><span class="num">${d}</span>${(H||D)?`<span class="badges">${H?'<span class="bH">H</span>':''}${D?'<span class="bD">D</span>':''}</span>`:''}<div class="bars">${[...new Set(items.map(i=>i.drug))].map(n=>`<div class="bar" style="background:${colorOf(n)}"></div>`).join('')}</div></div>`;
+    }
+    html+='</div></div>';
+  }
+  $('#v-cal').innerHTML=html+'</div>';
+}
+function sheetText(c){
+  const ev=byDate(), dispD=new Set(R.dispensations.map(d=>d.date)); let t=`Calendario de tratamiento · ${state.alias||'Paciente'} · Ciclo ${c.cycle} (${fmt(c.start)} – ${fmt(c.end)})\n`;
+  for(let d=toDate(c.start); d<=toDate(c.end); d=addDays(d,1)){ const k=iso(d), its=ev[k]||[]; if(!its.length && !dispD.has(k)) continue;
+    t+=`\n${fmtL(k)}${its.some(i=>i.where==='hospital')?' — IR AL HOSPITAL':''}\n`; its.forEach(i=>t+=`  [ ] ${i.drug}${i.dose?' · '+i.dose:''}${i.where==='hospital'?' (en el hospital)':''}\n`); if(dispD.has(k)) t+='  Recoger medicación en la farmacia del hospital\n'; }
+  return t;
+}
+function renderSheet(){
+  if(!R.cycles.length){ $('#v-sheet').innerHTML='<p class="empty">Revise la pauta: no se ha generado ningún ciclo.</p>'; return; }
+  sheetCycle=Math.min(sheetCycle,R.cycles.length);
+  const c=R.cycles[sheetCycle-1], ev=byDate(), dispD=new Set(R.dispensations.map(d=>d.date));
+  const hospDays=R.hospitalDays.filter(d=>d>=c.start&&d<=c.end);
+  const nextDisp=R.dispensations.find(d=>d.date>c.start) ;
+  let cells='', s=toDate(c.start), e=toDate(c.end);
+  const lead=(s.getUTCDay()+6)%7; for(let i=0;i<lead;i++) cells+='<div class="sd blank"></div>';
+  for(let d=s; d<=e; d=addDays(d,1)){ const k=iso(d), its=ev[k]||[], H=its.some(i=>i.where==='hospital');
+    cells+=`<div class="sd${H?' hosp':''}"><div class="dt">${fmtL(k)}</div>${H?'<div class="tag">Ir al hospital</div>':''}${its.map(i=>`<div class="it"><span class="bx"></span><span><b style="color:${colorOf(i.drug)}">${esc(i.drug)}</b>${i.dose?'<br>'+esc(i.dose):''}</span></div>`).join('')}${dispD.has(k)?'<div class="tagd">Recoger medicación en farmacia</div>':''}</div>`; }
+  const trail=(7-((lead+c.len)%7))%7; for(let i=0;i<trail;i++) cells+='<div class="sd blank"></div>';
+  $('#v-sheet').innerHTML=`<div class="sheet-tools">
+     <label>Ciclo<select id="sheetSel">${R.cycles.map(x=>`<option value="${x.cycle}"${x.cycle===sheetCycle?' selected':''}>Ciclo ${x.cycle} · ${fmt(x.start)}${x.label?' · '+esc(x.label):''}</option>`).join('')}</select></label>
+     <button class="btn" id="copySheet" type="button">Copiar como texto</button>${window.self===window.top?'<button class="btn sec2" id="printSheet" type="button">Imprimir hoja</button>':''}<span class="copied" id="copied" role="status"></span></div>
+   <div class="sheet"><h3>Mi calendario de tratamiento</h3>
+     <div class="meta"><span>Paciente: <b>${esc(state.alias||'—')}</b></span><span>Ciclo <b>${c.cycle}</b> de ${R.cycles.length}</span><span>Del <b>${fmt(c.start)}</b> al <b>${fmt(c.end)}</b></span>
+     <span>Días de hospital: <b>${hospDays.length?hospDays.map(d=>fmt(d,{day:'numeric',month:'short',timeZone:'UTC'})).join(', '):'ninguno'}</b></span></div>
+     <div class="wkwrap"><div class="wk">${['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'].map(d=>`<div class="wd" style="font-weight:800;font-size:.85rem;text-align:center">${d}</div>`).join('')}${cells}</div></div>
+     <p class="foot">Marque cada casilla al tomar la medicación. ${nextDisp?`Próxima recogida en farmacia: <b>${fmtL(nextDisp.date)}</b>. `:''}Ante cualquier duda, consulte con su farmacéutico.</p></div>`;
+  const pb=$('#printSheet'); if(pb) pb.addEventListener('click',()=>window.print());
+  $('#sheetSel').addEventListener('change',e=>{ sheetCycle=+e.target.value; renderSheet(); });
+  $('#copySheet').addEventListener('click',()=>{ const txt=sheetText(c), out=$('#copied');
+    const fallback=()=>{ const ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy'); out.textContent='Copiado';}catch(e){out.textContent='Seleccione y copie manualmente';} ta.remove(); };
+    try{ navigator.clipboard.writeText(txt).then(()=>out.textContent='Copiado',fallback); }catch(e){ fallback(); } });
+}
+function renderDisp(){
+  if(!R.dispensations.length){ $('#v-disp').innerHTML='<p class="empty">Sin dispensaciones programadas.</p>'; return; }
+  const rows=R.dispensations.map((d,i)=>{ const next=R.dispensations[i+1]; const until=next?iso(addDays(toDate(next.date),-1)):R.endDate;
+    return `<tr><td class="num">${i+1}</td><td class="mono">${fmtL(d.scheduled)}</td><td class="mono"><b>${fmtL(d.date)}</b></td><td>${d.moved?`<span class="pill w">Adelantada · ${d.reason}</span>`:'<span class="pill o">Sin cambios</span>'}</td><td class="mono">${fmtL(until)}</td></tr>`; }).join('');
+  $('#v-disp').innerHTML=`<div class="tbl"><table><thead><tr><th>#</th><th>Prevista</th><th>Real</th><th>Estado</th><th>Cubre hasta</th></tr></thead><tbody>${rows}</tbody></table></div>
+   <p class="hint" style="margin-top:10px">“Cubre hasta” es el día anterior a la siguiente recogida. Compruebe que la cantidad dispensada cubre ese periodo según la presentación del medicamento.</p>`;
+}
+function renderWarn(){
+  const items=R.errors.map(e=>`<li class="err"><span class="pill w">Error</span><span>${esc(e)}</span></li>`)
+   .concat(R.warnings.map(w=>`<li><span class="date">${fmtL(w.date)}</span><span class="pill ${w.type==='visita'?'h':'d'}">${w.type==='visita'?'Visita':'Dispensación'}</span><span>${esc(w.text)}${w.real?' ('+fmtL(w.real)+')':''}${w.type==='visita'?'. Reprograme según el protocolo del centro; la herramienta no la mueve.':''}</span></li>`));
+  $('#v-warn').innerHTML=items.length?`<ul class="warn-list">${items.join('')}</ul>`:'<p class="empty">Sin avisos: ninguna visita ni dispensación cae en fin de semana o festivo.</p>';
+}
+function renderTest(){
+  const rows=CASES.map(c=>{ const r=plan(c.reg,c.start,HOLIDAYS_ES), x=EXPECTED[c.id];
+    const got={end:r.endDate,hosp:r.hospitalDays.length,home:r.events.filter(e=>e.where==='casa').length,disp:r.dispensations.map(d=>d.date),moved:r.dispensations.filter(d=>d.moved).length,hospConf:r.warnings.filter(w=>w.type==='visita').length};
+    const checks=[['Fin',got.end===x.end],['Visitas',got.hosp===x.hosp],['Tomas en casa',got.home===x.home],['Fechas de dispensación',JSON.stringify(got.disp)===JSON.stringify(x.disp)],['Adelantos',got.moved===x.moved],['Visitas en festivo',got.hospConf===x.hospConf]];
+    const ok=checks.every(k=>k[1]);
+    return `<tr><td><b>${esc(c.name)}</b><br><span class="hint">${esc(c.area)} · inicio ${fmt(c.start)}</span></td><td class="mono">${fmt(x.end)}</td><td class="num">${x.hosp}</td><td class="num">${x.home}</td><td class="num">${x.disp.length} (${x.moved} adel.)</td><td>${ok?'<span class="pill o">Coincide</span>':`<span class="pill w">Falla: ${checks.filter(k=>!k[1]).map(k=>k[0]).join(', ')}</span>`}</td></tr>`; }).join('');
+  $('#v-test').innerHTML=`<p style="margin-top:0">Cada caso de ejemplo se recalcula aquí y se compara con un resultado esperado obtenido de forma independiente. Es el paso 4 del método: no se confía en una herramienta hasta comprobarla con casos de solución conocida.</p>
+   <div class="tbl"><table><thead><tr><th>Caso</th><th>Fin esperado</th><th>Visitas</th><th>Tomas en casa</th><th>Dispensaciones</th><th>Resultado</th></tr></thead><tbody>${rows}</tbody></table></div>
+   <p class="hint" style="margin-top:10px">Usa siempre los festivos nacionales precargados, aunque haya editado la lista.</p>`;
+}
+
+// ----- Arranque -----
+const saved=load();
+if(saved){ state=saved.state; activeCase=saved.activeCase; } else { state=fromCase(CASES[3]); activeCase='mix'; }
+try{ const t=localStorage.getItem('planificador-pautas-tab'); if(t){ const b=document.querySelector(`.tab[data-v="${t}"]`); if(b) b.click(); } }catch(e){}
+renderEditor(); update();
+</script>
+
+</body>
+</html>

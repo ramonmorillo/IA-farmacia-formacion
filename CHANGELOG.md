@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-09 · Sevilla 14-oct: plugins, tareas programadas, diseño y artefactos
+
+- Bloque 01: la tabla de piezas de Claude pasa de cinco a siete (añade plugin y tarea programada) con la disponibilidad por plan verificada en la ayuda oficial.
+- Nuevo apartado 1.6: diferencias entre conectores, skills y plugins, con analogías y ejemplos de farmacia hospitalaria.
+- Nuevo apartado 1.7: tareas programadas, con cuatro ideas por área y dos encargos copiables (PubMed semanal y notas de seguridad de la AEMPS).
+- Nuevo apartado 1.8: plantilla Design, Claude Design (de pago) y conectores de diseño, con un prompt de prototipo.
+- Bloque 05: opción C con el Planificador de Pautas (cuatro prompts del método y cuatro casos con resultado esperado) y tres ejemplos de artefacto (documento, presentación y diseño) a partir del PNT ficticio de telefarmacia.
+- Nueva herramienta de ejemplo `assets/sevilla-14-octubre/planificador-pautas.html`, añadida también a la galería de herramientas.
+
 ## 2026-10-03 · FOCO VIH
 
 - Foto de recuerdo de la sesión del 3 de octubre en la página del taller (`foco-3-octubre.html#recuerdo`), en WebP y sin metadatos.
