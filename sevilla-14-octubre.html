@@ -8,7 +8,7 @@
   <meta name="description" content="Material del taller práctico de inteligencia artificial aplicada a la farmacia hospitalaria: Claude, ChatGPT, Gemini Notebook (antes NotebookLM) y SciSpace. Sevilla, 14 de octubre de 2026.">
   <title>Taller práctico de IA aplicada a la farmacia hospitalaria · Sevilla, 14 de octubre</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/sevilla-14-octubre.css?v=20261009a">
+  <link rel="stylesheet" href="css/sevilla-14-octubre.css?v=20261013a">
   <link rel="stylesheet" href="css/recursos-ia.css?v=20261009a">
 </head>
 <body id="top">
@@ -58,7 +58,7 @@
       <li><b>25 min</b><div><strong><a href="#chatgpt">02 · ChatGPT: imagen, datos, voz y edición</a></strong><span>Infografía para pacientes, análisis de datos con código, ensayo de entrevista y lenguaje claro en el lienzo. Mapa interactivo del menú + con diez casos de farmacia hospitalaria.</span></div></li>
       <li><b>30 min</b><div><strong><a href="#notebook">03 · Gemini Notebook: responder solo con tus fuentes</a></strong><span>Preguntar a dos documentos, verificar citas y detectar contradicciones.</span></div></li>
       <li><b>10 min</b><div><strong>Pausa</strong><span>Cargar portátiles y estirar las piernas.</span></div></li>
-      <li><b>10 min</b><div><strong><a href="#scispace">04 · SciSpace: buscar y leer literatura (si da tiempo)</a></strong><span>Demostración breve. Si no da tiempo, queda como tarea para después.</span></div></li>
+      <li><b>10 min</b><div><strong><a href="#scispace">04 · SciSpace: de la pregunta clínica a la evidencia científica</a></strong><span>Cinco ejercicios: consulta farmacoterapéutica, lectura crítica, comparación de estudios, resultados contradictorios y oportunidad de investigación.</span></div></li>
       <li><b>50 min</b><div><strong><a href="#ciborg">05 · Parte ciborg: crea tu propia herramienta</a></strong><span>De una necesidad de tu servicio a un artefacto que funciona y que has comprobado. Tres tipos de artefacto (documento, presentación y diseño) y un ejemplo avanzado: el Planificador de Pautas.</span></div></li>
       <li><b>5 min</b><div><strong><a href="#cierre">06 · Qué te llevas y regalo</a></strong><span>Diez ideas para recordar y dos regalos: 12 atajos de prompt y la verdad sobre los «códigos secretos».</span></div></li>
     </ol></div>
@@ -574,17 +574,25 @@ Si no encuentras contradicciones, dilo. No interpretes más allá de lo que dice
       </details>
     </article>
 
-    <article class="lesson lesson-extended" id="scispace"><div class="lesson-heading"><span>04 · 10 min · si da tiempo</span><h3>SciSpace: buscar y leer literatura con ayuda</h3></div>
-      <p>SciSpace combina un buscador de literatura científica con un asistente para leer y preguntar a un artículo en PDF. Lo veremos como demostración. Si no da tiempo, tienes el ejercicio para hacerlo después. Comprueba en tu cuenta qué incluye el plan gratuito, porque sus límites cambian.</p>
-      <details>
-        <summary><h4>Ejercicio 4.1 · De la pregunta al artículo original</h4></summary>
-        <ol class="practice-list">
-          <li>Formula en SciSpace una pregunta de tu área. Por ejemplo: «¿Qué intervenciones de telefarmacia en pacientes externos de farmacia hospitalaria se han evaluado y con qué resultados?».</li>
-          <li>Elige dos artículos de la respuesta y ábrelos en su fuente original (DOI o PubMed). Comprueba título, autores, año y que el artículo dice lo que el resumen le atribuye.</li>
-          <li>Abre uno de los PDF de acceso abierto y pregúntale: «¿Cuál es el diseño del estudio, el tamaño muestral y la variable principal? Indica la página o sección de donde sale cada dato».</li>
-        </ol>
-        <p class="check-note"><strong>Punto de control:</strong> cada dato que vayas a citar debe estar en el artículo original. Si el asistente da un tamaño muestral o un resultado que no encuentras en el texto, no lo uses.</p>
-      </details>
+    <article class="lesson lesson-extended scispace-module" id="scispace"><div class="lesson-heading"><span>04 · 5 ejercicios</span><h3>SciSpace: investiga, compara y analiza evidencia científica con IA</h3></div>
+      <div class="ss-hero">
+        <p class="ss-kicker">SciSpace: de la pregunta clínica a la evidencia científica</p>
+        <p class="ss-subtitle">Cinco ejercicios prácticos para descubrir cómo utilizar la inteligencia artificial en búsquedas bibliográficas, lectura crítica y proyectos de investigación desde la farmacia hospitalaria.</p>
+        <a class="ss-cta" href="https://scispace.com/" target="_blank" rel="noopener noreferrer">Abrir SciSpace ↗<span>scispace.com</span></a>
+      </div>
+      <div class="ss-intro">
+        <div><h4>Qué es</h4><p>Una plataforma que combina un buscador de literatura científica con asistentes de IA para resumir, leer y comparar artículos. Responde a partir de las publicaciones que encuentra o de los PDF que tú subes.</p></div>
+        <div><h4>Qué usaremos</h4><ul><li><strong>Literature Review:</strong> búsqueda con IA que devuelve una tabla de estudios y una síntesis.</li><li><strong>Chat with PDF:</strong> preguntas a un artículo concreto, con referencia a la página o el fragmento.</li><li><strong>Extract Data:</strong> extracción de las mismas variables en varios estudios a la vez.</li></ul></div>
+        <div><h4>Sus límites</h4><ul><li>Su cobertura no es la de una búsqueda sistemática en PubMed o Embase con una estrategia reproducible.</li><li>Sin acceso al texto completo, muchos datos salen solo del resumen.</li><li>Puede equivocarse en cifras, diseños y tamaños muestrales, o atribuir a un artículo lo que no dice.</li><li>Algunas funciones y límites dependen del plan. Comprueba en tu cuenta qué incluye el gratuito: no lo des por hecho.</li></ul></div>
+      </div>
+      <p class="source-note">Los nombres de las funciones (Literature Review, Chat with PDF, Extract Data) pueden cambiar o aparecer traducidos. Si no encuentras una, usa la equivalente de tu cuenta.</p>
+      <div id="scispace-app" class="ss-app"><noscript><p>Este módulo interactivo necesita JavaScript. Los ejercicios completos están en <a href="data/scispace-ejercicios.js">data/scispace-ejercicios.js</a>.</p></noscript></div>
+      <div class="ss-final">
+        <h4>Antes de confiar en la IA: cinco comprobaciones</h4>
+        <p>Márcalas cuando las hayas hecho con un resultado concreto. La lista solo funciona en tu navegador y no guarda ningún dato.</p>
+        <div id="scispace-checklist"></div>
+        <p class="ss-final-message">SciSpace facilita encontrar, organizar y analizar literatura científica. La validez de las conclusiones sigue dependiendo de la comprobación de las fuentes y del juicio crítico del profesional.</p>
+      </div>
     </article>
 
     <article class="lesson lesson-extended featured" id="ciborg"><div class="lesson-heading"><span>05 · 50 min · ciborg</span><h3>Parte ciborg: crea tu propia herramienta</h3></div>
@@ -1007,6 +1015,8 @@ No pongas teléfonos, horarios ni direcciones que no te haya dado: déjalos como
 <footer class="footer"><div class="wrap footer-grid"><div><strong>Taller de IA en farmacia hospitalaria · Sevilla, 14 de octubre de 2026</strong><p>Material formativo de Ramón Morillo Verdugo. Programa y horarios según la agenda del evento.</p><p><a href="index.html#inicio">Web de Ramón Morillo</a> · <a href="mailto:ramon.morillo.verdugo@gmail.com">Contacto</a></p></div><div class="footer-partner"><span>Con la colaboración de</span>BeOne</div></div></footer>
 <script src="data/menu-chatgpt.js?v=20261009a"></script>
 <script src="js/menu-chatgpt.js?v=20261009a"></script>
+<script src="data/scispace-ejercicios.js?v=20261013a"></script>
+<script src="js/scispace.js?v=20261013a"></script>
 <script src="js/sevilla-plegables.js?v=20261009a"></script>
 <script>
   document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
