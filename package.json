@@ -1,1 +1,1 @@
-{"scripts":{"validate-content":"node scripts/validate-content.js","test":"node scripts/validate-content.js"},"devDependencies":{}}
+{"scripts":{"validate-content":"node scripts/validate-content.js","test":"node scripts/validate-content.js","validate-google-ia":"node scripts/validate-google-ia.js"},"devDependencies":{}}

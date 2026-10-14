@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-14 · Sevilla 14-oct: ecosistema Google IA en «Recursos para llevarte»
+
+- Nuevo bloque `#google-ia` dentro de `#recursos`: siete tarjetas (Stitch, Pomelli, Flow Music, AI Studio, Antigravity, Flow y Mixboard) con descripción, ejemplo en farmacia hospitalaria, ejercicio práctico, «Copiar prompt» y «Abrir herramienta» en pestaña nueva (`noopener noreferrer`).
+- Filtros Diseño, Comunicación, Audio/Vídeo, Desarrollo y Creatividad; etiqueta de acceso por herramienta (gratuita experimental, gratuita con límites, requiere suscripción) revisada el 14-10-2026.
+- Advertencia de datos ficticios y validación profesional; nota de que las condiciones de acceso pueden cambiar.
+- Contenido en `data/google-ia.js` (para añadir herramientas basta con un objeto nuevo), render en `js/google-ia.js` y validador `scripts/validate-google-ia.js` (`npm run validate-google-ia`).
+
 ## 2026-10-09 · Sevilla 14-oct: plugins, tareas programadas, diseño y artefactos
 
 - Bloque 01: la tabla de piezas de Claude pasa de cinco a siete (añade plugin y tarea programada) con la disponibilidad por plan verificada en la ayuda oficial.
