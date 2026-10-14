@@ -123,3 +123,4 @@ main{padding:4.5rem 0 5rem}.section{margin-bottom:4.7rem;scroll-margin-top:1rem}
 @media(max-width:980px){.gi-card{flex-basis:calc((100% - 1rem)/2)}}
 @media(max-width:780px){#recursos .materials{grid-template-columns:1fr}}
 @media(max-width:640px){.gi-card{flex-basis:100%}.gi-filter .filter-chips button{font-size:.8rem}}
+.memory-photo{margin:1.5rem 0 0;max-width:640px;background:#fff;border:1px solid var(--line);border-radius:1rem;overflow:hidden}.memory-photo img{display:block;width:100%;height:auto}.memory-photo figcaption{padding:.9rem 1.2rem;color:var(--muted);font-size:.9rem}
