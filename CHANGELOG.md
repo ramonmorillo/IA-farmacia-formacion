@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-14 · Sevilla 14-oct: Ecosistema Google IA como tarjeta desplegable
+
+- «Recursos para llevarte» pasa a tres tarjetas iguales (Diccionario IA, Herramientas IA y Ecosistema Google IA); la intro dice «Tres recursos».
+- El botón «Ver las 7 herramientas» despliega y pliega el catálogo debajo de las tarjetas. Empieza plegado; se abre solo si se llega con `#google-ia`. Sin JavaScript el catálogo queda visible.
+
 ## 2026-10-14 · Sevilla 14-oct: ecosistema Google IA en «Recursos para llevarte»
 
 - Nuevo bloque `#google-ia` dentro de `#recursos`: siete tarjetas (Stitch, Pomelli, Flow Music, AI Studio, Antigravity, Flow y Mixboard) con descripción, ejemplo en farmacia hospitalaria, ejercicio práctico, «Copiar prompt» y «Abrir herramienta» en pestaña nueva (`noopener noreferrer`).

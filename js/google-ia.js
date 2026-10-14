@@ -63,4 +63,23 @@
       clearTimeout(b._t); b._t = setTimeout(() => { status.textContent = ''; }, 4000);
     }
   });
+
+  // Desplegable: la tarjeta «Ecosistema Google IA» de Recursos abre y cierra el catálogo.
+  // Sin JavaScript el catálogo queda visible y el botón es un enlace a #google-ia.
+  const panel = document.getElementById('google-ia');
+  const toggle = document.querySelector('.gi-toggle');
+  if (!panel || !toggle) return;
+  const label = { true: 'Ocultar las herramientas ↑', false: 'Ver las 7 herramientas ↓' };
+  function setOpen(open, scroll) {
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = label[open];
+    if (open && scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  toggle.setAttribute('role', 'button');
+  toggle.addEventListener('click', e => { e.preventDefault(); setOpen(panel.hidden, panel.hidden); });
+  toggle.addEventListener('keydown', e => { if (e.key === ' ') { e.preventDefault(); toggle.click(); } });
+  const fromHash = () => location.hash === '#google-ia';
+  setOpen(fromHash(), fromHash());
+  window.addEventListener('hashchange', () => { if (fromHash()) setOpen(true, true); });
 })();
