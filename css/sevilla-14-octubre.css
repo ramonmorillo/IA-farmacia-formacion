@@ -106,7 +106,8 @@ main{padding:4.5rem 0 5rem}.section{margin-bottom:4.7rem;scroll-margin-top:1rem}
 @media(max-width:900px){.ss-intro{grid-template-columns:1fr}}
 @media(max-width:780px){.ss-hero{grid-template-columns:1fr}.ss-toolbar{flex-direction:column;align-items:flex-start}.ss-toggle{gap:.7rem;padding:.9rem}.ss-num{flex-basis:2.2rem;height:2.2rem;font-size:1rem}.ss-body{padding:0 .9rem 1rem}}
 /* Recursos · Ecosistema Google IA (data/google-ia.js + js/google-ia.js). Reutiliza .filter-chips y .card-chip de recursos-ia.css. */
-.google-ia{margin-top:2.6rem;padding-top:2rem;border-top:1px solid var(--line)}.gi-subtitle{color:var(--muted);max-width:760px;margin:.5rem 0 1rem}
+#recursos .materials{grid-template-columns:repeat(3,minmax(0,1fr))}#recursos .material:nth-child(3){border-top-color:var(--cyan)}.gi-toggle{cursor:pointer}
+.google-ia{margin-top:1.4rem;padding:clamp(1.1rem,3vw,1.6rem);background:#fff;border:1px solid var(--line);border-top:4px solid var(--cyan);border-radius:.7rem}.google-ia[hidden]{display:none}#recursos .google-ia>h3{font-size:1.3rem}.gi-subtitle{color:var(--muted);max-width:760px;margin:.5rem 0 1rem}
 .gi-warning{margin:0 0 1.2rem;padding:.85rem 1.1rem;border-left:4px solid var(--wine);background:#fdf4f8;border-radius:0 .5rem .5rem 0;font-size:.92rem}
 .gi-filter{margin:0 0 .4rem}.gi-count{margin:.2rem 0 1rem;font-size:.86rem;font-weight:700;color:var(--muted)}
 .gi-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
@@ -120,4 +121,5 @@ main{padding:4.5rem 0 5rem}.section{margin-bottom:4.7rem;scroll-margin-top:1rem}
 .gi-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:.5rem;padding-top:.4rem}.gi-copy,.gi-open{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.5rem .85rem;border-radius:.45rem;font:inherit;font-size:.86rem;font-weight:800;text-decoration:none;cursor:pointer}.gi-copy{border:1px solid var(--navy);background:#fff;color:var(--navy)}.gi-copy:hover{background:#edf2fb}.gi-open{border:1px solid var(--navy);background:var(--navy);color:#fff}.gi-open:hover{background:var(--wine);border-color:var(--wine)}
 .gi-copy-status{margin:0;min-height:1.2em;font-size:.8rem;font-weight:700;color:#2c7a4b}.gi-copy-status:empty{min-height:0}.gi-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.gi-note{margin-top:1.2rem}
 @media(max-width:980px){.gi-card{flex-basis:calc((100% - 1rem)/2)}}
+@media(max-width:780px){#recursos .materials{grid-template-columns:1fr}}
 @media(max-width:640px){.gi-card{flex-basis:100%}.gi-filter .filter-chips button{font-size:.8rem}}
