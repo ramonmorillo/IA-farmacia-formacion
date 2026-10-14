@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-14 · Sevilla 14-oct: foto de la sesión
+
+- Foto de recuerdo de la sesión del 14 de octubre al inicio de la página del taller (`sevilla-14-octubre.html#recuerdo`), en WebP y sin metadatos.
+
 ## 2026-10-14 · Sevilla 14-oct: Ecosistema Google IA como tarjeta desplegable
 
 - «Recursos para llevarte» pasa a tres tarjetas iguales (Diccionario IA, Herramientas IA y Ecosistema Google IA); la intro dice «Tres recursos».
