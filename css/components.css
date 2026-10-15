@@ -50,6 +50,13 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
 .proposal-form textarea { resize: vertical; }
 .proposal-form small { display: block; margin-top: .35rem; color: var(--muted); }
 .proposal-form .full { grid-column: 1 / -1; }
+.proposal-form .honey { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.proposal-form .check-inline { display: flex; gap: .6rem; align-items: flex-start; font-weight: 600; }
+.proposal-form .check-inline input { width: auto; min-height: 0; margin-top: .25rem; }
+.proposal-form button:disabled { opacity: .6; cursor: progress; }
+.contact-status { margin: 0; font-weight: 700; }
+.contact-status.ok { color: var(--brand2); }
+.contact-status.error { color: #b42318; }
 .proposal-result { position: sticky; top: 8rem; border-top: 5px solid var(--brand2); box-shadow: none; }
 .proposal-result h2 { margin-top: .35rem; }
 .proposal-result dl { display: grid; grid-template-columns: minmax(110px, .7fr) 1.3fr; gap: .35rem .75rem; }
@@ -204,3 +211,4 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
   .session-table-wrap { overflow: visible; }
   .session-table-wrap table { min-width: 0; }
 }
+[data-theme="dark"] .contact-status.error { color: #ff8a80; }
