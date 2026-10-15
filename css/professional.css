@@ -41,3 +41,5 @@ body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif
 [data-theme=dark] .public-home .btn:not(.secondary),[data-theme=dark] #app-nav .nav-contact{color:var(--bg)}[data-theme=dark] .public-home .btn:not(.secondary):hover,[data-theme=dark] #app-nav .nav-contact:hover{color:#102831}
 .recognitions{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:2rem;align-items:center;padding:1.6rem 0;border-bottom:1px solid var(--line)}.recognitions .section-kicker{margin:0}.recognitions>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}.recognitions strong,.recognitions span,.recognitions a{display:block}.recognitions strong{font-size:1.15rem;line-height:1.25}.recognitions span{color:var(--muted);font-size:.88rem;margin:.3rem 0}.recognitions a{font-size:.82rem}
 @media(max-width:760px){.recognitions{grid-template-columns:1fr;gap:.8rem}}
+/* #app recibe el foco por programa al cambiar de vista (tabindex=-1); no es un control, así que no se dibuja el marco de foco. */
+#app:focus,#app:focus-visible{outline:none}
