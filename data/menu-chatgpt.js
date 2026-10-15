@@ -89,8 +89,7 @@ window.MENU_CHATGPT = {
       availability: 'Requiere conectar GitHub, con permisos sobre el repositorio. En el taller se ve como demostración del docente.',
       what: 'Consulta y, si lo autorizas, gestiona código, incidencias (issues), solicitudes de cambio (pull requests) y publicación. No es lo mismo que Codex, que es un entorno de programación con su propio flujo de trabajo.',
       use: 'Auditar una web docente, revisar una incidencia de un formulario, leer el historial de cambios o preparar una mejora de accesibilidad sin romper nada.',
-      exercise: 'Demostración sobre el repositorio público de esta misma web: solo auditoría de accesibilidad y propuesta de issue, sin fusionar ni publicar cambios.',
-      materials: [ { label: 'Repositorio público de esta web', href: 'https://github.com/ramonmorillo/IA-farmacia-formacion', external: true } ],
+      exercise: 'Demostración sobre un repositorio de prueba del docente: solo auditoría de accesibilidad y propuesta de issue, sin fusionar ni publicar cambios.',
       prompt: 'Revisa este repositorio en modo lectura. Localiza la página principal y detecta hasta 5 mejoras de accesibilidad, navegación y claridad para farmacéuticos de hospital.\nIndica los archivos afectados, el riesgo de romper algo, las pruebas recomendadas y redacta el texto de una issue.\nNo modifiques archivos, no crees ramas ni hagas merge ni despliegue sin mi aprobación.',
       check: 'Comprueba que las rutas de archivo que cita existen y que el repositorio no tiene cambios nuevos.'
     },
