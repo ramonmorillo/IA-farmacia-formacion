@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-15 · Portada v6 tras análisis comparativo
+
+- Nueva portada (`js/teaching.js`, `renderTeachingHome`): titular «IA con método para la farmacia hospitalaria», franja de trayectoria verificable, sección del problema del lector, método en cuatro pasos, recursos abiertos sin registro, cinco formatos de trabajo, galería de sesiones con foto, proyectos con estado y registro, preguntas frecuentes, «Quién está detrás» y contacto.
+- «Recursos» en la navegación principal (`#home-recursos`). Las anclas `#home-recursos` y `#home-servicios` desplazan a su sección.
+- `CONFERENCE_EVENTS` admite `photo` y `photoAlt`; FOCO-VIH y Sevilla muestran la foto ya publicada en sus páginas.
+- Corrección del contraste de los botones principales en modo oscuro.
+- Análisis y decisiones en `ANALISIS_COMPETIDORES.md`.
+
 ## 2026-10-14 · Sevilla 14-oct: foto de la sesión
 
 - Foto de recuerdo de la sesión del 14 de octubre al inicio de la página del taller (`sevilla-14-octubre.html#recuerdo`), en WebP y sin metadatos.
