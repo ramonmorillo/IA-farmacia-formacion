@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-15 · Santiago 16-nov: sin patrocinador
+
+- Retirada la mención «Con la colaboración de BeOne» del pie de `santiago-16-noviembre.html`, que venía de la copia de Sevilla. La jornada de Santiago no tiene patrocinador.
+- Retirada también del pie de `diccionario-ia.html` y `herramientas-ia.html`, recursos generales enlazados desde varias jornadas y desde la portada. La página de Sevilla la conserva.
+
 ## 2026-10-15 · Sede de Santiago, PNT regenerado y limpieza de cabeceras
 
 - Santiago 16-nov: sede confirmada en el Complejo Universitario de Santiago (cabecera, programa y ficha del evento).
