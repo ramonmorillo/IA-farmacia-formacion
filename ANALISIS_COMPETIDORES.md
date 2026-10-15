@@ -46,12 +46,15 @@ Fuente: capturas de pantalla facilitadas por el autor el 15/10/2026 (portada y d
 | Proyectos sin estado | Etiqueta de estado y número de registro en cada tarjeta |
 | Dudas habituales | Bloque de preguntas frecuentes en la portada |
 
-## 4. Pendiente (requiere datos del autor)
+## 4. Decisiones del autor (15/10/2026)
 
-- **Número de profesionales formados** y de sesiones impartidas, con fuente verificable. Es la cifra que más pesa en la portada de Mora Delgado.
-- **Premios, becas o reconocimientos** con fecha y entidad, equivalentes a la franja «Reconocimientos» de García Pellicer.
-- **Testimonios** con consentimiento escrito.
-- **Logos de entidades** (SEFH, hospitales, universidades) solo con autorización.
-- **Versión en inglés**, si interesa el público internacional (congresos EAHP, FIP).
-- **Captación por correo** (newsletter o repositorio con registro): requiere responsable del tratamiento, proveedor, política de privacidad y aviso legal antes de activarla.
-- **Revisar las páginas internas** de ambas webs cuando haya acceso de red, para contrastar servicios, ponencias y precios.
+- **Recursos abiertos, sin pedir correo.** Se mantienen. Motivos: en esta fase importa más la confianza y la difusión que la captación; pedir el correo exige aviso legal, política de privacidad y un proveedor de envíos; y el acceso abierto es coherente con el mensaje de la web. Se reconsiderará como suscripción **opcional** (nunca como requisito para descargar) cuando haya contenido periódico que enviar.
+- **Sin número de personas formadas ni testimonios.** La actividad formativa es reciente; una cifra baja resta en lugar de sumar. La prueba social se apoya en trayectoria, MAPEX, publicaciones, herramientas, registros y sesiones con materiales públicos.
+- **Reconocimientos: todavía no.** La portada incluye una franja preparada que solo aparece cuando `HOME_RECOGNITIONS` (en `js/teaching.js`) tiene contenido. Para activarla basta con añadir un objeto con título, año, detalle y enlace a la fuente.
+
+## 5. Pendiente
+
+- Cifra de personas formadas y testimonios con consentimiento, cuando haya volumen suficiente.
+- Logos de entidades, solo con autorización.
+- Versión en inglés, si interesa el público internacional.
+- Revisar las páginas internas de ambas webs cuando haya acceso de red.
