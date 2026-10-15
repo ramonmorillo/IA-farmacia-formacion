@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-15 · Santiago 16-nov: réplica completa del taller de Sevilla
+
+- `santiago-16-noviembre.html` pasa de plantilla con contenido pendiente a la misma página que Sevilla: programa, preparación, ruta centauro–ciborg, guía paso a paso (Claude, ChatGPT con mapa del menú +, Gemini Notebook, SciSpace y parte ciborg), 12 atajos, «códigos secretos», materiales, herramientas, recursos y ecosistema Google IA.
+- Adaptado al evento: lunes 16 de noviembre, taller de 16:00 a 18:50 con cierre de 18:50 a 19:00, sede por confirmar. Sin bloque de bienvenida del patrocinador ni foto de recuerdo, que eran propios de Sevilla.
+- Materiales propios en `assets/santiago-16-noviembre/`: textos, CSV, planificador de pautas (vuelve a la página de Santiago) y los dos PDF ficticios con la cabecera «Santiago de Compostela (16-11-2026)».
+- `css/santiago-16-noviembre.css` se genera a partir de la hoja de Sevilla con la paleta azul y ámbar de Santiago.
+- La ficha del evento en la web indica que la guía y los materiales ya están disponibles.
+
 ## 2026-10-15 · Portada v6 tras análisis comparativo
 
 - Nueva portada (`js/teaching.js`, `renderTeachingHome`): titular «IA con método para la farmacia hospitalaria», franja de trayectoria verificable, sección del problema del lector, método en cuatro pasos, recursos abiertos sin registro, cinco formatos de trabajo, galería de sesiones con foto, proyectos con estado y registro, preguntas frecuentes, «Quién está detrás» y contacto.

@@ -1,0 +1,11 @@
+id_ficticio,edad,medicamentos_cronicos,horas_hasta_conciliacion,numero_fuentes,discrepancia_no_justificada,horas_hasta_comunicacion,registrado_en_historia
+C01,72,7,10,2,no,,si
+C02,80,9,30,2,no,,si
+C03,68,5,12,1,no,,si
+C04,75,6,8,2,si,36,si
+C05,66,8,20,2,si,4,si
+C06,70,5,15,2,no,,no
+C07,59,3,40,1,no,,si
+C08,85,11,22,3,si,20,si
+C09,77,6,24,2,no,,si
+C10,69,10,18,2,si,,si
