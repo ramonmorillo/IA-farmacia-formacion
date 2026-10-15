@@ -1,7 +1,6 @@
 window.GITHUB_ROUTE = {
   reviewedAt: '2026-07-14',
   title: 'Crear una herramienta farmacéutica con GitHub paso a paso',
-  repoExampleBase: 'https://github.com/ramonmorillo/',
   tabs: [
     ['Code','Archivos, carpetas, README, ramas, commits, etiquetas, descarga, clonación y edición.','Explorar el producto docente y diferenciar fuente de web publicada.','Al iniciar, revisar o recuperar una herramienta farmacéutica.','Leer, descargar, crear ramas y editar copias docentes.','Editar main sin prueba; subir datos clínicos; confundir Pages con el código.','No leer README; no mirar rama; no comprobar último commit.','Localiza index.html, js/app.js, css/base.css, README, último commit y rama predeterminada.','IA-farmacia-formacion','https://docs.github.com/repositories'],
     ['Issues','Registro trazable de errores, mejoras, preguntas y tareas.','Convertir incidencias en trabajo revisable con título, pasos, esperado y observado.','Cuando un cálculo, texto o requisito docente falla o necesita mejora.','Crear issues ficticios, etiquetar prioridad y enlazar PR.','Publicar datos sensibles o emitir recomendaciones clínicas no validadas.','Título vago; no reproducir; mezclar varios problemas.','Crea un issue ficticio: “Error docente en cálculo de dosis simulada”.','cambiosTAR','https://docs.github.com/issues/tracking-your-work-with-issues/about-issues'],

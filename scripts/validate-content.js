@@ -69,7 +69,7 @@ for (const c of data.cases||[]){
  req(!c.resolution&&!c.deliberateErrors&&!c.verificationProcess&&!c.rubric&&!c.questions&&!c.simulatedOutput,`Caso ${c.id} expone solución o evaluación reservada`);
 }
 for (const t of data.portfolio||[]){
- req(hasUrl(t.repository),`Herramienta ${t.name} sin repositorio válido`);
+ req(!/github\.com\/ramonmorillo/i.test(t.repository||''),`Herramienta ${t.name} expone un repositorio de código propio`);
  req(t.warning&&/validada clínicamente|validación clínica|uso docente/i.test(t.warning),`Herramienta ${t.name} sin advertencia de validación`);
  req(t.risks,`Herramienta ${t.name} sin riesgos`);
 }

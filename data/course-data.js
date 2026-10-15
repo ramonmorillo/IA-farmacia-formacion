@@ -201,12 +201,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -379,12 +374,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -557,12 +547,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -735,12 +720,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -913,12 +893,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "hiv-prescribing-cascade-auditor",
-          "url": "https://github.com/ramonmorillo/hiv-prescribing-cascade-auditor"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -1091,12 +1066,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -1268,12 +1238,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -1445,12 +1410,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -1622,12 +1582,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -1799,12 +1754,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "cambiosTAR",
-          "url": "https://github.com/ramonmorillo/cambiosTAR"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -1976,12 +1926,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -2153,12 +2098,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -2330,12 +2270,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -2507,12 +2442,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "ayudainvestigacion",
-          "url": "https://github.com/ramonmorillo/ayudainvestigacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -2684,12 +2614,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "ayudainvestigacion",
-          "url": "https://github.com/ramonmorillo/ayudainvestigacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -2861,12 +2786,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "ayudainvestigacion",
-          "url": "https://github.com/ramonmorillo/ayudainvestigacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -3038,12 +2958,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "ayudainvestigacion",
-          "url": "https://github.com/ramonmorillo/ayudainvestigacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -3215,12 +3130,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "ayudainvestigacion",
-          "url": "https://github.com/ramonmorillo/ayudainvestigacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -3392,12 +3302,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "ayudainvestigacion",
-          "url": "https://github.com/ramonmorillo/ayudainvestigacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -3569,12 +3474,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "ayudainvestigacion",
-          "url": "https://github.com/ramonmorillo/ayudainvestigacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -3873,12 +3773,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -4051,12 +3946,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -4229,12 +4119,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -4407,12 +4292,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "cambiosTAR",
-          "url": "https://github.com/ramonmorillo/cambiosTAR"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -4585,12 +4465,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -4763,12 +4638,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -4941,12 +4811,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -5119,12 +4984,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -5297,12 +5157,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "IA-farmacia-formacion",
-          "url": "https://github.com/ramonmorillo/IA-farmacia-formacion"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -5474,12 +5329,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "SIAF-CMO",
-          "url": "https://github.com/ramonmorillo/SIAF-CMO"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -5651,12 +5501,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "SIAF-CMO",
-          "url": "https://github.com/ramonmorillo/SIAF-CMO"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -5828,12 +5673,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "cambiosTAR",
-          "url": "https://github.com/ramonmorillo/cambiosTAR"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -6005,12 +5845,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "hiv-prescribing-cascade-auditor",
-          "url": "https://github.com/ramonmorillo/hiv-prescribing-cascade-auditor"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -6182,12 +6017,7 @@ window.COURSE_DATA = {
         "title": "Reto experto",
         "instructions": "Revise un diff, añada una prueba o proponga gobernanza sin tocar producción."
       },
-      "repositoryExamples": [
-        {
-          "name": "SIAF-CMO",
-          "url": "https://github.com/ramonmorillo/SIAF-CMO"
-        }
-      ],
+      "repositoryExamples": [],
       "prompts": [
         "Actúa como asistente de apoyo. No inventes fuentes. Separa datos, inferencias, riesgos y comprobaciones pendientes."
       ],
@@ -6274,7 +6104,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/IA-farmacia-formacion",
       "published": "https://ramonmorillo.github.io/IA-farmacia-formacion/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6300,7 +6129,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/SIAF-CMO",
       "published": "https://ramonmorillo.github.io/SIAF-CMO/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6326,7 +6154,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/hub-estratificacionCMO",
       "published": "https://ramonmorillo.github.io/hub-estratificacionCMO/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6352,7 +6179,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/cmo-vih-app2",
       "published": "https://ramonmorillo.github.io/cmo-vih-app2/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6378,7 +6204,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/cmo-vhb-vhd",
       "published": "https://ramonmorillo.github.io/cmo-vhb-vhd/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6404,7 +6229,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/estratificacionEM",
       "published": "https://ramonmorillo.github.io/estratificacionEM/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6430,7 +6254,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/estratificacionRCV",
       "published": "https://ramonmorillo.github.io/estratificacionRCV/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6456,7 +6279,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/hiv-prescribing-cascade-auditor",
       "published": "https://ramonmorillo.github.io/hiv-prescribing-cascade-auditor/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6482,7 +6304,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/cambiosTAR",
       "published": "https://ramonmorillo.github.io/cambiosTAR/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6508,7 +6329,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/antipcsk9tool",
       "published": "https://ramonmorillo.github.io/antipcsk9tool/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6534,7 +6354,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/MRCI",
       "published": "https://ramonmorillo.github.io/MRCI/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6560,7 +6379,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/CMO-Scientific-Engine",
       "published": "https://ramonmorillo.github.io/CMO-Scientific-Engine/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6586,7 +6404,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/evidencegap-radar",
       "published": "https://ramonmorillo.github.io/evidencegap-radar/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6612,7 +6429,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/ayudainvestigacion",
       "published": "https://ramonmorillo.github.io/ayudainvestigacion/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6638,7 +6454,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/drugpersist",
       "published": "https://ramonmorillo.github.io/drugpersist/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6664,7 +6479,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/sesionesfarmacia",
       "published": "https://ramonmorillo.github.io/sesionesfarmacia/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6690,7 +6504,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/actadeguardias",
       "published": "https://ramonmorillo.github.io/actadeguardias/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6716,7 +6529,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/ubicacionesfh",
       "published": "https://ramonmorillo.github.io/ubicacionesfh/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6742,7 +6554,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/qpex",
       "published": "https://ramonmorillo.github.io/qpex/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6768,7 +6579,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/rxplain",
       "published": "https://ramonmorillo.github.io/rxplain/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
@@ -6794,7 +6604,6 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "repository": "https://github.com/ramonmorillo/fharmacuentos",
       "published": "https://ramonmorillo.github.io/fharmacuentos/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
