@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-15 · Sede de Santiago, PNT regenerado y limpieza de cabeceras
+
+- Santiago 16-nov: sede confirmada en el Complejo Universitario de Santiago (cabecera, programa y ficha del evento).
+- PNT ficticio de telefarmacia (`fuente-1`) regenerado para Sevilla y Santiago con `scripts/generar-pnt-telefarmacia.py`. La tabla del circuito ya no se sale del margen y el documento cabe en una página. El texto es idéntico al anterior, comprobado por extracción.
+- Las vistas internas de la web dejan de mostrar «Aula y formación aplicada · Versión · Actualizado».
+- El contenedor principal no dibuja el marco de foco al cambiar de vista.
+
 ## 2026-10-15 · Santiago 16-nov: réplica completa del taller de Sevilla
 
 - `santiago-16-noviembre.html` pasa de plantilla con contenido pendiente a la misma página que Sevilla: programa, preparación, ruta centauro–ciborg, guía paso a paso (Claude, ChatGPT con mapa del menú +, Gemini Notebook, SciSpace y parte ciborg), 12 atajos, «códigos secretos», materiales, herramientas, recursos y ecosistema Google IA.

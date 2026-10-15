@@ -1,347 +1,74 @@
 %PDF-1.4
-%âãÏÓ
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/Producer (ReportLab PDF Library \055 \050opensource\051)
-/Author (Taller IA FH \267 material ficticio)
-/CreationDate (D\07220261008133137\05302\04700\047)
-/Creator (\050unspecified\051)
-/Keywords ()
-/ModDate (D\07220261008133137\05302\04700\047)
-/Subject (\050unspecified\051)
-/Title (PNT\055FH\05517 \267 Telefarmacia con env\355o domiciliario a pacientes externos \050versi\363n 3\054 marzo 2026\051)
-/Trapped (\057False)
+/F1 2 0 R /F2 3 0 R
 >>
 endobj
 2 0 obj
 <<
-/Type /Pages
-/Count 2
-/Kids [ 4 0 R 9 0 R ]
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
 >>
 endobj
 3 0 obj
 <<
-/Type /Catalog
-/Pages 2 0 R
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
 >>
 endobj
 4 0 obj
 <<
-/Contents 5 0 R
-/MediaBox [ 0 0 595.2756 841.8898 ]
-/Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->>
-/Rotate 0
-/Trans <<
->>
-/Type /Page
-/Parent 2 0 R
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 5 0 obj
 <<
-/Length 5779
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 68.3622 755.1969 cm
-q
-.541176 .101961 .313725 RG
-.6 w
-n -6 -6 470.5512 36 re S
-Q
-q
-.541176 .101961 .313725 rg
-BT 1 0 0 1 0 15 Tm /F1 9 Tf 12 TL -0.07513 Tw (DOCUMENTO FICTICIO CON FINES DOCENTES. Hospital, servicio, criterios y plazos inventados para el taller de) Tj T* 0 Tw (IA de Santiago de Compostela \(16-11-2026\). No es un procedimiento real ni una recomendaci\363n cl\355nica.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 707.1969 cm
-q
-.109804 .184314 .419608 rg
-BT 1 0 0 1 0 23 Tm /F2 15 Tf 19 TL (PNT-FH-17 \267 Telefarmacia con env\355o domiciliario a pacientes) Tj T* (externos \(versi\363n 3, marzo 2026\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 673.1969 cm
-q
-BT 1 0 0 1 0 18 Tm 14 TL /F2 10 Tf 0 0 0 rg (Hospital Universitario Ficticio San Rafael \267 Servicio de Farmacia Hospitalaria) Tj /F1 10 Tf (. Responsable del) Tj T* (procedimiento: Unidad de Pacientes Externos. Pr\363xima revisi\363n: marzo de 2027.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 669.1969 cm
-Q
-q
-1 0 0 1 68.3622 646.1969 cm
-q
-.541176 .101961 .313725 rg
-BT 1 0 0 1 0 3.5 Tm /F2 11.5 Tf 15 TL (1. Objetivo) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 636.1969 cm
-Q
-q
-1 0 0 1 68.3622 602.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 18 Tm /F1 10 Tf 14 TL (Establecer c\363mo se selecciona, se sigue y se da de baja a los pacientes externos que reciben su) Tj T* (medicaci\363n en el domicilio, sin perder la calidad de la atenci\363n farmac\351utica presencial.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 598.1969 cm
-Q
-q
-1 0 0 1 68.3622 575.1969 cm
-q
-.541176 .101961 .313725 rg
-BT 1 0 0 1 0 3.5 Tm /F2 11.5 Tf 15 TL (2. Criterios de inclusi\363n \(deben cumplirse todos\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 565.1969 cm
-Q
-q
-1 0 0 1 68.3622 545.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Al menos 6 meses con el mismo tratamiento dispensado en la Unidad de Pacientes Externos.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 525.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Adherencia igual o superior al 90 % por registro de dispensaci\363n en los \372ltimos 6 meses.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 505.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Sin cambios de tratamiento en los \372ltimos 3 meses.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 485.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Haber firmado el consentimiento espec\355fico de telefarmacia.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 465.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Disponer de un tel\351fono de contacto verificado en la \372ltima visita presencial.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 461.1969 cm
-Q
-q
-1 0 0 1 68.3622 438.1969 cm
-q
-.541176 .101961 .313725 rg
-BT 1 0 0 1 0 3.5 Tm /F2 11.5 Tf 15 TL (3. Criterios de exclusi\363n) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 428.1969 cm
-Q
-q
-1 0 0 1 68.3622 394.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 18 Tm /F1 10 Tf 14 TL (\177 Medicamentos que requieren conservaci\363n entre 2 y 8 \260C cuando el domicilio est\341 fuera de la) Tj T* (provincia.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 374.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Inicio de tratamiento o cambio de tratamiento previsto en los pr\363ximos 2 meses.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 354.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Dos o m\341s incidencias de entrega no resueltas en los \372ltimos 6 meses.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 350.1969 cm
-Q
-q
-1 0 0 1 68.3622 327.1969 cm
-q
-.541176 .101961 .313725 rg
-BT 1 0 0 1 0 3.5 Tm /F2 11.5 Tf 15 TL (4. Circuito) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 317.1969 cm
-Q
-q
-1 0 0 1 68.3622 209.1969 cm
-q
-.933333 .945098 .972549 rg
-n 0 108 467.7165 -18 re f*
-0 0 0 rg
-BT /F1 9 Tf 12 TL ET
-BT 1 0 0 1 6 96 Tm (Paso) Tj T* ET
-BT 1 0 0 1 125.0551 96 Tm (Qu\351 se hace) Tj T* ET
-BT 1 0 0 1 6 78 Tm (Periodicidad) Tj T* ET
-BT 1 0 0 1 125.0551 78 Tm (Los env\355os se realizan cada 8 semanas como m\341ximo.) Tj T* ET
-BT 1 0 0 1 6 60 Tm (Llamada previa) Tj T* ET
-BT 1 0 0 1 125.0551 60 Tm (El farmac\351utico llama al paciente 5 d\355as h\341biles antes del env\355o. Revisa adherencia, efectos adversos, medicaci\363n nueva y direcci\363n de entrega.) Tj T* ET
-BT 1 0 0 1 6 42 Tm (Sin contacto) Tj T* ET
-BT 1 0 0 1 125.0551 42 Tm (Si no se consigue hablar con el paciente tras 2 intentos en d\355as distintos, el env\355o se suspende y se cita al paciente de forma presencial.) Tj T* ET
-BT 1 0 0 1 6 24 Tm (Registro) Tj T* ET
-BT 1 0 0 1 125.0551 24 Tm (Cada llamada se registra en la historia farmacoterap\351utica con la plantilla TF-2.) Tj T* ET
-BT 1 0 0 1 6 6 Tm (Visita presencial) Tj T* ET
-BT 1 0 0 1 125.0551 6 Tm (Todo paciente en telefarmacia acude al menos 1 vez cada 6 meses a la consulta presencial.) Tj T* ET
-q
-1 J
-1 j
-.501961 .501961 .501961 RG
-.4 w
-n 0 108 m 467.7165 108 l S
-n 0 0 m 467.7165 0 l S
-n 0 0 m 0 108 l S
-n 467.7165 0 m 467.7165 108 l S
-n 0 90 m 467.7165 90 l S
-n 0 72 m 467.7165 72 l S
-n 0 54 m 467.7165 54 l S
-n 0 36 m 467.7165 36 l S
-n 0 18 m 467.7165 18 l S
-n 119.0551 0 m 119.0551 108 l S
-Q
-Q
-Q
-q
-1 0 0 1 68.3622 205.1969 cm
-Q
-q
-1 0 0 1 68.3622 182.1969 cm
-q
-.541176 .101961 .313725 rg
-BT 1 0 0 1 0 3.5 Tm /F2 11.5 Tf 15 TL (5. Criterios de baja del programa) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 172.1969 cm
-Q
-q
-1 0 0 1 68.3622 152.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Adherencia inferior al 80 % en dos env\355os consecutivos.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 132.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Cambio de tratamiento.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 112.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F1 10 Tf 14 TL (\177 Petici\363n del paciente o de su m\351dico responsable.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 108.1969 cm
-Q
-q
-1 0 0 1 68.3622 85.19685 cm
-q
-.541176 .101961 .313725 rg
-BT 1 0 0 1 0 3.5 Tm /F2 11.5 Tf 15 TL (6. Indicadores) Tj T* ET
-Q
-Q
-q
-1 0 0 1 68.3622 75.19685 cm
-Q
- 
-
-endstream
 endobj
 6 0 obj
 <<
-/F1 7 0 R
-/F2 8 0 R
+/Author (Ram\363n Morillo Verdugo) /CreationDate (D:20000101000000+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20000101000000+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (PNT-FH-17 \267 Telefarmacia \(documento ficticio\)) /Trapped /False
 >>
 endobj
 7 0 obj
 <<
-/BaseFont /Helvetica
-/Encoding /WinAnsiEncoding
-/Name /F1
-/Subtype /Type1
-/Type /Font
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
 >>
 endobj
 8 0 obj
 <<
-/BaseFont /Helvetica-Bold
-/Encoding /WinAnsiEncoding
-/Name /F2
-/Subtype /Type1
-/Type /Font
->>
-endobj
-9 0 obj
-<<
-/Contents 10 0 R
-/MediaBox [ 0 0 595.2756 841.8898 ]
-/Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->>
-/Rotate 0
-/Trans <<
->>
-/Type /Page
-/Parent 2 0 R
->>
-endobj
-10 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 339
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2341
 >>
 stream
-Gatmu5AS.j&B/jCMRN_O;I%Cpl]-[B.]!0*?<$e7A7WlGC_-@64Zas3kR_Df3'H*^*^<C$&VjJ0h#Yh7&$H$YL-._s@1)gb(E&_Enbk4m%$Nf6;<1k.b.QdimRD!D*<S22=&5FU/q23eDfON4U+#M>>tt9r>!bTLI]ehbZ_#_2kbsqM@PI(`;/P]59;A*G'?U_&=EIQ+$=E2;*FoP'[kR51Ic4!#Ojb/tWCD.ANb6P6,A$Lm/cDIZ;2!1gFRc!ehQ*H.4*#Lq)cWpWPrqeT@@kQa]Kuds:tsi&AlK/IVnUa)@'C-0A[C7l4h*C2h3$kB\:n0manGgf0@N"L?N~>
-endstream
+Gau`Ua`?-*&A@B[qN<<h,p=+A"FNiZ.97p\A;eQdQOtp97YQQ969G2C]H.%u84sZX\/9&cAq6<;fA#VR+<04Tr/EM,?fq"0Kco@$HqD2]4IZ:9kOXmu-_brCE3(1&,!f/b[mUouGRr8hmg1]Xa:^B8"^/!IViFOpIQOf$qK.nL=hm7..',+]6?3/X(#>Io5O`]=Ifb2>7Rl@c4>R%.7QuU(40pNn$Z-L&r"DeR]q52qkP<[+RP$4*o?5hK29i;-E-$/N9:3ZIq5m*SMJAu'R@[<Qb-d7PECt5MCK9YoU46jAatL9Oq-)mf9Q7P*V'M<=?:n3hM5&1chpD:`k!)0fhASbj19\*u06heDA?2H)<@V];&]'kHB9)?^M`2DW'r3<oEa"_sX:h(<lr!foR8U1B+`SM=RE?0\l\-:f3Q:7"p&/.9dd";q?/?Ou^:'$g%W*HW.'u.Q)g\[&Vh[8or!HcND;fUGd(hSLHm^jSo<X@!B4=I@-^`=eV.qI&%$F2>Mk!b\B$m8nOTER'97TPGLrHH^Wd8q<l8&Fc!Tmjs<b9fqk+5Htb:a%,n@Yi.&4?WfG!.*]'ngR2UPR0Pf]KfYVb(fNqCC/eK\?]YU#VT4J.5$kjANkA7bQPA44p2B^!cj'GZ>Yr9ur]m-5M#+eZ-\@H'^"nQ#;iDZ1V<:+HZu6Hdh"Ck8c`%h3<lCB:Z:TXE=cugC>XE"K\IF*$Og'&OF"s#d39-4@*)O0DNO'KLOL:O/gds@`7EG)/S.Ki@0Cr!GkIh3Nm0%0LhkWXEmni;"9/]=<j01k#U@u$GhVC6o$07nkm9o;A62rW#MZ3LkcRCqG--O2&j/<0M8ta1X*]/]dG$T<#T2FaomkMP%0pRB#C1@<SkLCL'.QD1iOacJ#OohQ0AQ1q-io$c/_t`gLN+]Wq/2eqKQ3e;_\JrPH@_g!kl01L)UeOrpu98mFfnJk&'$.`,obFa5Tm?K(sYGee<L-$$d(s"Sf'+:QofQW%0hr?-6>okqg`;8g3\eJuo=M*"9(ab51,]asIY!1gWQ=D58VjIC!B=Q@ulkVB9K*lVcR)W\.!mkg^`!0F,Ap/sFjIgEJRGA_0)Rb.!21=CucJV[a14[3k<d9n\"4:#<uR,`/?e*afdXfi+"7lFsp+/gsI+r_geVEqQ)gN_miUVT2a%=3\.SV)t>#&==-dZH/%'d'&`i1d`S>:hgqp]u_O>mAaN]%DAb8?*g6:QOVL.D)N@WNUIl*G%S*VhupcfQ%,8!Pd(Vh2=+hJ3DHjj<iu\$?\;9=.#B+r(OLlV0D!a42^Jo^=>*oTd'?NFlm`moa]djp5;\o(!%Ml*ChLE)HR:XE&k/-Mp;^6h2f5nBWb5;@G"/AA:P;6!3=&_``[9[L,h@eYSCVc7_"X"4DAK6AV)?9m9>YnJ0hpHu;"G65\r7S6O5PeR1JDI_jRO*iOlrKH_'c\b,2PHFpB$+4ck"SfSiMD7a5r@Dd-_i_[r2Ga_'(/:Bmp9"jlAm3cRU4+&?Y-Fq50G72k3L.]0=;<4V&="pI?beG/`TKLU=nqB8$';YeqPO[;#Ogeq0AmrC(`]#8n%,Pf[/c?->9Ik1DcRP*!_2]bm`mGWul/nmtfGk?p+:eG6uB4P_7V"f8j`1U=a>+J0:d!X_/rY'2o1fp%53U']U?`U+hs'&MFu^!ghF]MpU5H'rVe>#a^DGC#Ic;/;$LT'2?lTQY:D'b4Y6'sEAC&@8OV^C72n\BB43fNZUWX>32<mH#D9oZ=D:p`"17f/[P\>am4!N7Xg6p02;R4J`)&=EK11eM'3_\jeDd2DR*/-C+h:4-$%s)nm63%inf&)8pGqI)b$8G#;Yactk$j,5/euYXCS#H>ilt,Zi_IQ%A)_TCTN-<h]?.R<(&OVluEUmsPC"_O4a!967JE>GJ3GLKp%%)q\<eXeYr,rR*$m^8mKq]8%IdW2YD*RmTC04+88K1qR5-pW4eT^,c"*Mc[>=?[S?kXdQJM'DB_U4a:r8a>421:qGU"DDtM>mT[t[T5Zi]_-K:aHc$0Fob/b$K*g>@'>eorj7-0>RpNo)cZ0$_qf7+7O6`8[+jRl2\G%;djCML=_IF8YS\@<qDYj<nqgD4_42odTrj^oC\1n[n"@m+iZ_nZ9(f@uAZgA^N#JY[9*Rk6;Iap,pnO:;`^YBmsNmYiA^<AXBkV>q-P?i'ee.:na+8l3#VC5sRGKHUp=\8(d*C"8O\Gb"d/LEo1Nr51e+)]rE4Gu-C^^X#u&GlErEa?Yd3oX<8oTt>fWX0Uf4A)IDAG)lN?#e&TWV.0KHXP-3$u>L$CD^ib/.QF)3JAG0Vl-&fl;FCE_UeVLd`K7EV(se~>endstream
 endobj
 xref
-0 11
+0 9
 0000000000 65535 f 
-0000000015 00000 n 
-0000000461 00000 n 
-0000000526 00000 n 
-0000000575 00000 n 
-0000000774 00000 n 
-0000006605 00000 n 
-0000006646 00000 n 
-0000006753 00000 n 
-0000006865 00000 n 
-0000007065 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000920 00000 n 
+0000000979 00000 n 
 trailer
 <<
-/Size 11
-/Root 3 0 R
-/Info 1 0 R
+/ID 
+[<12389a1bfd1a40418a5caacad4e8ed13><12389a1bfd1a40418a5caacad4e8ed13>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
 >>
 startxref
-7496
+3411
 %%EOF
