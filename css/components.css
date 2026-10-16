@@ -57,6 +57,7 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
 .contact-status { margin: 0; font-weight: 700; }
 .contact-status.ok { color: var(--brand2); }
 .contact-status.error { color: #b42318; }
+.contact-thanks { margin-bottom: 1.5rem; border-left: 4px solid var(--brand2); }
 .proposal-result { position: sticky; top: 8rem; border-top: 5px solid var(--brand2); box-shadow: none; }
 .proposal-result h2 { margin-top: .35rem; }
 .proposal-result dl { display: grid; grid-template-columns: minmax(110px, .7fr) 1.3fr; gap: .35rem .75rem; }
