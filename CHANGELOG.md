@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-16 · Analítica de visitas con Cloudflare Web Analytics
+
+- Fragmento de Cloudflare Web Analytics (sin cookies) en las 36 páginas HTML del sitio.
+- El diagnóstico IA queda accesible solo por URL (`#diagnostico`), sin enlaces, hasta su validación.
+
 ## 2026-10-16 · Diagnóstico IA de tu servicio (pendiente de validación)
 
 - Nueva vista `#diagnostico` (`js/diagnostico.js`): 12 preguntas puntuadas en cuatro bloques y 3 de contexto, con nivel, barras por bloque, prioridad por bloque débil y formato recomendado. Se calcula en el navegador y no guarda ni envía nada; «Enviar el resultado a Ramón» abre el formulario de contacto con el resumen.
