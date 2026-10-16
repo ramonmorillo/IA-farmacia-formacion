@@ -1,6 +1,6 @@
 # Diagnóstico IA de tu servicio · Propuesta de preguntas (borrador para validar)
 
-Estado: **borrador pendiente de validación por Ramón Morillo**. No se publica hasta que se revisen preguntas, puntuaciones y recomendaciones.
+Estado: **publicado el 16/10/2026** en `#diagnostico` con las opciones por defecto de la sección 5 (sin pregunta de presupuesto, orientado a servicios, título «¿Dónde está tu servicio con la IA?»). Umbrales y textos se revisarán con las primeras respuestas reales.
 
 ## 1. Planteamiento
 
