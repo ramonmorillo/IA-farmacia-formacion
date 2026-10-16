@@ -6104,7 +6104,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/IA-farmacia-formacion/",
+      "published": "https://ramonmorillo.es/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6129,7 +6129,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/SIAF-CMO/",
+      "published": "https://ramonmorillo.es/SIAF-CMO/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6154,7 +6154,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/hub-estratificacionCMO/",
+      "published": "https://ramonmorillo.es/hub-estratificacionCMO/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6179,7 +6179,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/cmo-vih-app2/",
+      "published": "https://ramonmorillo.es/cmo-vih-app2/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6204,7 +6204,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/cmo-vhb-vhd/",
+      "published": "https://ramonmorillo.es/cmo-vhb-vhd/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6229,7 +6229,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/estratificacionEM/",
+      "published": "https://ramonmorillo.es/estratificacionEM/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6254,7 +6254,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/estratificacionRCV/",
+      "published": "https://ramonmorillo.es/estratificacionRCV/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6279,7 +6279,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/hiv-prescribing-cascade-auditor/",
+      "published": "https://ramonmorillo.es/hiv-prescribing-cascade-auditor/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6304,7 +6304,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/cambiosTAR/",
+      "published": "https://ramonmorillo.es/cambiosTAR/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6329,7 +6329,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/antipcsk9tool/",
+      "published": "https://ramonmorillo.es/antipcsk9tool/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6354,7 +6354,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/MRCI/",
+      "published": "https://ramonmorillo.es/MRCI/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6379,7 +6379,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/CMO-Scientific-Engine/",
+      "published": "https://ramonmorillo.es/CMO-Scientific-Engine/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6404,7 +6404,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/evidencegap-radar/",
+      "published": "https://ramonmorillo.es/evidencegap-radar/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6429,7 +6429,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/ayudainvestigacion/",
+      "published": "https://ramonmorillo.es/ayudainvestigacion/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6454,7 +6454,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/drugpersist/",
+      "published": "https://ramonmorillo.es/drugpersist/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6479,7 +6479,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/sesionesfarmacia/",
+      "published": "https://ramonmorillo.es/sesionesfarmacia/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6504,7 +6504,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/actadeguardias/",
+      "published": "https://ramonmorillo.es/actadeguardias/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6529,7 +6529,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/ubicacionesfh/",
+      "published": "https://ramonmorillo.es/ubicacionesfh/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6554,7 +6554,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/qpex/",
+      "published": "https://ramonmorillo.es/qpex/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6579,7 +6579,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/rxplain/",
+      "published": "https://ramonmorillo.es/rxplain/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
@@ -6604,7 +6604,7 @@ window.COURSE_DATA = {
       "lessons": "La herramienta nace del criterio profesional y la IA solo acelera partes del ciclo.",
       "technicalLevel": "Nivel 2-4 según complejidad.",
       "reproductionTime": "2-12 horas en versión docente simplificada.",
-      "published": "https://ramonmorillo.github.io/fharmacuentos/",
+      "published": "https://ramonmorillo.es/fharmacuentos/",
       "activity": "Auditar README, estructura, advertencias, pruebas y una mejora segura sobre copia docente.",
       "debate": [
         "¿Qué evidencia falta para uso real?",
