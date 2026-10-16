@@ -213,3 +213,22 @@ th { background: color-mix(in srgb, var(--panel) 86%, var(--brand) 14%); }
   .session-table-wrap table { min-width: 0; }
 }
 [data-theme="dark"] .contact-status.error { color: #ff8a80; }
+
+/* Diagnóstico IA */
+.diag-notice { margin: 1.5rem 0; }
+.diag-notice p { margin: .4rem 0; }
+.diag-form { display: grid; gap: 1.5rem; }
+.diag-dimension { padding: 1.5rem; border: 1px solid var(--line); border-radius: 1.1rem; background: var(--panel); }
+.diag-dimension h2 { margin: .2rem 0 1rem; }
+.diag-question { border: 0; border-top: 1px solid var(--line); margin: 0; padding: 1rem 0 .5rem; min-width: 0; }
+.diag-question legend { font-weight: 800; padding: 0 0 .6rem; }
+.diag-option { display: flex; gap: .6rem; align-items: flex-start; padding: .35rem 0; cursor: pointer; }
+.diag-option input { margin-top: .3rem; }
+.diag-points { display: inline-grid; place-items: center; min-width: 1.4rem; height: 1.4rem; border-radius: 50%; border: 1px solid var(--line); font-size: .75rem; color: var(--muted); }
+.diag-form > .btn { justify-self: start; }
+.diag-result { margin-top: 2rem; }
+.diag-bars { display: grid; gap: .7rem; margin: 1.5rem 0; }
+.diag-bar { display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr 3rem; gap: .8rem; align-items: center; }
+.diag-track { height: .8rem; border-radius: 1rem; background: var(--line); overflow: hidden; }
+.diag-track i { display: block; height: 100%; background: var(--brand2); border-radius: 1rem; }
+@media (max-width: 600px) { .diag-bar { grid-template-columns: 1fr 3rem; } .diag-bar span { grid-column: 1 / -1; } }

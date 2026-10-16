@@ -36,7 +36,8 @@ a { color: var(--brand); }
 nav { display: flex; gap: .5rem; flex-wrap: wrap; }
 nav a, button, .btn { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: .8rem; padding: .7rem .9rem; text-decoration: none; cursor: pointer; font: inherit; }
 .btn, button:hover, nav a:hover { background: var(--brand); color: white; }
-.secondary { background: transparent; }
+.secondary { background: transparent; color: var(--brand); border-color: var(--brand); }
+.secondary:hover { background: var(--brand); color: white; }
 .progress-wrap { display: none; padding: .75rem 2rem; background: var(--panel); border-bottom: 1px solid var(--line); }
 .technical-progress .progress-wrap { display: block; }
 .progress { height: .7rem; background: var(--line); border-radius: 2rem; overflow: hidden; }

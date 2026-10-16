@@ -29,6 +29,7 @@ function route(){
   if(h==='iris')return renderIris();
   if(h==='contacto')return renderContact();
   if(h==='propuesta')return renderProposal();
+  if(h==='diagnostico')return renderDiagnostic();
   if(h==='github-herramienta')return renderGithubRoute();
   if(h==='catalogo')return renderCatalog();
   if(h==='portfolio')return renderToolLab();
