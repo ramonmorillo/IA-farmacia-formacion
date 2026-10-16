@@ -126,7 +126,7 @@ window.TEACHING_DATA = {
     }
   ],
   featuredTools: [
-    ['Hub de Estratificación CMO','Acceso unificado a las herramientas de estratificación','https://ramonmorillo.github.io/hub-estratificacionCMO/']
+    ['Hub de Estratificación CMO','Acceso unificado a las herramientas de estratificación','https://ramonmorillo.es/hub-estratificacionCMO/']
   ]
 };
 

@@ -32,7 +32,7 @@ for(const p of teaching?.programs||[]){
   for(const id of s.caseIds||[]) req(caseIds.has(id),`Sesión ${s.id} enlaza un caso inexistente: ${id}`);
  }
 }
-req((teaching?.featuredTools||[]).every(t=>/^https:\/\/ramonmorillo\.github\.io\//.test(t[2])),'El acceso destacado debe abrir herramientas publicadas');
+req((teaching?.featuredTools||[]).every(t=>/^https:\/\/ramonmorillo\.es\/[^/]+\//.test(t[2])),'El acceso destacado debe abrir herramientas publicadas');
 req(data.cases?.length===32,'La biblioteca debe contener 32 casos prácticos');
 req(data.programs?.length===3,'Deben existir tres programas formativos principales');
 req(data.levels?.length===5,'Deben existir cinco niveles reales');
