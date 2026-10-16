@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-16 · Diagnóstico IA publicado
+
+- Validado por el autor con las opciones por defecto. Enlaces desde la portada (bloque «Hablemos») y desde la página de contacto.
+
 ## 2026-10-16 · Analítica de visitas con Cloudflare Web Analytics
 
 - Fragmento de Cloudflare Web Analytics (sin cookies) en las 36 páginas HTML del sitio.
