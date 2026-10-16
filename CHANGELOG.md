@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-16 · Formulario de contacto: envío como el cuestionario previo
+
+- El formulario de `#contacto` deja de usar el endpoint `formsubmit.co/ajax/`, que fallaba mostrando solo un error genérico, y pasa al envío HTML clásico de FormSubmit, el mismo que usa `encuesta-previa.html`. Tras enviar, FormSubmit redirige a `?enviado=1#contacto` y la página muestra «Mensaje enviado».
+- Si FormSubmit necesita algo (activación pendiente, captcha), ahora lo muestra en su propia página en lugar de un error sin causa.
+- Campos opcionales nuevos: formato previsto, asistentes aproximados y fecha orientativa. El asunto del correo sigue el motivo elegido.
+
 ## 2026-10-15 · Santiago 16-nov: sin patrocinador
 
 - Retirada la mención «Con la colaboración de BeOne» del pie de `santiago-16-noviembre.html`, que venía de la copia de Sevilla. La jornada de Santiago no tiene patrocinador.
