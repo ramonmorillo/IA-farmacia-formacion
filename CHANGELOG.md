@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-16 · Origen de los contactos y propuesta de diagnóstico
+
+- Formulario de contacto: nuevo campo obligatorio «¿Cómo me has conocido?» (formación, newsletter, LinkedIn, buscador, recomendación, sociedad científica, otro) para saber qué canal trae encargos.
+- `DIAGNOSTICO_IA_PROPUESTA.md`: borrador de preguntas, puntuación y recomendaciones del futuro «Diagnóstico IA de tu servicio», pendiente de validación.
+
 ## 2026-10-16 · Formulario de contacto: envío como el cuestionario previo
 
 - El formulario de `#contacto` deja de usar el endpoint `formsubmit.co/ajax/`, que fallaba mostrando solo un error genérico, y pasa al envío HTML clásico de FormSubmit, el mismo que usa `encuesta-previa.html`. Tras enviar, FormSubmit redirige a `?enviado=1#contacto` y la página muestra «Mensaje enviado».
